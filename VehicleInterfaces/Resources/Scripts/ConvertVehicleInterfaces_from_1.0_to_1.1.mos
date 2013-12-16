@@ -1,0 +1,17 @@
+// Convert from VehicleInterfaces 1.0 to VehicleInterfaces 1.1
+
+// clear
+convertClear();
+
+// Change class name
+convertClass("VehicleInterfaces.Examples.BaseCar",
+             "VehicleInterfaces.Examples.PartialVehicle");
+
+// Change units
+convertModifiers("VehicleInterfaces.Engines.MinimalEngine",
+                 {"engineSpeed_start"}, 
+                 {"engineSpeed_start=%engineSpeed_start%*(104.7197551196598/1000)"}, true);
+
+convertModifiers("VehicleInterfaces.Engines.MinimalEngineUsingPedal",
+                 {"engineSpeed_start"}, 
+                 {"engineSpeed_start=%engineSpeed_start%*(104.7197551196598/1000)"}, true);

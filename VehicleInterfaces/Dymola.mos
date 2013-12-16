@@ -1,0 +1,5 @@
+// Show all referenced bus variables in the bus dialog
+Hidden.AddAllBusReferenced=true
+
+// Show inherited components in the diagram layer
+// Advanced.HighlightInherited=true
