@@ -23,6 +23,7 @@ Download [VehicleInterfaces v1.2.1 (2013-10-01)](../../archive/v1.2.1.zip)
 
 ## License
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+
 Copyright &copy; 2013- Modelica Association
 
 This Modelica package is free software and the use is completely at your own risk;
