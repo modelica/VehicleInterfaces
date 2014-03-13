@@ -233,7 +233,6 @@ href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more informat
 <p>
 A collection of partial base classes which define interfaces for transmission models. 
 </p>
-<placeholder></placeholder>
 </html>"));
   end Interfaces;
 

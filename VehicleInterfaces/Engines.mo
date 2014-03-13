@@ -119,8 +119,7 @@ package Engines "Collection of combustion engine subsystem definitions"
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
         Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}}),
-             graphics),
+                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for an engine subsystem. This class should be extended to form a particular engine model. See the <a href=\"Modelica://VehicleInterfaces.Engines\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Engines.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -149,7 +148,6 @@ package Engines "Collection of combustion engine subsystem definitions"
 <p>
 A collection of partial base classes which define interfaces for engine models. 
 </p>
-<placeholder></placeholder>
 </html>"));
   end Interfaces;
 
@@ -161,7 +159,7 @@ A collection of partial base classes which define interfaces for engine models.
     connect(accessoryFlange, transmissionFlange)
       annotation (Line(points={{-100,0},{100,0}}, color={0,0,0}));
 
-    annotation (Diagram(graphics),
+    annotation (
       Documentation(info="<html>
 <p>
 Empty engine model (just rigid connection between accessory and transmission flange). Using this empty model in overall vehicle architecture the functionality of engine can be eliminated. 
@@ -273,8 +271,7 @@ Empty engine model (just rigid connection between accessory and transmission fla
         color={0,0,127},
         smooth=Smooth.None));
     annotation (Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,
-              -100},{100,100}}),
-                        graphics),
+              -100},{100,100}})),
       Documentation(info="<html>
  <p>A simple engine model with flywheel and where the torque output is proportional to the accelerator pedal position.
 This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal position is read from the control bus.</p>
@@ -385,8 +382,7 @@ This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal p
         color={0,0,127},
         smooth=Smooth.None));
     annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                        graphics),
+              -100},{100,100}})),
                          Documentation(info="<html>
 <p>A simple engine model with flywheel and where the torque output is proportional to the accelerator pedal position.
 This engine model uses the physical connection between the driver and the engine for the accelerator pedal.</p> 
@@ -431,5 +427,5 @@ A collection of internal material for engine models. Control bus definitions are
 <h4>Effects to be modelled in this subsystem</h4>
 <p>Within the VehicleIntefaces package the engine subsystem is used to model the generation of torque and the application of this torque to the transmission and accessories flange.  The connections to the transmission and accessories subsystems are via 1D rotational connectors.  The torque reaction in to the engine block and the block itself are also to be modelled in this subsystem if required.  The torque reactions, if included, should all be referred back to a single reference frame for the engine block (the engineMount connector).</p>
 </html>"), Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
-            {100,100}}), graphics));
+            {100,100}})));
 end Engines;

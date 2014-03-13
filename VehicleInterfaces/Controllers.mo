@@ -43,11 +43,9 @@ package Controllers "Collection of controllers subsystem definitions"
               rotation=0)));
       annotation (
         Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
-                {100,100}}),
-                graphics),
+                {100,100}})),
         Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}}),
-             graphics),
+                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for a controller subsystem. This class should be extended to form a particular controller model. See the <a href=\"Modelica://VehicleInterfaces.Controllers\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Controllers.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -56,7 +54,6 @@ package Controllers "Collection of controllers subsystem definitions"
 <p>
 A collection of partial base classes which define interfaces for control system models. 
 </p>
-<placeholder></placeholder>
 </html>"));
   end Interfaces;
 

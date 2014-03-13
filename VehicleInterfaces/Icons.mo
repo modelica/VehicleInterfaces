@@ -8,7 +8,7 @@ package Icons "Collection of icons"
 
     annotation (
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-              100}}), graphics),
+              100}})),
       Documentation(info="<html>
 <p>
 This partial class is intended to design a <em>default icon for a package class</em> which contains several <em>variants</em> of one assembly or component.
@@ -22,7 +22,7 @@ This partial class is intended to design a <em>default icon for a package class<
     extends Modelica.Icons.ObsoleteModel;
 
      annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}), graphics),
+              -100},{100,100}})),
                               Documentation(revisions="<html><table border=0 cellspacing=0 cellpadding=0>
   <tr><td valign=\"center\"> <img src=\"modelica://LibraryTemplate/Resources/Images/logo_dlr.png\" width=60></td>
       <td valign=\"center\"> <b>Copyright &copy; 2006-2010, DLR Institute of Robotics and Mechatronics<b> </td>
@@ -116,8 +116,7 @@ This partial class is intended to design a <em>default icon for a package class<
             fillPattern=FillPattern.Solid,
             textString="%name")}),
                               Diagram(coordinateSystem(preserveAspectRatio=false,
-                     extent={{-100,-100},{100,100}}),
-                                      graphics),
+                     extent={{-100,-100},{100,100}})),
       Documentation(info="<html>
 <p>
 This partial class is intended to design a default icon for an <em>accessorier assembly</em>.
@@ -211,7 +210,6 @@ This partial class is intended to design a default icon for an <em>accessorier a
 <p>
 This partial class is intended to design a default icon for an <em>atmosphere</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end Atmosphere;
 
@@ -221,7 +219,7 @@ This partial class is intended to design a default icon for an <em>atmosphere</e
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
-          grid={1,1}), graphics),
+          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -257,7 +255,6 @@ This partial class is intended to design a default icon for an <em>atmosphere</e
 <p>
 This partial class is intended to design a default icon for a <em>batery model</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end Battery;
 
@@ -345,7 +342,6 @@ This partial class is intended to design a default icon for a <em>batery model</
 <p>
 This partial class is intended to design a default icon for a <em>brakes assembly</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end Brakes;
 
@@ -356,7 +352,7 @@ This partial class is intended to design a default icon for a <em>brakes assembl
           preserveAspectRatio=false,
           extent={{-160,-100},{160,100}},
           grid={1,1},
-          initialScale=0.1), graphics),
+          initialScale=0.1)),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-160,-100},{160,100}},
@@ -497,7 +493,6 @@ This partial class is intended to design a default icon for a <em>brakes assembl
 <p>
 This partial class is intended to design a default icon for a <em>chassis assembly</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end Chassis;
 
@@ -700,15 +695,13 @@ This partial class is intended to design a default icon for a <em>chassis assemb
 <p>
 This partial class is intended to design a default icon for <em>controllers</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end Controller;
 
   model DataDictionary "Icon for a data dictionary"
 
     annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                        graphics),
+              -100},{100,100}})),
                          Icon(coordinateSystem(preserveAspectRatio=false,
             extent={{-100,-100},{100,100}}), graphics={
           Ellipse(
@@ -778,7 +771,6 @@ This partial class is intended to design a default icon for <em>controllers</em>
 <p>
 This partial class is intended to design a default icon for a <em>data dictionary</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end DataDictionary;
 
@@ -788,7 +780,7 @@ This partial class is intended to design a default icon for a <em>data dictionar
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
-          grid={1,1}), graphics),
+          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -946,7 +938,6 @@ This partial class is intended to design a default icon for a <em>data dictionar
 <p>
 This partial class is intended to design a default icon for a <em>driveline assembly</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end Driveline;
 
@@ -1010,7 +1001,6 @@ This partial class is intended to design a default icon for a <em>driveline asse
 <p>
 This partial class is intended to design a default icon for a <em>driver environment</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end DriverEnvironment;
 
@@ -1033,7 +1023,6 @@ This partial class is intended to design a default icon for a <em>driver environ
 <p>
 This partial class is intended to design a default icon for a <em>driver model</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end Driver;
 
@@ -1043,8 +1032,7 @@ This partial class is intended to design a default icon for a <em>driver model</
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
-          grid={1,1}),
-          graphics),
+          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -1091,7 +1079,6 @@ This partial class is intended to design a default icon for a <em>driver model</
 <p>
 This partial class is intended to design a default icon for an <em>electric motor</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end ElectricMotor;
 
@@ -1179,7 +1166,6 @@ This partial class is intended to design a default icon for an <em>empty element
 <p>
 This partial class is intended to design a default icon for a <em>engine assembly</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end Engine;
 
@@ -1190,7 +1176,7 @@ This partial class is intended to design a default icon for a <em>engine assembl
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
           grid={1,1},
-          initialScale=0.1), graphics),
+          initialScale=0.1)),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
@@ -1223,7 +1209,6 @@ This partial class is intended to design a default icon for a <em>engine assembl
 <p>
 This partial class is intended to design a default icon for a model of <em>multiple mounts</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end MultipleMounts;
 
@@ -1272,7 +1257,6 @@ This partial class is intended to design a default icon for a model of <em>multi
 <p>
 This partial class is intended to design a default icon for a <em>road</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end Road;
 
@@ -1284,7 +1268,7 @@ This partial class is intended to design a default icon for a <em>road</em>.
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
           grid={2,2},
-          initialScale=0.1), graphics),
+          initialScale=0.1)),
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -1299,7 +1283,6 @@ This partial class is intended to design a default icon for a <em>road</em>.
 <p>
 This icon is designed for a <b>sub-bus</b> in a signal connector.
 </p>
-<placeholder></placeholder>
 </html>"));
   end SignalSubBusWithExplicitSignals;
 
@@ -1309,7 +1292,7 @@ This icon is designed for a <b>sub-bus</b> in a signal connector.
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
-          grid={1,1}), graphics),
+          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -1337,7 +1320,6 @@ This icon is designed for a <b>sub-bus</b> in a signal connector.
 <p>
 This partial class is intended to design a default icon for a model of <em>single mount</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end SingleMount;
 
@@ -1348,7 +1330,7 @@ This partial class is intended to design a default icon for a model of <em>singl
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
           grid={1,1},
-          initialScale=0.1), graphics),
+          initialScale=0.1)),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
@@ -1379,7 +1361,6 @@ This partial class is intended to design a default icon for a model of <em>singl
 <p>
 This partial class is intended to design a default icon for a model of <em>two mounts</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end TwoMounts;
 
@@ -1426,12 +1407,10 @@ This partial class is intended to design a default icon for a model of <em>two m
 <p>
 This partial class is intended to design a default icon for a <em>transmission assembly</em>.
 </p>
-<placeholder></placeholder>
 </html>"));
   end Transmission;
 
   annotation (Documentation(info="<html>
 <p>A collection of basic icon definitions used in the package</p>
-<placeholder></placeholder>
-</html>"), Icon(graphics));
+</html>"));
 end Icons;

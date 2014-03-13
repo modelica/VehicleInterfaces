@@ -234,7 +234,6 @@ of the track.
 <p>
 Basic interface definition of a generic road as parameterized surface.
 </p>
-<placeholder></placeholder>
 </html>"));
   end Interfaces;
 
@@ -689,7 +688,6 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
         experiment(StopTime=1),
         Documentation(info="<html>
 <p>Model to check that the road functions can be differentiated correctly</p>
-<placeholder></placeholder>
 </html>"));
     end CheckFunctionDifferentiation_FlatRoads;
 
@@ -739,7 +737,6 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
         experiment(StopTime=1),
         Documentation(info="<html>
 <p>Model to check that the road functions can be differentiated correctly</p> 
-<placeholder></placeholder>
 </html>"));
     end CheckFunctionDifferentiation_CircleRoads;
 
