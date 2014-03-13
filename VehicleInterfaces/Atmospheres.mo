@@ -194,8 +194,7 @@ A collection of base classes which define interfaces for atmosphere models.
       "Air pressure";
     parameter Modelica.SIunits.Temperature T=293.15 "Air temperature";
     parameter Real h=0.5 "Air humidity (0-1)";
-    constant Real R=Modelica.Media.IdealGases.Common.SingleGasesData.Air.R
-      "Gas constant for air";
+    constant Real R=287.0512249529787 "Gas constant for air";
 
   protected
     parameter Modelica.SIunits.Density rho=ambientPressure/(R*T);
