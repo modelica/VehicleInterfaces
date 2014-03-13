@@ -95,7 +95,7 @@ package EnergyStorage "Collection of energy storage subsystem definitions"
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for energy storage models. 
+A collection of partial base classes which define interfaces for energy storage models.
 </p>
 </html>"));
   end Interfaces;

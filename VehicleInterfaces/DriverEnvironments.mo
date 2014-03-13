@@ -133,7 +133,7 @@ package DriverEnvironments
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
                             Documentation(info="<html>
- <p>Base class for driver models for vehicles with manual transmissions where the driver control logic is contained within the derived model.</p> 
+ <p>Base class for driver models for vehicles with manual transmissions where the driver control logic is contained within the derived model.</p>
 </html>"));
     end BaseManualTransmission;
 
@@ -164,7 +164,7 @@ package DriverEnvironments
         "Engine ignition (Off, On or Start)" annotation (Dialog);
       annotation (Documentation(info="<html>
 <p>
-An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
+An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
 </html>"));
     end MinimalBus;
@@ -181,7 +181,7 @@ An expandable connector that defines the minimum set of signals required on the 
         annotation (Dialog);
       annotation (Documentation(info="<html>
 <p>
-An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
+An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
 </html>"));
     end BusForAutomaticTransmission;
@@ -199,14 +199,14 @@ An expandable connector that defines the minimum set of signals required on the 
 
       annotation (Documentation(info="<html>
 <p>
-An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
+An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
 </html>"));
     end BusForManualTransmission;
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for driver environment models. 
+A collection of partial base classes which define interfaces for driver environment models.
 </p>
 </html>"));
   end Interfaces;
@@ -217,7 +217,7 @@ A collection of partial base classes which define interfaces for driver environm
     extends Interfaces.Base;
     annotation (Documentation(info="<html>
 <p>
-Empty driver environment. Using this empty model in overall vehicle architecture the functionality of driver environment can be eliminated. 
+Empty driver environment. Using this empty model in overall vehicle architecture the functionality of driver environment can be eliminated.
 </p>
 </html>"));
   end NoDriverEnvironment;
@@ -421,7 +421,7 @@ Empty driver environment. Using this empty model in overall vehicle architecture
           extent={{-100,-100},{100,100}},
           grid={2,2})),
       Documentation(info="<html>
-<p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.  
+<p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.
 Fixed gear and constant clutch position.</p>
 </html>"));
   end ConventionalManual;

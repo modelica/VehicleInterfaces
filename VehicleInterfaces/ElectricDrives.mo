@@ -77,7 +77,7 @@ package ElectricDrives "Collection of electric drive subsystem definitions"
                 {-70,90},{-50,110}}, rotation=0)));
 
       annotation (Documentation(info="<html>
-<p>This partial model defines the interfaces required for an electric machine subsystem.  
+<p>This partial model defines the interfaces required for an electric machine subsystem.
 This class should be extended to form a particular electric machine model. See the <a href=\"Modelica://VehicleInterfaces.ElectricDrives\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.ElectricDrives.Tutorial\">tutorial</a> for more information.</p>information.</p>
 </html>"), Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
                 -100},{100,100}})));
@@ -85,7 +85,7 @@ This class should be extended to form a particular electric machine model. See t
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for electric drive models. 
+A collection of partial base classes which define interfaces for electric drive models.
 </p>
 </html>"));
   end Interfaces;

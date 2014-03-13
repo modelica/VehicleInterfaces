@@ -480,7 +480,7 @@ package Drivelines "Collection of drivelines subsystem definitions"
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for driveline models. 
+A collection of partial base classes which define interfaces for driveline models.
 </p>
 </html>"));
   end Interfaces;
@@ -499,7 +499,7 @@ A collection of partial base classes which define interfaces for driveline model
 <p>
 Zero torque is applied to all the wheelhubs and the reaction paths in to the wheel hubs included if the <b>driveTrainMechanics3D</b> flag in the world object is true.</p>
 <p>
-Using this empty model in overall vehicle architecture the functionality of driveline can be eliminated. 
+Using this empty model in overall vehicle architecture the functionality of driveline can be eliminated.
 </p>
 </html>"));
   end NoDriveline;

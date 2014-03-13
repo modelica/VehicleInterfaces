@@ -166,7 +166,7 @@ A collection of internal material for interface models. Especially, the bus defi
             lineColor={255,204,51},
             lineThickness=0.5)}),
       Documentation(info="<html>
-<p>Should be used to contain signals measured in the brakes subsystem.  
+<p>Should be used to contain signals measured in the brakes subsystem.
 It is defined as an empty expandable connector.</p>
 </html>"));
   end BrakesBus;

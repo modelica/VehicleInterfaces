@@ -113,7 +113,7 @@ package Transmissions "Collection of transmission subsystem definitions"
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
         Documentation(info="<html>
-<p>This partial model defines the common interfaces required for a transmission subsystem.  
+<p>This partial model defines the common interfaces required for a transmission subsystem.
 See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end Base;
@@ -122,8 +122,8 @@ See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a hre
       "Interface definition for an automatic transmission"
       extends Base;
       annotation (Documentation(info="<html>
-<p>This partial model defines the interfaces required for an automatic transmission model within the VehicleInterfaces package.  
-See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p> 
+<p>This partial model defines the interfaces required for an automatic transmission model within the VehicleInterfaces package.
+See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end BaseAutomaticTransmission;
 
@@ -154,8 +154,8 @@ See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a hre
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
         Documentation(info="<html>
-<p>This partial model defines the interfaces required for a manual transmission model within the VehicleInterfaces package.  
-See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>  
+<p>This partial model defines the interfaces required for a manual transmission model within the VehicleInterfaces package.
+See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end BaseManualTransmission;
 
@@ -192,9 +192,9 @@ See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a hre
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
         Documentation(info="<html>
-<p>This partial model defines the interfaces required for a transmission model that has two input shafts (such as a power-split device) 
-within the VehicleInterfaces package.  See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a 
-href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p> 
+<p>This partial model defines the interfaces required for a transmission model that has two input shafts (such as a power-split device)
+within the VehicleInterfaces package.  See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a
+href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end BaseTwoInputTransmission;
 
@@ -231,7 +231,7 @@ href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more informat
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for transmission models. 
+A collection of partial base classes which define interfaces for transmission models.
 </p>
 </html>"));
   end Interfaces;
@@ -248,7 +248,7 @@ A collection of partial base classes which define interfaces for transmission mo
                         graphics),
       Documentation(info="<html>
 <p>
-Empty transmission model (just rigid connection between engine and driveline flange). Using this empty model in overall vehicle architecture the functionality of transmission can be eliminated. 
+Empty transmission model (just rigid connection between engine and driveline flange). Using this empty model in overall vehicle architecture the functionality of transmission can be eliminated.
 </p>
 </html>"));
   end NoTransmissions;
@@ -325,7 +325,7 @@ Empty transmission model (just rigid connection between engine and driveline fla
               100}}),
            graphics),
       Documentation(info="<html>
-<p>A single gear transmission without a launch device that is based on the automatic transmission model interface definition</p> 
+<p>A single gear transmission without a launch device that is based on the automatic transmission model interface definition</p>
 </html>"));
   end SingleGearAutomaticTransmission;
 
@@ -454,9 +454,9 @@ Empty transmission model (just rigid connection between engine and driveline fla
               100}}),
            graphics),
       Documentation(info="<html>
-<p>A single gear transmission based on the manual transmission model interface definition.  Includes a clutch model and uses 
-physical connections between the driver and transmission system for the clutch position and current gear number (although the 
-gear number is ignored in this model.</p>  
+<p>A single gear transmission based on the manual transmission model interface definition.  Includes a clutch model and uses
+physical connections between the driver and transmission system for the clutch position and current gear number (although the
+gear number is ignored in this model.</p>
 </html>"));
   end SingleGearManualTransmission;
 

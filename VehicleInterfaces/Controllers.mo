@@ -52,7 +52,7 @@ package Controllers "Collection of controllers subsystem definitions"
     end Base;
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for control system models. 
+A collection of partial base classes which define interfaces for control system models.
 </p>
 </html>"));
   end Interfaces;
@@ -63,7 +63,7 @@ A collection of partial base classes which define interfaces for control system 
     extends Interfaces.Base;
     annotation (Documentation(info="<html>
 <p>
-Empty controller model. Using this empty model in overall vehicle architecture the functionality of controller can be eliminated. 
+Empty controller model. Using this empty model in overall vehicle architecture the functionality of controller can be eliminated.
 </p>
 </html>"));
   end NoController;

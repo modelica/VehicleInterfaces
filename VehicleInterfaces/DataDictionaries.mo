@@ -48,14 +48,14 @@ the second creates a new signal called <b>v_veh</b>.
       annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
                 -100},{100,100}})),
                         Documentation(info="<html>
-<p>This partial model defines the interfaces required for a data dictionary within the VehicleInterfaces package. 
+<p>This partial model defines the interfaces required for a data dictionary within the VehicleInterfaces package.
 Especially, it provide alias names for the controBus. See the <a href=\"VehicleSystems.DataDictionaries\">documentation</a> and <a href=\"VehicleInterfaces.DataDictionaries.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end Base;
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for data dictionary. 
+A collection of partial base classes which define interfaces for data dictionary.
 </p>
 </html>"));
   end Interfaces;

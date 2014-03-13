@@ -146,7 +146,7 @@ package Engines "Collection of combustion engine subsystem definitions"
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for engine models. 
+A collection of partial base classes which define interfaces for engine models.
 </p>
 </html>"));
   end Interfaces;
@@ -162,7 +162,7 @@ A collection of partial base classes which define interfaces for engine models.
     annotation (
       Documentation(info="<html>
 <p>
-Empty engine model (just rigid connection between accessory and transmission flange). Using this empty model in overall vehicle architecture the functionality of engine can be eliminated. 
+Empty engine model (just rigid connection between accessory and transmission flange). Using this empty model in overall vehicle architecture the functionality of engine can be eliminated.
 </p>
 </html>"));
   end NullEngine;
@@ -385,7 +385,7 @@ This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal p
               -100},{100,100}})),
                          Documentation(info="<html>
 <p>A simple engine model with flywheel and where the torque output is proportional to the accelerator pedal position.
-This engine model uses the physical connection between the driver and the engine for the accelerator pedal.</p> 
+This engine model uses the physical connection between the driver and the engine for the accelerator pedal.</p>
 </html>"));
   end MinimalEngineUsingPedal;
 

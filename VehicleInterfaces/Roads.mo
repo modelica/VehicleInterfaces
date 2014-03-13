@@ -20,73 +20,73 @@ package Roads "Collection of road definitions"
 </ul>
 <li>Define the position function.  The road is to be defined as a line along the x-axis with the lateral direction along the y-axis.  The inputs to the base position function are <b>s</b> and <b>w</b> and these have the following meaning in this road definition:<br>
 <pre>
- 
+
    s: x-coordinate in world frame (x-axis is road heading direction)
    w: y-coordinate in world frame (y-axis is lateral displacement)
 </pre>
 <br>The input arguments <b>s</b> and <b>w</b> are common to all the road functions that we need to define and are included in the base function definitions.  These definitions can then be used to define our position function as follows:</li>
 <br><br><pre>
-  function linePosition \"Determine point on road\" 
+  function linePosition \"Determine point on road\"
     extends VehicleInterfaces.Roads.Interfaces.Base.position;
-  algorithm 
+  algorithm
     r_0 := {s,w,0};
   end linePosition;
- 
+
 </pre>
 <li>Define the trackOffset function.  This road is defined with a constant offset that can be non-zero so the function is defined as:</li>
-<br><br><pre> 
-  function constantOffset \"Determine offset from road centre line\" 
+<br><br><pre>
+  function constantOffset \"Determine offset from road centre line\"
     extends VehicleInterfaces.Roads.Interfaces.Base.trackOffset;
     input Modelica.SIunits.Distance offset;
-  algorithm 
+  algorithm
     trackOffset := {0,offset,0};
   end constantOffset;
- 
+
 </pre>
 <li>Define the normal function.  This road is a flat road so the normal is always in the same direction along the z-axis and our normal function can be defined as:</li>
 <br><br><pre>
-  function lineNormal \"Determine unit normal on road\" 
+  function lineNormal \"Determine unit normal on road\"
     extends VehicleInterfaces.Roads.Interfaces.Base.normal;
-  algorithm 
+  algorithm
     e_n_0 := {0,0,1};
   end lineNormal;
- 
+
 </pre>
 <li>Define the headingDirection function.  In step 3, we define the road as a line along the x-axis.  This means that the heading direction is always in the same direction along the x-axis and our headingDirection function can be defined as:</li>
 <br><br><pre>
-  function lineHeadingDirection 
-    \"Determine unit heading direction on road\" 
+  function lineHeadingDirection
+    \"Determine unit heading direction on road\"
     extends VehicleInterfaces.Roads.Interfaces.Base.headingDirection;
-  algorithm 
+  algorithm
     e_s_0 := {1,0,0};
   end lineHeadingDirection;
- 
+
 </pre>
 <li>Define the frictionCoefficient function.  The friction coefficient could be defined to vary along the road surface but in this case we are going to define it as a constant.  Our frictionCoefficient can be defined as:</li>
 <br><br><pre>
-  function lineFrictionCoefficient 
-    \"Determine friction coefficient at point on road\" 
+  function lineFrictionCoefficient
+    \"Determine friction coefficient at point on road\"
     extends VehicleInterfaces.Roads.Interfaces.Base.frictionCoefficient;
     input Real mue_fixed \"Friction coefficient\";
-  algorithm 
+  algorithm
     mue := mue_fixed;
   end lineFrictionCoefficient;
- 
+
 </pre>
 <li>We now need to redeclare the functions in the base road definition to be the functions shown above.  We do this with the following code assuming that the above functions have been defined within the class <b>FlatRoad</b>:</li>
 <br><br><pre>
-  model FlatRoad \"Straight road along x-axis (perpendicular to world z-axis)\" 
+  model FlatRoad \"Straight road along x-axis (perpendicular to world z-axis)\"
     extends VehicleInterfaces.Roads.Interfaces.Base(
       redeclare final function position = linePosition,
       redeclare final function trackOffset = constantOffset(offset=offset)
       redeclare final function normal = lineNormal,
       redeclare final function headingDirection = lineHeadingDirection,
       redeclare final function frictionCoefficient = lineFrictionCoefficient(mue_fixed=mue));
- 
+
     //rest of definition
     ...
   end FlatRoad;
- 
+
 </pre>
 <li>In redeclaring the functions we have also introduced new parameters <b>mue</b> and <b>offset</b> that need to be added to the model to define the friction coefficient of the road and the track offset from the road centre line.</li>
 <li>The <b>FlatRoad</b> model included in this package also includes animation of the road surface but this is not essential to the definition of the road and will not be described in this tutorial.</li>
@@ -642,7 +642,7 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
                 {100,100}}),
                 graphics),
         Documentation(info="<html>
-<p>Model to check that the tire contact patch calculation is working correctly with the road models.</p> 
+<p>Model to check that the tire contact patch calculation is working correctly with the road models.</p>
 </html>"));
     end CheckContactCalculation;
 
@@ -736,7 +736,7 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
       annotation (
         experiment(StopTime=1),
         Documentation(info="<html>
-<p>Model to check that the road functions can be differentiated correctly</p> 
+<p>Model to check that the road functions can be differentiated correctly</p>
 </html>"));
     end CheckFunctionDifferentiation_CircleRoads;
 

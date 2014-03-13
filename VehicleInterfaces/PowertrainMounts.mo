@@ -130,7 +130,7 @@ package PowertrainMounts "Collection of powertrain mounts subsystem definition"
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for powertrain mounting systems. 
+A collection of partial base classes which define interfaces for powertrain mounting systems.
 </p>
 </html>"));
   end Interfaces;
@@ -238,7 +238,7 @@ A collection of partial base classes which define interfaces for powertrain moun
               100}}),
            graphics),
       Documentation(info="<html>
-<p>Rigidly mounts 2 power train systems such as the engine and transmission on one supporting system, usually the chassis</p> 
+<p>Rigidly mounts 2 power train systems such as the engine and transmission on one supporting system, usually the chassis</p>
 </html>"));
   end TwoSystemRigidMount;
 
@@ -271,7 +271,7 @@ A collection of partial base classes which define interfaces for powertrain moun
               100}}),
            graphics),
       Documentation(info="<html>
-<p>Rigidly mounts 1 power train systems such as the engine or transmission on one supporting system, usually the chassis</p> 
+<p>Rigidly mounts 1 power train systems such as the engine or transmission on one supporting system, usually the chassis</p>
 </html>"));
   end SingleSystemRigidMount;
 

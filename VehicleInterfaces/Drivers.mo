@@ -50,8 +50,8 @@ package Drivers "Collection of driver subsystem definitions"
       SI.Velocity vehicleSpeed "Vehicle speed" annotation (Dialog);
       SI.AngularVelocity engineSpeed "Engine speed" annotation (Dialog);
       annotation (Documentation(info="<html>
-<p>An expandable connector that defines the minimum set of signals required 
-  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.  
+<p>An expandable connector that defines the minimum set of signals required
+  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.
   </p>
 </html>"));
     end MinimalBus;
@@ -68,8 +68,8 @@ package Drivers "Collection of driver subsystem definitions"
         annotation (Dialog);
 
       annotation (Documentation(info="<html>
-<p>An expandable connector that defines the minimum set of signals required 
-  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.  
+<p>An expandable connector that defines the minimum set of signals required
+  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.
   </p>
 </html>"));
     end BusForAutomaticTransmission;
@@ -92,7 +92,7 @@ package Drivers "Collection of driver subsystem definitions"
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for driver models. 
+A collection of partial base classes which define interfaces for driver models.
 </p>
 </html>"));
   end Interfaces;
@@ -104,7 +104,7 @@ A collection of partial base classes which define interfaces for driver models.
 
     annotation (Documentation(info="<html>
 <p>
-Empty driver model. Using this empty model in overall vehicle architecture the functionality of driver can be eliminated. 
+Empty driver model. Using this empty model in overall vehicle architecture the functionality of driver can be eliminated.
 </p>
 </html>"));
   end NoDriver;

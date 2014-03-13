@@ -71,7 +71,7 @@ package Accessories "Collection of accessory subsystem definitions"
     end Base;
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for accessories models. 
+A collection of partial base classes which define interfaces for accessories models.
 </p>
 </html>"));
   end Interfaces;
@@ -85,7 +85,7 @@ A collection of partial base classes which define interfaces for accessories mod
               -100},{100,100}})),
                          Documentation(info="<html>
 <p>
-Empty accessories subsystem. Using this empty model in overall vehicle architecture the functionality of accessories subsystem can be eliminated. 
+Empty accessories subsystem. Using this empty model in overall vehicle architecture the functionality of accessories subsystem can be eliminated.
 </p>
 </html>"));
   end NoAccessories;

@@ -140,7 +140,7 @@ Formally, the output <b>y</b> is computed as:
 <pre>
     y = 1 - u;
 </pre>
- 
+
 </HTML>
 "));
   end InvertNormalizedInput;
