@@ -25,11 +25,9 @@ package Drivers "Collection of driver subsystem definitions"
             origin={100,0})));
       annotation (
         Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{100,
-                100}}),
-                graphics),
+                100}})),
         Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}}),
-             graphics),
+                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for the driver subsystem. This class should be extended to form a particular driver model. See the <a href=\"Modelica://VehicleInterfaces.Drivers\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Drivers.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -96,7 +94,6 @@ package Drivers "Collection of driver subsystem definitions"
 <p>
 A collection of partial base classes which define interfaces for driver models. 
 </p>
-<placeholder></placeholder>
 </html>"));
   end Interfaces;
 
@@ -215,8 +212,7 @@ Empty driver model. Using this empty model in overall vehicle architecture the f
     annotation (
       defaultComponentName="driver",
       Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-              100}}),
-              graphics),
+              100}})),
       Documentation(info="<html>
 <p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.</p>
 </html>"));

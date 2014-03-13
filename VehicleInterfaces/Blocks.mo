@@ -15,8 +15,7 @@ package Blocks "Collection of input/output fixed causality blocks"
     y = u;
 
     annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                     graphics),
+              -100},{100,100}})),
                       Documentation(info="<html>
 <p>Passes a Real signal through without modification.  Enables signals to be read out of one bus, have their name changed and be sent back to a bus.</p>
 </html>"));
@@ -35,8 +34,7 @@ package Blocks "Collection of input/output fixed causality blocks"
     y = u;
 
     annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                     graphics),
+              -100},{100,100}})),
                       Documentation(info="<html>
 <p>Passes a Integer signal through without modification.  Enables signals to be read out of one bus, have their name changed and be sent back to a bus.</p>
 </html>"));
@@ -55,8 +53,7 @@ package Blocks "Collection of input/output fixed causality blocks"
     y = u;
 
     annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                        graphics),
+              -100},{100,100}})),
                          Documentation(info="<html>
 <p>Passes a Boolean signal through without modification.  Enables signals to be read out of one bus, have their name changed and be sent back to a bus.</p>
 </html>"));
@@ -151,6 +148,5 @@ Formally, the output <b>y</b> is computed as:
   annotation (Documentation(info="<html>
 <p>
 A collection of additional input and ouput fixed causality blocks.</p>
-<placeholder></placeholder>
 </html>"));
 end Blocks;
