@@ -1276,7 +1276,7 @@ This partial class is intended to design a default icon for a <em>road</em>.
 </html>"));
   end Road;
 
-  connector SignalSubBusWithExplicitSignals
+  expandable connector SignalSubBusWithExplicitSignals
     "Icon for signal sub-bus where the explicit signals are defined in the bus"
 
     annotation (
