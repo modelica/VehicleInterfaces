@@ -80,8 +80,7 @@ package DriverEnvironments
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
         Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}}),
-             graphics),
+                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for the driver environment subsystem.  See the <a href=\"Modelica://VehicleInterfaces.DriverEnvironments\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.DriverEnvironments.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -104,7 +103,7 @@ package DriverEnvironments
             origin={-100,0})));
       annotation (Documentation(info="<html>
 <p>Base class for driver models for vehicles with automatic transmissions where the driver control logic is contained in an <a href=\"Modelica://VehicleInterfaces.Drivers\">external driver model</a>. </p>
-</html>"), Diagram(graphics));
+</html>"));
     end BaseAutomaticTransmissionExternalDriver;
 
     partial model BaseManualTransmission
@@ -147,7 +146,7 @@ package DriverEnvironments
             origin={-100,0})));
       annotation (Documentation(info="<html>
 <p>Base class for driver models for vehicles with manual transmissions where the driver control logic is contained in an <a href=\"Modelica://VehicleInterfaces.Drivers\">external driver model</a>. </p>
-</html>"),     Diagram(graphics));
+</html>"));
     end BaseManualTransmissionExternalDriver;
 
     expandable connector MinimalBus
@@ -167,7 +166,7 @@ package DriverEnvironments
 <p>
 An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
 </p>
-</html>"), Diagram(graphics));
+</html>"));
     end MinimalBus;
 
     expandable connector BusForAutomaticTransmission
@@ -184,7 +183,7 @@ An expandable connector that defines the minimum set of signals required on the 
 <p>
 An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
 </p>
-</html>"), Diagram(graphics));
+</html>"));
     end BusForAutomaticTransmission;
 
     expandable connector BusForManualTransmission
@@ -202,14 +201,13 @@ An expandable connector that defines the minimum set of signals required on the 
 <p>
 An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
 </p>
-</html>"), Diagram(graphics));
+</html>"));
     end BusForManualTransmission;
 
     annotation (Documentation(info="<html>
 <p>
 A collection of partial base classes which define interfaces for driver environment models. 
 </p>
-<placeholder></placeholder>
 </html>"));
   end Interfaces;
 
@@ -300,11 +298,10 @@ Empty driver environment. Using this empty model in overall vehicle architecture
       Diagram(coordinateSystem(
           preserveAspectRatio=true,
           extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={2,2})),
       Documentation(info="<html>
 <p>Constant acceleration driver with the capabilitiy to step between two constant throttle values and to step on/off the brakes.</p>
-</html>"),
-      Icon(graphics));
+</html>"));
   end DriveByWireAutomatic;
 
   model ConventionalManual
@@ -422,7 +419,7 @@ Empty driver environment. Using this empty model in overall vehicle architecture
       Diagram(coordinateSystem(
           preserveAspectRatio=true,
           extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={2,2})),
       Documentation(info="<html>
 <p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.  
 Fixed gear and constant clutch position.</p>
@@ -539,7 +536,7 @@ Fixed gear and constant clutch position.</p>
       Diagram(coordinateSystem(
           preserveAspectRatio=true,
           extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={2,2})),
       Documentation(info="<html>
 <p>Driver environment that requires an external driver model. Signals received from external driver model are simply propagated throug withouth any modification.</p>
 </html>"),

@@ -88,7 +88,5 @@ package Types "Collection of type definitions"
 
   annotation (Documentation(info="<html>
 <p>Type definitions required by the library.</p>
-<placeholder></placeholder>
-<placeholder></placeholder>
 </html>"));
 end Types;

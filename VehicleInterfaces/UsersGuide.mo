@@ -422,6 +422,22 @@ Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
   package ReleaseNotes "Release notes"
     extends Modelica.Icons.ReleaseNotes;
 
+    class Version_1_2_2 "Version 1.2.1 (Mar. 13, 2014)"
+      extends Modelica.Icons.ReleaseNotes;
+
+      annotation (Documentation(info="<html>
+<p>This version requires the <b>Modelica 3.2.1</b> Library.
+   This version is backwards compatible to versions&nbsp;1.1.x of the VehicleInterfaces library.</p>
+
+<h4>Improvements in this version:</h4>
+
+<ul>
+<li>Further adaption to the conventions of the Modelica Specification 3.2 Revision 2, removal of Dymola specific visualization.
+</li>
+</ul>
+</html>"));
+    end Version_1_2_2;
+
     class Version_1_2_1 "Version 1.2.1 (Oct. 1, 2013)"
       extends Modelica.Icons.ReleaseNotes;
 

@@ -73,7 +73,6 @@ package Accessories "Collection of accessory subsystem definitions"
 <p>
 A collection of partial base classes which define interfaces for accessories models. 
 </p>
-<placeholder></placeholder>
 </html>"));
   end Interfaces;
 
@@ -83,8 +82,7 @@ A collection of partial base classes which define interfaces for accessories mod
     extends Interfaces.Base;
 
     annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                        graphics),
+              -100},{100,100}})),
                          Documentation(info="<html>
 <p>
 Empty accessories subsystem. Using this empty model in overall vehicle architecture the functionality of accessories subsystem can be eliminated. 
@@ -136,11 +134,9 @@ Empty accessories subsystem. Using this empty model in overall vehicle architect
         color={95,95,95},
         thickness=0.5));
     annotation (Diagram(coordinateSystem(preserveAspectRatio=true, extent={{-100,
-              -100},{100,100}}),
-                        graphics),
+              -100},{100,100}})),
                          Documentation(info="<html>
 <p>Simple accessory model with a single inertia and constant torque loss.</p>
-<placeholder></placeholder>
 </html>"));
   end MinimalAccessories;
 

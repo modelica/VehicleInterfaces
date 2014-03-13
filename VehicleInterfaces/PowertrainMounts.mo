@@ -124,7 +124,7 @@ package PowertrainMounts "Collection of powertrain mounts subsystem definition"
             preserveAspectRatio=false,
             extent={{-150,-100},{150,100}},
             grid={1,1},
-            initialScale=0.1), graphics));
+            initialScale=0.1)));
 
     end TripleSystemMount;
 
@@ -132,7 +132,6 @@ package PowertrainMounts "Collection of powertrain mounts subsystem definition"
 <p>
 A collection of partial base classes which define interfaces for powertrain mounting systems. 
 </p>
-<placeholder></placeholder>
 </html>"));
   end Interfaces;
 

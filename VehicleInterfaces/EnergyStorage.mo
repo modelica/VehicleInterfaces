@@ -64,8 +64,7 @@ package EnergyStorage "Collection of energy storage subsystem definitions"
           color={0,0,255},
           smooth=Smooth.None));
       annotation (Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,
-                -100},{100,100}}),
-                          graphics),
+                -100},{100,100}})),
                            Icon(coordinateSystem(preserveAspectRatio=true,
               extent={{-100,-100},{100,100}}),
                                 graphics={
@@ -98,7 +97,6 @@ package EnergyStorage "Collection of energy storage subsystem definitions"
 <p>
 A collection of partial base classes which define interfaces for energy storage models. 
 </p>
-<placeholder></placeholder>
 </html>"));
   end Interfaces;
 
@@ -124,14 +122,11 @@ A collection of partial base classes which define interfaces for energy storage 
 
     annotation (
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-              100}}),
-           graphics),
+              100}})),
       Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{100,
-              100}}),
-              graphics),
+              100}})),
       Documentation(info="<html>
 <p>An ideal battery with a constant voltage. No state of charge is introduced.</p>
-<placeholder></placeholder>
 </html>"));
   end Battery;
 
