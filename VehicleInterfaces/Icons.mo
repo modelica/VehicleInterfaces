@@ -7,8 +7,6 @@ package Icons "Collection of icons"
     extends Modelica.Icons.VariantsPackage;
 
     annotation (
-      Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-              100}})),
       Documentation(info="<html>
 <p>
 This partial class is intended to design a <em>default icon for a package class</em> which contains several <em>variants</em> of one assembly or component.
@@ -21,9 +19,7 @@ This partial class is intended to design a <em>default icon for a package class<
     extends Modelica.Icons.BasesPackage;
     extends Modelica.Icons.ObsoleteModel;
 
-     annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
-                              Documentation(revisions="<html><table border=0 cellspacing=0 cellpadding=0>
+     annotation (                              Documentation(revisions="<html><table border=0 cellspacing=0 cellpadding=0>
   <tr><td valign=\"center\"> <img src=\"modelica://LibraryTemplate/Resources/Images/logo_dlr.png\" width=60></td>
       <td valign=\"center\"> <b>Copyright &copy; 2006-2010, DLR Institute of Robotics and Mechatronics<b> </td>
   </tr>
@@ -115,8 +111,6 @@ This partial class is intended to design a <em>default icon for a package class<
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name")}),
-                              Diagram(coordinateSystem(preserveAspectRatio=false,
-                     extent={{-100,-100},{100,100}})),
       Documentation(info="<html>
 <p>
 This partial class is intended to design a default icon for an <em>accessorier assembly</em>.
@@ -216,10 +210,6 @@ This partial class is intended to design a default icon for an <em>atmosphere</e
   partial model Battery "Icon for a battery subsystem"
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -700,9 +690,7 @@ This partial class is intended to design a default icon for <em>controllers</em>
 
   model DataDictionary "Icon for a data dictionary"
 
-    annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
-                         Icon(coordinateSystem(preserveAspectRatio=false,
+    annotation (                         Icon(coordinateSystem(preserveAspectRatio=false,
             extent={{-100,-100},{100,100}}), graphics={
           Ellipse(
             extent={{-60,-60},{60,-100}},
@@ -777,10 +765,6 @@ This partial class is intended to design a default icon for a <em>data dictionar
   partial model Driveline "Icon for a driveline subsystem"
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -1029,10 +1013,6 @@ This partial class is intended to design a default icon for a <em>driver model</
   partial model ElectricMotor "Icon for an electric drive subsystem"
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -1264,11 +1244,6 @@ This partial class is intended to design a default icon for a <em>road</em>.
     "Icon for signal sub-bus where the explicit signals are defined in the bus"
 
     annotation (
-      Icon(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={2,2},
-          initialScale=0.1)),
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -1289,10 +1264,6 @@ This icon is designed for a <b>sub-bus</b> in a signal connector.
   partial model SingleMount "Icon for a single mounting subsystem"
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},

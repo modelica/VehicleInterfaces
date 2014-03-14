@@ -45,9 +45,7 @@ the second creates a new signal called <b>v_veh</b>.
       VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
         annotation (Placement(transformation(extent={{-20,-80},{20,-120}},
               rotation=0)));
-      annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}})),
-                        Documentation(info="<html>
+      annotation (                        Documentation(info="<html>
 <p>This partial model defines the interfaces required for a data dictionary within the VehicleInterfaces package.
 Especially, it provide alias names for the controBus. See the <a href=\"VehicleSystems.DataDictionaries\">documentation</a> and <a href=\"VehicleInterfaces.DataDictionaries.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -104,8 +102,6 @@ Empty data dictionary model. Using this empty model in overall vehicle architect
         index=-1,
         extent={{-6,3},{-6,3}}));
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=true, extent={{-100,-100},{
-              100,100}})),
                          Documentation(info="<html>
  <p>A simple data dictionary example that creates a new signal called <b>v_veh</b> within the <b>chassisBus</b> sub-bus of the control bus.</p>
 </html>"));

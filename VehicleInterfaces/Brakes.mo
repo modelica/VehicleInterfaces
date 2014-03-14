@@ -102,8 +102,6 @@ the brake pedal connection.</li>
               extent={{-18,112},{6,88}},
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
-        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the basic interfaces required for any brakes subsystem.  This class should be extended to form a brakes interface definition with the correct number of wheelHub connectors for the type of vehicle being modelled. See the <a href=\"Modelica://VehicleInterfaces.Brakes\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Brakes.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -521,9 +519,7 @@ A collection of partial base classes which define interfaces for brakes models.
   protected
     outer Modelica.Mechanics.MultiBody.World world;
 
-    annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
-      Documentation(info="<html>
+    annotation (      Documentation(info="<html>
 <p>Zero torque is applied to all the wheelhubs and the reaction paths in to the wheel hubs included if the <b>driveTrainMechanics3D</b> flag in the world object is true.</p>
 <p>
 Using this empty model in overall vehicle architecture the functionality of brakes can be eliminated.
@@ -697,10 +693,6 @@ Using this empty model in overall vehicle architecture the functionality of brak
            {{-80,-75},{-80,-60},{-70,-60}}, color={0,0,0}));
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Documentation(info="<html>
 <p>Brakes subsystem model that uses the driver <b>brakePedalPosition</b> signal to determine the brake torque demand being requested by the driver.</p>
 </html>"));
@@ -871,10 +863,6 @@ Using this empty model in overall vehicle architecture the functionality of brak
     connect(torqueReaction_1.flange_b,brake_1.support)  annotation (Line(points=
            {{-80,-75},{-80,-60},{-70,-60}}, color={0,0,0}));
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Documentation(info="<html>
 <p>Brakes subsystem model that uses the physical pedal connection to determine the brake torque demand being requested by the driver.</p>
 </html>"));

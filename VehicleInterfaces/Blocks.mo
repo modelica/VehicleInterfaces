@@ -14,9 +14,7 @@ package Blocks "Collection of input/output fixed causality blocks"
   equation
     y = u;
 
-    annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
-                      Documentation(info="<html>
+    annotation (                      Documentation(info="<html>
 <p>Passes a Real signal through without modification.  Enables signals to be read out of one bus, have their name changed and be sent back to a bus.</p>
 </html>"));
   end RealPassThrough;
@@ -33,9 +31,7 @@ package Blocks "Collection of input/output fixed causality blocks"
   equation
     y = u;
 
-    annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
-                      Documentation(info="<html>
+    annotation (                      Documentation(info="<html>
 <p>Passes a Integer signal through without modification.  Enables signals to be read out of one bus, have their name changed and be sent back to a bus.</p>
 </html>"));
   end IntegerPassThrough;
@@ -52,9 +48,7 @@ package Blocks "Collection of input/output fixed causality blocks"
   equation
     y = u;
 
-    annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
-                         Documentation(info="<html>
+    annotation (                         Documentation(info="<html>
 <p>Passes a Boolean signal through without modification.  Enables signals to be read out of one bus, have their name changed and be sent back to a bus.</p>
 </html>"));
   end BooleanPassThrough;

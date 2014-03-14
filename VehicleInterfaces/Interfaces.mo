@@ -83,9 +83,7 @@ A collection of internal material for interface models. Especially, the bus defi
     VehicleInterfaces.Interfaces.TransmissionControlBus
       transmissionControlBus "Transmission control bus" annotation(Dialog(enable=false));
 
-    annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}), graphics),
-      Documentation(info="<html>
+    annotation (      Documentation(info="<html>
 <p>An empty expandable connector used as the top-level control signal bus in VehicleInterfaces.</p>
 </html>"));
   end ControlBus;
@@ -542,9 +540,6 @@ It is defined as an empty expandable connector.</p>
     end if;
 
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{
-              100,100}}),
-              graphics),
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
               100}}), graphics={
           Rectangle(
@@ -651,9 +646,6 @@ It is defined as an empty expandable connector.</p>
     end if;
 
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{
-              100,100}}),
-              graphics),
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
               100}}), graphics={
           Rectangle(

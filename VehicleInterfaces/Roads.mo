@@ -448,12 +448,7 @@ of the functions.
           Text(
             extent={{-150,160},{150,110}},
             lineColor={0,0,255},
-            textString="%name")}),
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={2,2},
-          initialScale=0.2), graphics));
+            textString="%name")}));
   end CircleRoad;
 
   package Internal "Collection of internal material involving roads"
@@ -638,9 +633,6 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
 
       annotation (
         experiment(StopTime=6.2),
-        Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
-                {100,100}}),
-                graphics),
         Documentation(info="<html>
 <p>Model to check that the tire contact patch calculation is working correctly with the road models.</p>
 </html>"));

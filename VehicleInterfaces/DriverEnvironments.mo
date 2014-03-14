@@ -79,8 +79,6 @@ package DriverEnvironments
               extent={{22,-88},{46,-112}},
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
-        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for the driver environment subsystem.  See the <a href=\"Modelica://VehicleInterfaces.DriverEnvironments\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.DriverEnvironments.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -295,10 +293,6 @@ Empty driver environment. Using this empty model in overall vehicle architecture
             40},{60,60}}, color={255,127,0}));
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})),
       Documentation(info="<html>
 <p>Constant acceleration driver with the capabilitiy to step between two constant throttle values and to step on/off the brakes.</p>
 </html>"));
@@ -416,10 +410,6 @@ Empty driver environment. Using this empty model in overall vehicle architecture
                      color={255,127,0}));
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})),
       Documentation(info="<html>
 <p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.
 Fixed gear and constant clutch position.</p>
@@ -533,17 +523,9 @@ Fixed gear and constant clutch position.</p>
         index=1,
         extent={{6,3},{6,3}}));
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})),
       Documentation(info="<html>
 <p>Driver environment that requires an external driver model. Signals received from external driver model are simply propagated throug withouth any modification.</p>
-</html>"),
-      Icon(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})));
+</html>"));
   end DriveByWireAutomaticExternalDriver;
 
   package Internal

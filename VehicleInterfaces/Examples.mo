@@ -174,10 +174,6 @@ package Examples "Collection of vehicle model examples"
           extent={{-160,-100},{160,100}},
           grid={1,1},
           initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with an automatic transmission.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -204,10 +200,6 @@ package Examples "Collection of vehicle model examples"
           extent={{-160,-100},{160,100}},
           grid={1,1},
           initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with an automatic transmission.  Based on <a href=\"Modelica://VehicleInterfaces.Examples.ConventionalAutomaticVehicle\">ConventionalAutomaticVehicle</a> this example shows how the DataDictionary can be used.</p>
 </html>"),
@@ -422,10 +414,6 @@ package Examples "Collection of vehicle model examples"
           extent={{-160,-100},{160,100}},
           grid={1,1},
           initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
       Documentation(info="<html>
 <p>Example model architecture of a rear wheel drive passenger car with an automatic transmission.  In this architecture variant the PowerTrain systems can be elastically mounted in the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -618,10 +606,6 @@ package Examples "Collection of vehicle model examples"
           extent={{-160,-100},{160,100}},
           grid={1,1},
           initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with an automatic transmission and a driver model that is defined separately from the driverEnvironment.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -810,10 +794,6 @@ package Examples "Collection of vehicle model examples"
           extent={{-160,-100},{160,100}},
           grid={1,1},
           initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with a manual transmission.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -1016,10 +996,6 @@ package Examples "Collection of vehicle model examples"
           extent={{-150,-100},{170,100}},
           grid={1,1},
           initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
       Documentation(info="<html>
 <p>Example model architecture of a front wheel drive passenger car with an automatic transmission.  In this architecture variant the PowerTrain systems can be elastically mounted in the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -1164,10 +1140,6 @@ package Examples "Collection of vehicle model examples"
           extent={{-160,-100},{160,100}},
           grid={1,1},
           initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with a power-split hybrid powertrain.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -1291,10 +1263,6 @@ package Examples "Collection of vehicle model examples"
           extent={{-160,-100},{160,100}},
           grid={1,1},
           initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with a series hybrid powertrain.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -1427,10 +1395,6 @@ package Examples "Collection of vehicle model examples"
           extent={{-160,-100},{160,100}},
           grid={1,1},
           initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
       Documentation(info="<html>
 <p>Base model architecture of a passenger car that can be extended to add any type of powertrain.  In this architecture variant the Driveline subsystem is rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"));
@@ -1438,6 +1402,5 @@ package Examples "Collection of vehicle model examples"
 
   annotation (Protection(allowDuplicate=true),Documentation(info="<html>
 <p>Example vehicle model architectures.  These can be used as the basis for your own vehicle models but are also fully functional vehicle models on their own.</p>
-</html>"),
-    Icon(graphics));
+</html>"));
 end Examples;
