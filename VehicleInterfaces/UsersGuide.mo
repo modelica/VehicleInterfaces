@@ -1,5 +1,5 @@
 within VehicleInterfaces;
-package UsersGuide "Users Guide"
+package UsersGuide "User's Guide"
   extends Modelica.Icons.Information;
 
   class QuickStart "Quick start guide"
