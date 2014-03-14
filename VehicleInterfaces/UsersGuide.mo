@@ -1,5 +1,5 @@
 within VehicleInterfaces;
-package UsersGuide "Users Guide"
+package UsersGuide "User's Guide"
   extends Modelica.Icons.Information;
 
   class QuickStart "Quick start guide"
@@ -426,13 +426,13 @@ Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
       extends Modelica.Icons.ReleaseNotes;
 
       annotation (Documentation(info="<html>
-<p>This version requires the <b>Modelica 3.2.2</b> Library.
+<p>This version requires the <b>Modelica 3.2.1</b> Library.
    This version is backwards compatible to versions&nbsp;1.1.x of the VehicleInterfaces library.</p>
 
 <h4>Improvements in this version:</h4>
 
 <ul>
-<li>Adapted to the conventions of the Modelica Standard Library 3.2.2, removal of Dymola specific visualization.
+<li>Further adaption to the conventions of the Modelica Specification 3.2 Revision 2, removal of Dymola specific visualization.
 </li>
 </ul>
 </html>"));

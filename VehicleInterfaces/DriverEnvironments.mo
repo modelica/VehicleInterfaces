@@ -79,8 +79,6 @@ package DriverEnvironments
               extent={{22,-88},{46,-112}},
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
-        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for the driver environment subsystem.  See the <a href=\"Modelica://VehicleInterfaces.DriverEnvironments\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.DriverEnvironments.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -133,7 +131,7 @@ package DriverEnvironments
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
                             Documentation(info="<html>
- <p>Base class for driver models for vehicles with manual transmissions where the driver control logic is contained within the derived model.</p> 
+ <p>Base class for driver models for vehicles with manual transmissions where the driver control logic is contained within the derived model.</p>
 </html>"));
     end BaseManualTransmission;
 
@@ -164,7 +162,7 @@ package DriverEnvironments
         "Engine ignition (Off, On or Start)" annotation (Dialog);
       annotation (Documentation(info="<html>
 <p>
-An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
+An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
 </html>"));
     end MinimalBus;
@@ -181,7 +179,7 @@ An expandable connector that defines the minimum set of signals required on the 
         annotation (Dialog);
       annotation (Documentation(info="<html>
 <p>
-An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
+An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
 </html>"));
     end BusForAutomaticTransmission;
@@ -199,14 +197,14 @@ An expandable connector that defines the minimum set of signals required on the 
 
       annotation (Documentation(info="<html>
 <p>
-An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
+An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
 </html>"));
     end BusForManualTransmission;
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for driver environment models. 
+A collection of partial base classes which define interfaces for driver environment models.
 </p>
 </html>"));
   end Interfaces;
@@ -217,7 +215,7 @@ A collection of partial base classes which define interfaces for driver environm
     extends Interfaces.Base;
     annotation (Documentation(info="<html>
 <p>
-Empty driver environment. Using this empty model in overall vehicle architecture the functionality of driver environment can be eliminated. 
+Empty driver environment. Using this empty model in overall vehicle architecture the functionality of driver environment can be eliminated.
 </p>
 </html>"));
   end NoDriverEnvironment;
@@ -295,10 +293,6 @@ Empty driver environment. Using this empty model in overall vehicle architecture
             40},{60,60}}, color={255,127,0}));
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})),
       Documentation(info="<html>
 <p>Constant acceleration driver with the capabilitiy to step between two constant throttle values and to step on/off the brakes.</p>
 </html>"));
@@ -416,12 +410,8 @@ Empty driver environment. Using this empty model in overall vehicle architecture
                      color={255,127,0}));
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})),
       Documentation(info="<html>
-<p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.  
+<p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.
 Fixed gear and constant clutch position.</p>
 </html>"));
   end ConventionalManual;
@@ -533,17 +523,9 @@ Fixed gear and constant clutch position.</p>
         index=1,
         extent={{6,3},{6,3}}));
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})),
       Documentation(info="<html>
 <p>Driver environment that requires an external driver model. Signals received from external driver model are simply propagated throug withouth any modification.</p>
-</html>"),
-      Icon(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})));
+</html>"));
   end DriveByWireAutomaticExternalDriver;
 
   package Internal

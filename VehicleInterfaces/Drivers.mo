@@ -24,10 +24,6 @@ package Drivers "Collection of driver subsystem definitions"
                 {10,10}},          rotation=-90,
             origin={100,0})));
       annotation (
-        Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{100,
-                100}})),
-        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for the driver subsystem. This class should be extended to form a particular driver model. See the <a href=\"Modelica://VehicleInterfaces.Drivers\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Drivers.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -50,8 +46,8 @@ package Drivers "Collection of driver subsystem definitions"
       SI.Velocity vehicleSpeed "Vehicle speed" annotation (Dialog);
       SI.AngularVelocity engineSpeed "Engine speed" annotation (Dialog);
       annotation (Documentation(info="<html>
-<p>An expandable connector that defines the minimum set of signals required 
-  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.  
+<p>An expandable connector that defines the minimum set of signals required
+  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.
   </p>
 </html>"));
     end MinimalBus;
@@ -68,8 +64,8 @@ package Drivers "Collection of driver subsystem definitions"
         annotation (Dialog);
 
       annotation (Documentation(info="<html>
-<p>An expandable connector that defines the minimum set of signals required 
-  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.  
+<p>An expandable connector that defines the minimum set of signals required
+  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.
   </p>
 </html>"));
     end BusForAutomaticTransmission;
@@ -92,7 +88,7 @@ package Drivers "Collection of driver subsystem definitions"
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for driver models. 
+A collection of partial base classes which define interfaces for driver models.
 </p>
 </html>"));
   end Interfaces;
@@ -104,7 +100,7 @@ A collection of partial base classes which define interfaces for driver models.
 
     annotation (Documentation(info="<html>
 <p>
-Empty driver model. Using this empty model in overall vehicle architecture the functionality of driver can be eliminated. 
+Empty driver model. Using this empty model in overall vehicle architecture the functionality of driver can be eliminated.
 </p>
 </html>"));
   end NoDriver;
@@ -211,8 +207,6 @@ Empty driver model. Using this empty model in overall vehicle architecture the f
 
     annotation (
       defaultComponentName="driver",
-      Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-              100}})),
       Documentation(info="<html>
 <p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.</p>
 </html>"));

@@ -34,10 +34,7 @@ package PowertrainMounts "Collection of powertrain mounts subsystem definition"
             origin={0,-100},
             extent={{-16,-16},{16,16}},
             rotation=90)));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics),
-        Documentation(info="<html>
+      annotation (        Documentation(info="<html>
 <p>This partial model defines the common interfaces required for a mounting subsystem.  See the <a href=\"Modelica://VehicleInterfaces.PowertrainMounts\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.PowertrainMounts.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end Base;
@@ -51,10 +48,7 @@ package PowertrainMounts "Collection of powertrain mounts subsystem definition"
             origin={0,100},
             extent={{-16,-16},{16,16}},
             rotation=90)));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics),
-        Documentation(info="<html>
+      annotation (        Documentation(info="<html>
 <p>This partial model defines the interfaces required for a single powertrain system mounting subsystem. This class should be extended to form a particular powertrain mounting model. See the <a href=\"Modelica://VehicleInterfaces.PowertrainMounts\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.PowertrainMounts.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end SingleSystemMount;
@@ -130,7 +124,7 @@ package PowertrainMounts "Collection of powertrain mounts subsystem definition"
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for powertrain mounting systems. 
+A collection of partial base classes which define interfaces for powertrain mounting systems.
 </p>
 </html>"));
   end Interfaces;
@@ -238,7 +232,7 @@ A collection of partial base classes which define interfaces for powertrain moun
               100}}),
            graphics),
       Documentation(info="<html>
-<p>Rigidly mounts 2 power train systems such as the engine and transmission on one supporting system, usually the chassis</p> 
+<p>Rigidly mounts 2 power train systems such as the engine and transmission on one supporting system, usually the chassis</p>
 </html>"));
   end TwoSystemRigidMount;
 
@@ -264,14 +258,8 @@ A collection of partial base classes which define interfaces for powertrain moun
         thickness=0.5));
 
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-              100,100}}),
-              graphics),
-      Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-              100}}),
-           graphics),
       Documentation(info="<html>
-<p>Rigidly mounts 1 power train systems such as the engine or transmission on one supporting system, usually the chassis</p> 
+<p>Rigidly mounts 1 power train systems such as the engine or transmission on one supporting system, usually the chassis</p>
 </html>"));
   end SingleSystemRigidMount;
 

@@ -58,11 +58,7 @@ package ElectricDrives "Collection of electric drive subsystem definitions"
           color={135,135,135},
           thickness=0.5));
 
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}})),
-                           Icon(coordinateSystem(preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}})),
-        Documentation(info="<html>
+      annotation (        Documentation(info="<html>
 <p>This partial model defines the interfaces required for an electric machine subsystem. This class should be extended to form an electric machine interface definition with propper electrical connectors. See the <a href=\"Modelica://VehicleInterfaces.ElectricDrives\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.ElectricDrives.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end Base;
@@ -77,15 +73,14 @@ package ElectricDrives "Collection of electric drive subsystem definitions"
                 {-70,90},{-50,110}}, rotation=0)));
 
       annotation (Documentation(info="<html>
-<p>This partial model defines the interfaces required for an electric machine subsystem.  
+<p>This partial model defines the interfaces required for an electric machine subsystem.
 This class should be extended to form a particular electric machine model. See the <a href=\"Modelica://VehicleInterfaces.ElectricDrives\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.ElectricDrives.Tutorial\">tutorial</a> for more information.</p>information.</p>
-</html>"), Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}})));
+</html>"));
     end BaseDCMachine;
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for electric drive models. 
+A collection of partial base classes which define interfaces for electric drive models.
 </p>
 </html>"));
   end Interfaces;
@@ -132,8 +127,6 @@ A collection of partial base classes which define interfaces for electric drive 
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
               100}}), graphics={Rectangle(extent={{-100,100},{100,-100}},
               lineColor={0,0,0})}),
-      Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{
-              100,100}})),
       Documentation(info="<html>
 <p>A simple DC electric motor with inductance and internal resistance.</p>
 </html>"));

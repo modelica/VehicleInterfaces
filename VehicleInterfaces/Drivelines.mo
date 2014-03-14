@@ -84,8 +84,6 @@ package Drivelines "Collection of drivelines subsystem definitions"
               extent={{-108,28},{-92,16}},
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
-        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the basic interfaces required for any driveline subsystem.  This class should be extended to form a driveline interface definition with the correct number of wheelHub connectors for the type of vehicle being modelled. See the <a href=\"Modelica://VehicleInterfaces.Drivelines\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Drivelines.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -480,7 +478,7 @@ package Drivelines "Collection of drivelines subsystem definitions"
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for driveline models. 
+A collection of partial base classes which define interfaces for driveline models.
 </p>
 </html>"));
   end Interfaces;
@@ -493,13 +491,11 @@ A collection of partial base classes which define interfaces for driveline model
   protected
     outer Modelica.Mechanics.MultiBody.World world;
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
       Documentation(info="<html>
 <p>
 Zero torque is applied to all the wheelhubs and the reaction paths in to the wheel hubs included if the <b>driveTrainMechanics3D</b> flag in the world object is true.</p>
 <p>
-Using this empty model in overall vehicle architecture the functionality of driveline can be eliminated. 
+Using this empty model in overall vehicle architecture the functionality of driveline can be eliminated.
 </p>
 </html>"));
   end NoDriveline;
@@ -559,10 +555,6 @@ Using this empty model in overall vehicle architecture the functionality of driv
     connect(finalDrive.flange_a, transmissionFlange.flange)
       annotation (Line(points={{-80,0},{-100,0}}, color={0,0,0}));
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})),
       Documentation(info="<html>
 <p>This driveline model is of a front-wheel drive 4-wheeled vehicle.  The front differential is modelled using an ideal gear and planetary gear.  The model does include the 3D mount effects if the <b>driveTrainMechanics3D</b> in the world object is set to true.  To properly include these effects the additional constant and FrameForceAndTorque actuators are required on the front wheel hubs.  A constant zero torque is applied to the rear wheelhubs and the reaction paths in to the wheelhubs are included.</p>
 </html>"));

@@ -42,17 +42,13 @@ package Controllers "Collection of controllers subsystem definitions"
         annotation (Placement(transformation(extent={{-20,-80},{20,-120}},
               rotation=0)));
       annotation (
-        Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
-                {100,100}})),
-        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for a controller subsystem. This class should be extended to form a particular controller model. See the <a href=\"Modelica://VehicleInterfaces.Controllers\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Controllers.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end Base;
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for control system models. 
+A collection of partial base classes which define interfaces for control system models.
 </p>
 </html>"));
   end Interfaces;
@@ -63,7 +59,7 @@ A collection of partial base classes which define interfaces for control system 
     extends Interfaces.Base;
     annotation (Documentation(info="<html>
 <p>
-Empty controller model. Using this empty model in overall vehicle architecture the functionality of controller can be eliminated. 
+Empty controller model. Using this empty model in overall vehicle architecture the functionality of controller can be eliminated.
 </p>
 </html>"));
   end NoController;

@@ -510,7 +510,7 @@ package Chassis "Collection of chassis subsystem definitions"
     end StandardBus;
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for chassis models. 
+A collection of partial base classes which define interfaces for chassis models.
 </p>
 </html>"));
   end Interfaces;
@@ -526,7 +526,7 @@ A collection of partial base classes which define interfaces for chassis models.
               -100},{160,100}})),
                          Documentation(info="<html>
 <p>
-Empty chassis model. Using this empty model in overall vehicle architecture the functionality of chassis can be eliminated. 
+Empty chassis model. Using this empty model in overall vehicle architecture the functionality of chassis can be eliminated.
 </p>
 </html>"));
   end NoChassis;
@@ -791,7 +791,7 @@ Empty chassis model. Using this empty model in overall vehicle architecture the 
     annotation (Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-160,
               -100},{160,100}})),
                          Documentation(info="<html>
-<p>Single degree-of-freedom chassis model with mass and speed dependant drag model.  Uses MultiBody wheelHub connections and positions these relative to the vehicle body position.</p> 
+<p>Single degree-of-freedom chassis model with mass and speed dependant drag model.  Uses MultiBody wheelHub connections and positions these relative to the vehicle body position.</p>
 </html>"));
   end MinimalChassis3;
 
