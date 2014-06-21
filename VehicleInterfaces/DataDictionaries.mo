@@ -7,7 +7,6 @@ package DataDictionaries "Collection of data dictionary definitions"
 
     annotation (DocumentationClass=true,Documentation(info="<html>
 <h4>Tutorial - Defining a new data dictionary subsystem</h4>
-</p>
 <p>
 The following process will demonstrate how to create a new data dictionary
 model using these interface definitions.
@@ -17,8 +16,6 @@ model using these interface definitions.
 <br>&nbsp;<br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDataDictionary1.png\"><br>&nbsp;</li>
 <li>You can now define your data dictionary model as required</li>
 </ol>
-
-
 <h4>Adding an alias signal to the data dictionary</h4>
 <p>
 The following steps demonstrate how to add a new alias signal to the control signal bus.
@@ -46,7 +43,7 @@ the second creates a new signal called <b>v_veh</b>.
         annotation (Placement(transformation(extent={{-20,-80},{20,-120}})));
       annotation (                        Documentation(info="<html>
 <p>This partial model defines the interfaces required for a data dictionary within the VehicleInterfaces package.
-Especially, it provide alias names for the controBus. See the <a href=\"VehicleSystems.DataDictionaries\">documentation</a> and <a href=\"VehicleInterfaces.DataDictionaries.Tutorial\">tutorial</a> for more information.</p>
+Especially, it provide alias names for the controBus. See the <a href=\"modelica://VehicleInterfaces.DataDictionaries\">documentation</a> and <a href=\"modelica://VehicleInterfaces.DataDictionaries.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end Base;
 

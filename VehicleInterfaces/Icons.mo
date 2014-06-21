@@ -19,11 +19,8 @@ This partial class is intended to design a <em>default icon for a package class<
     extends Modelica.Icons.BasesPackage;
     extends Modelica.Icons.ObsoleteModel;
 
-     annotation (                              Documentation(revisions="<html><table border=0 cellspacing=0 cellpadding=0>
-  <tr><td valign=\"center\"> <img src=\"modelica://LibraryTemplate/Resources/Images/logo_dlr.png\" width=60></td>
-      <td valign=\"center\"> <b>Copyright &copy; 2006-2010, DLR Institute of Robotics and Mechatronics<b> </td>
-  </tr>
- </table>
+     annotation (Documentation(revisions="<html>
+<p>Copyright &copy; 2006-2010, DLR Institute of Robotics and Mechatronics</p>
 </html>",   info="<html>
 <p><b>Obsolete</b> partial class intended to design a <i>default icon for a package class</i> which is called <i>BaseClasses</i> or <i>Internal</i>. </p>
 

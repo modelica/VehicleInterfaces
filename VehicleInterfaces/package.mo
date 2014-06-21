@@ -28,7 +28,7 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.2) - Interface
     Documentation(info="<html>
 <p>This Modelica library provides standard interface definitions for automotive subsystems and vehicle models.  These are designed to promote compatibility between the various automotive libraries and provide a flexible, powerful structure for vehicle modelling.  The main focus of the library is on defining the interfaces for the individual subsystems and a number of vehicle model examples are included to demonstrate how they might be used.</p>
 <p>
-<img src=\"modelica://VehicleInterfaces/Resources/Images/conventionalVehicle.png\" align=\"center\">
+<img src=\"modelica://VehicleInterfaces/Resources/Images/conventionalVehicle.png\" align=\"middle\">
 </p>
 <p>For an automotive library to be compatible with other libraries based on this set of interface definitions they should extend the interface definition from within this library and following the naming convention for the signal bus. </p>
 <p>This library also contains a proposal for a naming convention covering the whole model library and the developers of this library would recommend that this convention is followed by other developers to ensure a consistent naming convention across the whole set of automotive models.</p>

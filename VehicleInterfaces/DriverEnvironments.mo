@@ -12,10 +12,10 @@ package DriverEnvironments
 <p><b>Tutorial - Defining a new driver environment model</b></p>
 <p>The following process will demonstrate how to create a new driver environment model using these interface definitions.  This tutorial will guide you through building a driver environment for a conventional passenger car with a manual transmission.</p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.DriverEnvironments.Interfaces.BaseManualTransmission</b>, it should look like this:</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriverEnvironment1.png\"><br><br>
-<li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriverEnvironment2.png\"><br><br>
+<li>Create a new model that extends <b>VehicleInterfaces.DriverEnvironments.Interfaces.BaseManualTransmission</b>, it should look like this:
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriverEnvironment1.png\"><br><br></li>
+<li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriverEnvironment2.png\"><br><br></li>
 <li>This dialog allows you to enable/disable the optional connections by setting the various parameters as required for your new driver environment model.</li>
 <li>You can now define your driver environment model as required</li>
 </ol>
@@ -563,7 +563,7 @@ A collection of internal material for driver environment models. Control bus def
 <ul>
 <li><b>controlBus</b> - control signal bus connection</li>
 <li><b>chassisFrame</b> - MultiBody connection providing a connection point to the vehicle body (optional)</li>
-<li><b>steeringWheel</b> - steering wheel connection (optional)</li>;
+<li><b>steeringWheel</b> - steering wheel connection (optional)</li>
 <li><b>acceleratorPedal</b> - 1D translational connection for the accelerator pedal connection to the driverEnvironment (optional)</li>
 <li><b>brakePedal</b> - 1D translational connection for the brake pedal connection to the driverEnvironment (optional)</li>
 <li><b>clutchPedal</b> - 1D translational connection for the clutch pedal connection to the driverEnvironment (optional, for manual gearboxes only)</li>

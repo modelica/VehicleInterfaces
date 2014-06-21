@@ -22,7 +22,7 @@ from the context menu to produce the following parameter dialog
 <li>This dialog allows you to enable/disable the optional connections by setting
 <b>includeWheelBearings</b> and <b>includeBrakePedal</b> as required for your new brakes model.
 The wheelHub connectors are of the type
-<a href=\"Modelica://VehicleInterfaces.Interfaces.FlangeWithBearing\">VehicleInterfaces.Interfaces.FlangeWithBearing</a>,
+<a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>,
 the parameter <b>includeWheelBearings</b> controls whether the bearing connectors within
 the wheelHubs is enabled or not.</li>
 <li>You can now define your brakes model as required.</li>
@@ -66,8 +66,8 @@ below appears and should be completed with the correct index for all four wheel 
 <br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewBrakes7.png\"><br>&nbsp;</li>
 <li>The model is now complete and should check successfully and can be used in any model
 compatible with the VehicleInterfaces library assuming the selected Driver model also uses
-the brake pedal connection.</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewBrakes8.png\">
+the brake pedal connection.
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewBrakes8.png\"></li>
 </ol>
 </html>"));
   end Tutorial;
@@ -885,7 +885,7 @@ A collection of internal material for brakes models. Control bus definitions are
 <p>The brakes subsystem interfaces are defined in this sub-package of the VehicleInterfaces library.  The brakes subsystem has the following connectors some of which are optional (see below for more information):</p>
 <ul>
 <li><b>controlBus</b> - control signal bus connection</li>
-<li><b>wheelHub_n</b> - wheelHub connectors that consist of a 1D rotational connector and a MultiBody frame connector (see <a href=\"Modelica://VehicleInterfaces.Iterfaces.FlangeWithBearing\">here</a>.  The number of these varies depending on how many wheels the vehicle has.</li>
+<li><b>wheelHub_n</b> - wheelHub connectors that consist of a 1D rotational connector and a MultiBody frame connector (see <a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>.  The number of these varies depending on how many wheels the vehicle has.</li>
 <li><b>brakePedal</b> - 1D translational connection for the brake pedal connection to the driverEnvironment (optional)</li>
 </ul>
 <p>The optional connectors are, by default, disabled and can be ignored if not required.  They can be enabled by setting the appropriate parameter to be true.  This is only possible at design time, i.e. when you are building the subsystem model.</p>
