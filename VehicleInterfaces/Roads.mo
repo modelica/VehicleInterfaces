@@ -323,7 +323,7 @@ The point s=0, w=0 has position vector r={0, 0, 0};
 </p>
 </html>"),
       Icon(coordinateSystem(preserveAspectRatio=true, extent={{-200,-100},{200,
-              100}}), graphics));
+              100}})));
   end FlatRoad;
 
   model CircleRoad "Circular road (perpendicular to world z-axis)"
@@ -589,20 +589,16 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
               textString="%name"),
             Line(
               points={{0,-20},{0,-80}},
-              color={95,95,95},
-              smooth=Smooth.None),
+              color={95,95,95}),
             Line(
               points={{-80,-50},{80,-50}},
-              color={95,95,95},
-              smooth=Smooth.None),
+              color={95,95,95}),
             Line(
               points={{-58,-30},{58,-70}},
-              color={95,95,95},
-              smooth=Smooth.None),
+              color={95,95,95}),
             Line(
               points={{-58,-70},{58,-30}},
-              color={95,95,95},
-              smooth=Smooth.None)}));
+              color={95,95,95})}));
     end DummyTyre;
 
     model CheckContactCalculation
@@ -618,19 +614,18 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
         wheelRadius=wheelRadius,
         e_axis = Modelica.Math.Vectors.normalize(axis_wheel),
         r_wheel={radius_wheel*sin(phi),-radius_wheel*cos(phi),1 + sin(phi)/20})
-        annotation (Placement(transformation(extent={{20,40},{40,60}}, rotation=
-               0)));
+        annotation (Placement(transformation(extent={{20,40},{40,60}})));
       inner VehicleInterfaces.Roads.CircleRoad road(
         radius=50,
         width=8,
         mue=0.5,
         roadColor={100,100,100}) annotation (Placement(transformation(extent={{
-                -40,40},{0,80}}, rotation=0)));
+                -40,40},{0,80}})));
       inner Modelica.Mechanics.MultiBody.World world(
         enableAnimation=true,
         axisLength=20,
         n={0,0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,
-                60}}, rotation=0)));
+                60}})));
     equation
       // Define movement of center of wheel r_wheel and of wheel axis axis_wheel
       phi = time;
@@ -663,9 +658,9 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
       Frames.Orientation R;
       inner Modelica.Mechanics.MultiBody.World world(enableAnimation=true, n={0,
             0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,
-                60}}, rotation=0)));
+                60}})));
       inner FlatRoad road annotation (Placement(transformation(extent={{-40,40},
-                {0,60}}, rotation=0)));
+                {0,60}})));
     equation
       s = (k/2)*time*time;
       r = road.position(s, 0);
@@ -708,12 +703,11 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
       Frames.Orientation R;
       inner Modelica.Mechanics.MultiBody.World world(enableAnimation=true, n={0,
             0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,
-                60}}, rotation=0)));
+                60}})));
       inner CircleRoad road(
         radius=1,
         width=0.2,
-        mue=0.5) annotation (Placement(transformation(extent={{-40,40},{0,80}},
-              rotation=0)));
+        mue=0.5) annotation (Placement(transformation(extent={{-40,40},{0,80}})));
     equation
       phi = (k/2)*time*time;
       s = road.radius*phi;

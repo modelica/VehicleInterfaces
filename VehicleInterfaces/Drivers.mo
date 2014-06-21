@@ -132,33 +132,29 @@ Empty driver model. Using this empty model in overall vehicle architecture the f
       height=finalBrakeRequest,
       offset=initialBrakeRequest,
       startTime=brakeTime) annotation (Placement(transformation(extent={{-40,40},
-              {-20,60}}, rotation=0)));
+              {-20,60}})));
     Modelica.Blocks.Sources.Step acceleratorDemand(
       height=finalAccelRequest,
       offset=initialAccelRequest,
       startTime=accelTime) annotation (Placement(transformation(extent={{-40,10},
-              {-20,30}}, rotation=0)));
+              {-20,30}})));
     Modelica.Blocks.Sources.Constant steeringAngle(k=0)
-      annotation (Placement(transformation(extent={{-40,70},{-20,90}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-40,70},{-20,90}})));
     Modelica.Blocks.Sources.IntegerConstant gearboxMode(k=selectedGearboxMode)
-      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}})));
     Modelica.Blocks.Sources.IntegerConstant requestedGear(k=manualGearRequest)
-      annotation (Placement(transformation(extent={{-40,-60},{-20,-40}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-40,-60},{-20,-40}})));
     Mechanics.NormalisedRotational.Position steeringWheelAngle
-      annotation (Placement(transformation(extent={{0,70},{20,90}},  rotation=0)));
+      annotation (Placement(transformation(extent={{0,70},{20,90}})));
     Mechanics.NormalisedTranslational.Position brakePosition
-      annotation (Placement(transformation(extent={{0,40},{20,60}},  rotation=0)));
+      annotation (Placement(transformation(extent={{0,40},{20,60}})));
     Mechanics.NormalisedTranslational.Position acceleratorPosition
-      annotation (Placement(transformation(extent={{0,10},{20,30}},  rotation=0)));
+      annotation (Placement(transformation(extent={{0,10},{20,30}})));
     Modelica.Blocks.Sources.IntegerStep ignition(
       height=-1,
       startTime=0.5,
       offset=VehicleInterfaces.Types.IgnitionSetting.Start)
-      annotation (Placement(transformation(extent={{-40,-90},{-20,-70}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-40,-90},{-20,-70}})));
   equation
     connect(gearboxMode.y, driverInterface.gearboxMode) annotation (
       Line(points={{-19,-20},{98,-20},{98,0},{100,0}}, color={255,127,0}),

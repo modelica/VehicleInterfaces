@@ -507,8 +507,7 @@ It is defined as an empty expandable connector.</p>
     parameter Modelica.SIunits.Distance intoGearDisplacement=0.1
       "Distance to move in to gear";
     ShiftConnector shiftConnector "Gear shift connection"
-      annotation (Placement(transformation(extent={{-130,-30},{-70,30}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-130,-30},{-70,30}})));
     Modelica.Blocks.Interfaces.IntegerInput gear "Gear number"
       annotation (Placement(transformation(
           origin={120,0},
@@ -615,11 +614,9 @@ It is defined as an empty expandable connector.</p>
     parameter Modelica.SIunits.Distance intoGearDisplacement=0.1
       "Distance to move in to gear";
     ShiftConnector shiftConnector "Gear shift connection"
-      annotation (Placement(transformation(extent={{-130,-30},{-70,30}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-130,-30},{-70,30}})));
     Modelica.Blocks.Interfaces.IntegerOutput gear "Gear number"
-      annotation (Placement(transformation(extent={{100,-10},{120,10}},rotation=
-             0)));
+      annotation (Placement(transformation(extent={{100,-10},{120,10}})));
   equation
     shiftConnector.crossGate.f = 0;
     shiftConnector.intoGear.f = 0;

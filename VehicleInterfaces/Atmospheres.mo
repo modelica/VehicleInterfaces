@@ -231,8 +231,7 @@ A collection of base classes which define interfaces for atmosphere models.
       defaultComponentPrefixes="inner",
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-200,-100},{200,
               100}},
-          grid={2,2},
-          initialScale=0.1)),
+          grid={2,2})),
       Documentation(info="<html>
 <p>
 This is the simplest atmosphere model with constant characteristics.

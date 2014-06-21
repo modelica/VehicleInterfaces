@@ -72,16 +72,14 @@ package PowertrainMounts "Collection of powertrain mounts subsystem definition"
         Diagram(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-150,-100},{150,100}},
-            grid={1,1},
-            initialScale=0.1), graphics),
+            grid={1,1})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for two powertrain system mounting subsystem. This class should be extended to form a particular powertrain mounting model. See the <a href=\"Modelica://VehicleInterfaces.PowertrainMounts\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.PowertrainMounts.Tutorial\">tutorial</a> for more information.</p>
 </html>"),
         Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-150,-100},{150,100}},
-            grid={1,1},
-            initialScale=0.1), graphics));
+            grid={1,1})));
     end DualSystemMount;
 
     partial model TripleSystemMount
@@ -109,16 +107,14 @@ package PowertrainMounts "Collection of powertrain mounts subsystem definition"
         Diagram(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-150,-100},{150,100}},
-            grid={1,1},
-            initialScale=0.1), graphics),
+            grid={1,1})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for three powertrain system mounting subsystem. This class should be extended to form a particular powertrain mounting model. See the <a href=\"Modelica://VehicleInterfaces.PowertrainMounts\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.PowertrainMounts.Tutorial\">tutorial</a> for more information.</p>
 </html>"),
         Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-150,-100},{150,100}},
-            grid={1,1},
-            initialScale=0.1)));
+            grid={1,1})));
 
     end TripleSystemMount;
 
@@ -153,8 +149,7 @@ A collection of partial base classes which define interfaces for powertrain moun
           rotation=90)));
     Modelica.Mechanics.MultiBody.Parts.FixedTranslation chassisFrameToMount3(
         animation=false, r=r_ChassisToMount3)
-      annotation (Placement(transformation(extent={{30,-30},{70,-10}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{30,-30},{70,-10}})));
   equation
     connect(chassisFrameToMount1.frame_a, chassisFrame) annotation (Line(
         points={{-30,-20},{0,-20},{0,-100}},
@@ -182,8 +177,7 @@ A collection of partial base classes which define interfaces for powertrain moun
         thickness=0.5));
 
     annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-              -150,-100},{150,100}}),
-                        graphics),
+              -150,-100},{150,100}})),
       Documentation(info="<html>
 <p>Rigidly mounts 3 power train systems such as the engine, transmission and driveline on one supporting system, usually the chassis</p>
 </html>"));
@@ -205,7 +199,7 @@ A collection of partial base classes which define interfaces for powertrain moun
           rotation=180)));
     Modelica.Mechanics.MultiBody.Parts.FixedTranslation chassisFrameToMount2(r=
           r_ChassisToMount2) annotation (Placement(transformation(extent={{30,
-              10},{70,30}}, rotation=0)));
+              10},{70,30}})));
   equation
     connect(chassisFrameToMount1.frame_a, chassisFrame) annotation (Line(
         points={{-30,20},{0,20},{0,-100}},
@@ -226,11 +220,9 @@ A collection of partial base classes which define interfaces for powertrain moun
 
     annotation (
       Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-150,-100},{
-              150,100}}),
-              graphics),
+              150,100}})),
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-150,-100},{150,
-              100}}),
-           graphics),
+              100}})),
       Documentation(info="<html>
 <p>Rigidly mounts 2 power train systems such as the engine and transmission on one supporting system, usually the chassis</p>
 </html>"));
@@ -244,7 +236,6 @@ A collection of partial base classes which define interfaces for powertrain moun
 
     Modelica.Mechanics.MultiBody.Parts.FixedTranslation chassisFrameToMount1(r=
           r_ChassisToMount1) annotation (Placement(transformation(
-          origin={0,0},
           extent={{-20,-10},{20,10}},
           rotation=90)));
   equation

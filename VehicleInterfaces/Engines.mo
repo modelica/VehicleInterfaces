@@ -47,13 +47,12 @@ package Engines "Collection of combustion engine subsystem definitions"
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing accessoryFlange(
           final includeBearingConnector=includeAccessoriesBearing or
             usingMultiBodyAccessories) "Connection for the engine accessories"
-        annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing
         transmissionFlange(final includeBearingConnector=
             includeTransmissionBearing or usingMultiBodyTransmission)
         "Connection to the transmission" annotation (Placement(transformation(
-              extent={{90,-10},{110,10}}, rotation=0)));
+              extent={{90,-10},{110,10}})));
       VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
         annotation (Placement(transformation(
             origin={-100,60},
@@ -67,8 +66,7 @@ package Engines "Collection of combustion engine subsystem definitions"
             rotation=90)));
       Modelica.Mechanics.Translational.Interfaces.Flange_a acceleratorPedal if
         includeAcceleratorPedal "Accelerator pedal connection (optional)"
-        annotation (Placement(transformation(extent={{-10,110},{10,90}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-10,110},{10,90}})));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeTransmissionBearing or usingMultiBodyTransmission)
         annotation (Placement(transformation(
@@ -188,40 +186,31 @@ Empty engine model (just rigid connection between accessory and transmission fla
       w(fixed=true,
         start=engineSpeed_start))
                                annotation (Placement(transformation(extent={{
-              -10,-10},{10,10}}, rotation=0)));
+              -10,-10},{10,10}})));
     Modelica.Mechanics.Rotational.Sources.Torque engine(useSupport=true)
-      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}},
-                                                                       rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}})));
     Modelica.Mechanics.Rotational.Sensors.SpeedSensor engineSpeed
       annotation (Placement(transformation(
           origin={10,60},
           extent={{-10,10},{10,-10}},
           rotation=180)));
     Modelica.Mechanics.Rotational.Sensors.TorqueSensor engineTorque
-      annotation (Placement(transformation(extent={{30,-10},{50,10}}, rotation=
-              0)));
+      annotation (Placement(transformation(extent={{30,-10},{50,10}})));
     Modelica.Mechanics.Rotational.Sensors.PowerSensor enginePower
-      annotation (Placement(transformation(extent={{60,-10},{80,10}}, rotation=
-              0)));
+      annotation (Placement(transformation(extent={{60,-10},{80,10}})));
     Modelica.Blocks.Math.Gain gain(k=requestedTorque)
-      annotation (Placement(transformation(extent={{-66,-26},{-54,-14}},
-                                                                       rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-66,-26},{-54,-14}})));
     Modelica.Mechanics.MultiBody.Parts.Mounting1D mounting1D(n=axisOfRotation)
-      annotation (Placement(transformation(extent={{-50,-50},{-30,-30}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-50,-50},{-30,-30}})));
   protected
     replaceable VehicleInterfaces.Engines.Interfaces.StandardBus
                                            engineBus constrainedby
       VehicleInterfaces.Interfaces.EngineBus
-      annotation (Placement(transformation(extent={{-70,50},{-50,70}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-70,50},{-50,70}})));
     replaceable VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus
                                            driverBus constrainedby
       VehicleInterfaces.Interfaces.DriverBus
-      annotation (Placement(transformation(extent={{-90,30},{-70,50}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-90,30},{-70,50}})));
     outer Modelica.Mechanics.MultiBody.World world;
   equation
     connect(engine.flange,   flywheel.flange_a)
@@ -266,8 +255,7 @@ Empty engine model (just rigid connection between accessory and transmission fla
 
     connect(engineSpeed.w, engineBus.speed) annotation (Line(
         points={{-1,60},{-60,60}},
-        color={0,0,127},
-        smooth=Smooth.None));
+        color={0,0,127}));
     annotation (      Documentation(info="<html>
  <p>A simple engine model with flywheel and where the torque output is proportional to the accelerator pedal position.
 This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal position is read from the control bus.</p>
@@ -298,29 +286,22 @@ This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal p
       phi(fixed=false),
       w(fixed=true, start=engineSpeed_start))
       annotation (Placement(transformation(extent={{
-              -10,-10},{10,10}}, rotation=0)));
+              -10,-10},{10,10}})));
     Modelica.Mechanics.Rotational.Sources.Torque engine(useSupport=true)
-      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}},
-                                                                       rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}})));
     Modelica.Mechanics.Rotational.Sensors.SpeedSensor engineSpeed
       annotation (Placement(transformation(
           origin={10,60},
           extent={{-10,-10},{10,10}},
           rotation=180)));
     Modelica.Mechanics.Rotational.Sensors.TorqueSensor engineTorque
-      annotation (Placement(transformation(extent={{30,-10},{50,10}}, rotation=
-              0)));
+      annotation (Placement(transformation(extent={{30,-10},{50,10}})));
     Modelica.Mechanics.Rotational.Sensors.PowerSensor enginePower
-      annotation (Placement(transformation(extent={{60,-10},{80,10}}, rotation=
-              0)));
+      annotation (Placement(transformation(extent={{60,-10},{80,10}})));
     Modelica.Blocks.Math.Gain gain(k(unit="N")=pedalPositionToTorque)
-      annotation (Placement(transformation(extent={{-66,-26},{-54,-14}},
-                                                                       rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-66,-26},{-54,-14}})));
     Modelica.Mechanics.MultiBody.Parts.Mounting1D mounting1D(n=axisOfRotation)
-      annotation (Placement(transformation(extent={{-50,-50},{-30,-30}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-50,-50},{-30,-30}})));
     Modelica.Mechanics.Translational.Sensors.PositionSensor
       acceleratorPedalPosition
       annotation (Placement(transformation(
@@ -330,8 +311,7 @@ This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal p
   protected
     replaceable VehicleInterfaces.Engines.Interfaces.StandardBus engineBus constrainedby
       VehicleInterfaces.Interfaces.EngineBus
-      annotation (Placement(transformation(extent={{-70,50},{-50,70}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-70,50},{-50,70}})));
     outer Modelica.Mechanics.MultiBody.World world;
   equation
     connect(engine.flange,   flywheel.flange_a)
@@ -375,8 +355,7 @@ This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal p
 
     connect(engineSpeed.w, engineBus.speed) annotation (Line(
         points={{-1,60},{-60,60}},
-        color={0,0,127},
-        smooth=Smooth.None));
+        color={0,0,127}));
     annotation (                         Documentation(info="<html>
 <p>A simple engine model with flywheel and where the torque output is proportional to the accelerator pedal position.
 This engine model uses the physical connection between the driver and the engine for the accelerator pedal.</p>

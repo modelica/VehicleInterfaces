@@ -41,16 +41,13 @@ package DriverEnvironments
             rotation=90)));
       Modelica.Mechanics.Rotational.Interfaces.Flange_a steeringWheel if
         includeSteeringWheel "Steering wheel connection (optional)"
-        annotation (Placement(transformation(extent={{90,-10},{110,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{90,-10},{110,10}})));
       Modelica.Mechanics.Translational.Interfaces.Flange_a acceleratorPedal if
         includeAcceleratorPedal "Accelerator pedal connection (optional)"
-        annotation (Placement(transformation(extent={{-90,-90},{-70,-110}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-90,-90},{-70,-110}})));
       Modelica.Mechanics.Translational.Interfaces.Flange_a brakePedal if
         includeBrakePedal "Brake pedal connection (optional)"
-        annotation (Placement(transformation(extent={{30,-90},{50,-110}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{30,-90},{50,-110}})));
     protected
       parameter Boolean includeDriverSeat=false
         "Include the drivers seat connection to the body";
@@ -115,13 +112,11 @@ package DriverEnvironments
     public
       Modelica.Mechanics.Translational.Interfaces.Flange_a clutchPedal if
         includeClutchPedal "Clutch pedal connection (optional)"
-        annotation (Placement(transformation(extent={{-50,-90},{-30,-110}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-50,-90},{-30,-110}})));
       VehicleInterfaces.Interfaces.ShiftConnector shiftConnector if
         includeManualShiftConnector
         "Manual transmission shift connection (optional)"
-        annotation (Placement(transformation(extent={{-10,-110},{10,-90}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-10,-110},{10,-90}})));
       annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
                 -100,-100},{100,100}}), graphics={Rectangle(
               extent={{-58,-88},{-34,-112}},
@@ -249,31 +244,28 @@ Empty driver environment. Using this empty model in overall vehicle architecture
       height=finalBrakeRequest,
       offset=initialBrakeRequest,
       startTime=brakeTime) annotation (Placement(transformation(extent={{-60,50},
-              {-40,70}}, rotation=0)));
+              {-40,70}})));
     Modelica.Blocks.Sources.Step acceleratorDemand(
       height=finalAccelRequest,
       offset=initialAccelRequest,
       startTime=accelTime) annotation (Placement(transformation(extent={{-20,70},
-              {0,90}},    rotation=0)));
+              {0,90}})));
 
     Modelica.Blocks.Sources.IntegerConstant gearSelect(k=manualGearRequest)
-      annotation (Placement(transformation(extent={{-20,-10},{0,10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-20,-10},{0,10}})));
     Modelica.Blocks.Sources.IntegerConstant gearMode(k=selectedGearboxMode)
-      annotation (Placement(transformation(extent={{-60,10},{-40,30}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-60,10},{-40,30}})));
     Modelica.Blocks.Sources.IntegerStep ignition(
       height=-1,
       startTime=0.5,
       offset=VehicleInterfaces.Types.IgnitionSetting.Start)
-      annotation (Placement(transformation(extent={{-20,30},{0,50}}, rotation=0)));
+      annotation (Placement(transformation(extent={{-20,30},{0,50}})));
   protected
     replaceable
       VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission
                                            driverBus constrainedby
       VehicleInterfaces.Interfaces.DriverBus
-      annotation (Placement(transformation(extent={{50,50},{70,70}},  rotation=
-              0)));
+      annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(controlBus.driverBus, driverBus) annotation (Line(
         points={{100,60},{80,60},{60,60}},
@@ -377,12 +369,12 @@ Empty driver environment. Using this empty model in overall vehicle architecture
       height=-1,
       startTime=0.5,
       offset=VehicleInterfaces.Types.IgnitionSetting.Start)
-      annotation (Placement(transformation(extent={{0,50},{20,70}},  rotation=0)));
+      annotation (Placement(transformation(extent={{0,50},{20,70}})));
   protected
     replaceable VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus
                                            driverBus constrainedby
       VehicleInterfaces.Interfaces.DriverBus
-      annotation (Placement(transformation(extent={{50,50},{70,70}}, rotation=0)));
+      annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(acceleratorDemand.y, acceleratorPosition.s_ref) annotation (Line(
           points={{-80,-31},{-80,-48}}, color={0,0,127}));
@@ -423,25 +415,21 @@ Fixed gear and constant clutch position.</p>
 
   public
     Mechanics.NormalisedTranslational.PositionSensor acceleratorPosition
-      annotation (Placement(transformation(extent={{-40,50},{-20,70}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-40,50},{-20,70}})));
     Mechanics.NormalisedTranslational.PositionSensor brakePosition
-      annotation (Placement(transformation(extent={{-40,30},{-20,50}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-40,30},{-20,50}})));
     Blocks.IntegerPassThrough gearboxMode annotation (Placement(transformation(
-            extent={{-40,-10},{-20,10}},
-                                       rotation=0)));
+            extent={{-40,-10},{-20,10}})));
     Blocks.IntegerPassThrough requestedGear
-      annotation (Placement(transformation(extent={{-40,-40},{-20,-20}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-40,-40},{-20,-20}})));
     Blocks.IntegerPassThrough ignition annotation (Placement(transformation(
-            extent={{-40,-70},{-20,-50}}, rotation=0)));
+            extent={{-40,-70},{-20,-50}})));
   protected
     replaceable
       VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission
                                            driverBus constrainedby
       VehicleInterfaces.Interfaces.DriverBus
-      annotation (Placement(transformation(extent={{50,50},{70,70}}, rotation=0)));
+      annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(driverBus, controlBus.driverBus) annotation (Line(
         points={{60,60},{100,60}},
@@ -493,32 +481,28 @@ Fixed gear and constant clutch position.</p>
 
     connect(driverInterface.brakePedal, brakePosition.flange_a) annotation (Line(
         points={{-100,0},{-98,0},{-98,2},{-80,2},{-80,40},{-40,40}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
+        color={0,127,0}), Text(
         string="%first",
         index=-1,
         extent={{-6,3},{-6,3}}));
     connect(driverInterface.acceleratorPedal, acceleratorPosition.flange_a)
       annotation (Line(
         points={{-100,0},{-100,4},{-82,4},{-82,60},{-40,60}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
+        color={0,127,0}), Text(
         string="%first",
         index=-1,
         extent={{-6,3},{-6,3}}));
     connect(acceleratorPosition.position, driverBus.acceleratorPedalPosition)
       annotation (Line(
         points={{-19,60},{60,60}},
-        color={0,0,127},
-        smooth=Smooth.None), Text(
+        color={0,0,127}), Text(
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
     connect(brakePosition.position, driverBus.brakePedalPosition) annotation (
         Line(
         points={{-19,40},{56,40},{56,60},{60,60}},
-        color={0,0,127},
-        smooth=Smooth.None), Text(
+        color={0,0,127}), Text(
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));

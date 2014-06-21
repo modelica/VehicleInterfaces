@@ -6,11 +6,9 @@ package Blocks "Collection of input/output fixed causality blocks"
     extends Modelica.Blocks.Interfaces.BlockIcon;
 
     Modelica.Blocks.Interfaces.RealInput u "Input signal"
-      annotation (Placement(transformation(extent={{-140,-20},{-100,20}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
     Modelica.Blocks.Interfaces.RealOutput y "Output signal"
-      annotation (Placement(transformation(extent={{100,-10},{120,10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{100,-10},{120,10}})));
   equation
     y = u;
 
@@ -23,11 +21,9 @@ package Blocks "Collection of input/output fixed causality blocks"
     extends Modelica.Blocks.Interfaces.IntegerBlockIcon;
 
     Modelica.Blocks.Interfaces.IntegerInput u "Input signal"
-      annotation (Placement(transformation(extent={{-140,-20},{-100,20}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
     Modelica.Blocks.Interfaces.IntegerOutput y "Output signal"
-      annotation (Placement(transformation(extent={{100,-10},{120,10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{100,-10},{120,10}})));
   equation
     y = u;
 
@@ -40,11 +36,9 @@ package Blocks "Collection of input/output fixed causality blocks"
     extends Modelica.Blocks.Interfaces.BooleanBlockIcon;
 
     Modelica.Blocks.Interfaces.BooleanInput u "Input signal"
-      annotation (Placement(transformation(extent={{-140,-20},{-100,20}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
     Modelica.Blocks.Interfaces.BooleanOutput y "Output signal"
-      annotation (Placement(transformation(extent={{100,-10},{120,10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{100,-10},{120,10}})));
   equation
     y = u;
 
@@ -82,8 +76,7 @@ package Blocks "Collection of input/output fixed causality blocks"
           Line(points={{-90,-78},{76,-78}}, color={192,192,192}),
           Line(
             points={{-80,22},{32,-78}},
-            color={0,0,0},
-            smooth=Smooth.None),
+            color={0,0,0}),
           Text(
             extent={{28,54},{98,30}},
             lineColor={95,95,95},
@@ -91,7 +84,6 @@ package Blocks "Collection of input/output fixed causality blocks"
           Polygon(
             points={{-8,42},{28,42},{16,46},{16,38},{28,42},{-8,42}},
             lineColor={0,0,0},
-            smooth=Smooth.None,
             fillColor={0,0,0},
             fillPattern=FillPattern.Solid)}),
       Diagram(coordinateSystem(
@@ -124,8 +116,7 @@ package Blocks "Collection of input/output fixed causality blocks"
           Text(extent={{-92,77},{-72,57}}, textString="1"),
           Line(
             points={{-58,64},{26,0}},
-            color={0,0,0},
-            smooth=Smooth.None)}),
+            color={0,0,0})}),
       Documentation(info="<HTML>
 <p>
 This block is used to invert a normalized input signal u from [0..1] to [1..0].

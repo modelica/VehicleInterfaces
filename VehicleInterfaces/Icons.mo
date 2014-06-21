@@ -123,8 +123,7 @@ This partial class is intended to design a default icon for an <em>accessorier a
     annotation (Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-200,-100},{200,100}},
-          grid={2,2},
-          initialScale=0.1), graphics={
+          grid={2,2}), graphics={
           Rectangle(
             extent={{-200,100},{200,-100}},
             lineColor={0,0,255},
@@ -221,20 +220,16 @@ This partial class is intended to design a default icon for an <em>atmosphere</e
             fillPattern=FillPattern.Solid),
           Line(
             points={{88,60},{0,60},{0,10}},
-            color={0,0,255},
-            smooth=Smooth.None),
+            color={0,0,255}),
           Line(
             points={{-60,10},{-60,10},{60,10}},
-            color={0,0,255},
-            smooth=Smooth.None),
+            color={0,0,255}),
           Line(
             points={{-32,-10},{30,-10}},
-            color={0,0,255},
-            smooth=Smooth.None),
+            color={0,0,255}),
           Line(
             points={{0,-10},{0,-60},{90,-60}},
-            color={0,0,255},
-            smooth=Smooth.None),
+            color={0,0,255}),
           Text(
             extent={{-100,100},{100,62}},
             lineColor={0,0,255},
@@ -341,13 +336,11 @@ This partial class is intended to design a default icon for a <em>brakes assembl
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1)),
+          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1), graphics={
+          grid={1,1}), graphics={
           Rectangle(
             extent={{-160,100},{160,-100}},
             lineColor={0,0,0},
@@ -1155,13 +1148,11 @@ This partial class is intended to design a default icon for a <em>engine assembl
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
-          grid={1,1},
-          initialScale=0.1)),
+          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
-          grid={1,1},
-          initialScale=0.1), graphics={
+          grid={1,1}), graphics={
           Rectangle(
             extent={{-150,100},{150,-100}},
             lineColor={0,0,0},
@@ -1197,8 +1188,7 @@ This partial class is intended to design a default icon for a model of <em>multi
     annotation (Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-200,-100},{200,100}},
-          grid={2,2},
-          initialScale=0.1), graphics={
+          grid={2,2}), graphics={
           Rectangle(
             extent={{-200,100},{200,-100}},
             lineColor={0,0,255},
@@ -1247,8 +1237,7 @@ This partial class is intended to design a default icon for a <em>road</em>.
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
-          grid={2,2},
-          initialScale=0.1), graphics={
+          grid={2,2}), graphics={
           Polygon(
             points={{-40,25},{40,25},{50,15},{40,-20},{30,-25},{-30,-25},{-40,
                 -20},{-50,15},{-40,25}},
@@ -1300,13 +1289,11 @@ This partial class is intended to design a default icon for a model of <em>singl
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
-          grid={1,1},
-          initialScale=0.1)),
+          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
-          grid={1,1},
-          initialScale=0.1), graphics={
+          grid={1,1}), graphics={
           Rectangle(
             extent={{-150,100},{150,-100}},
             lineColor={0,0,0},

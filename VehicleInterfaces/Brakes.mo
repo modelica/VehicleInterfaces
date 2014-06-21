@@ -85,8 +85,7 @@ the brake pedal connection.</li>
             rotation=90)));
       Modelica.Mechanics.Translational.Interfaces.Flange_a brakePedal if
         includeBrakePedal "Brake pedal connection (optional)"
-        annotation (Placement(transformation(extent={{-10,110},{10,90}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-10,110},{10,90}})));
       parameter Boolean usingMultiBodyChassis=false
         "=true if using a MultiBody chassis with a 1D driveline"
         annotation (Dialog(tab="Advanced"));
@@ -141,20 +140,16 @@ the brake pedal connection.</li>
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,92},{44,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,92},{44,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,-108},{44,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,-108},{44,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
     equation
       connect(end_2.flange, wheelHub_2) annotation (Line(
           points={{-80,100},{-60,100}},
@@ -237,28 +232,22 @@ the brake pedal connection.</li>
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,92},{44,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,92},{44,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_6(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,92},{144,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,92},{144,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_5(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,-108},{144,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,-108},{144,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,-108},{44,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,-108},{44,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
     equation
       connect(end_2.flange, wheelHub_2) annotation (Line(
           points={{-80,100},{-60,100}},
@@ -371,36 +360,28 @@ the brake pedal connection.</li>
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,92},{44,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,92},{44,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_6(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,92},{144,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,92},{144,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_8(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{232,92},{244,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{232,92},{244,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_7(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{232,-108},{244,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{232,-108},{244,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_5(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,-108},{144,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,-108},{144,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,-108},{44,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,-108},{44,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
     equation
       connect(end_2.flange, wheelHub_2) annotation (Line(
           points={{-80,100},{-60,100}},
@@ -614,13 +595,11 @@ Using this empty model in overall vehicle architecture the functionality of brak
     replaceable VehicleInterfaces.Brakes.Interfaces.StandardBus
                                            brakesBus constrainedby
       VehicleInterfaces.Interfaces.BrakesBus
-      annotation (Placement(transformation(extent={{-70,10},{-50,30}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-70,10},{-50,30}})));
     replaceable VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus
                                            driverBus constrainedby
       VehicleInterfaces.Interfaces.DriverBus
-      annotation (Placement(transformation(extent={{-90,-20},{-70,0}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-90,-20},{-70,0}})));
   equation
     connect(computeTorque.y, brake_1.f_normalized) annotation (Line(points={{-19,-10},
             {0,-10},{0,-60},{-49,-60}},          color={0,0,127}));
@@ -789,8 +768,7 @@ Using this empty model in overall vehicle architecture the functionality of brak
     outer Modelica.Mechanics.MultiBody.World world;
     replaceable Interfaces.StandardBus     brakesBus constrainedby
       VehicleInterfaces.Interfaces.BrakesBus
-      annotation (Placement(transformation(extent={{-70,10},{-50,30}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-70,10},{-50,30}})));
   equation
     connect(computeTorque.y, brake_4.f_normalized) annotation (Line(points={{
             -1.22155e-016,49.5},{0,40},{24,40},{24,60},{49,60}},color={0,0,127}));

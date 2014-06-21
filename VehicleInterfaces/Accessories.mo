@@ -36,8 +36,7 @@ package Accessories "Collection of accessory subsystem definitions"
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing engineFlange(
           final includeBearingConnector=includeAccessoriesBearing or
             usingMultiBodyEngine) "Source of drive torque"
-        annotation (Placement(transformation(extent={{90,-10},{110,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{90,-10},{110,10}})));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeAccessoriesBearing or usingMultiBodyEngine)
         annotation (Placement(transformation(
@@ -103,16 +102,15 @@ Empty accessories subsystem. Using this empty model in overall vehicle architect
     Modelica.Mechanics.MultiBody.Parts.Rotor1D inertia(
       J=accessoriesInertia,
       n=axisOfRotation)   annotation (Placement(transformation(extent={{20,-10},
-              {40,10}}, rotation=0)));
+              {40,10}})));
     Modelica.Mechanics.Rotational.Sources.ConstantTorque torqueLoss(
       tau_constant=accessoriesLoad,
       useSupport=includeAccessoriesBearing)
                            annotation (Placement(transformation(extent={{-20,-10},
-              {0,10}},      rotation=0)));
+              {0,10}})));
     Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction(
       n=axisOfRotation) if includeAccessoriesBearing
-      annotation (Placement(transformation(extent={{110,-20},{90,-40}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{110,-20},{90,-40}})));
   protected
     outer Modelica.Mechanics.MultiBody.World world;
   equation

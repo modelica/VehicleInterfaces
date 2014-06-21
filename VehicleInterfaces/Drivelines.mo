@@ -39,8 +39,7 @@ package Drivelines "Collection of drivelines subsystem definitions"
         transmissionFlange(final includeBearingConnector=
             includeTransmissionBearing or usingMultiBodyTransmission)
         "Connection to the Transmission output shaft"
-        annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
       VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
         annotation (Placement(transformation(
             origin={-100,60},
@@ -123,20 +122,16 @@ package Drivelines "Collection of drivelines subsystem definitions"
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,-108},{44,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,-108},{44,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,92},{44,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,92},{44,108}})));
     equation
       connect(end_1.flange, wheelHub_1) annotation (Line(
           points={{-80,-100},{-60,-100}},
@@ -228,28 +223,22 @@ package Drivelines "Collection of drivelines subsystem definitions"
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{22,-108},{34,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{22,-108},{34,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{22,92},{34,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{22,92},{34,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_5(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,-108},{144,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,-108},{144,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_6(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,92},{144,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,92},{144,108}})));
     equation
       connect(end_5.flange, wheelHub_5) annotation (Line(
           points={{140,-100},{160,-100}},
@@ -371,36 +360,28 @@ package Drivelines "Collection of drivelines subsystem definitions"
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{22,-108},{34,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{22,-108},{34,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{22,92},{34,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{22,92},{34,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_5(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,-108},{144,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,-108},{144,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_6(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,92},{144,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,92},{144,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_7(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{232,-108},{244,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{232,-108},{244,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_8(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{232,92},{244,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{232,92},{244,108}})));
     equation
       connect(end_7.flange, wheelHub_7) annotation (Line(
           points={{240,-100},{260,-100}},
@@ -531,8 +512,7 @@ Using this empty model in overall vehicle architecture the functionality of driv
     Modelica.Mechanics.Rotational.Components.IdealGear finalDrive(
                                                        ratio=finalDriveRatio,
         useSupport=false)
-      annotation (Placement(transformation(extent={{-80,-10},{-60,10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-80,-10},{-60,10}})));
   equation
     connect(rightHalfShaft.flange_a, wheelHub_2.flange) annotation (Line(points=
            {{-40,60},{-40,80},{-60,80},{-60,100}}, color={0,0,0}));
