@@ -288,19 +288,19 @@ package Examples "Collection of vehicle model examples"
       constrainedby PowertrainMounts.Interfaces.DualSystemMount
       "Engine and Transmission mounting system" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-100,-55},{-40,-40}}, rotation=0)));
     replaceable PowertrainMounts.SingleSystemRigidMount diffMount constrainedby
       PowertrainMounts.Interfaces.SingleSystemMount
       "Differential mounting system" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{0,-54},{10,-40}}, rotation=0)));
     replaceable Drivers.MinimalDriver driver constrainedby
       Drivers.Interfaces.Base "Driver model"
                      annotation (
       choicesAllMatching=true,
-      Dialog(group="Driver Models"),
+      Dialog(group="Driver Models"),
       Placement(transformation(extent={{-70,60},{-40,90}}, rotation=0)));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
@@ -501,7 +501,7 @@ package Examples "Collection of vehicle model examples"
     replaceable Drivers.MinimalDriver driver constrainedby
       Drivers.Interfaces.Base "Driver model"
                      annotation (
-      Dialog(group="Driver Models"),
+      Dialog(group="Driver Models"),
       choicesAllMatching=true,
       Placement(transformation(extent={{-40,55},{-20,75}}, rotation=0)));
   equation
@@ -807,8 +807,8 @@ package Examples "Collection of vehicle model examples"
     replaceable Engines.MinimalEngineUsingPedal engine constrainedby
       VehicleInterfaces.Engines.Interfaces.Base "Engine subsystem" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-110,-20},{-80,10}}, rotation=0)));
+      Dialog(group="Plant Models"),
+ Placement(transformation(extent={{-110,-20},{-80,10}}, rotation=0)));
     replaceable Transmissions.SingleGearManualTransmission transmission(
       clutch(
         phi_rel(fixed=true)))
@@ -816,7 +816,7 @@ package Examples "Collection of vehicle model examples"
       VehicleInterfaces.Transmissions.Interfaces.BaseManualTransmission
       "Transmission subsystem" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="PlantModels"),
       Placement(transformation(extent={{-60,-20},{-30,10}}, rotation=0)));
     replaceable Chassis.MinimalChassis3 chassis(
       constraint(v(fixed=true)))
@@ -824,26 +824,26 @@ package Examples "Collection of vehicle model examples"
       "Chassis subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{40,-30},{100,10}}, rotation=0)));
     replaceable Drivelines.MinimalDriveline driveline(usingMultiBodyChassis=
           true) constrainedby
       VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase "Driveline subsystem"
                             annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-10,-20},{20,10}}, rotation=0)));
     replaceable Brakes.MinimalBrakesUsingPedal brakes(usingMultiBodyChassis=
           true) constrainedby VehicleInterfaces.Brakes.Interfaces.TwoAxleBase
       "Brakes subsystem" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{120,-20},{150,10}}, rotation=0)));
     replaceable Accessories.MinimalAccessories accessories constrainedby
       VehicleInterfaces.Accessories.Interfaces.Base "Accesories subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-144,-15},{-124,5}}, rotation=0)));
     replaceable DriverEnvironments.ConventionalManual driverEnvironment(
       acceleratorPosition(v(fixed=true)),
@@ -853,7 +853,7 @@ package Examples "Collection of vehicle model examples"
       VehicleInterfaces.DriverEnvironments.Interfaces.BaseManualTransmission
       "Driver environment" annotation (
       choicesAllMatching=true,
-      Dialog(group="Driver Models"),
+      Dialog(group="Driver Models"),
       Placement(transformation(extent={{0,60},{30,90}}, rotation=0)));
     inner replaceable Roads.FlatRoad road constrainedby
       VehicleInterfaces.Roads.Interfaces.Base "Road models" annotation (
@@ -889,7 +889,7 @@ package Examples "Collection of vehicle model examples"
       constrainedby PowertrainMounts.Interfaces.TripleSystemMount
       "Powertrain mounting system" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-60,-55},{-30,-40}}, rotation=0)));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
@@ -1009,13 +1009,13 @@ package Examples "Collection of vehicle model examples"
       constrainedby VehicleInterfaces.Engines.Interfaces.Base
       "Engine subsystem"                                           annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-100,60},{-70,90}}, rotation=0)));
     replaceable Accessories.MinimalAccessories accessories constrainedby
       VehicleInterfaces.Accessories.Interfaces.Base "Accessories subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-141,65},{-121,85}}, rotation=0)));
     replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC motor1(
       inductor(
@@ -1023,7 +1023,7 @@ package Examples "Collection of vehicle model examples"
       constrainedby ElectricDrives.Interfaces.BaseDCMachine "Electric Motor 1"
                                                                  annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-101,26},{-71,-6}}, rotation=0)));
     replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC motor2(
       inductor(
@@ -1031,19 +1031,19 @@ package Examples "Collection of vehicle model examples"
       constrainedby ElectricDrives.Interfaces.BaseDCMachine "Electric Motor 2"
                                                                  annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-101,-67},{-71,-39}},rotation=0)));
     replaceable Transmissions.PowerSplitDevice powerSplitDevice constrainedby
       Transmissions.Interfaces.BaseTwoInputTransmission "Power-split device"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-54,-40},{-24,-10}},rotation=0)));
     replaceable EnergyStorage.Battery battery(V=1)
       constrainedby EnergyStorage.Interfaces.Base "Energy storage subsystem"
                                                                annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-141,-36},{-111,-6}},  rotation=0)));
     Modelica.Electrical.Analog.Basic.Ground ground
       annotation (Placement(transformation(extent={{-114,-65},{-94,-45}},
@@ -1158,13 +1158,13 @@ package Examples "Collection of vehicle model examples"
       constrainedby VehicleInterfaces.Engines.Interfaces.Base "Engine model"
                                                                annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-98,50},{-68,80}},  rotation=0)));
     replaceable Accessories.MinimalAccessories accessories constrainedby
       VehicleInterfaces.Accessories.Interfaces.Base "Accessories model"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-138,55},{-118,75}}, rotation=0)));
     replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC generator(
       inductor(i(start=0, fixed=true)))
@@ -1172,20 +1172,20 @@ package Examples "Collection of vehicle model examples"
       "Generator subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-20,80},{-50,50}}, rotation=0)));
     replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC driveMotor(
       inductor(i(start=0, fixed=true)))
       constrainedby ElectricDrives.Interfaces.BaseDCMachine
       "Traction motor subsystem" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-70,-40},{-40,-10}}, rotation=0)));
     replaceable EnergyStorage.Battery battery(V=1)
                                               constrainedby
       EnergyStorage.Interfaces.Base "Energy storage subsystem" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-130,-6},{-100,24}},rotation=0)));
     Modelica.Electrical.Analog.Basic.Ground ground
       annotation (Placement(transformation(extent={{-100,-24},{-80,-4}},
@@ -1277,26 +1277,26 @@ package Examples "Collection of vehicle model examples"
       VehicleInterfaces.Chassis.Interfaces.TwoAxleBase "Chassis subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{44,-50},{104,-10}},rotation=0)));
     replaceable Drivelines.MinimalDriveline driveline constrainedby
       VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase "Driveline subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{-6,-40},{24,-10}},rotation=0)));
     replaceable Brakes.MinimalBrakes brakes constrainedby
       VehicleInterfaces.Brakes.Interfaces.TwoAxleBase "Brakes subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
+      Dialog(group="Plant Models"),
       Placement(transformation(extent={{120,-40},{150,-10}},rotation=0)));
     replaceable DriverEnvironments.DriveByWireAutomatic driverEnvironment
       constrainedby
       VehicleInterfaces.DriverEnvironments.Interfaces.BaseAutomaticTransmission
       "Driver environment" annotation (
       choicesAllMatching=true,
-      Dialog(group="Driver Models"),
+      Dialog(group="Driver Models"),
       Placement(transformation(extent={{20,50},{50,80}},  rotation=0)));
     inner replaceable Roads.FlatRoad road constrainedby
       VehicleInterfaces.Roads.Interfaces.Base "Road model" annotation (

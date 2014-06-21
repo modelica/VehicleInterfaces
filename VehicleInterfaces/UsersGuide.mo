@@ -21,7 +21,7 @@ package UsersGuide "User's Guide"
 <p>The control bus structure utilises expandable connectors to provide a flexible bus concept.  This approach makes it easy to add new signals to the control bus so that data can be passed around the model.  The control bus structure implemented is heirarchical so that signals are easily located.  The approach adopted is that physical measurements taken from, for example, the transmission are placed on a sub-bus called <b>transmissionBus</b>.  Signals output from control blocks, for example the transmission controller, are placed on a sub-bus called <b>transmissionControlBus</b>.</p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
   end QuickStart;
@@ -72,7 +72,7 @@ Parameters that represent initial values for simulation experiments are denoted 
 <p>Wheels are identified by numbers from front left towards rear right. Those are, typically, used as indices in parameter or variable names. E.g., for a four-wheel car the front left wheel is \"1\", front right is \"2\", rear left \"3\", and rear right \"4\".</p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
   end NamingConventions;
@@ -105,7 +105,7 @@ Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
 </ol>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
     end AddingSignals;
@@ -227,7 +227,7 @@ Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
 </table>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
   end SignalBus;
@@ -327,7 +327,7 @@ Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
 <p>For example: when the accelerator pedal position = 1, the driver is accelerating as fast as possible;  when the clutch pedal position = 1, the driver has pressed the clutch pedal and the clutch is actually disengaged.</p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
 
@@ -348,7 +348,7 @@ Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
 </ol></p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
   end ModelRotatingParts;
@@ -376,7 +376,7 @@ Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
 </ul>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
   end SubsystemDefinitions;
@@ -397,7 +397,7 @@ Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
 </ol>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
     end Tutorial1;
@@ -414,7 +414,7 @@ Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
 Some elements of the library may have been renamed since this tutorial but the principles are still utilised.</p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
   end Tutorials;
@@ -611,7 +611,7 @@ on the library.
 <ul>
 <li>Arsenal Research: Franz Pirker, Anton Haumer, Christian Kral</li>
 <li>Claytex Services Ltd: Mike Dempsey</li>
-<li>Dassault Systèmes AB: Hilding Elmqvist</li>
+<li>Dassault Syst&egrave;mes AB: Hilding Elmqvist</li>
 <li>DLR Oberpfaffenhofen: Martin Otter, Christian Schweiger, Jakub Tobolar</li>
 <li>DLR Stuttgart: Peter Treffinger, Marcus Baur, J&ouml;rg Ungeth&uuml;m</li>
 <li>Modelon AB: Johan Andreasson, Magnus G&auml;fvert</li>
@@ -619,10 +619,10 @@ on the library.
 </ul>
 <p>This library has been developed from work on the original Modelica VMA (<a href=\"http://www.modelica.org/events/Conference2003/papers/h32_vehicle_Tiller.pdf\">Paper from the Modelica Conference 2003</a>) developed by Michael Tiller et al and published by Ford Motor Company.</p>
 <p>Additional ideas from intermediate work by members of DLR Oberpfaffenhofen and Modelon has also been incorporated.  The above partners agreed to develop these ideas in to a new library and adopt this set of interface definitions.</p>
-<p>The implementation of the VehicleInterfaces library was led by Claytex Services Limited under contract to Dassault Systèmes AB</p>
+<p>The implementation of the VehicleInterfaces library was led by Claytex Services Limited under contract to Dassault Syst&egrave;mes AB</p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
   end Acknowledgements;
@@ -667,7 +667,7 @@ even if advised of the possibility of such damage.
 </html>
 ", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
   end License;
@@ -680,7 +680,7 @@ Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
 <p>The library has been developed as a co-operation between a number of vendors who are currently developing automotive libraries.  The developers can be contacted by emailing <a href=\"mailto://vi@claytex.com\">vi@claytex.com</a>, please see <a href=\"Modelica://VehicleInterfaces.UsersGuide.Acknowledgements\">here</a> for a list of the people involved in the development of this library.</p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </p>
 </html>"));
 end UsersGuide;

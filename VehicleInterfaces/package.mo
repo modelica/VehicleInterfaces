@@ -40,7 +40,7 @@ is available as <a href=\"modelica://VehicleInterfaces/Resources/Documentation/V
 
 <p>The library has been developed as a co-operation between a number of vendors who are currently developing automotive libraries.  The developers can be contacted by emailing <a href=\"mailto://vi@claytex.com\">vi@claytex.com</a>, please see <a href=\"Modelica://VehicleInterfaces.UsersGuide.Acknowledgements\">acknowledgements</a> for a list of the people involved in the development of this library.</p>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 Copyright &copy; 2013-, Modelica Association
 </p>
 </html>"));
