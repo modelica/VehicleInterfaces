@@ -14,12 +14,13 @@ This library also contains a proposal for a naming convention covering the whole
 
 ## Current release
 
-Download [VehicleInterfaces v1.2.2 (2013-03-13)](../../archive/v1.2.2.zip)
+Download [VehicleInterfaces v1.2.2 (2014-06-30)](../../archive/v1.2.2.zip)
 
 #### Release notes
 
-* [Version v1.2.2 (2013-03-13)](../../archive/v1.2.2.zip)
+* [Version v1.2.2 (2014-06-30)](../../archive/v1.2.2.zip)
   * Further adaption to the conventions of the Modelica Specification 3.2 Revision 2, removal of Dymola specific visualization.
+  * Clean-up of superfluous annotations and HTML syntax and links
 * [Version v1.2.1 (2013-10-01)](../../archive/v1.2.1.zip)
   * Adapted to the conventions of the *Modelica Standard Library 3.2.1*.
 

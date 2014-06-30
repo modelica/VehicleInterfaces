@@ -32,16 +32,14 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.2) - Interface
 </p>
 <p>For an automotive library to be compatible with other libraries based on this set of interface definitions they should extend the interface definition from within this library and following the naming convention for the signal bus. </p>
 <p>This library also contains a proposal for a naming convention covering the whole model library and the developers of this library would recommend that this convention is followed by other developers to ensure a consistent naming convention across the whole set of automotive models.</p>
-
 <p>
-The complete documentation of the VehicleInterfaces library in pdf format
+The complete documentation of the VehicleInterfaces library in PDF format
 is available as <a href=\"modelica://VehicleInterfaces/Resources/Documentation/VehicleInterfaces.pdf\">VehicleInterfaces.pdf</a>
 </p>
-
-<p>The library has been developed as a co-operation between a number of vendors who are currently developing automotive libraries.  The developers can be contacted by emailing <a href=\"mailto://vi@claytex.com\">vi@claytex.com</a>, please see <a href=\"Modelica://VehicleInterfaces.UsersGuide.Acknowledgements\">acknowledgements</a> for a list of the people involved in the development of this library.</p>
+<p>The library has been developed as a co-operation between a number of vendors who are currently developing automotive libraries. Please see <a href=\"modelica://VehicleInterfaces.UsersGuide.Contact\">the contact information</a> on how to give feedback and for a list of the people involved in the development of this library.</p>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
-Copyright &copy; 2013-, Modelica Association
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
 end VehicleInterfaces;

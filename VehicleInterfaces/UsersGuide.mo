@@ -21,7 +21,8 @@ package UsersGuide "User's Guide"
 <p>The control bus structure utilises expandable connectors to provide a flexible bus concept.  This approach makes it easy to add new signals to the control bus so that data can be passed around the model.  The control bus structure implemented is heirarchical so that signals are easily located.  The approach adopted is that physical measurements taken from, for example, the transmission are placed on a sub-bus called <b>transmissionBus</b>.  Signals output from control blocks, for example the transmission controller, are placed on a sub-bus called <b>transmissionControlBus</b>.</p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
   end QuickStart;
@@ -72,7 +73,8 @@ Parameters that represent initial values for simulation experiments are denoted 
 <p>Wheels are identified by numbers from front left towards rear right. Those are, typically, used as indices in parameter or variable names. E.g., for a four-wheel car the front left wheel is \"1\", front right is \"2\", rear left \"3\", and rear right \"4\".</p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
   end NamingConventions;
@@ -104,7 +106,8 @@ Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </ol>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
     end AddingSignals;
@@ -226,7 +229,8 @@ Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </table>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
   end SignalBus;
@@ -326,7 +330,8 @@ Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 <p>For example: when the accelerator pedal position = 1, the driver is accelerating as fast as possible;  when the clutch pedal position = 1, the driver has pressed the clutch pedal and the clutch is actually disengaged.</p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
 
@@ -347,7 +352,8 @@ Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </ol>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
   end ModelRotatingParts;
@@ -375,7 +381,8 @@ Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </ul>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
   end SubsystemDefinitions;
@@ -396,7 +403,8 @@ Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 </ol>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
     end Tutorial1;
@@ -413,7 +421,8 @@ Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 Some elements of the library may have been renamed since this tutorial but the principles are still utilised.</p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
   end Tutorials;
@@ -421,7 +430,7 @@ Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
   package ReleaseNotes "Release notes"
     extends Modelica.Icons.ReleaseNotes;
 
-    class Version_1_2_2 "Version 1.2.2 (Jun. 21, 2014)"
+    class Version_1_2_2 "Version 1.2.2 (Jun. 30, 2014)"
       extends Modelica.Icons.ReleaseNotes;
 
       annotation (Documentation(info="<html>
@@ -603,30 +612,6 @@ on the library.
 </html>"));
   end ReleaseNotes;
 
-  class Acknowledgements "Acknowledgements"
-    extends Modelica.Icons.Information;
-
-    annotation (Documentation(info="<html>
-<p>A number of automotive library developers and consultants have co-operated to develop this release of the VehicleInterfaces Library.  The developers can all be contacted by emailing <a href=\"mailto:vi@claytex.com\">vi@claytex.com</a>.  The developers are:</p>
-<ul>
-<li>Arsenal Research: Franz Pirker, Anton Haumer, Christian Kral</li>
-<li>Claytex Services Ltd: Mike Dempsey</li>
-<li>Dassault Syst&egrave;mes AB: Hilding Elmqvist</li>
-<li>DLR Oberpfaffenhofen: Martin Otter, Christian Schweiger, Jakub Tobolar</li>
-<li>DLR Stuttgart: Peter Treffinger, Marcus Baur, J&ouml;rg Ungeth&uuml;m</li>
-<li>Modelon AB: Johan Andreasson, Magnus G&auml;fvert</li>
-<li>Ricardo UK Ltd: Mark Ingram, Peter Harman</li>
-</ul>
-<p>This library has been developed from work on the original Modelica VMA (<a href=\"http://www.modelica.org/events/Conference2003/papers/h32_vehicle_Tiller.pdf\">Paper from the Modelica Conference 2003</a>) developed by Michael Tiller et al and published by Ford Motor Company.</p>
-<p>Additional ideas from intermediate work by members of DLR Oberpfaffenhofen and Modelon has also been incorporated.  The above partners agreed to develop these ideas in to a new library and adopt this set of interface definitions.</p>
-<p>The implementation of the VehicleInterfaces library was led by Claytex Services Limited under contract to Dassault Syst&egrave;mes AB</p>
-</html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
-</p>
-</html>"));
-  end Acknowledgements;
-
   class License "VehicleInterfaces license"
     extends Modelica.Icons.Information;
 
@@ -667,20 +652,54 @@ even if advised of the possibility of such damage.
 </html>
 ", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
   end License;
-  annotation (DocumentationClass=true, Documentation(info="<html>
-<p>The VehicleInterfaces Modelica library provides standard interface definitions for automotive subsystems and vehicle models.  These are designed to promote compatibility between the various automotive libraries and provide a flexible, powerful structure for vehicle modelling.  The main focus of the library is on defining the interfaces for the individual subsystems and a number of vehicle model examples are included to demonstrate how they might be used.</p>
-<img src=\"modelica://VehicleInterfaces/Resources/Images/conventionalVehicle.png\" align=\"middle\">
-<p>For an automotive library to be compatible with other libraries based on this set of interface definitions they should extend the interface definition from within this library and following the naming convention for the control signal bus and driver interaction bus if used. </p>
-<p>This library also contains a proposal for a naming convention covering the whole model library and the developers of this library would recommend that this convention is followed by other developers to ensure a consistent naming convention across the whole set of automotive models.</p>
 
-<p>The library has been developed as a co-operation between a number of vendors who are currently developing automotive libraries.  The developers can be contacted by emailing <a href=\"mailto://vi@claytex.com\">vi@claytex.com</a>, please see <a href=\"Modelica://VehicleInterfaces.UsersGuide.Acknowledgements\">here</a> for a list of the people involved in the development of this library.</p>
+  class Contact "Contact"
+    extends Modelica.Icons.Contact;
+
+    annotation (Documentation(info="<html>
+<p>This library is maintained by the Modelica Association. Further development takes place on <a href=\"https://github.com/modelica/VehicleInterfaces\">https://github.com/modelica/VehicleInterfaces</a> where users can also report issues and/or supply pull-requests.</p>
+<h5>History</h5>
+<p>A number of automotive library developers and consultants have co-operated to develop the VehicleInterfaces Library.  The developers were:</p>
+<ul>
+<li>Arsenal Research: Franz Pirker, Anton Haumer, Christian Kral</li>
+<li>Claytex Services Ltd: Mike Dempsey</li>
+<li>Dassault Syst&egrave;mes AB: Hilding Elmqvist</li>
+<li>DLR Oberpfaffenhofen: Martin Otter, Christian Schweiger, Jakub Tobolar</li>
+<li>DLR Stuttgart: Peter Treffinger, Marcus Baur, J&ouml;rg Ungeth&uuml;m</li>
+<li>Modelon AB: Johan Andreasson, Magnus G&auml;fvert</li>
+<li>Ricardo UK Ltd: Mark Ingram, Peter Harman</li>
+</ul>
+<p>This library has been developed from work on the original Modelica VMA (<a href=\"http://www.modelica.org/events/Conference2003/papers/h32_vehicle_Tiller.pdf\">Paper from the Modelica Conference 2003</a>) developed by Michael Tiller et al and published by Ford Motor Company.</p>
+<p>Additional ideas from intermediate work by members of DLR Oberpfaffenhofen and Modelon has also been incorporated.  The above partners agreed to develop these ideas in to a new library and adopt this set of interface definitions.</p>
+<p>The implementation of the VehicleInterfaces library was led by Claytex Services Limited under contract to Dassault Syst&egrave;mes AB</p>
 </html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
+</p>
+</html>"));
+  end Contact;
+
+  annotation (DocumentationClass=true, Documentation(info="<html>
+<p>The VehicleInterfaces Modelica library provides standard interface definitions for automotive subsystems and vehicle models.  These are designed to promote compatibility between the various automotive libraries and provide a flexible, powerful structure for vehicle modelling.  The main focus of the library is on defining the interfaces for the individual subsystems and a number of vehicle model examples are included to demonstrate how they might be used.</p>
+<p>
+<img src=\"modelica://VehicleInterfaces/Resources/Images/conventionalVehicle.png\" align=\"middle\">
+</p>
+<p>For an automotive library to be compatible with other libraries based on this set of interface definitions they should extend the interface definition from within this library and following the naming convention for the control signal bus and driver interaction bus if used. </p>
+<p>This library also contains a proposal for a naming convention covering the whole model library and the developers of this library would recommend that this convention is followed by other developers to ensure a consistent naming convention across the whole set of automotive models.</p>
+<p>
+The complete documentation of the VehicleInterfaces library in PDF format
+is available as <a href=\"modelica://VehicleInterfaces/Resources/Documentation/VehicleInterfaces.pdf\">VehicleInterfaces.pdf</a>
+</p>
+</html>", revisions="<html>
+<p>
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2014, Modelica Association
 </p>
 </html>"));
 end UsersGuide;
