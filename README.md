@@ -6,7 +6,7 @@ Free library from the Modelica Association for interface definitions and archite
 
 This Modelica library provides standard interface definitions for automotive subsystems and vehicle models. These are designed to promote compatibility between the various automotive libraries and provide a flexible, powerful structure for vehicle modelling. The main focus of the library is on defining the interfaces for the individual subsystems and a number of vehicle model examples are included to demonstrate how they might be used.
 
-![VehicleInterfaces](VehicleInterfaces 1.2.1/Resources/Images/conventionalVehicle.png)
+![VehicleInterfaces](VehicleInterfaces 1.2.2/Resources/Images/conventionalVehicle.png)
 
 For an automotive library to be compatible with other libraries based on this set of interface definitions they should extend the interface definition from within this library and following the naming convention for the signal bus.
 
@@ -14,12 +14,13 @@ This library also contains a proposal for a naming convention covering the whole
 
 ## Current release
 
-Download [VehicleInterfaces v1.2.2 (2013-03-13)](../../archive/v1.2.2.zip)
+Download [VehicleInterfaces v1.2.2 (2014-06-30)](../../archive/v1.2.2.zip)
 
 #### Release notes
 
-* [Version v1.2.2 (2013-03-13)](../../archive/v1.2.2.zip)
+* [Version v1.2.2 (2014-06-30)](../../archive/v1.2.2.zip)
   * Further adaption to the conventions of the Modelica Specification 3.2 Revision 2, removal of Dymola specific visualization.
+  * Clean-up of superfluous annotations and HTML syntax and links
 * [Version v1.2.1 (2013-10-01)](../../archive/v1.2.1.zip)
   * Adapted to the conventions of the *Modelica Standard Library 3.2.1*.
 

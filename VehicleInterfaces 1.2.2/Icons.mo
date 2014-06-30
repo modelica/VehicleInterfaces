@@ -7,8 +7,6 @@ package Icons "Collection of icons"
     extends Modelica.Icons.VariantsPackage;
 
     annotation (
-      Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-              100}})),
       Documentation(info="<html>
 <p>
 This partial class is intended to design a <em>default icon for a package class</em> which contains several <em>variants</em> of one assembly or component.
@@ -21,13 +19,8 @@ This partial class is intended to design a <em>default icon for a package class<
     extends Modelica.Icons.BasesPackage;
     extends Modelica.Icons.ObsoleteModel;
 
-     annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
-                              Documentation(revisions="<html><table border=0 cellspacing=0 cellpadding=0>
-  <tr><td valign=\"center\"> <img src=\"modelica://LibraryTemplate/Resources/Images/logo_dlr.png\" width=60></td>
-      <td valign=\"center\"> <b>Copyright &copy; 2006-2010, DLR Institute of Robotics and Mechatronics<b> </td>
-  </tr>
- </table>
+     annotation (Documentation(revisions="<html>
+<p>Copyright &copy; 2006-2010, DLR Institute of Robotics and Mechatronics</p>
 </html>",   info="<html>
 <p><b>Obsolete</b> partial class intended to design a <i>default icon for a package class</i> which is called <i>BaseClasses</i> or <i>Internal</i>. </p>
 
@@ -115,8 +108,6 @@ This partial class is intended to design a <em>default icon for a package class<
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name")}),
-                              Diagram(coordinateSystem(preserveAspectRatio=false,
-                     extent={{-100,-100},{100,100}})),
       Documentation(info="<html>
 <p>
 This partial class is intended to design a default icon for an <em>accessorier assembly</em>.
@@ -129,8 +120,7 @@ This partial class is intended to design a default icon for an <em>accessorier a
     annotation (Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-200,-100},{200,100}},
-          grid={2,2},
-          initialScale=0.1), graphics={
+          grid={2,2}), graphics={
           Rectangle(
             extent={{-200,100},{200,-100}},
             lineColor={0,0,255},
@@ -216,10 +206,6 @@ This partial class is intended to design a default icon for an <em>atmosphere</e
   partial model Battery "Icon for a battery subsystem"
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -231,20 +217,16 @@ This partial class is intended to design a default icon for an <em>atmosphere</e
             fillPattern=FillPattern.Solid),
           Line(
             points={{88,60},{0,60},{0,10}},
-            color={0,0,255},
-            smooth=Smooth.None),
+            color={0,0,255}),
           Line(
             points={{-60,10},{-60,10},{60,10}},
-            color={0,0,255},
-            smooth=Smooth.None),
+            color={0,0,255}),
           Line(
             points={{-32,-10},{30,-10}},
-            color={0,0,255},
-            smooth=Smooth.None),
+            color={0,0,255}),
           Line(
             points={{0,-10},{0,-60},{90,-60}},
-            color={0,0,255},
-            smooth=Smooth.None),
+            color={0,0,255}),
           Text(
             extent={{-100,100},{100,62}},
             lineColor={0,0,255},
@@ -351,13 +333,11 @@ This partial class is intended to design a default icon for a <em>brakes assembl
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1)),
+          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1), graphics={
+          grid={1,1}), graphics={
           Rectangle(
             extent={{-160,100},{160,-100}},
             lineColor={0,0,0},
@@ -700,9 +680,7 @@ This partial class is intended to design a default icon for <em>controllers</em>
 
   model DataDictionary "Icon for a data dictionary"
 
-    annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
-                         Icon(coordinateSystem(preserveAspectRatio=false,
+    annotation (                         Icon(coordinateSystem(preserveAspectRatio=false,
             extent={{-100,-100},{100,100}}), graphics={
           Ellipse(
             extent={{-60,-60},{60,-100}},
@@ -777,10 +755,6 @@ This partial class is intended to design a default icon for a <em>data dictionar
   partial model Driveline "Icon for a driveline subsystem"
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -1029,10 +1003,6 @@ This partial class is intended to design a default icon for a <em>driver model</
   partial model ElectricMotor "Icon for an electric drive subsystem"
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -1175,13 +1145,11 @@ This partial class is intended to design a default icon for a <em>engine assembl
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
-          grid={1,1},
-          initialScale=0.1)),
+          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
-          grid={1,1},
-          initialScale=0.1), graphics={
+          grid={1,1}), graphics={
           Rectangle(
             extent={{-150,100},{150,-100}},
             lineColor={0,0,0},
@@ -1217,8 +1185,7 @@ This partial class is intended to design a default icon for a model of <em>multi
     annotation (Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-200,-100},{200,100}},
-          grid={2,2},
-          initialScale=0.1), graphics={
+          grid={2,2}), graphics={
           Rectangle(
             extent={{-200,100},{200,-100}},
             lineColor={0,0,255},
@@ -1264,16 +1231,10 @@ This partial class is intended to design a default icon for a <em>road</em>.
     "Icon for signal sub-bus where the explicit signals are defined in the bus"
 
     annotation (
-      Icon(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={2,2},
-          initialScale=0.1)),
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
-          grid={2,2},
-          initialScale=0.1), graphics={
+          grid={2,2}), graphics={
           Polygon(
             points={{-40,25},{40,25},{50,15},{40,-20},{30,-25},{-30,-25},{-40,
                 -20},{-50,15},{-40,25}},
@@ -1289,10 +1250,6 @@ This icon is designed for a <b>sub-bus</b> in a signal connector.
   partial model SingleMount "Icon for a single mounting subsystem"
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -1329,13 +1286,11 @@ This partial class is intended to design a default icon for a model of <em>singl
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
-          grid={1,1},
-          initialScale=0.1)),
+          grid={1,1})),
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-150,-100},{150,100}},
-          grid={1,1},
-          initialScale=0.1), graphics={
+          grid={1,1}), graphics={
           Rectangle(
             extent={{-150,100},{150,-100}},
             lineColor={0,0,0},

@@ -83,9 +83,7 @@ A collection of internal material for interface models. Especially, the bus defi
     VehicleInterfaces.Interfaces.TransmissionControlBus
       transmissionControlBus "Transmission control bus" annotation(Dialog(enable=false));
 
-    annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}), graphics),
-      Documentation(info="<html>
+    annotation (      Documentation(info="<html>
 <p>An empty expandable connector used as the top-level control signal bus in VehicleInterfaces.</p>
 </html>"));
   end ControlBus;
@@ -166,7 +164,7 @@ A collection of internal material for interface models. Especially, the bus defi
             lineColor={255,204,51},
             lineThickness=0.5)}),
       Documentation(info="<html>
-<p>Should be used to contain signals measured in the brakes subsystem.  
+<p>Should be used to contain signals measured in the brakes subsystem.
 It is defined as an empty expandable connector.</p>
 </html>"));
   end BrakesBus;
@@ -509,8 +507,7 @@ It is defined as an empty expandable connector.</p>
     parameter Modelica.SIunits.Distance intoGearDisplacement=0.1
       "Distance to move in to gear";
     ShiftConnector shiftConnector "Gear shift connection"
-      annotation (Placement(transformation(extent={{-130,-30},{-70,30}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-130,-30},{-70,30}})));
     Modelica.Blocks.Interfaces.IntegerInput gear "Gear number"
       annotation (Placement(transformation(
           origin={120,0},
@@ -542,9 +539,6 @@ It is defined as an empty expandable connector.</p>
     end if;
 
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{
-              100,100}}),
-              graphics),
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
               100}}), graphics={
           Rectangle(
@@ -620,11 +614,9 @@ It is defined as an empty expandable connector.</p>
     parameter Modelica.SIunits.Distance intoGearDisplacement=0.1
       "Distance to move in to gear";
     ShiftConnector shiftConnector "Gear shift connection"
-      annotation (Placement(transformation(extent={{-130,-30},{-70,30}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-130,-30},{-70,30}})));
     Modelica.Blocks.Interfaces.IntegerOutput gear "Gear number"
-      annotation (Placement(transformation(extent={{100,-10},{120,10}},rotation=
-             0)));
+      annotation (Placement(transformation(extent={{100,-10},{120,10}})));
   equation
     shiftConnector.crossGate.f = 0;
     shiftConnector.intoGear.f = 0;
@@ -651,9 +643,6 @@ It is defined as an empty expandable connector.</p>
     end if;
 
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{
-              100,100}}),
-              graphics),
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
               100}}), graphics={
           Rectangle(

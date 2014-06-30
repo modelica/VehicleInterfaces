@@ -9,9 +9,9 @@ package Drivers "Collection of driver subsystem definitions"
 <p><b>Tutorial - Defining a new driver model</b></p>
 <p>The following process will demonstrate how to create a new driver model using these interface definitions.  This tutorial will guide you through building a driver for a conventional automatic transmission passenger car.</p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.Drivers.Interfaces.Base</b>, it should look like this:</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriver1.png\"><br><br>
-<li>Unlike the other interface definitions in the VehicleInterfaces package the Driver model doesn't include optional connections.  It simply uses an expandable connector to exchange information with the DriverEnvironment subsystem.  The required signals are defined in the <a href=\"Modelica://VehicleInterfaces.UsersGuide.DriverInteractionBus\">Driver interaction bus</a> section of the Users Guide.  Normalised mechanical sensors and actuators are provided in the <a href=\"Modelica://VehicleInterfaces.Mechanics\">VehicleInterfaces.Mechanics</a> package.
+<li>Create a new model that extends <b>VehicleInterfaces.Drivers.Interfaces.Base</b>, it should look like this:
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriver1.png\"><br><br></li>
+<li>Unlike the other interface definitions in the VehicleInterfaces package the Driver model doesn't include optional connections.  It simply uses an expandable connector to exchange information with the DriverEnvironment subsystem.  The required signals are defined in the <a href=\"Modelica://VehicleInterfaces.UsersGuide.DriverInteractionBus\">Driver interaction bus</a> section of the Users Guide.  Normalised mechanical sensors and actuators are provided in the <a href=\"Modelica://VehicleInterfaces.Mechanics\">VehicleInterfaces.Mechanics</a> package.</li>
 </ol></html>"));
   end Tutorial;
 
@@ -24,10 +24,6 @@ package Drivers "Collection of driver subsystem definitions"
                 {10,10}},          rotation=-90,
             origin={100,0})));
       annotation (
-        Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{100,
-                100}})),
-        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for the driver subsystem. This class should be extended to form a particular driver model. See the <a href=\"Modelica://VehicleInterfaces.Drivers\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Drivers.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -50,8 +46,8 @@ package Drivers "Collection of driver subsystem definitions"
       SI.Velocity vehicleSpeed "Vehicle speed" annotation (Dialog);
       SI.AngularVelocity engineSpeed "Engine speed" annotation (Dialog);
       annotation (Documentation(info="<html>
-<p>An expandable connector that defines the minimum set of signals required 
-  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.  
+<p>An expandable connector that defines the minimum set of signals required
+  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.
   </p>
 </html>"));
     end MinimalBus;
@@ -68,8 +64,8 @@ package Drivers "Collection of driver subsystem definitions"
         annotation (Dialog);
 
       annotation (Documentation(info="<html>
-<p>An expandable connector that defines the minimum set of signals required 
-  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.  
+<p>An expandable connector that defines the minimum set of signals required
+  on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.
   </p>
 </html>"));
     end BusForAutomaticTransmission;
@@ -92,7 +88,7 @@ package Drivers "Collection of driver subsystem definitions"
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for driver models. 
+A collection of partial base classes which define interfaces for driver models.
 </p>
 </html>"));
   end Interfaces;
@@ -104,7 +100,7 @@ A collection of partial base classes which define interfaces for driver models.
 
     annotation (Documentation(info="<html>
 <p>
-Empty driver model. Using this empty model in overall vehicle architecture the functionality of driver can be eliminated. 
+Empty driver model. Using this empty model in overall vehicle architecture the functionality of driver can be eliminated.
 </p>
 </html>"));
   end NoDriver;
@@ -136,33 +132,29 @@ Empty driver model. Using this empty model in overall vehicle architecture the f
       height=finalBrakeRequest,
       offset=initialBrakeRequest,
       startTime=brakeTime) annotation (Placement(transformation(extent={{-40,40},
-              {-20,60}}, rotation=0)));
+              {-20,60}})));
     Modelica.Blocks.Sources.Step acceleratorDemand(
       height=finalAccelRequest,
       offset=initialAccelRequest,
       startTime=accelTime) annotation (Placement(transformation(extent={{-40,10},
-              {-20,30}}, rotation=0)));
+              {-20,30}})));
     Modelica.Blocks.Sources.Constant steeringAngle(k=0)
-      annotation (Placement(transformation(extent={{-40,70},{-20,90}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-40,70},{-20,90}})));
     Modelica.Blocks.Sources.IntegerConstant gearboxMode(k=selectedGearboxMode)
-      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}})));
     Modelica.Blocks.Sources.IntegerConstant requestedGear(k=manualGearRequest)
-      annotation (Placement(transformation(extent={{-40,-60},{-20,-40}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-40,-60},{-20,-40}})));
     Mechanics.NormalisedRotational.Position steeringWheelAngle
-      annotation (Placement(transformation(extent={{0,70},{20,90}},  rotation=0)));
+      annotation (Placement(transformation(extent={{0,70},{20,90}})));
     Mechanics.NormalisedTranslational.Position brakePosition
-      annotation (Placement(transformation(extent={{0,40},{20,60}},  rotation=0)));
+      annotation (Placement(transformation(extent={{0,40},{20,60}})));
     Mechanics.NormalisedTranslational.Position acceleratorPosition
-      annotation (Placement(transformation(extent={{0,10},{20,30}},  rotation=0)));
+      annotation (Placement(transformation(extent={{0,10},{20,30}})));
     Modelica.Blocks.Sources.IntegerStep ignition(
       height=-1,
       startTime=0.5,
       offset=VehicleInterfaces.Types.IgnitionSetting.Start)
-      annotation (Placement(transformation(extent={{-40,-90},{-20,-70}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-40,-90},{-20,-70}})));
   equation
     connect(gearboxMode.y, driverInterface.gearboxMode) annotation (
       Line(points={{-19,-20},{98,-20},{98,0},{100,0}}, color={255,127,0}),
@@ -211,8 +203,6 @@ Empty driver model. Using this empty model in overall vehicle architecture the f
 
     annotation (
       defaultComponentName="driver",
-      Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-              100}})),
       Documentation(info="<html>
 <p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.</p>
 </html>"));

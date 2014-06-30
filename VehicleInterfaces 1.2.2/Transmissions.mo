@@ -8,11 +8,11 @@ package Transmissions "Collection of transmission subsystem definitions"
 <p><b>Tutorial - Defining a new manual transmission model</b></p>
 <p>The following process will demonstrate how to create a new manual transmission model using this interface definition.</p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.Transmissions.Interfaces.BaseManualTransmission</b>, it should look like this:</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission1.png\"><br><br>
-<li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission2.png\"><br><br>
-<li>This dialog allows you to enable/disable the optional connections by setting <b>includeClutchPedal</b>, <b>includeManualShiftConnector</b> and <b>includeMount</b> as required for your new transmission model.  The <b>engineFlange</b> and <b>drivelineFlange</b> connectors are of the type <a href=\"Modelica://VehicleInterfaces.Interfaces.FlangeWithBearing\">VehicleInterfaces.Interfaces.FlangeWithBearing</a>, the parameters <b>includeTransmissionBearing</b> and <b>includeDrivelineBearing</b> controls whether the bearing connectors within these connections are enabled or not.</li>
+<li>Create a new model that extends <b>VehicleInterfaces.Transmissions.Interfaces.BaseManualTransmission</b>, it should look like this:
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission1.png\"><br><br></li>
+<li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission2.png\"><br><br></li>
+<li>This dialog allows you to enable/disable the optional connections by setting <b>includeClutchPedal</b>, <b>includeManualShiftConnector</b> and <b>includeMount</b> as required for your new transmission model.  The <b>engineFlange</b> and <b>drivelineFlange</b> connectors are of the type <a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>, the parameters <b>includeTransmissionBearing</b> and <b>includeDrivelineBearing</b> controls whether the bearing connectors within these connections are enabled or not.</li>
 <li>You can now define your transmission model as required</li>
 </ol>
 <h4>Creating the MinimalTransmission example</h4>
@@ -20,19 +20,19 @@ package Transmissions "Collection of transmission subsystem definitions"
 <p>Starting from step 3 above.</p>
 <ol>
 <li>First, decide which of the optional connectors are required to model.  For this example we don't need any of the optional connections</li>
-<li>Add the following blocks and connections to the diagram</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission3.png\"><br><br>
-<li>Next, we need to add the required connections to the control signal bus for the transmission, see <a href=\"Modelica://VehicleInterfaces.UsersGuide.SignalBus\">here</a> for a complete list of the minimum connections required.  As we are creating a manual transmission model we need to add three signals to the transmissionBus which is part of the controlBus.  We need to put the transmission output speed, current gear and the clutch state on to the transmissionBus.  As this is a simple single gear transmission the current gear and clutch state can be set as constants.  Start by adding the transmissionBus connector which can be found at <b>VehicleInterfaces.Interfaces.TransmissionBus</b> and connect this to the controlBus.  When this connection is made the following dialog will be produced and should be completed as shown.</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission4.png\"><br><br>
-<li>We can now connect the constants for clutch state and current gear to the transmissionBus.  The transmission output speed needs to be in the correct units, in this case r/min (or rpm).  Add a rotational speed sensor and a unit conversion block from <b>Modelica.Blocks.Math.UnitConversions</b>, set the conversion block to convert to rpm.  When you create the connection between the transmissionBus and one of these blocks a dialog like the one below will be produced.  You will need to complete the dialog using one of the following names:</li>
+<li>Add the following blocks and connections to the diagram
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission3.png\"><br><br></li>
+<li>Next, we need to add the required connections to the control signal bus for the transmission, see <a href=\"Modelica://VehicleInterfaces.UsersGuide.SignalBus\">here</a> for a complete list of the minimum connections required.  As we are creating a manual transmission model we need to add three signals to the transmissionBus which is part of the controlBus.  We need to put the transmission output speed, current gear and the clutch state on to the transmissionBus.  As this is a simple single gear transmission the current gear and clutch state can be set as constants.  Start by adding the transmissionBus connector which can be found at <b>VehicleInterfaces.Interfaces.TransmissionBus</b> and connect this to the controlBus.  When this connection is made the following dialog will be produced and should be completed as shown.
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission4.png\"><br><br></li>
+<li>We can now connect the constants for clutch state and current gear to the transmissionBus.  The transmission output speed needs to be in the correct units, in this case r/min (or rpm).  Add a rotational speed sensor and a unit conversion block from <b>Modelica.Blocks.Math.UnitConversions</b>, set the conversion block to convert to rpm.  When you create the connection between the transmissionBus and one of these blocks a dialog like the one below will be produced.  You will need to complete the dialog using one of the following names:
 <ul>
 <li>gear</li>
 <li>clutchLocked</li>
 <li>outputSpeed</li>
 </ul>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission5.png\"><br><br>
-<li>The model is now complete and should check successfully and can be used in any model compatible with the VehicleInterfaces library</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission6.png\"><br><br>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission5.png\"><br><br></li>
+<li>The model is now complete and should check successfully and can be used in any model compatible with the VehicleInterfaces library
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewTransmission6.png\"><br><br></li>
 </ol>
 </html>"));
   end Tutorial;
@@ -51,13 +51,11 @@ package Transmissions "Collection of transmission subsystem definitions"
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing engineFlange(
           final includeBearingConnector=includeTransmissionBearing or
             usingMultiBodyEngine) "Connection to the engine"
-        annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing drivelineFlange(
           final includeBearingConnector=includeDrivelineBearing or
             usingMultiBodyDriveline) "Connection to the driveline"
-        annotation (Placement(transformation(extent={{90,-10},{110,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{90,-10},{110,10}})));
       VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
         annotation (Placement(transformation(
             origin={-100,60},
@@ -113,8 +111,8 @@ package Transmissions "Collection of transmission subsystem definitions"
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
         Documentation(info="<html>
-<p>This partial model defines the common interfaces required for a transmission subsystem.  
-See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>
+<p>This partial model defines the common interfaces required for a transmission subsystem.
+See the <a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"modelica://VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end Base;
 
@@ -122,8 +120,8 @@ See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a hre
       "Interface definition for an automatic transmission"
       extends Base;
       annotation (Documentation(info="<html>
-<p>This partial model defines the interfaces required for an automatic transmission model within the VehicleInterfaces package.  
-See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p> 
+<p>This partial model defines the interfaces required for an automatic transmission model within the VehicleInterfaces package.
+See the <a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"modelica://VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end BaseAutomaticTransmission;
 
@@ -138,13 +136,11 @@ See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a hre
     public
       Modelica.Mechanics.Translational.Interfaces.Flange_b clutchPedal if
         includeClutchPedal "Clutch pedal connection (optional)"
-        annotation (Placement(transformation(extent={{-70,90},{-50,110}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-70,90},{-50,110}})));
       VehicleInterfaces.Interfaces.ShiftConnector shiftConnector if
         includeManualShiftConnector
         "Manual shift selector connection (optional)"
-        annotation (Placement(transformation(extent={{-10,90},{10,110}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-10,90},{10,110}})));
       annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
                 -100},{100,100}}), graphics={Rectangle(
               extent={{-12,112},{12,86}},
@@ -154,8 +150,8 @@ See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a hre
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
         Documentation(info="<html>
-<p>This partial model defines the interfaces required for a manual transmission model within the VehicleInterfaces package.  
-See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>  
+<p>This partial model defines the interfaces required for a manual transmission model within the VehicleInterfaces package.
+See the <a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"modelica://VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end BaseManualTransmission;
 
@@ -176,8 +172,7 @@ See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a hre
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing motorFlange(
           final includeBearingConnector=includeTransmissionBearing or
             usingMultiBodyEngine) "Connection to the engine"
-        annotation (Placement(transformation(extent={{-110,-70},{-90,-50}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-110,-70},{-90,-50}})));
     protected
       parameter Boolean includeMotorBearing=false
         "Include the motor bearing connection";
@@ -192,9 +187,9 @@ See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a hre
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
         Documentation(info="<html>
-<p>This partial model defines the interfaces required for a transmission model that has two input shafts (such as a power-split device) 
-within the VehicleInterfaces package.  See the <a href=\"VehicleInterfaces.Transmissions\">documentation</a> and <a 
-href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p> 
+<p>This partial model defines the interfaces required for a transmission model that has two input shafts (such as a power-split device)
+within the VehicleInterfaces package.  See the <a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a> and <a
+href=\"modelica://VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end BaseTwoInputTransmission;
 
@@ -226,12 +221,12 @@ href=\"VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more informat
       Integer currentGear "Currently selected gear" annotation (Dialog);
       annotation (Documentation(info="<html>
 <p>Bus with a set of standard signals generated by the controller for a transmission subsystem. </p>
-</html>"), Diagram(graphics));
+</html>"));
     end StandardControlBus;
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for transmission models. 
+A collection of partial base classes which define interfaces for transmission models.
 </p>
 </html>"));
   end Interfaces;
@@ -243,12 +238,9 @@ A collection of partial base classes which define interfaces for transmission mo
   equation
     connect(engineFlange, drivelineFlange)
       annotation (Line(points={{-100,0},{100,0}}, color={0,0,0}));
-    annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                        graphics),
-      Documentation(info="<html>
+    annotation (      Documentation(info="<html>
 <p>
-Empty transmission model (just rigid connection between engine and driveline flange). Using this empty model in overall vehicle architecture the functionality of transmission can be eliminated. 
+Empty transmission model (just rigid connection between engine and driveline flange). Using this empty model in overall vehicle architecture the functionality of transmission can be eliminated.
 </p>
 </html>"));
   end NoTransmissions;
@@ -262,30 +254,25 @@ Empty transmission model (just rigid connection between engine and driveline fla
     Modelica.Mechanics.Rotational.Components.IdealGear gear(
                                                  ratio=gearRatio, useSupport=
           true)
-      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
     Modelica.Mechanics.MultiBody.Parts.Mounting1D mounting1D
-      annotation (Placement(transformation(extent={{-20,-60},{0,-40}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-20,-60},{0,-40}})));
     Modelica.Mechanics.Rotational.Sensors.SpeedSensor outputSpeed
       annotation (Placement(transformation(
           origin={70,60},
           extent={{-10,-10},{10,10}},
           rotation=180)));
     Modelica.Blocks.Sources.IntegerConstant currentGear(k=1)
-      annotation (Placement(transformation(extent={{40,80},{20,100}}, rotation=
-              0)));
+      annotation (Placement(transformation(extent={{40,80},{20,100}})));
   protected
     replaceable VehicleInterfaces.Transmissions.Interfaces.StandardBus
                                                  transmissionBus constrainedby
       VehicleInterfaces.Interfaces.TransmissionBus
-      annotation (Placement(transformation(extent={{-30,50},{-10,70}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
     replaceable VehicleInterfaces.Transmissions.Interfaces.StandardControlBus
                                                         transmissionControlBus
       constrainedby VehicleInterfaces.Interfaces.TransmissionControlBus
-      annotation (Placement(transformation(extent={{-30,80},{-10,100}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
     outer Modelica.Mechanics.MultiBody.World world;
   equation
     connect(mounting1D.flange_b,gear.support)
@@ -315,17 +302,10 @@ Empty transmission model (just rigid connection between engine and driveline fla
 
     connect(outputSpeed.w, transmissionBus.outputSpeed) annotation (Line(
         points={{59,60},{-20,60}},
-        color={0,0,127},
-        smooth=Smooth.None));
+        color={0,0,127}));
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{100,
-              100}}),
-              graphics),
-      Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-              100}}),
-           graphics),
       Documentation(info="<html>
-<p>A single gear transmission without a launch device that is based on the automatic transmission model interface definition</p> 
+<p>A single gear transmission without a launch device that is based on the automatic transmission model interface definition</p>
 </html>"));
   end SingleGearAutomaticTransmission;
 
@@ -342,11 +322,9 @@ Empty transmission model (just rigid connection between engine and driveline fla
     Modelica.Mechanics.Rotational.Components.IdealGear gear(
                                                  ratio=gearRatio, useSupport=
           true)
-      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
     Modelica.Mechanics.MultiBody.Parts.Mounting1D mounting1D
-      annotation (Placement(transformation(extent={{-20,-60},{0,-40}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-20,-60},{0,-40}})));
     Modelica.Mechanics.Rotational.Sensors.SpeedSensor outputSpeed
       annotation (Placement(transformation(
           origin={70,40},
@@ -358,37 +336,32 @@ Empty transmission model (just rigid connection between engine and driveline fla
           extent={{-6,-6},{6,6}},
           rotation=270)));
     Modelica.Mechanics.Rotational.Components.Clutch clutch(fn_max=1)
-      annotation (Placement(transformation(extent={{-80,-10},{-60,10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-80,-10},{-60,10}})));
     Modelica.Mechanics.Translational.Components.Fixed fixed
       annotation (Placement(transformation(
           origin={-80,46},
           extent={{-10,-10},{10,10}},
           rotation=270)));
     Modelica.Mechanics.Translational.Sensors.ForceSensor forceSensor
-      annotation (Placement(transformation(extent={{-80,36},{-60,56}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-80,36},{-60,56}})));
     Modelica.Mechanics.Translational.Components.SpringDamper pedalSpring(c=1, d=1)
       annotation (Placement(transformation(
           origin={-60,76},
           extent={{-10,-10},{10,10}},
           rotation=90)));
     Modelica.Blocks.Sources.BooleanExpression clutchLocked(y=clutch.locked)
-      annotation (Placement(transformation(extent={{40,10},{20,30}},  rotation=
-              0)));
+      annotation (Placement(transformation(extent={{40,10},{20,30}})));
   protected
     replaceable VehicleInterfaces.Transmissions.Interfaces.StandardBus
                                                  transmissionBus constrainedby
       VehicleInterfaces.Interfaces.TransmissionBus
-      annotation (Placement(transformation(extent={{-30,30},{-10,50}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-30,30},{-10,50}})));
     outer Modelica.Mechanics.MultiBody.World world;
   protected
     replaceable VehicleInterfaces.Transmissions.Interfaces.StandardControlBus
                                                         transmissionControlBus
       constrainedby VehicleInterfaces.Interfaces.TransmissionControlBus
-      annotation (Placement(transformation(extent={{-30,50},{-10,70}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
   public
     Modelica.Blocks.Math.Gain normalise(k=1/clutch.fn_max)
       annotation (Placement(transformation(
@@ -435,28 +408,19 @@ Empty transmission model (just rigid connection between engine and driveline fla
             127,0}));
     connect(forceSensor.f, normalise.u) annotation (Line(
         points={{-78,35},{-78,32},{-70,32},{-70,29}},
-        color={0,0,127},
-        smooth=Smooth.None));
+        color={0,0,127}));
     connect(normalise.y, clutch.f_normalized) annotation (Line(
         points={{-70,17.5},{-70,11}},
-        color={0,0,127},
-        smooth=Smooth.None));
+        color={0,0,127}));
 
     connect(outputSpeed.w, transmissionBus.outputSpeed) annotation (Line(
         points={{59,40},{-20,40}},
-        color={0,0,127},
-        smooth=Smooth.None));
+        color={0,0,127}));
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-              100,100}}),
-              graphics),
-      Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-              100}}),
-           graphics),
       Documentation(info="<html>
-<p>A single gear transmission based on the manual transmission model interface definition.  Includes a clutch model and uses 
-physical connections between the driver and transmission system for the clutch position and current gear number (although the 
-gear number is ignored in this model.</p>  
+<p>A single gear transmission based on the manual transmission model interface definition.  Includes a clutch model and uses
+physical connections between the driver and transmission system for the clutch position and current gear number (although the
+gear number is ignored in this model.</p>
 </html>"));
   end SingleGearManualTransmission;
 
@@ -469,8 +433,7 @@ gear number is ignored in this model.</p>
     Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing motorFlange(
         final includeBearingConnector=includeTransmissionBearing or
           usingMultiBodyEngine) "Connection to the engine"
-      annotation (Placement(transformation(extent={{-110,-70},{-90,-50}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-110,-70},{-90,-50}})));
     Modelica.Mechanics.Rotational.Sensors.SpeedSensor outputSpeed
       annotation (Placement(transformation(
           origin={60,60},
@@ -478,43 +441,34 @@ gear number is ignored in this model.</p>
           rotation=180)));
     Modelica.Mechanics.Rotational.Components.IdealPlanetary idealPlanetary(
                                                                 ratio=ratio)
-      annotation (Placement(transformation(extent={{-10,10},{10,-10}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-10,10},{10,-10}})));
     Modelica.Blocks.Sources.IntegerConstant currentGear(k=1)
-      annotation (Placement(transformation(extent={{30,80},{10,100}}, rotation=
-              0)));
+      annotation (Placement(transformation(extent={{30,80},{10,100}})));
   protected
     replaceable Interfaces.StandardBus           transmissionBus constrainedby
       VehicleInterfaces.Interfaces.TransmissionBus
-      annotation (Placement(transformation(extent={{-30,50},{-10,70}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
     outer Modelica.Mechanics.MultiBody.World world;
     replaceable Interfaces.StandardControlBus           transmissionControlBus
       constrainedby VehicleInterfaces.Interfaces.TransmissionControlBus
-      annotation (Placement(transformation(extent={{-30,80},{-10,100}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
   equation
     connect(outputSpeed.flange,   drivelineFlange.flange) annotation (Line(
         points={{70,60},{80,60},{80,0},{100,0}},
-        color={0,0,0},
-        smooth=Smooth.None));
+        color={0,0,0}));
     connect(controlBus.transmissionBus, transmissionBus) annotation (Line(
         points={{-100,60},{-20,60}},
         color={255,204,51},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(idealPlanetary.ring, drivelineFlange.flange) annotation (Line(
         points={{10,0},{100,0}},
-        color={0,0,0},
-        smooth=Smooth.None));
+        color={0,0,0}));
     connect(idealPlanetary.sun, engineFlange.flange) annotation (Line(
         points={{-10,0},{-100,0}},
-        color={0,0,0},
-        smooth=Smooth.None));
+        color={0,0,0}));
     connect(idealPlanetary.carrier, motorFlange.flange) annotation (Line(
         points={{-10,-4},{-40,-4},{-40,-60},{-100,-60}},
-        color={0,0,0},
-        smooth=Smooth.None));
+        color={0,0,0}));
     connect(transmissionControlBus, controlBus.transmissionControlBus)
       annotation (Line(
         points={{-20,90},{-40,90},{-40,60},{-100,60}},
@@ -525,12 +479,8 @@ gear number is ignored in this model.</p>
 
     connect(outputSpeed.w, transmissionBus.outputSpeed) annotation (Line(
         points={{49,60},{-20,60}},
-        color={0,0,127},
-        smooth=Smooth.None));
+        color={0,0,127}));
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-              100,100}}),
-              graphics),
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
               100}}), graphics={
           Rectangle(

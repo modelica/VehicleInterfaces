@@ -7,7 +7,6 @@ package DataDictionaries "Collection of data dictionary definitions"
 
     annotation (DocumentationClass=true,Documentation(info="<html>
 <h4>Tutorial - Defining a new data dictionary subsystem</h4>
-</p>
 <p>
 The following process will demonstrate how to create a new data dictionary
 model using these interface definitions.
@@ -17,8 +16,6 @@ model using these interface definitions.
 <br>&nbsp;<br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDataDictionary1.png\"><br>&nbsp;</li>
 <li>You can now define your data dictionary model as required</li>
 </ol>
-
-
 <h4>Adding an alias signal to the data dictionary</h4>
 <p>
 The following steps demonstrate how to add a new alias signal to the control signal bus.
@@ -43,19 +40,16 @@ the second creates a new signal called <b>v_veh</b>.
     partial model Base "Basic interface definition for a data dictionary"
 
       VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
-        annotation (Placement(transformation(extent={{-20,-80},{20,-120}},
-              rotation=0)));
-      annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}})),
-                        Documentation(info="<html>
-<p>This partial model defines the interfaces required for a data dictionary within the VehicleInterfaces package. 
-Especially, it provide alias names for the controBus. See the <a href=\"VehicleSystems.DataDictionaries\">documentation</a> and <a href=\"VehicleInterfaces.DataDictionaries.Tutorial\">tutorial</a> for more information.</p>
+        annotation (Placement(transformation(extent={{-20,-80},{20,-120}})));
+      annotation (                        Documentation(info="<html>
+<p>This partial model defines the interfaces required for a data dictionary within the VehicleInterfaces package.
+Especially, it provide alias names for the controBus. See the <a href=\"modelica://VehicleInterfaces.DataDictionaries\">documentation</a> and <a href=\"modelica://VehicleInterfaces.DataDictionaries.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
     end Base;
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for data dictionary. 
+A collection of partial base classes which define interfaces for data dictionary.
 </p>
 </html>"));
   end Interfaces;
@@ -76,13 +70,12 @@ Empty data dictionary model. Using this empty model in overall vehicle architect
     extends VehicleInterfaces.DataDictionaries.Interfaces.Base;
   protected
     Modelica.Blocks.Routing.RealPassThrough v_veh
-      annotation (Placement(transformation(extent={{6,-6},{-6,6}},   rotation=0),
+      annotation (Placement(transformation(extent={{6,-6},{-6,6}}),
           iconTransformation(extent={{-14,-6},{6,6}})));
     replaceable VehicleInterfaces.Chassis.Interfaces.StandardBus
                                             chassisBus constrainedby
       VehicleInterfaces.Interfaces.ChassisBus
-      annotation (Placement(transformation(extent={{-10,-60},{10,-40}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-10,-60},{10,-40}})));
 
   equation
     connect(chassisBus, controlBus.chassisBus) annotation (Line(
@@ -91,21 +84,17 @@ Empty data dictionary model. Using this empty model in overall vehicle architect
         thickness=0.5));
     connect(v_veh.u, chassisBus.longitudinalVelocity) annotation (Line(
         points={{7.2,0},{40,0},{40,-50},{0,-50}},
-        color={0,0,127},
-        smooth=Smooth.None), Text(
+        color={0,0,127}), Text(
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
     connect(chassisBus.v_veh, v_veh.y) annotation (Line(
         points={{0,-50},{-40,-50},{-40,0},{-6.6,0}},
-        color={0,0,127},
-        smooth=Smooth.None), Text(
+        color={0,0,127}), Text(
         string="%first",
         index=-1,
         extent={{-6,3},{-6,3}}));
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=true, extent={{-100,-100},{
-              100,100}})),
                          Documentation(info="<html>
  <p>A simple data dictionary example that creates a new signal called <b>v_veh</b> within the <b>chassisBus</b> sub-bus of the control bus.</p>
 </html>"));

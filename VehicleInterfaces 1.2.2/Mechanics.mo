@@ -53,8 +53,7 @@ A collection of additional 1D translational mechanical connectors used for norma
         annotation (Dialog(enable=not exact));
 
       Interfaces.Flange flange_b "flange to be positioned"
-        annotation (Placement(transformation(extent={{90,-10},{110,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{90,-10},{110,10}})));
       Modelica.Blocks.Interfaces.RealInput position "position to be applied"
         annotation (Placement(transformation(
             origin={-120,0},
@@ -114,8 +113,7 @@ A collection of additional 1D translational mechanical connectors used for norma
     model Force "Applies a force to a Flange"
 
       Interfaces.Flange flange_b "Flange to be forced"
-        annotation (Placement(transformation(extent={{90,-10},{110,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{90,-10},{110,10}})));
       Modelica.Blocks.Interfaces.RealInput force "Force to be applied"
         annotation (Placement(transformation(
             origin={-120,0},
@@ -175,12 +173,10 @@ A collection of additional 1D translational mechanical connectors used for norma
       extends Modelica.Icons.TranslationalSensor;
 
       Interfaces.Flange flange_a "Flange to be measured"
-        annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
       Modelica.Blocks.Interfaces.RealOutput position
         "Absolute position of flange as output signal"
-        annotation (Placement(transformation(extent={{100,-10},{120,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{100,-10},{120,10}})));
 
     equation
       position = flange_a.s;
@@ -268,8 +264,7 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
         annotation (Dialog(enable=not exact));
 
       Interfaces.Flange flange_b "flange to be rotated"
-        annotation (Placement(transformation(extent={{90,-10},{110,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{90,-10},{110,10}})));
       Modelica.Blocks.Interfaces.RealInput phi_ref "position to be applied"
         annotation (Placement(transformation(
             origin={-120,0},
@@ -333,8 +328,7 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
     model Torque "Applies a torque to a Flange"
 
       Interfaces.Flange flange_b "Flange to be turned"
-        annotation (Placement(transformation(extent={{90,-10},{110,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{90,-10},{110,10}})));
       Modelica.Blocks.Interfaces.RealInput tau "Torque to be applied"
         annotation (Placement(transformation(
             origin={-120,0},
@@ -392,12 +386,10 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
       extends Modelica.Icons.RotationalSensor;
 
       Interfaces.Flange flange_a "flange to be measured"
-        annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
       Modelica.Blocks.Interfaces.RealOutput phi
         "Absolute angle of flange as output signal"
-        annotation (Placement(transformation(extent={{100,-10},{120,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{100,-10},{120,10}})));
 
     equation
       phi = flange_a.phi;
@@ -431,8 +423,7 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing flange(
           includeBearingConnector=includeBearingConnector)
         "Flange with zero force and torque applied"
-        annotation (Placement(transformation(extent={{0,-20},{40,20}}, rotation=
-               0)));
+        annotation (Placement(transformation(extent={{0,-20},{40,20}})));
     protected
       Modelica.Mechanics.MultiBody.Sensors.Internal.ZeroForceAndTorque
         zeroForceAndTorque if includeBearingConnector
@@ -445,18 +436,15 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
     equation
       connect(zeroTorque1D.flange, flange.flange)   annotation (Line(
           points={{0,40},{20,40},{20,0}},
-          color={0,0,0},
-          smooth=Smooth.None));
+          color={0,0,0}));
       connect(zeroForceAndTorque.frame_a, flange.bearingFrame) annotation (Line(
           points={{-20,0},{20,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       annotation (
         Icon(coordinateSystem(
             preserveAspectRatio=false,
-            extent={{-60,-80},{60,80}},
-            initialScale=0.1), graphics={Polygon(
+            extent={{-60,-80},{60,80}}), graphics={Polygon(
               points={{40,-40},{40,-60},{-40,-60},{-40,60},{40,60},{40,40},{-20,
                   40},{-20,-40},{40,-40}},
               lineColor={0,0,255},
@@ -464,13 +452,12 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
               fillPattern=FillPattern.Solid)}),
         Documentation(info="<html>
 <p>
-This component is used to end a chain of multi-body components by applying zero force and torque to the end of the chain.  Uses the <a href=\"Modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">FlangeWithBearing</a> connector where the <b>flange</b> connector has zero torque applied to it and the <b>bearingFrame</b> can be optionally included through the parameter <code>includeBearingConnector</code>. 
+This component is used to end a chain of multi-body components by applying zero force and torque to the end of the chain.  Uses the <a href=\"Modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">FlangeWithBearing</a> connector where the <b>flange</b> connector has zero torque applied to it and the <b>bearingFrame</b> can be optionally included through the parameter <code>includeBearingConnector</code>.
 If <code>includeBearingConnector=true</code> then zero force and torque is applied to the bearingFrame.</p>
 </HTML>
 "),     Diagram(coordinateSystem(
             preserveAspectRatio=true,
-            extent={{-60,-80},{60,80}},
-            initialScale=0.1), graphics={Rectangle(
+            extent={{-60,-80},{60,80}}), graphics={Rectangle(
               extent={{-66,18},{0,-24}},
               lineColor={0,127,0},
               fillColor={215,215,215},
