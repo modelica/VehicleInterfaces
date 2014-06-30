@@ -10,56 +10,56 @@ package Examples "Collection of vehicle model examples"
       VehicleInterfaces.Engines.Interfaces.Base "Engine subsystem" annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-110,-30},{-80,0}}, rotation=0)));
+      Placement(transformation(extent={{-110,-30},{-80,0}})));
     replaceable Transmissions.SingleGearAutomaticTransmission transmission
       constrainedby
       VehicleInterfaces.Transmissions.Interfaces.BaseAutomaticTransmission
       "Transmission subsystem" annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-60,-30},{-30,0}}, rotation=0)));
+      Placement(transformation(extent={{-60,-30},{-30,0}})));
     replaceable Chassis.MinimalChassis chassis constrainedby
       VehicleInterfaces.Chassis.Interfaces.TwoAxleBase "Chassis subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{40,-40},{100,0}}, rotation=0)));
+      Placement(transformation(extent={{40,-40},{100,0}})));
     replaceable Drivelines.MinimalDriveline driveline constrainedby
       VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase "Driveline subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-10,-30},{20,0}}, rotation=0)));
+      Placement(transformation(extent={{-10,-30},{20,0}})));
     replaceable Brakes.MinimalBrakes brakes constrainedby
       VehicleInterfaces.Brakes.Interfaces.TwoAxleBase "Brakes subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{120,-30},{150,0}}, rotation=0)));
+      Placement(transformation(extent={{120,-30},{150,0}})));
     replaceable Accessories.MinimalAccessories accessories constrainedby
       VehicleInterfaces.Accessories.Interfaces.Base "Accesories subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-145,-25},{-125,-5}}, rotation=0)));
+      Placement(transformation(extent={{-145,-25},{-125,-5}})));
     replaceable DriverEnvironments.DriveByWireAutomatic driverEnvironment
       constrainedby
       VehicleInterfaces.DriverEnvironments.Interfaces.BaseAutomaticTransmission
       "Driver environment" annotation (
       choicesAllMatching=true,
       Dialog(group="Driver Models"),
-      Placement(transformation(extent={{0,50},{30,80}}, rotation=0)));
+      Placement(transformation(extent={{0,50},{30,80}})));
     inner replaceable Roads.FlatRoad road constrainedby
       VehicleInterfaces.Roads.Interfaces.Base "Road model" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-120,-100},{-80,-80}}, rotation=0)));
+      Placement(transformation(extent={{-120,-100},{-80,-80}})));
     inner replaceable Atmospheres.ConstantAtmosphere atmosphere constrainedby
       VehicleInterfaces.Atmospheres.Interfaces.Base "Atmospheric model"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-70,-100},{-30,-80}}, rotation=0)));
+      Placement(transformation(extent={{-70,-100},{-30,-80}})));
     inner replaceable Modelica.Mechanics.MultiBody.World world(
       enableAnimation=false,
       n={0,0,-1},
@@ -68,7 +68,7 @@ package Examples "Collection of vehicle model examples"
       "Global co-ordinate system" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-150,-100},{-130,-80}}, rotation=0)));
+      Placement(transformation(extent={{-150,-100},{-130,-80}})));
   protected
     Interfaces.ControlBus controlBus "Control bus connector"
       annotation (Placement(transformation(
@@ -172,12 +172,7 @@ package Examples "Collection of vehicle model examples"
       Diagram(coordinateSystem(
           preserveAspectRatio=true,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={1,1})),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with an automatic transmission.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -191,7 +186,7 @@ package Examples "Collection of vehicle model examples"
       DataDictionaries.Interfaces.Base "Data dictionary" annotation (
       Dialog(group="Control Systems"),
       choicesAllMatching=true,
-      Placement(transformation(extent={{-120,40},{-100,60}}, rotation=0)));
+      Placement(transformation(extent={{-120,40},{-100,60}})));
   equation
     connect(dataDictionary.controlBus, controlBus) annotation (Line(
         points={{-110,40},{-110,20},{-150,20}},
@@ -202,12 +197,7 @@ package Examples "Collection of vehicle model examples"
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={1,1})),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with an automatic transmission.  Based on <a href=\"Modelica://VehicleInterfaces.Examples.ConventionalAutomaticVehicle\">ConventionalAutomaticVehicle</a> this example shows how the DataDictionary can be used.</p>
 </html>"),
@@ -222,57 +212,57 @@ package Examples "Collection of vehicle model examples"
       VehicleInterfaces.Engines.Interfaces.Base "Engine subsystem" annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-110,-20},{-80,10}}, rotation=0)));
+      Placement(transformation(extent={{-110,-20},{-80,10}})));
     replaceable Transmissions.SingleGearAutomaticTransmission transmission
       constrainedby
       VehicleInterfaces.Transmissions.Interfaces.BaseAutomaticTransmission
       "Transmission subsystem" annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-60,-20},{-30,10}}, rotation=0)));
+      Placement(transformation(extent={{-60,-20},{-30,10}})));
     replaceable Chassis.MinimalChassis3 chassis constrainedby
       VehicleInterfaces.Chassis.Interfaces.TwoAxleBase "Chassis subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{40,-30},{100,10}}, rotation=0)));
+      Placement(transformation(extent={{40,-30},{100,10}})));
     replaceable Drivelines.MinimalDriveline driveline(
       usingMultiBodyChassis=true)
       constrainedby VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase
       "Driveline subsystem" annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-10,-20},{20,10}}, rotation=0)));
+      Placement(transformation(extent={{-10,-20},{20,10}})));
     replaceable Brakes.MinimalBrakes brakes(usingMultiBodyChassis=true)
       constrainedby VehicleInterfaces.Brakes.Interfaces.TwoAxleBase
       "Brakes subsystem" annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{120,-20},{150,10}}, rotation=0)));
+      Placement(transformation(extent={{120,-20},{150,10}})));
     replaceable Accessories.MinimalAccessories accessories constrainedby
       VehicleInterfaces.Accessories.Interfaces.Base "Accessories subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-150,-15},{-130,5}}, rotation=0)));
+      Placement(transformation(extent={{-150,-15},{-130,5}})));
     replaceable DriverEnvironments.DriveByWireAutomaticExternalDriver
       driverEnvironment constrainedby
       VehicleInterfaces.DriverEnvironments.Interfaces.BaseAutomaticTransmissionExternalDriver
       "Driver environment" annotation (
       choicesAllMatching=true,
       Dialog(group="Driver Models"),
-      Placement(transformation(extent={{0,60},{30,90}}, rotation=0)));
+      Placement(transformation(extent={{0,60},{30,90}})));
     inner replaceable Roads.FlatRoad road constrainedby
       VehicleInterfaces.Roads.Interfaces.Base "Road model" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-120,-100},{-80,-80}}, rotation=0)));
+      Placement(transformation(extent={{-120,-100},{-80,-80}})));
     inner replaceable Atmospheres.ConstantAtmosphere atmosphere constrainedby
       VehicleInterfaces.Atmospheres.Interfaces.Base "Atmospheric model"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-60,-100},{-20,-80}}, rotation=0)));
+      Placement(transformation(extent={{-60,-100},{-20,-80}})));
     inner replaceable Modelica.Mechanics.MultiBody.World world(
       enableAnimation=false,
       n={0,0,-1},
@@ -281,7 +271,7 @@ package Examples "Collection of vehicle model examples"
       "Global co-ordinate system" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-150,-100},{-130,-80}}, rotation=0)));
+      Placement(transformation(extent={{-150,-100},{-130,-80}})));
   protected
     Interfaces.ControlBus controlBus "Control bus connector"
       annotation (Placement(transformation(
@@ -296,20 +286,20 @@ package Examples "Collection of vehicle model examples"
       constrainedby PowertrainMounts.Interfaces.DualSystemMount
       "Engine and Transmission mounting system" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-100,-55},{-40,-40}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-100,-55},{-40,-40}})));
     replaceable PowertrainMounts.SingleSystemRigidMount diffMount constrainedby
       PowertrainMounts.Interfaces.SingleSystemMount
       "Differential mounting system" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{0,-54},{10,-40}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{0,-54},{10,-40}})));
     replaceable Drivers.MinimalDriver driver constrainedby
       Drivers.Interfaces.Base "Driver model"
                      annotation (
       choicesAllMatching=true,
-      Dialog(group="Driver Models"),
-      Placement(transformation(extent={{-70,60},{-40,90}}, rotation=0)));
+      Dialog(group="Driver Models"),
+      Placement(transformation(extent={{-70,60},{-40,90}})));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
           points={{-130,-5},{-110,-5}}, color={0,0,0}));
@@ -414,18 +404,12 @@ package Examples "Collection of vehicle model examples"
       annotation (Line(
         points={{0,75},{-20,75},{-20,75},{-40,75}},
         color={85,85,255},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     annotation (
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={1,1})),
       Documentation(info="<html>
 <p>Example model architecture of a rear wheel drive passenger car with an automatic transmission.  In this architecture variant the PowerTrain systems can be elastically mounted in the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -440,38 +424,38 @@ package Examples "Collection of vehicle model examples"
       VehicleInterfaces.Engines.Interfaces.Base "Engine subsystem" annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-110,-30},{-80,0}}, rotation=0)));
+      Placement(transformation(extent={{-110,-30},{-80,0}})));
     replaceable Transmissions.SingleGearAutomaticTransmission transmission
       constrainedby
       VehicleInterfaces.Transmissions.Interfaces.BaseAutomaticTransmission
       "Transmission subsystem" annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-60,-30},{-30,0}}, rotation=0)));
+      Placement(transformation(extent={{-60,-30},{-30,0}})));
     replaceable Chassis.MinimalChassis chassis constrainedby
       VehicleInterfaces.Chassis.Interfaces.TwoAxleBase "Chassis subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{40,-40},{100,0}}, rotation=0)));
+      Placement(transformation(extent={{40,-40},{100,0}})));
     replaceable Drivelines.MinimalDriveline driveline constrainedby
       VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase "Driveline subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-10,-30},{20,0}}, rotation=0)));
+      Placement(transformation(extent={{-10,-30},{20,0}})));
     replaceable Brakes.MinimalBrakes brakes constrainedby
       VehicleInterfaces.Brakes.Interfaces.TwoAxleBase "Brakes subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{120,-30},{150,0}}, rotation=0)));
+      Placement(transformation(extent={{120,-30},{150,0}})));
     replaceable Accessories.MinimalAccessories accessories constrainedby
       VehicleInterfaces.Accessories.Interfaces.Base "Accessories subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-145,-25},{-125,-5}}, rotation=0)));
+      Placement(transformation(extent={{-145,-25},{-125,-5}})));
     replaceable
       VehicleInterfaces.DriverEnvironments.DriveByWireAutomaticExternalDriver
       driverEnvironment constrainedby
@@ -479,18 +463,18 @@ package Examples "Collection of vehicle model examples"
       "Driver environment" annotation (
       choicesAllMatching=true,
       Dialog(group="Driver Models"),
-      Placement(transformation(extent={{0,50},{30,80}}, rotation=0)));
+      Placement(transformation(extent={{0,50},{30,80}})));
     inner replaceable Roads.FlatRoad road constrainedby
       VehicleInterfaces.Roads.Interfaces.Base "Road model" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-120,-100},{-80,-80}}, rotation=0)));
+      Placement(transformation(extent={{-120,-100},{-80,-80}})));
     inner replaceable Atmospheres.ConstantAtmosphere atmosphere constrainedby
       VehicleInterfaces.Atmospheres.Interfaces.Base "Atmospheric model"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-70,-100},{-30,-80}}, rotation=0)));
+      Placement(transformation(extent={{-70,-100},{-30,-80}})));
     inner replaceable Modelica.Mechanics.MultiBody.World world(
       enableAnimation=false,
       n={0,0,-1},
@@ -499,7 +483,7 @@ package Examples "Collection of vehicle model examples"
       "Global co-ordinate system" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-150,-100},{-130,-80}}, rotation=0)));
+      Placement(transformation(extent={{-150,-100},{-130,-80}})));
   protected
     Interfaces.ControlBus controlBus "Control bus connector"
       annotation (Placement(transformation(
@@ -513,9 +497,9 @@ package Examples "Collection of vehicle model examples"
     replaceable Drivers.MinimalDriver driver constrainedby
       Drivers.Interfaces.Base "Driver model"
                      annotation (
-      Dialog(group="Driver Models"),
+      Dialog(group="Driver Models"),
       choicesAllMatching=true,
-      Placement(transformation(extent={{-40,55},{-20,75}}, rotation=0)));
+      Placement(transformation(extent={{-40,55},{-20,75}})));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
           points={{-125,-15},{-110,-15}}, color={0,0,0}));
@@ -610,18 +594,12 @@ package Examples "Collection of vehicle model examples"
       annotation (Line(
         points={{0,65},{-20,65}},
         color={85,85,255},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     annotation (
       Diagram(coordinateSystem(
           preserveAspectRatio=true,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={1,1})),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with an automatic transmission and a driver model that is defined separately from the driverEnvironment.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -635,7 +613,7 @@ package Examples "Collection of vehicle model examples"
       VehicleInterfaces.Engines.Interfaces.Base "Engine subsystem" annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-110,-30},{-80,0}}, rotation=0)));
+      Placement(transformation(extent={{-110,-30},{-80,0}})));
     replaceable Transmissions.SingleGearManualTransmission transmission(
       clutch(
         phi_rel(fixed=true, start=0)))
@@ -644,7 +622,7 @@ package Examples "Collection of vehicle model examples"
       "Transmission subsystem" annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-60,-30},{-30,0}}, rotation=0)));
+      Placement(transformation(extent={{-60,-30},{-30,0}})));
     replaceable Chassis.MinimalChassis chassis(
       body(v(fixed=true)))
       constrainedby VehicleInterfaces.Chassis.Interfaces.TwoAxleBase
@@ -652,25 +630,25 @@ package Examples "Collection of vehicle model examples"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{40,-40},{100,0}}, rotation=0)));
+      Placement(transformation(extent={{40,-40},{100,0}})));
     replaceable Drivelines.MinimalDriveline driveline constrainedby
       VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase "Driveline subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-10,-30},{20,0}}, rotation=0)));
+      Placement(transformation(extent={{-10,-30},{20,0}})));
     replaceable Brakes.MinimalBrakesUsingPedal brakes constrainedby
       VehicleInterfaces.Brakes.Interfaces.TwoAxleBase "Brakes subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{120,-30},{150,0}}, rotation=0)));
+      Placement(transformation(extent={{120,-30},{150,0}})));
     replaceable Accessories.MinimalAccessories accessories constrainedby
       VehicleInterfaces.Accessories.Interfaces.Base "Accessory subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-145,-25},{-125,-5}}, rotation=0)));
+      Placement(transformation(extent={{-145,-25},{-125,-5}})));
     replaceable DriverEnvironments.ConventionalManual driverEnvironment(
       acceleratorPosition(v(fixed=true)),
       brakePosition(v(fixed=true)),
@@ -680,18 +658,18 @@ package Examples "Collection of vehicle model examples"
       "Driver environment" annotation (
       choicesAllMatching=true,
       Dialog(group="Driver Models"),
-      Placement(transformation(extent={{0,50},{30,80}}, rotation=0)));
+      Placement(transformation(extent={{0,50},{30,80}})));
     inner replaceable Roads.FlatRoad road constrainedby
       VehicleInterfaces.Roads.Interfaces.Base "Road model" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-120,-100},{-80,-80}}, rotation=0)));
+      Placement(transformation(extent={{-120,-100},{-80,-80}})));
     inner replaceable Atmospheres.ConstantAtmosphere atmosphere constrainedby
       VehicleInterfaces.Atmospheres.Interfaces.Base "Atmospheric model"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-70,-100},{-30,-80}}, rotation=0)));
+      Placement(transformation(extent={{-70,-100},{-30,-80}})));
     inner replaceable Modelica.Mechanics.MultiBody.World world(
       enableAnimation=false,
       n={0,0,-1},
@@ -700,7 +678,7 @@ package Examples "Collection of vehicle model examples"
       "Global co-ordinate system" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-150,-100},{-130,-80}}, rotation=0)));
+      Placement(transformation(extent={{-150,-100},{-130,-80}})));
   protected
     Interfaces.ControlBus controlBus "Control bus connector"
       annotation (Placement(transformation(
@@ -808,12 +786,7 @@ package Examples "Collection of vehicle model examples"
       Diagram(coordinateSystem(
           preserveAspectRatio=true,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={1,1})),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with a manual transmission.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -827,8 +800,8 @@ package Examples "Collection of vehicle model examples"
     replaceable Engines.MinimalEngineUsingPedal engine constrainedby
       VehicleInterfaces.Engines.Interfaces.Base "Engine subsystem" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-110,-20},{-80,10}}, rotation=0)));
+      Dialog(group="Plant Models"),
+ Placement(transformation(extent={{-110,-20},{-80,10}})));
     replaceable Transmissions.SingleGearManualTransmission transmission(
       clutch(
         phi_rel(fixed=true)))
@@ -836,35 +809,35 @@ package Examples "Collection of vehicle model examples"
       VehicleInterfaces.Transmissions.Interfaces.BaseManualTransmission
       "Transmission subsystem" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-60,-20},{-30,10}}, rotation=0)));
+      Dialog(group="PlantModels"),
+      Placement(transformation(extent={{-60,-20},{-30,10}})));
     replaceable Chassis.MinimalChassis3 chassis(
       constraint(v(fixed=true)))
       constrainedby VehicleInterfaces.Chassis.Interfaces.TwoAxleBase
       "Chassis subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{40,-30},{100,10}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{40,-30},{100,10}})));
     replaceable Drivelines.MinimalDriveline driveline(usingMultiBodyChassis=
           true) constrainedby
       VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase "Driveline subsystem"
                             annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-10,-20},{20,10}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-10,-20},{20,10}})));
     replaceable Brakes.MinimalBrakesUsingPedal brakes(usingMultiBodyChassis=
           true) constrainedby VehicleInterfaces.Brakes.Interfaces.TwoAxleBase
       "Brakes subsystem" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{120,-20},{150,10}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{120,-20},{150,10}})));
     replaceable Accessories.MinimalAccessories accessories constrainedby
       VehicleInterfaces.Accessories.Interfaces.Base "Accesories subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-144,-15},{-124,5}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-144,-15},{-124,5}})));
     replaceable DriverEnvironments.ConventionalManual driverEnvironment(
       acceleratorPosition(v(fixed=true)),
       clutchPosition(v(fixed=true)),
@@ -873,19 +846,19 @@ package Examples "Collection of vehicle model examples"
       VehicleInterfaces.DriverEnvironments.Interfaces.BaseManualTransmission
       "Driver environment" annotation (
       choicesAllMatching=true,
-      Dialog(group="Driver Models"),
-      Placement(transformation(extent={{0,60},{30,90}}, rotation=0)));
+      Dialog(group="Driver Models"),
+      Placement(transformation(extent={{0,60},{30,90}})));
     inner replaceable Roads.FlatRoad road constrainedby
       VehicleInterfaces.Roads.Interfaces.Base "Road models" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-120,-100},{-80,-80}}, rotation=0)));
+      Placement(transformation(extent={{-120,-100},{-80,-80}})));
     inner replaceable Atmospheres.ConstantAtmosphere atmosphere constrainedby
       VehicleInterfaces.Atmospheres.Interfaces.Base "Atmospheric model"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-70,-100},{-30,-80}}, rotation=0)));
+      Placement(transformation(extent={{-70,-100},{-30,-80}})));
     inner replaceable Modelica.Mechanics.MultiBody.World world(
       enableAnimation=false,
       n={0,0,-1},
@@ -894,7 +867,7 @@ package Examples "Collection of vehicle model examples"
       "Global co-ordinate system" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-150,-100},{-130,-80}}, rotation=0)));
+      Placement(transformation(extent={{-150,-100},{-130,-80}})));
   protected
     Interfaces.ControlBus controlBus "Control bus connector"
       annotation (Placement(transformation(
@@ -909,8 +882,8 @@ package Examples "Collection of vehicle model examples"
       constrainedby PowertrainMounts.Interfaces.TripleSystemMount
       "Powertrain mounting system" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-60,-55},{-30,-40}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-60,-55},{-30,-40}})));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
           points={{-124,-5},{-110,-5}}, color={0,0,0}));
@@ -1014,12 +987,7 @@ package Examples "Collection of vehicle model examples"
       Diagram(coordinateSystem(
           preserveAspectRatio=true,
           extent={{-150,-100},{170,100}},
-          grid={1,1},
-          initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={1,1})),
       Documentation(info="<html>
 <p>Example model architecture of a front wheel drive passenger car with an automatic transmission.  In this architecture variant the PowerTrain systems can be elastically mounted in the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -1033,45 +1001,44 @@ package Examples "Collection of vehicle model examples"
       constrainedby VehicleInterfaces.Engines.Interfaces.Base
       "Engine subsystem"                                           annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-100,60},{-70,90}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-100,60},{-70,90}})));
     replaceable Accessories.MinimalAccessories accessories constrainedby
       VehicleInterfaces.Accessories.Interfaces.Base "Accessories subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-141,65},{-121,85}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-141,65},{-121,85}})));
     replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC motor1(
       inductor(
         i(start=0, fixed=true)))
       constrainedby ElectricDrives.Interfaces.BaseDCMachine "Electric Motor 1"
                                                                  annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-101,26},{-71,-6}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-101,26},{-71,-6}})));
     replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC motor2(
       inductor(
         i(start=0, fixed=true)))
       constrainedby ElectricDrives.Interfaces.BaseDCMachine "Electric Motor 2"
                                                                  annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-101,-67},{-71,-39}},rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-101,-67},{-71,-39}})));
     replaceable Transmissions.PowerSplitDevice powerSplitDevice constrainedby
       Transmissions.Interfaces.BaseTwoInputTransmission "Power-split device"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-54,-40},{-24,-10}},rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-54,-40},{-24,-10}})));
     replaceable EnergyStorage.Battery battery(V=1)
       constrainedby EnergyStorage.Interfaces.Base "Energy storage subsystem"
                                                                annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-141,-36},{-111,-6}},  rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-141,-36},{-111,-6}})));
     Modelica.Electrical.Analog.Basic.Ground ground
-      annotation (Placement(transformation(extent={{-114,-65},{-94,-45}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-114,-65},{-94,-45}})));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
           points={{-121,75},{-100,75}}, color={0,0,0},
@@ -1106,49 +1073,39 @@ package Examples "Collection of vehicle model examples"
       annotation (Line(
         points={{-24,-25},{-6,-25}},
         color={135,135,135},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(powerSplitDevice.motorFlange, motor1.shaft_b) annotation (Line(
         points={{-54,-34},{-65,-34},{-65,10},{-71,10}},
         color={0,127,0},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(powerSplitDevice.engineFlange, engine.transmissionFlange)
       annotation (Line(
         points={{-54,-25},{-62,-25},{-62,75},{-70,75}},
         color={135,135,135},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(powerSplitDevice.controlBus, controlBus) annotation (Line(
         points={{-54,-16},{-54,30},{-150,30}},
         color={255,204,51},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(battery.pin_p, motor1.pin_p) annotation (Line(
         points={{-111,-12},{-77,-12},{-77,-6}},
-        color={0,0,255},
-        smooth=Smooth.None));
+        color={0,0,255}));
     connect(battery.pin_n, motor1.pin_n) annotation (Line(
         points={{-111,-30},{-95,-30},{-95,-6}},
-        color={0,0,255},
-        smooth=Smooth.None));
+        color={0,0,255}));
     connect(battery.pin_p, motor2.pin_p) annotation (Line(
         points={{-111,-12},{-77,-12},{-77,-39}},
-        color={0,0,255},
-        smooth=Smooth.None));
+        color={0,0,255}));
     connect(battery.pin_n, motor2.pin_n) annotation (Line(
         points={{-111,-30},{-95,-30},{-95,-39}},
-        color={0,0,255},
-        smooth=Smooth.None));
+        color={0,0,255}));
     connect(ground.p, battery.pin_n) annotation (Line(
         points={{-104,-45},{-104,-30},{-111,-30}},
-        color={0,0,255},
-        smooth=Smooth.None));
+        color={0,0,255}));
     connect(battery.controlBus, controlBus.batteryBus) annotation (Line(
         points={{-141,-30},{-150,-30},{-150,30}},
         color={255,204,51},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(engine.engineMount, chassis.chassisFrame) annotation (Line(
         points={{-85,60},{-85,40},{31,40},{31,-44},{44,-44}},
         color={95,95,95},
@@ -1162,12 +1119,7 @@ package Examples "Collection of vehicle model examples"
       Diagram(coordinateSystem(
           preserveAspectRatio=true,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={1,1})),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with a power-split hybrid powertrain.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -1186,38 +1138,37 @@ package Examples "Collection of vehicle model examples"
       constrainedby VehicleInterfaces.Engines.Interfaces.Base "Engine model"
                                                                annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-98,50},{-68,80}},  rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-98,50},{-68,80}})));
     replaceable Accessories.MinimalAccessories accessories constrainedby
       VehicleInterfaces.Accessories.Interfaces.Base "Accessories model"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-138,55},{-118,75}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-138,55},{-118,75}})));
     replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC generator(
       inductor(i(start=0, fixed=true)))
       constrainedby ElectricDrives.Interfaces.BaseDCMachine
       "Generator subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-20,80},{-50,50}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-20,80},{-50,50}})));
     replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC driveMotor(
       inductor(i(start=0, fixed=true)))
       constrainedby ElectricDrives.Interfaces.BaseDCMachine
       "Traction motor subsystem" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-70,-40},{-40,-10}}, rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-70,-40},{-40,-10}})));
     replaceable EnergyStorage.Battery battery(V=1)
                                               constrainedby
       EnergyStorage.Interfaces.Base "Energy storage subsystem" annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-130,-6},{-100,24}},rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-130,-6},{-100,24}})));
     Modelica.Electrical.Analog.Basic.Ground ground
-      annotation (Placement(transformation(extent={{-100,-24},{-80,-4}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-100,-24},{-80,-4}})));
   equation
     connect(controlBus, engine.controlBus) annotation (Line(
         points={{-150,30},{-109,30},{-109,74},{-98,74}},
@@ -1252,34 +1203,27 @@ package Examples "Collection of vehicle model examples"
         thickness=0.5));
     connect(battery.pin_p, generator.pin_p) annotation (Line(
         points={{-100,18},{-44,18},{-44,50}},
-        color={0,0,255},
-        smooth=Smooth.None));
+        color={0,0,255}));
     connect(battery.pin_p, driveMotor.pin_p) annotation (Line(
         points={{-100,18},{-46,18},{-46,-10}},
-        color={0,0,255},
-        smooth=Smooth.None));
+        color={0,0,255}));
     connect(battery.pin_n, driveMotor.pin_n) annotation (Line(
         points={{-100,0},{-64,0},{-64,-10}},
-        color={0,0,255},
-        smooth=Smooth.None));
+        color={0,0,255}));
     connect(battery.pin_n, generator.pin_n) annotation (Line(
         points={{-100,0},{-26,0},{-26,50}},
-        color={0,0,255},
-        smooth=Smooth.None));
+        color={0,0,255}));
     connect(battery.pin_n, ground.p) annotation (Line(
         points={{-100,0},{-90,0},{-90,-4}},
-        color={0,0,255},
-        smooth=Smooth.None));
+        color={0,0,255}));
     connect(battery.controlBus, controlBus.batteryBus) annotation (Line(
         points={{-130,0},{-150,0},{-150,30}},
         color={255,204,51},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
         points={{-118,65},{-98,65}},
         color={135,135,135},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(engine.engineMount, chassis.chassisFrame) annotation (Line(
         points={{-83,50},{-83,40},{27,40},{27,-44},{44,-44}},
         color={95,95,95},
@@ -1289,12 +1233,7 @@ package Examples "Collection of vehicle model examples"
       Diagram(coordinateSystem(
           preserveAspectRatio=true,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={1,1})),
       Documentation(info="<html>
 <p>Example model architecture of a passenger car with a series hybrid powertrain.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"),
@@ -1309,38 +1248,38 @@ package Examples "Collection of vehicle model examples"
       VehicleInterfaces.Chassis.Interfaces.TwoAxleBase "Chassis subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{44,-50},{104,-10}},rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{44,-50},{104,-10}})));
     replaceable Drivelines.MinimalDriveline driveline constrainedby
       VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase "Driveline subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{-6,-40},{24,-10}},rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-6,-40},{24,-10}})));
     replaceable Brakes.MinimalBrakes brakes constrainedby
       VehicleInterfaces.Brakes.Interfaces.TwoAxleBase "Brakes subsystem"
       annotation (
       choicesAllMatching=true,
-      Dialog(group="Plant Models"),
-      Placement(transformation(extent={{120,-40},{150,-10}},rotation=0)));
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{120,-40},{150,-10}})));
     replaceable DriverEnvironments.DriveByWireAutomatic driverEnvironment
       constrainedby
       VehicleInterfaces.DriverEnvironments.Interfaces.BaseAutomaticTransmission
       "Driver environment" annotation (
       choicesAllMatching=true,
-      Dialog(group="Driver Models"),
-      Placement(transformation(extent={{20,50},{50,80}},  rotation=0)));
+      Dialog(group="Driver Models"),
+      Placement(transformation(extent={{20,50},{50,80}})));
     inner replaceable Roads.FlatRoad road constrainedby
       VehicleInterfaces.Roads.Interfaces.Base "Road model" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-120,-100},{-80,-80}}, rotation=0)));
+      Placement(transformation(extent={{-120,-100},{-80,-80}})));
     inner replaceable Atmospheres.ConstantAtmosphere atmosphere constrainedby
       VehicleInterfaces.Atmospheres.Interfaces.Base "Atmospheric model"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-70,-100},{-30,-80}}, rotation=0)));
+      Placement(transformation(extent={{-70,-100},{-30,-80}})));
     inner replaceable Modelica.Mechanics.MultiBody.World world(
       enableAnimation=false,
       n={0,0,-1},
@@ -1349,7 +1288,7 @@ package Examples "Collection of vehicle model examples"
       "Global co-ordinate system" annotation (
       choicesAllMatching=true,
       Dialog(group="Conditions"),
-      Placement(transformation(extent={{-150,-100},{-130,-80}}, rotation=0)));
+      Placement(transformation(extent={{-150,-100},{-130,-80}})));
   protected
     Interfaces.ControlBus controlBus "Control bus connector"
       annotation (Placement(transformation(
@@ -1425,12 +1364,7 @@ package Examples "Collection of vehicle model examples"
       Diagram(coordinateSystem(
           preserveAspectRatio=true,
           extent={{-160,-100},{160,100}},
-          grid={1,1},
-          initialScale=0.1), graphics),
-      Icon(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
+          grid={1,1})),
       Documentation(info="<html>
 <p>Base model architecture of a passenger car that can be extended to add any type of powertrain.  In this architecture variant the Driveline subsystem is rigidly mounted to the chassis when MultiBody effects are included.</p>
 </html>"));
@@ -1438,6 +1372,5 @@ package Examples "Collection of vehicle model examples"
 
   annotation (Protection(allowDuplicate=true),Documentation(info="<html>
 <p>Example vehicle model architectures.  These can be used as the basis for your own vehicle models but are also fully functional vehicle models on their own.</p>
-</html>"),
-    Icon(graphics));
+</html>"));
 end Examples;

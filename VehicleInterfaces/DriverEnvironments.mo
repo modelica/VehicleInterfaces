@@ -12,10 +12,10 @@ package DriverEnvironments
 <p><b>Tutorial - Defining a new driver environment model</b></p>
 <p>The following process will demonstrate how to create a new driver environment model using these interface definitions.  This tutorial will guide you through building a driver environment for a conventional passenger car with a manual transmission.</p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.DriverEnvironments.Interfaces.BaseManualTransmission</b>, it should look like this:</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriverEnvironment1.png\"><br><br>
-<li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriverEnvironment2.png\"><br><br>
+<li>Create a new model that extends <b>VehicleInterfaces.DriverEnvironments.Interfaces.BaseManualTransmission</b>, it should look like this:
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriverEnvironment1.png\"><br><br></li>
+<li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriverEnvironment2.png\"><br><br></li>
 <li>This dialog allows you to enable/disable the optional connections by setting the various parameters as required for your new driver environment model.</li>
 <li>You can now define your driver environment model as required</li>
 </ol>
@@ -41,16 +41,13 @@ package DriverEnvironments
             rotation=90)));
       Modelica.Mechanics.Rotational.Interfaces.Flange_a steeringWheel if
         includeSteeringWheel "Steering wheel connection (optional)"
-        annotation (Placement(transformation(extent={{90,-10},{110,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{90,-10},{110,10}})));
       Modelica.Mechanics.Translational.Interfaces.Flange_a acceleratorPedal if
         includeAcceleratorPedal "Accelerator pedal connection (optional)"
-        annotation (Placement(transformation(extent={{-90,-90},{-70,-110}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-90,-90},{-70,-110}})));
       Modelica.Mechanics.Translational.Interfaces.Flange_a brakePedal if
         includeBrakePedal "Brake pedal connection (optional)"
-        annotation (Placement(transformation(extent={{30,-90},{50,-110}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{30,-90},{50,-110}})));
     protected
       parameter Boolean includeDriverSeat=false
         "Include the drivers seat connection to the body";
@@ -79,8 +76,6 @@ package DriverEnvironments
               extent={{22,-88},{46,-112}},
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
-        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for the driver environment subsystem.  See the <a href=\"Modelica://VehicleInterfaces.DriverEnvironments\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.DriverEnvironments.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -117,13 +112,11 @@ package DriverEnvironments
     public
       Modelica.Mechanics.Translational.Interfaces.Flange_a clutchPedal if
         includeClutchPedal "Clutch pedal connection (optional)"
-        annotation (Placement(transformation(extent={{-50,-90},{-30,-110}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-50,-90},{-30,-110}})));
       VehicleInterfaces.Interfaces.ShiftConnector shiftConnector if
         includeManualShiftConnector
         "Manual transmission shift connection (optional)"
-        annotation (Placement(transformation(extent={{-10,-110},{10,-90}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-10,-110},{10,-90}})));
       annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
                 -100,-100},{100,100}}), graphics={Rectangle(
               extent={{-58,-88},{-34,-112}},
@@ -133,7 +126,7 @@ package DriverEnvironments
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
                             Documentation(info="<html>
- <p>Base class for driver models for vehicles with manual transmissions where the driver control logic is contained within the derived model.</p> 
+ <p>Base class for driver models for vehicles with manual transmissions where the driver control logic is contained within the derived model.</p>
 </html>"));
     end BaseManualTransmission;
 
@@ -164,7 +157,7 @@ package DriverEnvironments
         "Engine ignition (Off, On or Start)" annotation (Dialog);
       annotation (Documentation(info="<html>
 <p>
-An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
+An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
 </html>"));
     end MinimalBus;
@@ -181,7 +174,7 @@ An expandable connector that defines the minimum set of signals required on the 
         annotation (Dialog);
       annotation (Documentation(info="<html>
 <p>
-An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
+An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
 </html>"));
     end BusForAutomaticTransmission;
@@ -199,14 +192,14 @@ An expandable connector that defines the minimum set of signals required on the 
 
       annotation (Documentation(info="<html>
 <p>
-An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  
+An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
 </html>"));
     end BusForManualTransmission;
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for driver environment models. 
+A collection of partial base classes which define interfaces for driver environment models.
 </p>
 </html>"));
   end Interfaces;
@@ -217,7 +210,7 @@ A collection of partial base classes which define interfaces for driver environm
     extends Interfaces.Base;
     annotation (Documentation(info="<html>
 <p>
-Empty driver environment. Using this empty model in overall vehicle architecture the functionality of driver environment can be eliminated. 
+Empty driver environment. Using this empty model in overall vehicle architecture the functionality of driver environment can be eliminated.
 </p>
 </html>"));
   end NoDriverEnvironment;
@@ -251,31 +244,28 @@ Empty driver environment. Using this empty model in overall vehicle architecture
       height=finalBrakeRequest,
       offset=initialBrakeRequest,
       startTime=brakeTime) annotation (Placement(transformation(extent={{-60,50},
-              {-40,70}}, rotation=0)));
+              {-40,70}})));
     Modelica.Blocks.Sources.Step acceleratorDemand(
       height=finalAccelRequest,
       offset=initialAccelRequest,
       startTime=accelTime) annotation (Placement(transformation(extent={{-20,70},
-              {0,90}},    rotation=0)));
+              {0,90}})));
 
     Modelica.Blocks.Sources.IntegerConstant gearSelect(k=manualGearRequest)
-      annotation (Placement(transformation(extent={{-20,-10},{0,10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-20,-10},{0,10}})));
     Modelica.Blocks.Sources.IntegerConstant gearMode(k=selectedGearboxMode)
-      annotation (Placement(transformation(extent={{-60,10},{-40,30}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-60,10},{-40,30}})));
     Modelica.Blocks.Sources.IntegerStep ignition(
       height=-1,
       startTime=0.5,
       offset=VehicleInterfaces.Types.IgnitionSetting.Start)
-      annotation (Placement(transformation(extent={{-20,30},{0,50}}, rotation=0)));
+      annotation (Placement(transformation(extent={{-20,30},{0,50}})));
   protected
     replaceable
       VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission
                                            driverBus constrainedby
       VehicleInterfaces.Interfaces.DriverBus
-      annotation (Placement(transformation(extent={{50,50},{70,70}},  rotation=
-              0)));
+      annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(controlBus.driverBus, driverBus) annotation (Line(
         points={{100,60},{80,60},{60,60}},
@@ -295,10 +285,6 @@ Empty driver environment. Using this empty model in overall vehicle architecture
             40},{60,60}}, color={255,127,0}));
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})),
       Documentation(info="<html>
 <p>Constant acceleration driver with the capabilitiy to step between two constant throttle values and to step on/off the brakes.</p>
 </html>"));
@@ -383,12 +369,12 @@ Empty driver environment. Using this empty model in overall vehicle architecture
       height=-1,
       startTime=0.5,
       offset=VehicleInterfaces.Types.IgnitionSetting.Start)
-      annotation (Placement(transformation(extent={{0,50},{20,70}},  rotation=0)));
+      annotation (Placement(transformation(extent={{0,50},{20,70}})));
   protected
     replaceable VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus
                                            driverBus constrainedby
       VehicleInterfaces.Interfaces.DriverBus
-      annotation (Placement(transformation(extent={{50,50},{70,70}}, rotation=0)));
+      annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(acceleratorDemand.y, acceleratorPosition.s_ref) annotation (Line(
           points={{-80,-31},{-80,-48}}, color={0,0,127}));
@@ -416,12 +402,8 @@ Empty driver environment. Using this empty model in overall vehicle architecture
                      color={255,127,0}));
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})),
       Documentation(info="<html>
-<p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.  
+<p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.
 Fixed gear and constant clutch position.</p>
 </html>"));
   end ConventionalManual;
@@ -433,25 +415,21 @@ Fixed gear and constant clutch position.</p>
 
   public
     Mechanics.NormalisedTranslational.PositionSensor acceleratorPosition
-      annotation (Placement(transformation(extent={{-40,50},{-20,70}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-40,50},{-20,70}})));
     Mechanics.NormalisedTranslational.PositionSensor brakePosition
-      annotation (Placement(transformation(extent={{-40,30},{-20,50}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-40,30},{-20,50}})));
     Blocks.IntegerPassThrough gearboxMode annotation (Placement(transformation(
-            extent={{-40,-10},{-20,10}},
-                                       rotation=0)));
+            extent={{-40,-10},{-20,10}})));
     Blocks.IntegerPassThrough requestedGear
-      annotation (Placement(transformation(extent={{-40,-40},{-20,-20}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-40,-40},{-20,-20}})));
     Blocks.IntegerPassThrough ignition annotation (Placement(transformation(
-            extent={{-40,-70},{-20,-50}}, rotation=0)));
+            extent={{-40,-70},{-20,-50}})));
   protected
     replaceable
       VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission
                                            driverBus constrainedby
       VehicleInterfaces.Interfaces.DriverBus
-      annotation (Placement(transformation(extent={{50,50},{70,70}}, rotation=0)));
+      annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(driverBus, controlBus.driverBus) annotation (Line(
         points={{60,60},{100,60}},
@@ -503,47 +481,35 @@ Fixed gear and constant clutch position.</p>
 
     connect(driverInterface.brakePedal, brakePosition.flange_a) annotation (Line(
         points={{-100,0},{-98,0},{-98,2},{-80,2},{-80,40},{-40,40}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
+        color={0,127,0}), Text(
         string="%first",
         index=-1,
         extent={{-6,3},{-6,3}}));
     connect(driverInterface.acceleratorPedal, acceleratorPosition.flange_a)
       annotation (Line(
         points={{-100,0},{-100,4},{-82,4},{-82,60},{-40,60}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
+        color={0,127,0}), Text(
         string="%first",
         index=-1,
         extent={{-6,3},{-6,3}}));
     connect(acceleratorPosition.position, driverBus.acceleratorPedalPosition)
       annotation (Line(
         points={{-19,60},{60,60}},
-        color={0,0,127},
-        smooth=Smooth.None), Text(
+        color={0,0,127}), Text(
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
     connect(brakePosition.position, driverBus.brakePedalPosition) annotation (
         Line(
         points={{-19,40},{56,40},{56,60},{60,60}},
-        color={0,0,127},
-        smooth=Smooth.None), Text(
+        color={0,0,127}), Text(
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})),
       Documentation(info="<html>
 <p>Driver environment that requires an external driver model. Signals received from external driver model are simply propagated throug withouth any modification.</p>
-</html>"),
-      Icon(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})));
+</html>"));
   end DriveByWireAutomaticExternalDriver;
 
   package Internal
@@ -597,7 +563,7 @@ A collection of internal material for driver environment models. Control bus def
 <ul>
 <li><b>controlBus</b> - control signal bus connection</li>
 <li><b>chassisFrame</b> - MultiBody connection providing a connection point to the vehicle body (optional)</li>
-<li><b>steeringWheel</b> - steering wheel connection (optional)</li>;
+<li><b>steeringWheel</b> - steering wheel connection (optional)</li>
 <li><b>acceleratorPedal</b> - 1D translational connection for the accelerator pedal connection to the driverEnvironment (optional)</li>
 <li><b>brakePedal</b> - 1D translational connection for the brake pedal connection to the driverEnvironment (optional)</li>
 <li><b>clutchPedal</b> - 1D translational connection for the clutch pedal connection to the driverEnvironment (optional, for manual gearboxes only)</li>

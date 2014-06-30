@@ -8,27 +8,27 @@ package Engines "Collection of combustion engine subsystem definitions"
 <p><b>Tutorial - Defining a new engine model</b></p>
 <p>The following process will demonstrate how to create a new engine model using this interface definition.</p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.Engines.Interfaces.Base</b>, it should look like this:</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine1.png\"><br><br>
-<li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine2.png\"><br><br>
-<li>This dialog allows you to enable/disable the optional connections by setting <b>includeAcceleratorPedal</b> and <b>includeMount</b> as required for your new engine model.  The <b>accessoriesFlange</b> and <b>transmissionFlange</b> are of the type <a href=\"Modelica://VehicleInterfaces.Interfaces.FlangeWithBearing\">VehicleInterfaces.Interfaces.FlangeWithBearing</a>, the parameters <b>includeTransmissionBearing</b> and <b>includeAccessoriesBearing</b> controls whether the bearing connectors within these connections are enabled or not.</li>
+<li>Create a new model that extends <b>VehicleInterfaces.Engines.Interfaces.Base</b>, it should look like this:
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine1.png\"><br><br></li>
+<li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine2.png\"><br><br></li>
+<li>This dialog allows you to enable/disable the optional connections by setting <b>includeAcceleratorPedal</b> and <b>includeMount</b> as required for your new engine model.  The <b>accessoriesFlange</b> and <b>transmissionFlange</b> are of the type <a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>, the parameters <b>includeTransmissionBearing</b> and <b>includeAccessoriesBearing</b> controls whether the bearing connectors within these connections are enabled or not.</li>
 <li>You can now define your engine model as required</li>
 </ol>
 <h4>Creating the MinimalEngine example</h4>
 <p>The following steps demonstrate how to create a simple engine model.  The engine model will apply torque at the flywheel inertia based on a simple gain from the driver's accelerator pedal.  No torque reaction in to the engine block will be modelled.</p>
 <p>Starting from step 3 above.</p>
 <ol>
-<li>First, decide which of the optional connectors are required to model.  For this example we need the accelerator pedal connection but not the engine mount connection</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine3.png\"><br><br>
-<li>Add the following blocks and connections to the diagram</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine4.png\"><br><br>
-<li>Next, we need to check to see if any connections to the control signal bus are required for the engine, see <a href=\"Modelica://VehicleInterfaces.UsersGuide.SignalBus\">here</a> for a complete list of the minimum connections required.  In this case we need to add the engine speed to the control signal bus and this can be done by connecting a speed sensor to the flywheel and then connecting this to the signal bus.  As the engine speed signal is added to the engineBus we first need to add this connector.  The engineBus connector is <b>VehicleInterfaces.Interfaces.EngineBus</b>.  This should be connected to the <b>controlBus</b>, when this connection is made the following dialog is produced and should be completed as shown.</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewController4.png\"><br><br>
-<li>We shouldn't connect the speed sensor directly to the engineBus connector though because the units for the speed signal would be incorrect.  The definition of the speed signal on the control bus also states that this should be in <b>rpm</b> but the speed sensor measures speed in <b>rad/s</b>.  We can convert the units using the conversion blocks that can be found in <b>Modelica.Blocks.Math.UnitConversions</b>.Add a conversion block to convert the output of the speed sensor to rpm and connect this to the engineBus.  When this connection is made the following dialog will be produced and should be complete as shown.</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine6.png\"><br><br>
-<li>The model is now complete and should check successfully and can be used in any model compatible with the VehicleInterfaces library assuming the selected Driver model also uses the accelerator pedal connection</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine5.png\"><br><br>
+<li>First, decide which of the optional connectors are required to model.  For this example we need the accelerator pedal connection but not the engine mount connection
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine3.png\"><br><br></li>
+<li>Add the following blocks and connections to the diagram
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine4.png\"><br><br></li>
+<li>Next, we need to check to see if any connections to the control signal bus are required for the engine, see <a href=\"Modelica://VehicleInterfaces.UsersGuide.SignalBus\">here</a> for a complete list of the minimum connections required.  In this case we need to add the engine speed to the control signal bus and this can be done by connecting a speed sensor to the flywheel and then connecting this to the signal bus.  As the engine speed signal is added to the engineBus we first need to add this connector.  The engineBus connector is <b>VehicleInterfaces.Interfaces.EngineBus</b>.  This should be connected to the <b>controlBus</b>, when this connection is made the following dialog is produced and should be completed as shown.
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewController4.png\"><br><br></li>
+<li>We shouldn't connect the speed sensor directly to the engineBus connector though because the units for the speed signal would be incorrect.  The definition of the speed signal on the control bus also states that this should be in <b>rpm</b> but the speed sensor measures speed in <b>rad/s</b>.  We can convert the units using the conversion blocks that can be found in <b>Modelica.Blocks.Math.UnitConversions</b>.Add a conversion block to convert the output of the speed sensor to rpm and connect this to the engineBus.  When this connection is made the following dialog will be produced and should be complete as shown.
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine6.png\"><br><br></li>
+<li>The model is now complete and should check successfully and can be used in any model compatible with the VehicleInterfaces library assuming the selected Driver model also uses the accelerator pedal connection
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEngine5.png\"><br><br></li>
 </ol>
 </html>"));
   end Tutorial;
@@ -47,13 +47,12 @@ package Engines "Collection of combustion engine subsystem definitions"
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing accessoryFlange(
           final includeBearingConnector=includeAccessoriesBearing or
             usingMultiBodyAccessories) "Connection for the engine accessories"
-        annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing
         transmissionFlange(final includeBearingConnector=
             includeTransmissionBearing or usingMultiBodyTransmission)
         "Connection to the transmission" annotation (Placement(transformation(
-              extent={{90,-10},{110,10}}, rotation=0)));
+              extent={{90,-10},{110,10}})));
       VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
         annotation (Placement(transformation(
             origin={-100,60},
@@ -67,8 +66,7 @@ package Engines "Collection of combustion engine subsystem definitions"
             rotation=90)));
       Modelica.Mechanics.Translational.Interfaces.Flange_a acceleratorPedal if
         includeAcceleratorPedal "Accelerator pedal connection (optional)"
-        annotation (Placement(transformation(extent={{-10,110},{10,90}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-10,110},{10,90}})));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeTransmissionBearing or usingMultiBodyTransmission)
         annotation (Placement(transformation(
@@ -118,8 +116,6 @@ package Engines "Collection of combustion engine subsystem definitions"
               extent={{-108,28},{-92,16}},
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
-        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the interfaces required for an engine subsystem. This class should be extended to form a particular engine model. See the <a href=\"Modelica://VehicleInterfaces.Engines\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Engines.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -146,7 +142,7 @@ package Engines "Collection of combustion engine subsystem definitions"
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for engine models. 
+A collection of partial base classes which define interfaces for engine models.
 </p>
 </html>"));
   end Interfaces;
@@ -162,7 +158,7 @@ A collection of partial base classes which define interfaces for engine models.
     annotation (
       Documentation(info="<html>
 <p>
-Empty engine model (just rigid connection between accessory and transmission flange). Using this empty model in overall vehicle architecture the functionality of engine can be eliminated. 
+Empty engine model (just rigid connection between accessory and transmission flange). Using this empty model in overall vehicle architecture the functionality of engine can be eliminated.
 </p>
 </html>"));
   end NullEngine;
@@ -190,40 +186,31 @@ Empty engine model (just rigid connection between accessory and transmission fla
       w(fixed=true,
         start=engineSpeed_start))
                                annotation (Placement(transformation(extent={{
-              -10,-10},{10,10}}, rotation=0)));
+              -10,-10},{10,10}})));
     Modelica.Mechanics.Rotational.Sources.Torque engine(useSupport=true)
-      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}},
-                                                                       rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}})));
     Modelica.Mechanics.Rotational.Sensors.SpeedSensor engineSpeed
       annotation (Placement(transformation(
           origin={10,60},
           extent={{-10,10},{10,-10}},
           rotation=180)));
     Modelica.Mechanics.Rotational.Sensors.TorqueSensor engineTorque
-      annotation (Placement(transformation(extent={{30,-10},{50,10}}, rotation=
-              0)));
+      annotation (Placement(transformation(extent={{30,-10},{50,10}})));
     Modelica.Mechanics.Rotational.Sensors.PowerSensor enginePower
-      annotation (Placement(transformation(extent={{60,-10},{80,10}}, rotation=
-              0)));
+      annotation (Placement(transformation(extent={{60,-10},{80,10}})));
     Modelica.Blocks.Math.Gain gain(k=requestedTorque)
-      annotation (Placement(transformation(extent={{-66,-26},{-54,-14}},
-                                                                       rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-66,-26},{-54,-14}})));
     Modelica.Mechanics.MultiBody.Parts.Mounting1D mounting1D(n=axisOfRotation)
-      annotation (Placement(transformation(extent={{-50,-50},{-30,-30}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-50,-50},{-30,-30}})));
   protected
     replaceable VehicleInterfaces.Engines.Interfaces.StandardBus
                                            engineBus constrainedby
       VehicleInterfaces.Interfaces.EngineBus
-      annotation (Placement(transformation(extent={{-70,50},{-50,70}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-70,50},{-50,70}})));
     replaceable VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus
                                            driverBus constrainedby
       VehicleInterfaces.Interfaces.DriverBus
-      annotation (Placement(transformation(extent={{-90,30},{-70,50}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-90,30},{-70,50}})));
     outer Modelica.Mechanics.MultiBody.World world;
   equation
     connect(engine.flange,   flywheel.flange_a)
@@ -268,11 +255,8 @@ Empty engine model (just rigid connection between accessory and transmission fla
 
     connect(engineSpeed.w, engineBus.speed) annotation (Line(
         points={{-1,60},{-60,60}},
-        color={0,0,127},
-        smooth=Smooth.None));
-    annotation (Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,
-              -100},{100,100}})),
-      Documentation(info="<html>
+        color={0,0,127}));
+    annotation (      Documentation(info="<html>
  <p>A simple engine model with flywheel and where the torque output is proportional to the accelerator pedal position.
 This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal position is read from the control bus.</p>
 </html>"));
@@ -302,29 +286,22 @@ This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal p
       phi(fixed=false),
       w(fixed=true, start=engineSpeed_start))
       annotation (Placement(transformation(extent={{
-              -10,-10},{10,10}}, rotation=0)));
+              -10,-10},{10,10}})));
     Modelica.Mechanics.Rotational.Sources.Torque engine(useSupport=true)
-      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}},
-                                                                       rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-40,-30},{-20,-10}})));
     Modelica.Mechanics.Rotational.Sensors.SpeedSensor engineSpeed
       annotation (Placement(transformation(
           origin={10,60},
           extent={{-10,-10},{10,10}},
           rotation=180)));
     Modelica.Mechanics.Rotational.Sensors.TorqueSensor engineTorque
-      annotation (Placement(transformation(extent={{30,-10},{50,10}}, rotation=
-              0)));
+      annotation (Placement(transformation(extent={{30,-10},{50,10}})));
     Modelica.Mechanics.Rotational.Sensors.PowerSensor enginePower
-      annotation (Placement(transformation(extent={{60,-10},{80,10}}, rotation=
-              0)));
+      annotation (Placement(transformation(extent={{60,-10},{80,10}})));
     Modelica.Blocks.Math.Gain gain(k(unit="N")=pedalPositionToTorque)
-      annotation (Placement(transformation(extent={{-66,-26},{-54,-14}},
-                                                                       rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-66,-26},{-54,-14}})));
     Modelica.Mechanics.MultiBody.Parts.Mounting1D mounting1D(n=axisOfRotation)
-      annotation (Placement(transformation(extent={{-50,-50},{-30,-30}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-50,-50},{-30,-30}})));
     Modelica.Mechanics.Translational.Sensors.PositionSensor
       acceleratorPedalPosition
       annotation (Placement(transformation(
@@ -334,8 +311,7 @@ This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal p
   protected
     replaceable VehicleInterfaces.Engines.Interfaces.StandardBus engineBus constrainedby
       VehicleInterfaces.Interfaces.EngineBus
-      annotation (Placement(transformation(extent={{-70,50},{-50,70}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-70,50},{-50,70}})));
     outer Modelica.Mechanics.MultiBody.World world;
   equation
     connect(engine.flange,   flywheel.flange_a)
@@ -379,13 +355,10 @@ This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal p
 
     connect(engineSpeed.w, engineBus.speed) annotation (Line(
         points={{-1,60},{-60,60}},
-        color={0,0,127},
-        smooth=Smooth.None));
-    annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
-                         Documentation(info="<html>
+        color={0,0,127}));
+    annotation (                         Documentation(info="<html>
 <p>A simple engine model with flywheel and where the torque output is proportional to the accelerator pedal position.
-This engine model uses the physical connection between the driver and the engine for the accelerator pedal.</p> 
+This engine model uses the physical connection between the driver and the engine for the accelerator pedal.</p>
 </html>"));
   end MinimalEngineUsingPedal;
 
@@ -426,6 +399,5 @@ A collection of internal material for engine models. Control bus definitions are
 <p>The optional connectors are, by default, disabled and can be ignored if not required.  They can be enabled by setting the appropriate parameter to be true.  This is only possible at design time, i.e. when you are building the subsystem model.</p>
 <h4>Effects to be modelled in this subsystem</h4>
 <p>Within the VehicleIntefaces package the engine subsystem is used to model the generation of torque and the application of this torque to the transmission and accessories flange.  The connections to the transmission and accessories subsystems are via 1D rotational connectors.  The torque reaction in to the engine block and the block itself are also to be modelled in this subsystem if required.  The torque reactions, if included, should all be referred back to a single reference frame for the engine block (the engineMount connector).</p>
-</html>"), Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
-            {100,100}})));
+</html>"));
 end Engines;

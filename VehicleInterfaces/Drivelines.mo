@@ -9,22 +9,22 @@ package Drivelines "Collection of drivelines subsystem definitions"
 <p><b>Tutorial - Defining a new driveline model</b></p>
 <p>The following process will demonstrate how to create a new driveline model using these interface definitions.  This tutorial will guide you through building a driveline for a passenger car, i.e. a vehicle with 4 wheels.</p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase</b>, it should look like this:</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriveline1.png\"><br><br>
-<li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriveline2.png\"><br><br>
-<li>This dialog allows you to enable/disable the optional connections by setting <b>includeWheelBearings</b> and <b>includeMount</b> as required for your new driveline model.  The wheelHub connectors are of the type <a href=\"Modelica://VehicleInterfaces.Interfaces.FlangeWithBearing\">VehicleInterfaces.Interfaces.FlangeWithBearing</a>, the parameter <b>includeWheelBearings</b> controls whether the bearing connectors within the wheelHubs is enabled or not.</li>
+<li>Create a new model that extends <b>VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase</b>, it should look like this:
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriveline1.png\"><br><br></li>
+<li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriveline2.png\"><br><br></li>
+<li>This dialog allows you to enable/disable the optional connections by setting <b>includeWheelBearings</b> and <b>includeMount</b> as required for your new driveline model.  The wheelHub connectors are of the type <a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>, the parameter <b>includeWheelBearings</b> controls whether the bearing connectors within the wheelHubs is enabled or not.</li>
 <li>You can now define your driveline model as required</li>
 </ol>
 <h4>Creating a simple rear-wheel drive example</h4>
 <p>The following steps demonstrate how to create a simple rear-wheel drive driveline model.  The driveline model will transmit the torque from the transmission to the rear wheels via a propshaft, differential with final drive and then two halfshafts.  No torque reaction in to the transmission housings will be modelled.</p>
 <p>Starting from step 3 above.</p>
 <ol>
-<li>First, decide which of the optional connectors are required in the model.  For this example we don't need any of the optional connections</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriveline3.png\"><br><br>
-<li>Add the following blocks and connections to the diagram.  When you draw the connections from the rightHalfShaft and leftHalfShaft components to the wheelHub  connectors the dialog box shown below will appear asking which connector within the wheelHub connector you would like to make the connection to.  As we are modelling the driveline as a 1D system you should select <b>flange</b> from the list of options which is the 1D connector within the wheelHub connector.</li>
+<li>First, decide which of the optional connectors are required in the model.  For this example we don't need any of the optional connections
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriveline3.png\"><br><br></li>
+<li>Add the following blocks and connections to the diagram.  When you draw the connections from the rightHalfShaft and leftHalfShaft components to the wheelHub  connectors the dialog box shown below will appear asking which connector within the wheelHub connector you would like to make the connection to.  As we are modelling the driveline as a 1D system you should select <b>flange</b> from the list of options which is the 1D connector within the wheelHub connector.
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriveline4.png\">
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriveline5.png\"><br><br>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriveline5.png\"><br><br></li>
 <li>Next, we need to check to see if any connections to the control signal bus are required for the driveline, see <a href=\"Modelica://VehicleInterfaces.UsersGuide.SignalBus\">here</a> for a complete list of the minimum connections required.  In this case we don't need to add any signals to the control signal bus.</li>
 <li>The model is now complete and should check successfully and can be used in any model compatible with the VehicleInterfaces library assuming the selected Driver model also uses the accelerator pedal connection</li>
 </ol>
@@ -39,8 +39,7 @@ package Drivelines "Collection of drivelines subsystem definitions"
         transmissionFlange(final includeBearingConnector=
             includeTransmissionBearing or usingMultiBodyTransmission)
         "Connection to the Transmission output shaft"
-        annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
       VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
         annotation (Placement(transformation(
             origin={-100,60},
@@ -84,8 +83,6 @@ package Drivelines "Collection of drivelines subsystem definitions"
               extent={{-108,28},{-92,16}},
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
-        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the basic interfaces required for any driveline subsystem.  This class should be extended to form a driveline interface definition with the correct number of wheelHub connectors for the type of vehicle being modelled. See the <a href=\"Modelica://VehicleInterfaces.Drivelines\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Drivelines.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -125,20 +122,16 @@ package Drivelines "Collection of drivelines subsystem definitions"
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,-108},{44,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,-108},{44,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,92},{44,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,92},{44,108}})));
     equation
       connect(end_1.flange, wheelHub_1) annotation (Line(
           points={{-80,-100},{-60,-100}},
@@ -230,28 +223,22 @@ package Drivelines "Collection of drivelines subsystem definitions"
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{22,-108},{34,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{22,-108},{34,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{22,92},{34,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{22,92},{34,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_5(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,-108},{144,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,-108},{144,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_6(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,92},{144,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,92},{144,108}})));
     equation
       connect(end_5.flange, wheelHub_5) annotation (Line(
           points={{140,-100},{160,-100}},
@@ -373,36 +360,28 @@ package Drivelines "Collection of drivelines subsystem definitions"
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{22,-108},{34,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{22,-108},{34,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{22,92},{34,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{22,92},{34,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_5(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,-108},{144,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,-108},{144,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_6(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,92},{144,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,92},{144,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_7(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{232,-108},{244,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{232,-108},{244,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_8(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{232,92},{244,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{232,92},{244,108}})));
     equation
       connect(end_7.flange, wheelHub_7) annotation (Line(
           points={{240,-100},{260,-100}},
@@ -480,7 +459,7 @@ package Drivelines "Collection of drivelines subsystem definitions"
 
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for driveline models. 
+A collection of partial base classes which define interfaces for driveline models.
 </p>
 </html>"));
   end Interfaces;
@@ -493,13 +472,11 @@ A collection of partial base classes which define interfaces for driveline model
   protected
     outer Modelica.Mechanics.MultiBody.World world;
     annotation (
-      Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
       Documentation(info="<html>
 <p>
 Zero torque is applied to all the wheelhubs and the reaction paths in to the wheel hubs included if the <b>driveTrainMechanics3D</b> flag in the world object is true.</p>
 <p>
-Using this empty model in overall vehicle architecture the functionality of driveline can be eliminated. 
+Using this empty model in overall vehicle architecture the functionality of driveline can be eliminated.
 </p>
 </html>"));
   end NoDriveline;
@@ -535,8 +512,7 @@ Using this empty model in overall vehicle architecture the functionality of driv
     Modelica.Mechanics.Rotational.Components.IdealGear finalDrive(
                                                        ratio=finalDriveRatio,
         useSupport=false)
-      annotation (Placement(transformation(extent={{-80,-10},{-60,10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-80,-10},{-60,10}})));
   equation
     connect(rightHalfShaft.flange_a, wheelHub_2.flange) annotation (Line(points=
            {{-40,60},{-40,80},{-60,80},{-60,100}}, color={0,0,0}));
@@ -559,10 +535,6 @@ Using this empty model in overall vehicle architecture the functionality of driv
     connect(finalDrive.flange_a, transmissionFlange.flange)
       annotation (Line(points={{-80,0},{-100,0}}, color={0,0,0}));
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=true,
-          extent={{-100,-100},{100,100}},
-          grid={2,2})),
       Documentation(info="<html>
 <p>This driveline model is of a front-wheel drive 4-wheeled vehicle.  The front differential is modelled using an ideal gear and planetary gear.  The model does include the 3D mount effects if the <b>driveTrainMechanics3D</b> in the world object is set to true.  To properly include these effects the additional constant and FrameForceAndTorque actuators are required on the front wheel hubs.  A constant zero torque is applied to the rear wheelhubs and the reaction paths in to the wheelhubs are included.</p>
 </html>"));
@@ -573,7 +545,7 @@ Using this empty model in overall vehicle architecture the functionality of driv
 <ul>
 <li><b>transmissionFlange</b> - 1D rotational connection to the transmission subsystem (or other systems connected to the driveline input)</li>
 <li><b>controlBus</b> - control signal bus connection</li>
-<li><b>wheelHub_n</b> - wheelHub connectors that consist of a 1D rotational connector and a MultiBody frame connector (see <a href=\"Modelica://VehicleInterfaces.Iterfaces.FlangeWithBearing\">here</a>.  The number of these varies depending on how many wheels the vehicle has.</li>
+<li><b>wheelHub_n</b> - wheelHub connectors that consist of a 1D rotational connector and a MultiBody frame connector (see <a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>).  The number of these varies depending on how many wheels the vehicle has.</li>
 <li><b>drivelineMount</b> - MultiBody connection to transmit the driveline mount reactions (optional)</li>
 </ul>
 <p>The optional connectors are, by default, disabled and can be ignored if not required.  They can be enabled by setting the appropriate parameter to be true.  This is only possible at design time, i.e. when you are building the subsystem model.</p>

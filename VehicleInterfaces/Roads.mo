@@ -10,84 +10,84 @@ package Roads "Collection of road definitions"
 <p>This tutorial will guide you through the steps required to build the FlatRoad model.</p>
 <ol>
 <li>Create a new road model by extending the base definition which is <b>VehicleInterfaces.Roads.Interfaces.Base</b></li>
-<li>The minimum steps necessary to define a road model are to provide definitions to the following partial function definitions included in the base road model.</li>
+<li>The minimum steps necessary to define a road model are to provide definitions to the following partial function definitions included in the base road model.
 <ul>
 <li><b>position</b></li>
 <li><b>trackOffset</b></li>
 <li><b>normal</b></li>
 <li><b>headingDirection</b></li>
 <li><b>frictionCoefficient</b></li>
-</ul>
+</ul></li>
 <li>Define the position function.  The road is to be defined as a line along the x-axis with the lateral direction along the y-axis.  The inputs to the base position function are <b>s</b> and <b>w</b> and these have the following meaning in this road definition:<br>
 <pre>
- 
+
    s: x-coordinate in world frame (x-axis is road heading direction)
    w: y-coordinate in world frame (y-axis is lateral displacement)
 </pre>
-<br>The input arguments <b>s</b> and <b>w</b> are common to all the road functions that we need to define and are included in the base function definitions.  These definitions can then be used to define our position function as follows:</li>
+<br>The input arguments <b>s</b> and <b>w</b> are common to all the road functions that we need to define and are included in the base function definitions.  These definitions can then be used to define our position function as follows:
 <br><br><pre>
-  function linePosition \"Determine point on road\" 
+  function linePosition \"Determine point on road\"
     extends VehicleInterfaces.Roads.Interfaces.Base.position;
-  algorithm 
+  algorithm
     r_0 := {s,w,0};
   end linePosition;
- 
-</pre>
-<li>Define the trackOffset function.  This road is defined with a constant offset that can be non-zero so the function is defined as:</li>
-<br><br><pre> 
-  function constantOffset \"Determine offset from road centre line\" 
+
+</pre></li>
+<li>Define the trackOffset function.  This road is defined with a constant offset that can be non-zero so the function is defined as:
+<br><br><pre>
+  function constantOffset \"Determine offset from road centre line\"
     extends VehicleInterfaces.Roads.Interfaces.Base.trackOffset;
     input Modelica.SIunits.Distance offset;
-  algorithm 
+  algorithm
     trackOffset := {0,offset,0};
   end constantOffset;
- 
-</pre>
-<li>Define the normal function.  This road is a flat road so the normal is always in the same direction along the z-axis and our normal function can be defined as:</li>
+
+</pre></li>
+<li>Define the normal function.  This road is a flat road so the normal is always in the same direction along the z-axis and our normal function can be defined as:
 <br><br><pre>
-  function lineNormal \"Determine unit normal on road\" 
+  function lineNormal \"Determine unit normal on road\"
     extends VehicleInterfaces.Roads.Interfaces.Base.normal;
-  algorithm 
+  algorithm
     e_n_0 := {0,0,1};
   end lineNormal;
- 
-</pre>
-<li>Define the headingDirection function.  In step 3, we define the road as a line along the x-axis.  This means that the heading direction is always in the same direction along the x-axis and our headingDirection function can be defined as:</li>
+
+</pre></li>
+<li>Define the headingDirection function.  In step 3, we define the road as a line along the x-axis.  This means that the heading direction is always in the same direction along the x-axis and our headingDirection function can be defined as:
 <br><br><pre>
-  function lineHeadingDirection 
-    \"Determine unit heading direction on road\" 
+  function lineHeadingDirection
+    \"Determine unit heading direction on road\"
     extends VehicleInterfaces.Roads.Interfaces.Base.headingDirection;
-  algorithm 
+  algorithm
     e_s_0 := {1,0,0};
   end lineHeadingDirection;
- 
-</pre>
-<li>Define the frictionCoefficient function.  The friction coefficient could be defined to vary along the road surface but in this case we are going to define it as a constant.  Our frictionCoefficient can be defined as:</li>
+
+</pre></li>
+<li>Define the frictionCoefficient function.  The friction coefficient could be defined to vary along the road surface but in this case we are going to define it as a constant.  Our frictionCoefficient can be defined as:
 <br><br><pre>
-  function lineFrictionCoefficient 
-    \"Determine friction coefficient at point on road\" 
+  function lineFrictionCoefficient
+    \"Determine friction coefficient at point on road\"
     extends VehicleInterfaces.Roads.Interfaces.Base.frictionCoefficient;
     input Real mue_fixed \"Friction coefficient\";
-  algorithm 
+  algorithm
     mue := mue_fixed;
   end lineFrictionCoefficient;
- 
-</pre>
-<li>We now need to redeclare the functions in the base road definition to be the functions shown above.  We do this with the following code assuming that the above functions have been defined within the class <b>FlatRoad</b>:</li>
+
+</pre></li>
+<li>We now need to redeclare the functions in the base road definition to be the functions shown above.  We do this with the following code assuming that the above functions have been defined within the class <b>FlatRoad</b>:
 <br><br><pre>
-  model FlatRoad \"Straight road along x-axis (perpendicular to world z-axis)\" 
+  model FlatRoad \"Straight road along x-axis (perpendicular to world z-axis)\"
     extends VehicleInterfaces.Roads.Interfaces.Base(
       redeclare final function position = linePosition,
       redeclare final function trackOffset = constantOffset(offset=offset)
       redeclare final function normal = lineNormal,
       redeclare final function headingDirection = lineHeadingDirection,
       redeclare final function frictionCoefficient = lineFrictionCoefficient(mue_fixed=mue));
- 
+
     //rest of definition
     ...
   end FlatRoad;
- 
-</pre>
+
+</pre></li>
 <li>In redeclaring the functions we have also introduced new parameters <b>mue</b> and <b>offset</b> that need to be added to the model to define the friction coefficient of the road and the track offset from the road centre line.</li>
 <li>The <b>FlatRoad</b> model included in this package also includes animation of the road surface but this is not essential to the definition of the road and will not be described in this tutorial.</li>
 <li>The road model is complete and can now be used</li>
@@ -323,7 +323,7 @@ The point s=0, w=0 has position vector r={0, 0, 0};
 </p>
 </html>"),
       Icon(coordinateSystem(preserveAspectRatio=true, extent={{-200,-100},{200,
-              100}}), graphics));
+              100}})));
   end FlatRoad;
 
   model CircleRoad "Circular road (perpendicular to world z-axis)"
@@ -448,12 +448,7 @@ of the functions.
           Text(
             extent={{-150,160},{150,110}},
             lineColor={0,0,255},
-            textString="%name")}),
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={2,2},
-          initialScale=0.2), graphics));
+            textString="%name")}));
   end CircleRoad;
 
   package Internal "Collection of internal material involving roads"
@@ -468,7 +463,8 @@ of the functions.
       extends Modelica.Mechanics.MultiBody.Visualizers.Advanced.Surface(
         final nu=ns,
         final nv=nw,
-        redeclare final function surfaceCharacteristic = roadSurfaceCharacteristic(
+        redeclare final function surfaceCharacteristic =
+            roadSurfaceCharacteristic (
           final position=road.position,
           final s_min=s_min,
           final s_max=s_max,
@@ -483,24 +479,29 @@ of the functions.
       outer VehicleInterfaces.Roads.Interfaces.Base road;
 
       encapsulated function roadSurfaceCharacteristic
+      import  Modelica;
+      import VehicleInterfaces;
+        extends
+          Modelica.Mechanics.MultiBody.Interfaces.partialSurfaceCharacteristic(            final multiColoredSurface=false);
         input VehicleInterfaces.Roads.Interfaces.positionBase position;
         input Real s_min=0 "Minimum value of s";
         input Real s_max=1 "Maximum value of s";
         input Real w_min=-1 "Minimum value of w";
         input Real w_max=1 "Maximum value of w";
-        extends Modelica.Mechanics.MultiBody.Interfaces.partialSurfaceCharacteristic(final multiColoredSurface=false);
       protected
         Real s;
         Real w;
         Real r[3];
-        parameter Real ds = s_max - s_min "Length of one segment in s-direction";
-        parameter Real dw = w_max - w_min "Length of one segment in w-direction";
+        parameter Real ds = s_max - s_min
+          "Length of one segment in s-direction";
+        parameter Real dw = w_max - w_min
+          "Length of one segment in w-direction";
       algorithm
         for j in 1:nv loop
-          w := w_min + (j - 1)*dw/(nw - 1);
+          w := w_min + (j - 1)*dw/(nv - 1);
           for i in 1:nu loop
-            s := s_min + (i - 1)*ds/(ns - 1);
-            r := road.position(s, w);
+            s := s_min + (i - 1)*ds/(nu - 1);
+            r := position(s, w);
             X[i, j] := r[1];
             Y[i, j] := r[2];
             Z[i, j] := r[3];
@@ -588,20 +589,16 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
               textString="%name"),
             Line(
               points={{0,-20},{0,-80}},
-              color={95,95,95},
-              smooth=Smooth.None),
+              color={95,95,95}),
             Line(
               points={{-80,-50},{80,-50}},
-              color={95,95,95},
-              smooth=Smooth.None),
+              color={95,95,95}),
             Line(
               points={{-58,-30},{58,-70}},
-              color={95,95,95},
-              smooth=Smooth.None),
+              color={95,95,95}),
             Line(
               points={{-58,-70},{58,-30}},
-              color={95,95,95},
-              smooth=Smooth.None)}));
+              color={95,95,95})}));
     end DummyTyre;
 
     model CheckContactCalculation
@@ -617,19 +614,18 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
         wheelRadius=wheelRadius,
         e_axis = Modelica.Math.Vectors.normalize(axis_wheel),
         r_wheel={radius_wheel*sin(phi),-radius_wheel*cos(phi),1 + sin(phi)/20})
-        annotation (Placement(transformation(extent={{20,40},{40,60}}, rotation=
-               0)));
+        annotation (Placement(transformation(extent={{20,40},{40,60}})));
       inner VehicleInterfaces.Roads.CircleRoad road(
         radius=50,
         width=8,
         mue=0.5,
         roadColor={100,100,100}) annotation (Placement(transformation(extent={{
-                -40,40},{0,80}}, rotation=0)));
+                -40,40},{0,80}})));
       inner Modelica.Mechanics.MultiBody.World world(
         enableAnimation=true,
         axisLength=20,
         n={0,0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,
-                60}}, rotation=0)));
+                60}})));
     equation
       // Define movement of center of wheel r_wheel and of wheel axis axis_wheel
       phi = time;
@@ -638,11 +634,8 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
 
       annotation (
         experiment(StopTime=6.2),
-        Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
-                {100,100}}),
-                graphics),
         Documentation(info="<html>
-<p>Model to check that the tire contact patch calculation is working correctly with the road models.</p> 
+<p>Model to check that the tire contact patch calculation is working correctly with the road models.</p>
 </html>"));
     end CheckContactCalculation;
 
@@ -665,9 +658,9 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
       Frames.Orientation R;
       inner Modelica.Mechanics.MultiBody.World world(enableAnimation=true, n={0,
             0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,
-                60}}, rotation=0)));
+                60}})));
       inner FlatRoad road annotation (Placement(transformation(extent={{-40,40},
-                {0,60}}, rotation=0)));
+                {0,60}})));
     equation
       s = (k/2)*time*time;
       r = road.position(s, 0);
@@ -710,12 +703,11 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
       Frames.Orientation R;
       inner Modelica.Mechanics.MultiBody.World world(enableAnimation=true, n={0,
             0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,
-                60}}, rotation=0)));
+                60}})));
       inner CircleRoad road(
         radius=1,
         width=0.2,
-        mue=0.5) annotation (Placement(transformation(extent={{-40,40},{0,80}},
-              rotation=0)));
+        mue=0.5) annotation (Placement(transformation(extent={{-40,40},{0,80}})));
     equation
       phi = (k/2)*time*time;
       s = road.radius*phi;
@@ -736,7 +728,7 @@ Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and co
       annotation (
         experiment(StopTime=1),
         Documentation(info="<html>
-<p>Model to check that the road functions can be differentiated correctly</p> 
+<p>Model to check that the road functions can be differentiated correctly</p>
 </html>"));
     end CheckFunctionDifferentiation_CircleRoads;
 

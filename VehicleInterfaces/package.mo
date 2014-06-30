@@ -28,7 +28,7 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.2) - Interface
     Documentation(info="<html>
 <p>This Modelica library provides standard interface definitions for automotive subsystems and vehicle models.  These are designed to promote compatibility between the various automotive libraries and provide a flexible, powerful structure for vehicle modelling.  The main focus of the library is on defining the interfaces for the individual subsystems and a number of vehicle model examples are included to demonstrate how they might be used.</p>
 <p>
-<img src=\"modelica://VehicleInterfaces/Resources/Images/conventionalVehicle.png\" align=\"center\">
+<img src=\"modelica://VehicleInterfaces/Resources/Images/conventionalVehicle.png\" align=\"middle\">
 </p>
 <p>For an automotive library to be compatible with other libraries based on this set of interface definitions they should extend the interface definition from within this library and following the naming convention for the signal bus. </p>
 <p>This library also contains a proposal for a naming convention covering the whole model library and the developers of this library would recommend that this convention is followed by other developers to ensure a consistent naming convention across the whole set of automotive models.</p>
@@ -40,7 +40,7 @@ is available as <a href=\"modelica://VehicleInterfaces/Resources/Documentation/V
 
 <p>The library has been developed as a co-operation between a number of vendors who are currently developing automotive libraries.  The developers can be contacted by emailing <a href=\"mailto://vi@claytex.com\">vi@claytex.com</a>, please see <a href=\"Modelica://VehicleInterfaces.UsersGuide.Acknowledgements\">acknowledgements</a> for a list of the people involved in the development of this library.</p>
 <p>
-Copyright &copy; 2005-2013, Dassault Systèmes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 Copyright &copy; 2013-, Modelica Association
 </p>
 </html>"));

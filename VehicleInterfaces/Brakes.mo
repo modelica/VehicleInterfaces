@@ -22,7 +22,7 @@ from the context menu to produce the following parameter dialog
 <li>This dialog allows you to enable/disable the optional connections by setting
 <b>includeWheelBearings</b> and <b>includeBrakePedal</b> as required for your new brakes model.
 The wheelHub connectors are of the type
-<a href=\"Modelica://VehicleInterfaces.Interfaces.FlangeWithBearing\">VehicleInterfaces.Interfaces.FlangeWithBearing</a>,
+<a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>,
 the parameter <b>includeWheelBearings</b> controls whether the bearing connectors within
 the wheelHubs is enabled or not.</li>
 <li>You can now define your brakes model as required.</li>
@@ -66,8 +66,8 @@ below appears and should be completed with the correct index for all four wheel 
 <br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewBrakes7.png\"><br>&nbsp;</li>
 <li>The model is now complete and should check successfully and can be used in any model
 compatible with the VehicleInterfaces library assuming the selected Driver model also uses
-the brake pedal connection.</li>
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewBrakes8.png\">
+the brake pedal connection.
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewBrakes8.png\"></li>
 </ol>
 </html>"));
   end Tutorial;
@@ -85,8 +85,7 @@ the brake pedal connection.</li>
             rotation=90)));
       Modelica.Mechanics.Translational.Interfaces.Flange_a brakePedal if
         includeBrakePedal "Brake pedal connection (optional)"
-        annotation (Placement(transformation(extent={{-10,110},{10,90}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-10,110},{10,90}})));
       parameter Boolean usingMultiBodyChassis=false
         "=true if using a MultiBody chassis with a 1D driveline"
         annotation (Dialog(tab="Advanced"));
@@ -102,8 +101,6 @@ the brake pedal connection.</li>
               extent={{-18,112},{6,88}},
               lineColor={255,128,0},
               pattern=LinePattern.Dot)}),
-        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}})),
         Documentation(info="<html>
 <p>This partial model defines the basic interfaces required for any brakes subsystem.  This class should be extended to form a brakes interface definition with the correct number of wheelHub connectors for the type of vehicle being modelled. See the <a href=\"Modelica://VehicleInterfaces.Brakes\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Brakes.Tutorial\">tutorial</a> for more information.</p>
 </html>"));
@@ -143,20 +140,16 @@ the brake pedal connection.</li>
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,92},{44,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,92},{44,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,-108},{44,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,-108},{44,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
     equation
       connect(end_2.flange, wheelHub_2) annotation (Line(
           points={{-80,100},{-60,100}},
@@ -239,28 +232,22 @@ the brake pedal connection.</li>
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,92},{44,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,92},{44,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_6(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,92},{144,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,92},{144,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_5(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,-108},{144,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,-108},{144,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,-108},{44,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,-108},{44,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
     equation
       connect(end_2.flange, wheelHub_2) annotation (Line(
           points={{-80,100},{-60,100}},
@@ -373,36 +360,28 @@ the brake pedal connection.</li>
             rotation=90)));
       Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,92},{-76,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,92},{-76,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_4(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,92},{44,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,92},{44,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_6(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,92},{144,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,92},{144,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_8(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{232,92},{244,108}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{232,92},{244,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_7(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{232,-108},{244,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{232,-108},{244,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_5(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{132,-108},{144,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{132,-108},{144,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{32,-108},{44,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{32,-108},{44,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
             includeWheelBearings or usingMultiBodyChassis)
-        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}},
-              rotation=0)));
+        annotation (Placement(transformation(extent={{-88,-108},{-76,-92}})));
     equation
       connect(end_2.flange, wheelHub_2) annotation (Line(
           points={{-80,100},{-60,100}},
@@ -502,13 +481,13 @@ the brake pedal connection.</li>
               lineThickness=0.5)}),
         Documentation(info="<html>
 <p>
-Bus with a set of standard signals generated by the brakes subsystem. 
+Bus with a set of standard signals generated by the brakes subsystem.
 </p>
 </html>"));
     end StandardBus;
     annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for brakes models. 
+A collection of partial base classes which define interfaces for brakes models.
 </p>
 </html>"));
   end Interfaces;
@@ -521,12 +500,10 @@ A collection of partial base classes which define interfaces for brakes models.
   protected
     outer Modelica.Mechanics.MultiBody.World world;
 
-    annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}})),
-      Documentation(info="<html>
+    annotation (      Documentation(info="<html>
 <p>Zero torque is applied to all the wheelhubs and the reaction paths in to the wheel hubs included if the <b>driveTrainMechanics3D</b> flag in the world object is true.</p>
 <p>
-Using this empty model in overall vehicle architecture the functionality of brakes can be eliminated. 
+Using this empty model in overall vehicle architecture the functionality of brakes can be eliminated.
 </p>
 </html>"));
   end NoBrakes;
@@ -618,13 +595,11 @@ Using this empty model in overall vehicle architecture the functionality of brak
     replaceable VehicleInterfaces.Brakes.Interfaces.StandardBus
                                            brakesBus constrainedby
       VehicleInterfaces.Interfaces.BrakesBus
-      annotation (Placement(transformation(extent={{-70,10},{-50,30}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-70,10},{-50,30}})));
     replaceable VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus
                                            driverBus constrainedby
       VehicleInterfaces.Interfaces.DriverBus
-      annotation (Placement(transformation(extent={{-90,-20},{-70,0}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-90,-20},{-70,0}})));
   equation
     connect(computeTorque.y, brake_1.f_normalized) annotation (Line(points={{-19,-10},
             {0,-10},{0,-60},{-49,-60}},          color={0,0,127}));
@@ -697,10 +672,6 @@ Using this empty model in overall vehicle architecture the functionality of brak
            {{-80,-75},{-80,-60},{-70,-60}}, color={0,0,0}));
 
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Documentation(info="<html>
 <p>Brakes subsystem model that uses the driver <b>brakePedalPosition</b> signal to determine the brake torque demand being requested by the driver.</p>
 </html>"));
@@ -797,8 +768,7 @@ Using this empty model in overall vehicle architecture the functionality of brak
     outer Modelica.Mechanics.MultiBody.World world;
     replaceable Interfaces.StandardBus     brakesBus constrainedby
       VehicleInterfaces.Interfaces.BrakesBus
-      annotation (Placement(transformation(extent={{-70,10},{-50,30}}, rotation=
-             0)));
+      annotation (Placement(transformation(extent={{-70,10},{-50,30}})));
   equation
     connect(computeTorque.y, brake_4.f_normalized) annotation (Line(points={{
             -1.22155e-016,49.5},{0,40},{24,40},{24,60},{49,60}},color={0,0,127}));
@@ -871,10 +841,6 @@ Using this empty model in overall vehicle architecture the functionality of brak
     connect(torqueReaction_1.flange_b,brake_1.support)  annotation (Line(points=
            {{-80,-75},{-80,-60},{-70,-60}}, color={0,0,0}));
     annotation (
-      Diagram(coordinateSystem(
-          preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}},
-          grid={1,1})),
       Documentation(info="<html>
 <p>Brakes subsystem model that uses the physical pedal connection to determine the brake torque demand being requested by the driver.</p>
 </html>"));
@@ -919,7 +885,7 @@ A collection of internal material for brakes models. Control bus definitions are
 <p>The brakes subsystem interfaces are defined in this sub-package of the VehicleInterfaces library.  The brakes subsystem has the following connectors some of which are optional (see below for more information):</p>
 <ul>
 <li><b>controlBus</b> - control signal bus connection</li>
-<li><b>wheelHub_n</b> - wheelHub connectors that consist of a 1D rotational connector and a MultiBody frame connector (see <a href=\"Modelica://VehicleInterfaces.Iterfaces.FlangeWithBearing\">here</a>.  The number of these varies depending on how many wheels the vehicle has.</li>
+<li><b>wheelHub_n</b> - wheelHub connectors that consist of a 1D rotational connector and a MultiBody frame connector (see <a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>.  The number of these varies depending on how many wheels the vehicle has.</li>
 <li><b>brakePedal</b> - 1D translational connection for the brake pedal connection to the driverEnvironment (optional)</li>
 </ul>
 <p>The optional connectors are, by default, disabled and can be ignored if not required.  They can be enabled by setting the appropriate parameter to be true.  This is only possible at design time, i.e. when you are building the subsystem model.</p>
