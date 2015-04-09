@@ -132,6 +132,6 @@ Formally, the output <b>y</b> is computed as:
 
   annotation (Documentation(info="<html>
 <p>
-A collection of additional input and ouput fixed causality blocks.</p>
+A collection of additional input and output fixed causality blocks.</p>
 </html>"));
 end Blocks;
