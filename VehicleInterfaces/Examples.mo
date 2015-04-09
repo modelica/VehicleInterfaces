@@ -37,7 +37,7 @@ package Examples "Collection of vehicle model examples"
       Dialog(group="Plant Models"),
       Placement(transformation(extent={{120,-30},{150,0}})));
     replaceable Accessories.MinimalAccessories accessories constrainedby
-      VehicleInterfaces.Accessories.Interfaces.Base "Accesories subsystem"
+      VehicleInterfaces.Accessories.Interfaces.Base "Accessories subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
@@ -833,7 +833,7 @@ package Examples "Collection of vehicle model examples"
       Dialog(group="Plant Models"),
       Placement(transformation(extent={{120,-20},{150,10}})));
     replaceable Accessories.MinimalAccessories accessories constrainedby
-      VehicleInterfaces.Accessories.Interfaces.Base "Accesories subsystem"
+      VehicleInterfaces.Accessories.Interfaces.Base "Accessories subsystem"
       annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
