@@ -801,7 +801,7 @@ package Examples "Collection of vehicle model examples"
       VehicleInterfaces.Engines.Interfaces.Base "Engine subsystem" annotation (
       choicesAllMatching=true,
       Dialog(group="Plant Models"),
- Placement(transformation(extent={{-110,-20},{-80,10}})));
+      Placement(transformation(extent={{-110,-20},{-80,10}})));
     replaceable Transmissions.SingleGearManualTransmission transmission(
       clutch(
         phi_rel(fixed=true)))
@@ -1057,17 +1057,17 @@ package Examples "Collection of vehicle model examples"
     connect(motor2.shaft_b, driveline.transmissionFlange) annotation (Line(
         points={{-71,-53},{-15,-53},{-15,-25},{-6,-25}},
         color={135,135,135},
-        pattern=LinePattern.None,
+        pattern=LinePattern.Solid,
         thickness=0.5));
     connect(motor1.controlBus, controlBus) annotation (Line(
         points={{-101,19.6},{-110,20},{-110,30},{-150,30}},
         color={255,204,51},
-        pattern=LinePattern.None,
+        pattern=LinePattern.Solid,
         thickness=0.5));
     connect(motor2.controlBus, controlBus) annotation (Line(
         points={{-101,-61.4},{-150,-61.4},{-150,30}},
         color={255,204,51},
-        pattern=LinePattern.None,
+        pattern=LinePattern.Solid,
         thickness=0.5));
     connect(powerSplitDevice.drivelineFlange, driveline.transmissionFlange)
       annotation (Line(
@@ -1184,22 +1184,22 @@ package Examples "Collection of vehicle model examples"
     connect(driveMotor.shaft_b, driveline.transmissionFlange) annotation (Line(
         points={{-40,-25},{-6,-25}},
         color={135,135,135},
-        pattern=LinePattern.None,
+        pattern=LinePattern.Solid,
         thickness=0.5));
     connect(generator.controlBus, controlBus) annotation (Line(
         points={{-20,74},{-12,74},{-12,30},{-150,30}},
         color={255,204,51},
-        pattern=LinePattern.None,
+        pattern=LinePattern.Solid,
         thickness=0.5));
     connect(driveMotor.controlBus, controlBus) annotation (Line(
         points={{-70,-34},{-150,-34},{-150,30}},
         color={255,204,51},
-        pattern=LinePattern.None,
+        pattern=LinePattern.Solid,
         thickness=0.5));
     connect(generator.shaft_b, engine.transmissionFlange) annotation (Line(
         points={{-50,65},{-68,65}},
         color={135,135,135},
-        pattern=LinePattern.None,
+        pattern=LinePattern.Solid,
         thickness=0.5));
     connect(battery.pin_p, generator.pin_p) annotation (Line(
         points={{-100,18},{-44,18},{-44,50}},

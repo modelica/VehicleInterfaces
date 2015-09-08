@@ -734,11 +734,11 @@ This partial class is intended to design a default icon for <em>controllers</em>
           Line(
             points={{-60,80},{-60,-80}},
             color={0,0,255},
-            pattern=LinePattern.None),
+            pattern=LinePattern.Solid),
           Line(
             points={{60,80},{60,-80}},
             color={0,0,255},
-            pattern=LinePattern.None),
+            pattern=LinePattern.Solid),
           Text(
             extent={{-150,140},{150,100}},
             lineColor={0,0,255},
@@ -987,7 +987,7 @@ This partial class is intended to design a default icon for a <em>driver environ
             lineColor={0,0,0},
             fillColor={255,255,255},
             fillPattern=FillPattern.Solid),
-          Bitmap(extent={{-70,96},{82,-60}}, fileName="modelica://VehicleInterfaces/Resources/Images/driver.jpg"),
+          Bitmap(extent={{-70,-60},{82,96}}, fileName="modelica://VehicleInterfaces/Resources/Images/driver.jpg"),
           Text(
             extent={{-100,-50},{100,-90}},
             lineColor={0,0,255},

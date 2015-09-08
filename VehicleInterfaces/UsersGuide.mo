@@ -22,7 +22,7 @@ package UsersGuide "User's Guide"
 </html>", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
   end QuickStart;
@@ -74,7 +74,7 @@ Parameters that represent initial values for simulation experiments are denoted 
 </html>", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
   end NamingConventions;
@@ -107,7 +107,7 @@ Copyright &copy; 2013-2014, Modelica Association
 </html>", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
     end AddingSignals;
@@ -230,7 +230,7 @@ Copyright &copy; 2013-2014, Modelica Association
 </html>", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
   end SignalBus;
@@ -331,7 +331,7 @@ Copyright &copy; 2013-2014, Modelica Association
 </html>", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
 
@@ -353,7 +353,7 @@ Copyright &copy; 2013-2014, Modelica Association
 </html>", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
   end ModelRotatingParts;
@@ -382,7 +382,7 @@ Copyright &copy; 2013-2014, Modelica Association
 </html>", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
   end SubsystemDefinitions;
@@ -404,7 +404,7 @@ Copyright &copy; 2013-2014, Modelica Association
 </html>", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
     end Tutorial1;
@@ -422,12 +422,29 @@ Some elements of the library may have been renamed since this tutorial but the p
 </html>", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
   end Tutorials;
 
   package ReleaseNotes "Release notes"
+    class Version_1_2_3 "Version 1.2.3 (Sept. 9, 2015)"
+      extends Modelica.Icons.ReleaseNotes;
+
+      annotation (Documentation(info="<html>
+<p>This version requires the <b>Modelica 3.2.1</b> Library.
+   This version is backwards compatible to versions&nbsp;1.1.x and 1.2.x of the VehicleInterfaces library.</p>
+
+<h4>Improvements in this version:</h4>
+
+<ul>
+<li> Typos in the documentation fixed. </li>
+<li> Some LinePattern graphical annotations corrected
+     (in Examples.PowerSplitHybrid, Examples.SeriesHybridConverting, Icons.DataDictionary) </li>
+<li> Bitmap.extent corrected in Icons.Driver </li>
+</ul>
+</html>"));
+    end Version_1_2_3;
     extends Modelica.Icons.ReleaseNotes;
 
     class Version_1_2_2 "Version 1.2.2 (Jun. 30, 2014)"
@@ -653,7 +670,7 @@ even if advised of the possibility of such damage.
 ", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
   end License;
@@ -678,10 +695,8 @@ Copyright &copy; 2013-2014, Modelica Association
 <p>Additional ideas from intermediate work by members of DLR Oberpfaffenhofen and Modelon has also been incorporated.  The above partners agreed to develop these ideas in to a new library and adopt this set of interface definitions.</p>
 <p>The implementation of the VehicleInterfaces library was led by Claytex Services Limited under contract to Dassault Syst&egrave;mes AB</p>
 </html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
-</p>
+<p>Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+     Copyright &copy; 2013-2015, Modelica Association </p>
 </html>"));
   end Contact;
 
@@ -699,7 +714,7 @@ is available as <a href=\"modelica://VehicleInterfaces/Resources/Documentation/V
 </html>", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
 end UsersGuide;
