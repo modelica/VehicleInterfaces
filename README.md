@@ -14,9 +14,19 @@ This library also contains a proposal for a naming convention covering the whole
 
 ## Current release
 
-Download [VehicleInterfaces v1.2.2 (2014-06-30)](../../releases/tag/v1.2.2)
+Download [VehicleInterfaces v1.2.3 (2015-09-09)](../../releases/tag/v1.2.3)
 
 #### Release notes
+
+* [Version v1.2.3 (2015-09-09)](../../releases/tag/v1.2.3)
+  * This version is backwards compatible to versions 1.1.x and 1.2.x
+  * #3: Typos in the documentation fixed.
+  * #4: Illegal inheritance fixed.
+  * #5: Some LinePattern graphical annotations corrected:
+      * `Examples.PowerSplitHybrid`
+      * `Examples.SeriesHybridConverting`
+      * `Icons.DataDictionary`
+  * #5: Bitmap.extent corrected in `Icons.Driver`
 
 * [Version v1.2.2 (2014-06-30)](../../releases/tag/v1.2.2)
   * Further adaption to the conventions of the Modelica Specification 3.2 Revision 2, removal of Dymola specific visualization.
