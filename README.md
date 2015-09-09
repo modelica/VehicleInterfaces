@@ -43,6 +43,6 @@ it can be redistributed and/or modified under the terms of the [Modelica License
 ## Development and contribution
 The devolopment is organised by the [Modelica Association](https://www.modelica.org/association).
 
-You may report any issues with using the [Issues](../../issues) button.
+You may report any issues with using the [Issues](https://github.com/modelica/VehicleInterfaces/issues) button.
 
-Contributions in shape of [Pull Requests](../../pulls) are always welcome.
+Contributions in shape of [Pull Requests](https://github.com/modelica/VehicleInterfaces/pulls) are always welcome.
