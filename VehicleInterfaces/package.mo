@@ -1,5 +1,5 @@
 within ;
-package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.2) - Interface definitions and architectures for vehicle system modeling"
+package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.3) - Interface definitions and architectures for vehicle system modeling"
   extends Modelica.Icons.Package;
 
   import SI = Modelica.SIunits;
@@ -13,10 +13,10 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.2) - Interface
       showStatistics=true,
       allowDuplicate=true),
     preferredView="info",
-    version="1.2.2",
-    versionDate="2014-03-13",
+    version="1.2.3",
+    versionDate="2015-09-08",
     versionBuild=1,
-    dateModified="2014-03-13",
+    dateModified="2015-09-08",
     uses(Modelica(version="3.2.1")),
     conversion(
       from(version="1.0", script="modelica://VehicleInterfaces/Resources/Scripts/ConvertVehicleInterfaces_from_1.0_to_1.1.mos"),
@@ -24,7 +24,8 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.2) - Interface
       noneFromVersion="1.1.1",
       noneFromVersion="1.1.2",
       noneFromVersion="1.2",
-      noneFromVersion="1.2.1"),
+      noneFromVersion="1.2.1",
+      noneFromVersion="1.2.2"),
     Documentation(info="<html>
 <p>This Modelica library provides standard interface definitions for automotive subsystems and vehicle models.  These are designed to promote compatibility between the various automotive libraries and provide a flexible, powerful structure for vehicle modelling.  The main focus of the library is on defining the interfaces for the individual subsystems and a number of vehicle model examples are included to demonstrate how they might be used.</p>
 <p>
@@ -39,7 +40,7 @@ is available as <a href=\"modelica://VehicleInterfaces/Resources/Documentation/V
 <p>The library has been developed as a co-operation between a number of vendors who are currently developing automotive libraries. Please see <a href=\"modelica://VehicleInterfaces.UsersGuide.Contact\">the contact information</a> on how to give feedback and for a list of the people involved in the development of this library.</p>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2014, Modelica Association
+Copyright &copy; 2013-2015, Modelica Association
 </p>
 </html>"));
 end VehicleInterfaces;
