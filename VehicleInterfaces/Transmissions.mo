@@ -237,7 +237,7 @@ A collection of partial base classes which define interfaces for transmission mo
     extends Interfaces.Base;
   equation
     connect(engineFlange, drivelineFlange)
-      annotation (Line(points={{-100,0},{100,0}}, color={0,0,0}));
+      annotation (Line(points={{-100,0},{100,0}}));
     annotation (      Documentation(info="<html>
 <p>
 Empty transmission model (just rigid connection between engine and driveline flange). Using this empty model in overall vehicle architecture the functionality of transmission can be eliminated.
@@ -276,13 +276,13 @@ Empty transmission model (just rigid connection between engine and driveline fla
     outer Modelica.Mechanics.MultiBody.World world;
   equation
     connect(mounting1D.flange_b,gear.support)
-      annotation (Line(points={{0,-50},{0,-10}}, color={0,0,0}));
+      annotation (Line(points={{0,-50},{0,-10}}));
     connect(mounting1D.frame_a, transmissionMount) annotation (Line(
         points={{-10,-60},{-10,-80},{0,-80},{0,-100}},
         color={95,95,95},
         thickness=0.5));
     connect(gear.flange_b,outputSpeed.flange)    annotation (Line(points={{10,0},
-            {80,0},{80,60}}, color={0,0,0}));
+            {80,0},{80,60}}));
 
     connect(controlBus.transmissionBus, transmissionBus) annotation (Line(
         points={{-100,60},{-20,60}},
@@ -296,9 +296,9 @@ Empty transmission model (just rigid connection between engine and driveline fla
     connect(currentGear.y, transmissionControlBus.currentGear) annotation (Line(
           points={{19,90},{-20,90}}, color={255,127,0}));
     connect(gear.flange_a, engineFlange.flange)
-      annotation (Line(points={{-10,0},{-100,0}}, color={0,0,0}));
+      annotation (Line(points={{-10,0},{-100,0}}));
     connect(gear.flange_b, drivelineFlange.flange)
-      annotation (Line(points={{10,0},{100,0}}, color={0,0,0}));
+      annotation (Line(points={{10,0},{100,0}}));
 
     connect(outputSpeed.w, transmissionBus.outputSpeed) annotation (Line(
         points={{59,60},{-20,60}},
@@ -370,17 +370,17 @@ Empty transmission model (just rigid connection between engine and driveline fla
           rotation=270)));
   equation
     connect(mounting1D.flange_b,gear.support)
-      annotation (Line(points={{0,-50},{0,-10}}, color={0,0,0}));
+      annotation (Line(points={{0,-50},{0,-10}}));
     connect(mounting1D.frame_a, transmissionMount) annotation (Line(
         points={{-10,-60},{-10,-80},{0,-80},{0,-100}},
         color={95,95,95},
         thickness=0.5));
     connect(gear.flange_b,outputSpeed.flange)    annotation (Line(points={{10,0},
-            {80,0},{80,40}}, color={0,0,0}));
+            {80,0},{80,40}}));
     connect(shiftConnector, shiftOutput.shiftConnector) annotation (Line(points={{0,100},
-            {0,82},{1.10218e-015,82}},             color={0,0,0}));
+            {0,82},{1.10218e-015,82}}));
     connect(clutch.flange_b, gear.flange_a)
-      annotation (Line(points={{-60,0},{-10,0}}, color={0,0,0}));
+      annotation (Line(points={{-60,0},{-10,0}}));
     connect(forceSensor.flange_a,fixed.flange)    annotation (Line(points={{-80,
             46},{-80,46}}, color={0,127,0}));
     connect(clutchPedal, pedalSpring.flange_b) annotation (Line(points={{-60,
@@ -395,9 +395,9 @@ Empty transmission model (just rigid connection between engine and driveline fla
         color={255,204,51},
         thickness=0.5));
     connect(clutch.flange_a, engineFlange.flange)
-      annotation (Line(points={{-80,0},{-100,0}},color={0,0,0}));
+      annotation (Line(points={{-80,0},{-100,0}}));
     connect(gear.flange_b, drivelineFlange.flange)
-      annotation (Line(points={{10,0},{100,0}}, color={0,0,0}));
+      annotation (Line(points={{10,0},{100,0}}));
     connect(transmissionControlBus, controlBus.transmissionControlBus)
       annotation (Line(
         points={{-20,60},{-100,60}},
@@ -454,21 +454,17 @@ gear number is ignored in this model.</p>
       annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
   equation
     connect(outputSpeed.flange,   drivelineFlange.flange) annotation (Line(
-        points={{70,60},{80,60},{80,0},{100,0}},
-        color={0,0,0}));
+        points={{70,60},{80,60},{80,0},{100,0}}));
     connect(controlBus.transmissionBus, transmissionBus) annotation (Line(
         points={{-100,60},{-20,60}},
         color={255,204,51},
         thickness=0.5));
     connect(idealPlanetary.ring, drivelineFlange.flange) annotation (Line(
-        points={{10,0},{100,0}},
-        color={0,0,0}));
+        points={{10,0},{100,0}}));
     connect(idealPlanetary.sun, engineFlange.flange) annotation (Line(
-        points={{-10,0},{-100,0}},
-        color={0,0,0}));
+        points={{-10,0},{-100,0}}));
     connect(idealPlanetary.carrier, motorFlange.flange) annotation (Line(
-        points={{-10,-4},{-40,-4},{-40,-60},{-100,-60}},
-        color={0,0,0}));
+        points={{-10,-4},{-40,-4},{-40,-60},{-100,-60}}));
     connect(transmissionControlBus, controlBus.transmissionControlBus)
       annotation (Line(
         points={{-20,90},{-40,90},{-40,60},{-100,60}},
@@ -523,11 +519,11 @@ gear number is ignored in this model.</p>
             lineColor={0,0,0},
             fillPattern=FillPattern.HorizontalCylinder,
             fillColor={192,192,192}),
-          Line(points={{-100,-50},{-100,-38},{-60,-38}}, color={0,0,0}),
-          Line(points={{-70,-48},{-50,-48}}, color={0,0,0}),
-          Line(points={{-60,-38},{-60,-48}}, color={0,0,0}),
-          Line(points={{-70,-74},{-49,-74}}, color={0,0,0}),
-          Line(points={{-60,-74},{-60,-84}}, color={0,0,0}),
+          Line(points={{-100,-50},{-100,-38},{-60,-38}}),
+          Line(points={{-70,-48},{-50,-48}}),
+          Line(points={{-60,-38},{-60,-48}}),
+          Line(points={{-70,-74},{-49,-74}}),
+          Line(points={{-60,-74},{-60,-84}}),
           Text(
             extent={{-150,140},{150,100}},
             lineColor={0,0,255},

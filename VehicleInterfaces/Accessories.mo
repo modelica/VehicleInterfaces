@@ -115,16 +115,14 @@ Empty accessories subsystem. Using this empty model in overall vehicle architect
     outer Modelica.Mechanics.MultiBody.World world;
   equation
     connect(torqueLoss.flange, inertia.flange_a) annotation (Line(points={{0,0},{
-            10,0},{20,0}},
-                     color={0,0,0}));
+            10,0},{20,0}}));
     connect(inertia.flange_b, engineFlange.flange)
-      annotation (Line(points={{40,0},{100,0}}, color={0,0,0}));
+      annotation (Line(points={{40,0},{100,0}}));
     connect(torqueReaction.frame_a, engineFlange.bearingFrame) annotation (Line(
         points={{100,-20},{100,0}},
-        color={0,0,0},
         thickness=0.5));
     connect(torqueReaction.flange_b,torqueLoss.support)  annotation (Line(
-          points={{90,-30},{-10,-30},{-10,-10}}, color={0,0,0}));
+          points={{90,-30},{-10,-30},{-10,-10}}));
     connect(inertia.frame_a, torqueReaction.frame_a) annotation (Line(
         points={{30,-10},{30,-20},{100,-20}},
         color={95,95,95},

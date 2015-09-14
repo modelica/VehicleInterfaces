@@ -89,19 +89,19 @@ This partial package is intended to design a <em>default icon for a package clas
             lineColor={0,0,0},
             fillPattern=FillPattern.Sphere,
             fillColor={255,255,170}),
-          Line(points={{-8,-44},{-58,-4}}, color={0,0,0}),
-          Line(points={{-52,14},{-18,4}}, color={0,0,0}),
-          Line(points={{-12,16},{-56,66}}, color={0,0,0}),
-          Line(points={{-44,74},{8,14}}, color={0,0,0}),
-          Line(points={{14,12},{40,10}}, color={0,0,0}),
-          Line(points={{48,0},{46,-48}}, color={0,0,0}),
-          Line(points={{30,-46},{28,-24}}, color={0,0,0}),
+          Line(points={{-8,-44},{-58,-4}}),
+          Line(points={{-52,14},{-18,4}}),
+          Line(points={{-12,16},{-56,66}}),
+          Line(points={{-44,74},{8,14}}),
+          Line(points={{14,12},{40,10}}),
+          Line(points={{48,0},{46,-48}}),
+          Line(points={{30,-46},{28,-24}}),
           Ellipse(
             extent={{14,-18},{28,-32}},
             lineColor={0,0,0},
             fillPattern=FillPattern.Sphere,
             fillColor={255,255,170}),
-          Line(points={{16,-20},{6,-42},{6,-42}}, color={0,0,0}),
+          Line(points={{16,-20},{6,-42},{6,-42}}),
           Text(
             extent={{-100,-50},{100,-90}},
             lineColor={0,0,255},
@@ -303,23 +303,18 @@ This partial class is intended to design a default icon for a <em>batery model</
             fillColor={215,215,215}),
           Line(
             points={{-66,10},{-80,10}},
-            color={0,0,0},
             thickness=0.5),
           Line(
             points={{-54,-14},{-60,-10},{-60,10},{-54,14}},
-            color={0,0,0},
             thickness=0.5),
           Line(
             points={{-64,30},{-80,30}},
-            color={0,0,0},
             thickness=0.5),
           Line(
             points={{-64,-30},{-80,-30}},
-            color={0,0,0},
             thickness=0.5),
           Line(
             points={{-66,-10},{-80,-10}},
-            color={0,0,0},
             thickness=0.5)}),      Documentation(info="<html>
 <p>
 This partial class is intended to design a default icon for a <em>brakes assembly</em>.
@@ -940,7 +935,7 @@ This partial class is intended to design a default icon for a <em>driveline asse
             pattern=LinePattern.None,
             fillPattern=FillPattern.Sphere,
             fillColor={170,170,255}),
-          Line(points={{80,-8},{80,-40},{-80,-40}}, color={0,0,0}),
+          Line(points={{80,-8},{80,-40},{-80,-40}}),
           Polygon(
             points={{12,40},{6,6},{8,6},{14,40},{12,40}},
             lineColor={0,0,0},
@@ -1126,7 +1121,7 @@ This partial class is intended to design a default icon for an <em>empty element
             pattern=LinePattern.None,
             fillColor={95,95,95},
             fillPattern=FillPattern.Solid),
-          Line(points={{-46,38},{-36,54},{40,66}}, color={0,0,0}),
+          Line(points={{-46,38},{-36,54},{40,66}}),
           Text(
             extent={{-100,-50},{100,-90}},
             lineColor={0,0,255},
@@ -1162,17 +1157,17 @@ This partial class is intended to design a default icon for a <em>engine assembl
             fillPattern=FillPattern.Solid,
             textString="%name"),
           Line(points={{-112,70},{-112,60},{-92,50},{-132,30},{-92,10},{-132,-10},
-                {-92,-30},{-132,-50},{-112,-60},{-112,-70}}, color={0,0,0}),
+                {-92,-30},{-132,-50},{-112,-60},{-112,-70}}),
           Line(points={{-2,70},{-2,60},{18,50},{-22,30},{18,10},{-22,-10},{18,-30},
-                {-22,-50},{-2,-60},{-2,-90}}, color={0,0,0}),
+                {-22,-50},{-2,-60},{-2,-90}}),
           Line(points={{98,70},{98,60},{118,50},{78,30},{118,10},{78,-10},{118,
-                -30},{78,-50},{98,-60},{98,-70}}, color={0,0,0}),
+                -30},{78,-50},{98,-60},{98,-70}}),
           Rectangle(
             extent={{-132,90},{129,70}},
             lineColor={0,0,0},
             fillColor={215,215,215},
             fillPattern=FillPattern.Solid),
-          Line(points={{-132,-70},{118,-70}}, color={0,0,0})}),
+          Line(points={{-132,-70},{118,-70}})}),
       Documentation(info="<html>
 <p>
 This partial class is intended to design a default icon for a model of <em>multiple mounts</em>.
@@ -1266,13 +1261,13 @@ This icon is designed for a <b>sub-bus</b> in a signal connector.
             fillPattern=FillPattern.Solid,
             textString="%name"),
           Line(points={{0,70},{0,60},{20,50},{-20,30},{20,10},{-20,-10},{20,-30},
-                {-20,-50},{0,-60},{0,-90}}, color={0,0,0}),
+                {-20,-50},{0,-60},{0,-90}}),
           Rectangle(
             extent={{-80,90},{80,70}},
             lineColor={0,0,0},
             fillColor={215,215,215},
             fillPattern=FillPattern.Solid),
-          Line(points={{-81,-70},{80,-70}}, color={0,0,0})}),
+          Line(points={{-81,-70},{80,-70}})}),
       Documentation(info="<html>
 <p>
 This partial class is intended to design a default icon for a model of <em>single mount</em>.
@@ -1303,15 +1298,15 @@ This partial class is intended to design a default icon for a model of <em>singl
             fillPattern=FillPattern.Solid,
             textString="%name"),
           Line(points={{-80,70},{-80,60},{-60,50},{-100,30},{-60,10},{-100,-10},
-                {-60,-30},{-100,-50},{-80,-60},{-80,-70}}, color={0,0,0}),
+                {-60,-30},{-100,-50},{-80,-60},{-80,-70}}),
           Line(points={{80,70},{80,60},{100,50},{60,30},{100,10},{60,-10},{100,
-                -30},{60,-50},{80,-60},{80,-70}}, color={0,0,0}),
+                -30},{60,-50},{80,-60},{80,-70}}),
           Rectangle(
             extent={{-132,90},{129,70}},
             lineColor={0,0,0},
             fillColor={215,215,215},
             fillPattern=FillPattern.Solid),
-          Line(points={{-132,-70},{118,-70}}, color={0,0,0})}),
+          Line(points={{-132,-70},{118,-70}})}),
       Documentation(info="<html>
 <p>
 This partial class is intended to design a default icon for a model of <em>two mounts</em>.
@@ -1345,14 +1340,14 @@ This partial class is intended to design a default icon for a model of <em>two m
             lineColor={0,0,0},
             fillColor={192,192,192},
             fillPattern=FillPattern.Solid),
-          Line(points={{-53,0},{-36,0}}, color={0,0,0}),
-          Line(points={{-53,23},{-45,23},{-38,18}}, color={0,0,0}),
-          Line(points={{-53,36},{-44,36},{-36,30}}, color={0,0,0}),
-          Line(points={{-55,-19},{-47,-19},{-40,-16}}, color={0,0,0}),
-          Line(points={{-53,-35},{-46,-35},{-43,-31}}, color={0,0,0}),
-          Line(points={{-27,29},{21,29},{28,14}}, color={0,0,0}),
-          Line(points={{-9,-1},{21,-1}}, color={0,0,0}),
-          Line(points={{-33,-34},{-30,-34},{7,-34}}, color={0,0,0}),
+          Line(points={{-53,0},{-36,0}}),
+          Line(points={{-53,23},{-45,23},{-38,18}}),
+          Line(points={{-53,36},{-44,36},{-36,30}}),
+          Line(points={{-55,-19},{-47,-19},{-40,-16}}),
+          Line(points={{-53,-35},{-46,-35},{-43,-31}}),
+          Line(points={{-27,29},{21,29},{28,14}}),
+          Line(points={{-9,-1},{21,-1}}),
+          Line(points={{-33,-34},{-30,-34},{7,-34}}),
           Text(
             extent={{-100,-50},{100,-90}},
             lineColor={0,0,255},

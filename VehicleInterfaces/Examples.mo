@@ -80,11 +80,11 @@ package Examples "Collection of vehicle model examples"
           origin={-100,60})));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
-          points={{-125,-15},{-110,-15}}, color={0,0,0}));
+          points={{-125,-15},{-110,-15}}));
     connect(engine.transmissionFlange, transmission.engineFlange) annotation (Line(
-          points={{-80,-15},{-60,-15}}, color={0,0,0}));
+          points={{-80,-15},{-60,-15}}));
     connect(transmission.drivelineFlange, driveline.transmissionFlange)
-      annotation (Line(points={{-30,-15},{-10,-15}}, color={0,0,0}));
+      annotation (Line(points={{-30,-15},{-10,-15}}));
     connect(chassis.wheelHub_2, driveline.wheelHub_2) annotation (Line(
         points={{53.125,0},{53.125,15},{-4,15},{-4,0}},
         color={135,135,135},
@@ -162,7 +162,7 @@ package Examples "Collection of vehicle model examples"
     connect(driverEnvironment.brakePedal, brakes.brakePedal) annotation (Line(
           points={{21,50},{21,40},{135,40},{135,0}}, color={0,127,0}));
     connect(driverEnvironment.steeringWheel, chassis.steeringWheel) annotation (Line(
-          points={{30,65},{70,65},{70,0}}, color={0,0,0}));
+          points={{30,65},{70,65},{70,0}}));
     connect(driverEnvironment.chassisFrame, chassis.chassisFrame) annotation (Line(
         points={{27,50},{27,-34},{40,-34}},
         color={95,95,95},
@@ -302,11 +302,11 @@ package Examples "Collection of vehicle model examples"
       Placement(transformation(extent={{-70,60},{-40,90}})));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
-          points={{-130,-5},{-110,-5}}, color={0,0,0}));
+          points={{-130,-5},{-110,-5}}));
     connect(engine.transmissionFlange, transmission.engineFlange)
-      annotation (Line(points={{-80,-5},{-60,-5}}, color={0,0,0}));
+      annotation (Line(points={{-80,-5},{-60,-5}}));
     connect(transmission.drivelineFlange, driveline.transmissionFlange)
-      annotation (Line(points={{-30,-5},{-10,-5}}, color={0,0,0}));
+      annotation (Line(points={{-30,-5},{-10,-5}}));
     connect(chassis.wheelHub_2, driveline.wheelHub_2) annotation (Line(
         points={{53.125,10},{53.125,25},{-4,25},{-4,10}},
         color={135,135,135},
@@ -372,7 +372,7 @@ package Examples "Collection of vehicle model examples"
     connect(driverEnvironment.brakePedal, brakes.brakePedal) annotation (Line(
           points={{21,60},{21,50},{135,50},{135,10}}, color={0,127,0}));
     connect(driverEnvironment.steeringWheel, chassis.steeringWheel) annotation (Line(
-          points={{30,75},{70,75},{70,10}}, color={0,0,0}));
+          points={{30,75},{70,75},{70,10}}));
     connect(driverEnvironment.chassisFrame, chassis.chassisFrame) annotation (Line(
         points={{27,60},{27,-24},{40,-24}},
         color={95,95,95},
@@ -502,11 +502,11 @@ package Examples "Collection of vehicle model examples"
       Placement(transformation(extent={{-40,55},{-20,75}})));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
-          points={{-125,-15},{-110,-15}}, color={0,0,0}));
+          points={{-125,-15},{-110,-15}}));
     connect(engine.transmissionFlange, transmission.engineFlange) annotation (Line(
-          points={{-80,-15},{-60,-15}}, color={0,0,0}));
+          points={{-80,-15},{-60,-15}}));
     connect(transmission.drivelineFlange, driveline.transmissionFlange)
-      annotation (Line(points={{-30,-15},{-10,-15}}, color={0,0,0}));
+      annotation (Line(points={{-30,-15},{-10,-15}}));
     connect(chassis.wheelHub_2, driveline.wheelHub_2) annotation (Line(
         points={{53.125,0},{53.125,15},{-4,15},{-4,0}},
         color={135,135,135},
@@ -584,7 +584,7 @@ package Examples "Collection of vehicle model examples"
     connect(driverEnvironment.brakePedal, brakes.brakePedal) annotation (Line(
           points={{21,50},{21,40},{135,40},{135,0}}, color={0,127,0}));
     connect(driverEnvironment.steeringWheel, chassis.steeringWheel) annotation (Line(
-          points={{30,65},{70,65},{70,0}}, color={0,0,0}));
+          points={{30,65},{70,65},{70,0}}));
     connect(driverEnvironment.chassisFrame, chassis.chassisFrame) annotation (Line(
         points={{27,50},{27,-34},{40,-34}},
         color={95,95,95},
@@ -690,11 +690,11 @@ package Examples "Collection of vehicle model examples"
           origin={-100,60})));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
-          points={{-125,-15},{-110,-15}}, color={0,0,0}));
+          points={{-125,-15},{-110,-15}}));
     connect(engine.transmissionFlange, transmission.engineFlange) annotation (Line(
-          points={{-80,-15},{-60,-15}}, color={0,0,0}));
+          points={{-80,-15},{-60,-15}}));
     connect(transmission.drivelineFlange, driveline.transmissionFlange)
-      annotation (Line(points={{-30,-15},{-10,-15}}, color={0,0,0}));
+      annotation (Line(points={{-30,-15},{-10,-15}}));
     connect(chassis.wheelHub_2, driveline.wheelHub_2) annotation (Line(
         points={{53.125,0},{53.125,15},{-4,15},{-4,0}},
         color={135,135,135},
@@ -772,13 +772,13 @@ package Examples "Collection of vehicle model examples"
     connect(driverEnvironment.brakePedal, brakes.brakePedal) annotation (Line(
           points={{21,50},{21,40},{135,40},{135,0}}, color={0,127,0}));
     connect(driverEnvironment.steeringWheel, chassis.steeringWheel) annotation (Line(
-          points={{30,65},{70,65},{70,0}}, color={0,0,0}));
+          points={{30,65},{70,65},{70,0}}));
     connect(driverEnvironment.chassisFrame, chassis.chassisFrame) annotation (Line(
         points={{27,50},{27,-34},{40,-34}},
         color={95,95,95},
         thickness=0.5));
     connect(driverEnvironment.shiftConnector, transmission.shiftConnector)
-      annotation (Line(points={{15,50},{15,30},{-45,30},{-45,0}}, color={0,0,0}));
+      annotation (Line(points={{15,50},{15,30},{-45,30},{-45,0}}));
     connect(driverEnvironment.clutchPedal, transmission.clutchPedal)
       annotation (Line(points={{9,50},{9,35},{-54,35},{-54,0}}, color={0,127,0}));
 
@@ -886,11 +886,11 @@ package Examples "Collection of vehicle model examples"
       Placement(transformation(extent={{-60,-55},{-30,-40}})));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
-          points={{-124,-5},{-110,-5}}, color={0,0,0}));
+          points={{-124,-5},{-110,-5}}));
     connect(engine.transmissionFlange, transmission.engineFlange)
-      annotation (Line(points={{-80,-5},{-60,-5}}, color={0,0,0}));
+      annotation (Line(points={{-80,-5},{-60,-5}}));
     connect(transmission.drivelineFlange, driveline.transmissionFlange)
-      annotation (Line(points={{-30,-5},{-10,-5}}, color={0,0,0}));
+      annotation (Line(points={{-30,-5},{-10,-5}}));
     connect(chassis.wheelHub_2, driveline.wheelHub_2) annotation (Line(
         points={{53.125,10},{53.125,25},{-4,25},{-4,10}},
         color={135,135,135},
@@ -956,11 +956,11 @@ package Examples "Collection of vehicle model examples"
     connect(driverEnvironment.clutchPedal, transmission.clutchPedal)
       annotation (Line(points={{9,60},{9,47},{-54,47},{-54,10}}, color={0,127,0}));
     connect(driverEnvironment.shiftConnector, transmission.shiftConnector)
-      annotation (Line(points={{15,60},{15,44},{-45,44},{-45,10}}, color={0,0,0}));
+      annotation (Line(points={{15,60},{15,44},{-45,44},{-45,10}}));
     connect(driverEnvironment.brakePedal, brakes.brakePedal) annotation (Line(
           points={{21,60},{21,50},{135,50},{135,10}}, color={0,127,0}));
     connect(driverEnvironment.steeringWheel, chassis.steeringWheel) annotation (Line(
-          points={{30,75},{70,75},{70,10}}, color={0,0,0}));
+          points={{30,75},{70,75},{70,10}}));
     connect(driverEnvironment.chassisFrame, chassis.chassisFrame) annotation (Line(
         points={{27,60},{27,-24},{40,-24}},
         color={95,95,95},
@@ -1041,8 +1041,7 @@ package Examples "Collection of vehicle model examples"
       annotation (Placement(transformation(extent={{-114,-65},{-94,-45}})));
   equation
     connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
-          points={{-121,75},{-100,75}}, color={0,0,0},
-        thickness=0.5));
+          points={{-121,75},{-100,75}}, thickness=0.5));
     connect(controlBus, engine.controlBus) annotation (Line(
         points={{-150,30},{-110,30},{-110,84},{-100,84}},
         color={255,204,51},
@@ -1354,7 +1353,7 @@ package Examples "Collection of vehicle model examples"
     connect(driverEnvironment.brakePedal, brakes.brakePedal) annotation (Line(
           points={{41,50},{41,44},{135,44},{135,-10}},color={0,127,0}));
     connect(driverEnvironment.steeringWheel, chassis.steeringWheel) annotation (Line(
-          points={{50,65},{74,65},{74,-10}},color={0,0,0}));
+          points={{50,65},{74,65},{74,-10}}));
     connect(driverEnvironment.chassisFrame, chassis.chassisFrame) annotation (Line(
         points={{47,50},{47,40},{31,40},{31,-44},{44,-44}},
         color={95,95,95},

@@ -100,8 +100,7 @@ A collection of partial base classes which define interfaces for electric drive 
       annotation (Placement(transformation(extent={{50,-10},{70,10}})));
   equation
     connect(eMF.flange,   shaft_b.flange) annotation (Line(
-        points={{70,0},{100,0}},
-        color={0,0,0}));
+        points={{70,0},{100,0}}));
     connect(inductor.n, resistor.p) annotation (Line(
         points={{-20,-30},{20,-30}},
         color={0,0,255}));

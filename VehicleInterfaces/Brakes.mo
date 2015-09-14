@@ -612,21 +612,21 @@ Using this empty model in overall vehicle architecture the functionality of brak
             {0,-10},{0,60},{49,60}},                                      color=
            {0,0,127}));
     connect(brake_1.flange_b, wheelHub_1.flange) annotation (Line(points={{-60,
-            -70},{-60,-100}}, color={0,0,0}));
+            -70},{-60,-100}}));
     connect(brake_2.flange_a, wheelHub_2.flange) annotation (Line(points={{-60,
-            70},{-60,100}}, color={0,0,0}));
+            70},{-60,100}}));
     connect(brake_3.flange_a, wheelHub_3.flange) annotation (Line(points={{60,
-            -70},{60,-100}}, color={0,0,0}));
+            -70},{60,-100}}));
     connect(brake_4.flange_b, wheelHub_4.flange) annotation (Line(points={{60,
-            70},{60,100}}, color={0,0,0}));
+            70},{60,100}}));
     connect(wheelSpeed_1.flange,   brake_1.flange_a) annotation (Line(points={{
-            -60,-50},{-60,-50}}, color={0,0,0}));
+            -60,-50},{-60,-50}}));
     connect(brake_2.flange_b,wheelSpeed_2.flange)
-      annotation (Line(points={{-60,50},{-60,50}}, color={0,0,0}));
+      annotation (Line(points={{-60,50},{-60,50}}));
     connect(wheelSpeed_3.flange,   brake_3.flange_b)
-      annotation (Line(points={{60,-50},{60,-50}}, color={0,0,0}));
+      annotation (Line(points={{60,-50},{60,-50}}));
     connect(brake_4.flange_a,wheelSpeed_4.flange)
-      annotation (Line(points={{60,50},{60,50}}, color={0,0,0}));
+      annotation (Line(points={{60,50},{60,50}}));
     connect(controlBus.driverBus, driverBus) annotation (Line(
         points={{-100,60},{-90,60},{-90,-10},{-80,-10}},
         color={255,204,51},
@@ -647,7 +647,7 @@ Using this empty model in overall vehicle architecture the functionality of brak
         color={255,204,51},
         thickness=0.5));
     connect(brake_2.support, torqueReaction_2.flange_b) annotation (Line(points=
-           {{-70,60},{-80,60},{-80,75}}, color={0,0,0}));
+           {{-70,60},{-80,60},{-80,75}}));
     connect(torqueReaction_2.frame_a, wheelHub_2.bearingFrame) annotation (Line(
         points={{-75,80},{-70,80},{-70,100},{-60,100}},
         color={135,135,135},
@@ -657,9 +657,9 @@ Using this empty model in overall vehicle architecture the functionality of brak
         color={135,135,135},
         thickness=0.5));
     connect(torqueReaction_4.flange_b,brake_4.support)  annotation (Line(points={{80,75},
-            {80,60},{70,60}},         color={0,0,0}));
+            {80,60},{70,60}}));
     connect(torqueReaction_3.flange_b,brake_3.support)  annotation (Line(points={{80,-75},
-            {80,-60},{70,-60}},          color={0,0,0}));
+            {80,-60},{70,-60}}));
     connect(torqueReaction_3.frame_a, wheelHub_3.bearingFrame) annotation (Line(
         points={{75,-80},{70,-80},{70,-100},{60,-100}},
         color={135,135,135},
@@ -669,7 +669,7 @@ Using this empty model in overall vehicle architecture the functionality of brak
         color={135,135,135},
         thickness=0.5));
     connect(torqueReaction_1.flange_b,brake_1.support)  annotation (Line(points=
-           {{-80,-75},{-80,-60},{-70,-60}}, color={0,0,0}));
+           {{-80,-75},{-80,-60},{-70,-60}}));
 
     annotation (
       Documentation(info="<html>
@@ -782,27 +782,26 @@ Using this empty model in overall vehicle architecture the functionality of brak
             -1.22155e-016,49.5},{-1.22155e-016,-60},{-49,-60}},
                    color={0,0,127}));
     connect(brake_1.flange_b, wheelHub_1.flange) annotation (Line(points={{-60,
-            -70},{-60,-100}}, color={0,0,0}));
+            -70},{-60,-100}}));
     connect(brake_2.flange_a, wheelHub_2.flange) annotation (Line(points={{-60,
-            70},{-60,100}}, color={0,0,0}));
+            70},{-60,100}}));
     connect(brake_3.flange_a, wheelHub_3.flange) annotation (Line(points={{60,-70},
-            {60,-85},{60,-100}},
-                             color={0,0,0}));
+            {60,-85},{60,-100}}));
     connect(brake_4.flange_b, wheelHub_4.flange) annotation (Line(points={{60,
-            70},{60,100}}, color={0,0,0}));
+            70},{60,100}}));
     connect(positionSensor.flange,   brakePedal) annotation (Line(points={{
             9.18485e-016,80},{0,80},{0,100}}, color={0,127,0}));
     connect(positionSensor.s, computeTorque.u) annotation (Line(points={{
             -1.01033e-015,69.5},{1.99036e-015,69.5},{1.99036e-015,61}},   color=
            {0,0,127}));
     connect(wheelSpeed_1.flange,   brake_1.flange_a) annotation (Line(points={{
-            -60,-50},{-60,-50}}, color={0,0,0}));
+            -60,-50},{-60,-50}}));
     connect(wheelSpeed_2.flange,   brake_2.flange_b) annotation (Line(points={{
-            -60,50},{-60,50}}, color={0,0,0}));
+            -60,50},{-60,50}}));
     connect(wheelSpeed_3.flange,   brake_3.flange_b) annotation (Line(points={{60,-50},
-            {60,-50}},         color={0,0,0}));
+            {60,-50}}));
     connect(wheelSpeed_4.flange,   brake_4.flange_a) annotation (Line(points={{
-            60,50},{60,50}}, color={0,0,0}));
+            60,50},{60,50}}));
 
     connect(controlBus.brakesBus, brakesBus) annotation (Line(
         points={{-100,60},{-90,60},{-90,20},{-60,20}},
@@ -821,25 +820,25 @@ Using this empty model in overall vehicle architecture the functionality of brak
         color={135,135,135},
         thickness=0.5));
     connect(brake_2.support, torqueReaction_2.flange_b) annotation (Line(points=
-           {{-70,60},{-80,60},{-80,75}}, color={0,0,0}));
+           {{-70,60},{-80,60},{-80,75}}));
     connect(torqueReaction_4.frame_a, wheelHub_4.bearingFrame) annotation (Line(
         points={{75,80},{70,80},{70,100},{60,100}},
         color={135,135,135},
         thickness=0.5));
     connect(torqueReaction_4.flange_b,brake_4.support)  annotation (Line(points={{80,75},
-            {80,60},{70,60}},             color={0,0,0}));
+            {80,60},{70,60}}));
     connect(torqueReaction_3.frame_a, wheelHub_3.bearingFrame) annotation (Line(
         points={{75,-80},{70,-80},{70,-100},{60,-100}},
         color={135,135,135},
         thickness=0.5));
     connect(torqueReaction_3.flange_b,brake_3.support)  annotation (Line(points={{80,-75},
-            {80,-60},{70,-60}},          color={0,0,0}));
+            {80,-60},{70,-60}}));
     connect(torqueReaction_1.frame_a, wheelHub_1.bearingFrame) annotation (Line(
         points={{-75,-80},{-70,-80},{-70,-100},{-60,-100}},
         color={135,135,135},
         thickness=0.5));
     connect(torqueReaction_1.flange_b,brake_1.support)  annotation (Line(points=
-           {{-80,-75},{-80,-60},{-70,-60}}, color={0,0,0}));
+           {{-80,-75},{-80,-60},{-70,-60}}));
     annotation (
       Documentation(info="<html>
 <p>Brakes subsystem model that uses the physical pedal connection to determine the brake torque demand being requested by the driver.</p>

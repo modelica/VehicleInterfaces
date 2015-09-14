@@ -515,13 +515,13 @@ Using this empty model in overall vehicle architecture the functionality of driv
       annotation (Placement(transformation(extent={{-80,-10},{-60,10}})));
   equation
     connect(rightHalfShaft.flange_a, wheelHub_2.flange) annotation (Line(points=
-           {{-40,60},{-40,80},{-60,80},{-60,100}}, color={0,0,0}));
+           {{-40,60},{-40,80},{-60,80},{-60,100}}));
     connect(leftHalfShaft.flange_a, wheelHub_1.flange) annotation (Line(points=
-            {{-40,-60},{-40,-80},{-60,-80},{-60,-100}}, color={0,0,0}));
+            {{-40,-60},{-40,-80},{-60,-80},{-60,-100}}));
     connect(leftHalfShaft.flange_b, differential.sun) annotation (Line(points={
-            {-40,-40},{-40,10}}, color={0,0,0}));
+            {-40,-40},{-40,10}}));
     connect(differential.ring, rightHalfShaft.flange_b) annotation (Line(points=
-           {{-40,30},{-40,40}}, color={0,0,0}));
+           {{-40,30},{-40,40}}));
     connect(rightHalfShaft.frame_a, drivelineMount) annotation (Line(
         points={{-30,50},{0,50},{0,-100}},
         color={95,95,95},
@@ -531,9 +531,9 @@ Using this empty model in overall vehicle architecture the functionality of driv
         color={95,95,95},
         thickness=0.5));
     connect(finalDrive.flange_b, differential.carrier) annotation (Line(points=
-            {{-60,0},{-44,0},{-44,10}}, color={0,0,0}));
+            {{-60,0},{-44,0},{-44,10}}));
     connect(finalDrive.flange_a, transmissionFlange.flange)
-      annotation (Line(points={{-80,0},{-100,0}}, color={0,0,0}));
+      annotation (Line(points={{-80,0},{-100,0}}));
     annotation (
       Documentation(info="<html>
 <p>This driveline model is of a front-wheel drive 4-wheeled vehicle.  The front differential is modelled using an ideal gear and planetary gear.  The model does include the 3D mount effects if the <b>driveTrainMechanics3D</b> in the world object is set to true.  To properly include these effects the additional constant and FrameForceAndTorque actuators are required on the front wheel hubs.  A constant zero torque is applied to the rear wheelhubs and the reaction paths in to the wheelhubs are included.</p>

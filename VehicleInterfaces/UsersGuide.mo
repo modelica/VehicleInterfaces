@@ -604,8 +604,7 @@ convert to the new version. Changes with respect to version 1.0:
 
 
 
-</html>
-"));
+</html>"));
     end Version_1_1;
 
     class Version_1_0 "Version 1.0 (Dec. 3, 2007)"
@@ -618,8 +617,7 @@ First version of VehicleInterfaces library finalized, based on
 Modelica Standard Library 2.2.2
 </p>
 
-</html>
-"));
+</html>"));
     end Version_1_0;
     annotation (Documentation(info="<html>
 <p>
@@ -666,8 +664,7 @@ copyright holders, or any party who modify and/or redistribute the package,
 consequential damages, arising in any way out of the use of this software,
 even if advised of the possibility of such damage.
 </p>
-</html>
-", revisions="<html>
+</html>", revisions="<html>
 <p>
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
 Copyright &copy; 2013-2015, Modelica Association
