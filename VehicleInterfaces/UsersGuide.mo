@@ -56,7 +56,7 @@ Parameters that represent initial values for simulation experiments are denoted 
 <tr><td> <b>a</b>  </td><td>&nbsp;</td><td> Acceleration</td></tr>
 <tr><td> <b>phi</b></td><td>&nbsp;</td><td> Rotation angle </td></tr>
 <tr><td> <b>w</b>  </td><td>&nbsp;</td><td> Angular velocity</td></tr>
-<tr><td> <b>z</b>  </td><td>&nbsp;</td><td> Angular accleration</td></tr>
+<tr><td> <b>z</b>  </td><td>&nbsp;</td><td> Angular acceleration</td></tr>
 <tr><td> <b>f</b>  </td><td>&nbsp;</td><td> Force </td></tr>
 <tr><td> <b>tau</b></td><td>&nbsp;</td><td> Torque</td></tr>
 <tr><td> <b>n</b>  </td><td>&nbsp;</td><td> Direction of rotation or translation</td></tr>
