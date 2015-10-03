@@ -153,7 +153,7 @@ A collection of partial base classes which define interfaces for engine models.
     extends Interfaces.Base;
   equation
     connect(accessoryFlange, transmissionFlange)
-      annotation (Line(points={{-100,0},{100,0}}, color={0,0,0}));
+      annotation (Line(points={{-100,0},{100,0}}));
 
     annotation (
       Documentation(info="<html>
@@ -214,13 +214,13 @@ Empty engine model (just rigid connection between accessory and transmission fla
     outer Modelica.Mechanics.MultiBody.World world;
   equation
     connect(engine.flange,   flywheel.flange_a)
-      annotation (Line(points={{-20,-20},{-20,0},{-10,0}},color={0,0,0}));
+      annotation (Line(points={{-20,-20},{-20,0},{-10,0}}));
     connect(flywheel.flange_b,engineSpeed.flange)    annotation (Line(points={{
-            10,0},{20,0},{20,60}}, color={0,0,0}));
+            10,0},{20,0},{20,60}}));
     connect(flywheel.flange_b, engineTorque.flange_a) annotation (Line(points={
-            {10,0},{30,0}}, color={0,0,0}));
+            {10,0},{30,0}}));
     connect(engineTorque.flange_b, enginePower.flange_a) annotation (Line(
-          points={{50,0},{60,0}}, color={0,0,0}));
+          points={{50,0},{60,0}}));
     connect(controlBus.engineBus, engineBus) annotation (Line(
         points={{-100,60},{-60,60}},
         color={255,204,51},
@@ -245,9 +245,9 @@ Empty engine model (just rigid connection between accessory and transmission fla
     connect(gain.u, driverBus.acceleratorPedalPosition) annotation (Line(points={{-67.2,
             -20},{-80,-20},{-80,40}},    color={0,0,127}));
     connect(enginePower.flange_b, transmissionFlange.flange)
-      annotation (Line(points={{80,0},{100,0}},color={0,0,0}));
+      annotation (Line(points={{80,0},{100,0}}));
     connect(flywheel.flange_a, accessoryFlange.flange)
-      annotation (Line(points={{-10,0},{-100,0}}, color={0,0,0}));
+      annotation (Line(points={{-10,0},{-100,0}}));
     connect(accessoryFlange.bearingFrame, mounting1D.frame_a) annotation (Line(
         points={{-100,0},{-100,-60},{-40,-60},{-40,-50}},
         color={95,95,95},
@@ -315,26 +315,24 @@ This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal p
     outer Modelica.Mechanics.MultiBody.World world;
   equation
     connect(engine.flange,   flywheel.flange_a)
-      annotation (Line(points={{-20,-20},{-20,0},{-10,0}},color={0,0,0}));
+      annotation (Line(points={{-20,-20},{-20,0},{-10,0}}));
     connect(flywheel.flange_b,engineSpeed.flange)    annotation (Line(points={{
-            10,0},{20,0},{20,60}}, color={0,0,0}));
+            10,0},{20,0},{20,60}}));
     connect(flywheel.flange_b, engineTorque.flange_a) annotation (Line(points={
-            {10,0},{30,0}}, color={0,0,0}));
+            {10,0},{30,0}}));
     connect(engineTorque.flange_b, enginePower.flange_a) annotation (Line(
-          points={{50,0},{60,0}}, color={0,0,0}));
+          points={{50,0},{60,0}}));
     connect(gain.y, engine.tau) annotation (Line(points={{-53.4,-20},{-53.4,-20},
             {-42,-20}},
           color={0,0,127}));
     connect(flywheel.frame_a, engineMount) annotation (Line(
         points={{0,-10},{0,-100}},
-        color={0,0,0},
         thickness=0.5));
     connect(mounting1D.flange_b,engine.support)  annotation (Line(points={{-30,-40},
             {-30,-40},{-30,-30}},                                       color={
             0,0,0}));
     connect(mounting1D.frame_a, engineMount) annotation (Line(
         points={{-40,-50},{-40,-60},{0,-60},{0,-100}},
-        color={0,0,0},
         thickness=0.5));
     connect(acceleratorPedalPosition.flange,   acceleratorPedal) annotation (Line(
           points={{-40,90},{0,90},{0,100}}, color={0,127,0}));
@@ -345,12 +343,11 @@ This engine model uses a drive-by-wire accelerator, i.e. the accelerator pedal p
         color={255,204,51},
         thickness=0.5));
     connect(flywheel.flange_a, accessoryFlange.flange)
-      annotation (Line(points={{-10,0},{-100,0}}, color={0,0,0}));
+      annotation (Line(points={{-10,0},{-100,0}}));
     connect(enginePower.flange_b, transmissionFlange.flange)
-      annotation (Line(points={{80,0},{100,0}},color={0,0,0}));
+      annotation (Line(points={{80,0},{100,0}}));
     connect(accessoryFlange.bearingFrame, mounting1D.frame_a) annotation (Line(
         points={{-100,0},{-100,-60},{-40,-60},{-40,-50}},
-        color={0,0,0},
         thickness=0.5));
 
     connect(engineSpeed.w, engineBus.speed) annotation (Line(

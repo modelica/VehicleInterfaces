@@ -551,13 +551,13 @@ Empty chassis model. Using this empty model in overall vehicle architecture the 
     connect(body.flange_b,longitudinalVelocity.flange)    annotation (Line(
           points={{20,0},{20,30},{5,30}}, color={0,127,0}));
     connect(tyres.flangeR,  wheelHub_1.flange) annotation (Line(points={{-40,0},
-            {-90,0},{-90,-100}}, color={0,0,0}));
+            {-90,0},{-90,-100}}));
     connect(tyres.flangeR,  wheelHub_2.flange) annotation (Line(points={{-40,0},
-            {-90,0},{-90,100}}, color={0,0,0}));
+            {-90,0},{-90,100}}));
     connect(tyres.flangeR,  wheelHub_3.flange) annotation (Line(points={{-40,0},
-            {-90,0},{-90,-80},{90,-80},{90,-100}}, color={0,0,0}));
+            {-90,0},{-90,-80},{90,-80},{90,-100}}));
     connect(tyres.flangeR,  wheelHub_4.flange) annotation (Line(points={{-40,0},
-            {-90,0},{-90,80},{90,80},{90,100}}, color={0,0,0}));
+            {-90,0},{-90,80},{90,80},{90,100}}));
     connect(controlBus.chassisBus, chassisBus) annotation (Line(
         points={{-158,60},{-120,60},{-120,40}},
         color={255,204,51},
@@ -566,8 +566,7 @@ Empty chassis model. Using this empty model in overall vehicle architecture the 
         points={{80,0},{80,-20},{-20,-20},{-20,-10}},
         color={0,127,0}));
     connect(fixed.flange, tyres.supportR) annotation (Line(
-        points={{-40,-16},{-40,-10}},
-        color={0,0,0}));
+        points={{-40,-16},{-40,-10}}));
     connect(chassisBus.longitudinalVelocity, longitudinalVelocity.v)
       annotation (Line(
         points={{-120,40},{-120,30},{-16,30}},
@@ -624,13 +623,13 @@ Empty chassis model. Using this empty model in overall vehicle architecture the 
       annotation (Placement(transformation(extent={{-50,-20},{-30,0}})));
   equation
     connect(tyres.flangeR,  wheelHub_2.flange) annotation (Line(points={{-20,0},
-            {-90,0},{-90,100}}, color={0,0,0}));
+            {-90,0},{-90,100}}));
     connect(tyres.flangeR,  wheelHub_1.flange) annotation (Line(points={{-20,0},
-            {-90,0},{-90,-100}}, color={0,0,0}));
+            {-90,0},{-90,-100}}));
     connect(tyres.flangeR,  wheelHub_4.flange) annotation (Line(points={{-20,0},
-            {-90,0},{-90,80},{90,80},{90,100}}, color={0,0,0}));
+            {-90,0},{-90,80},{90,80},{90,100}}));
     connect(tyres.flangeR,  wheelHub_3.flange) annotation (Line(points={{-20,0},
-            {-90,0},{-90,-80},{90,-80},{90,-100}}, color={0,0,0}));
+            {-90,0},{-90,-80},{90,-80},{90,-100}}));
     connect(tyres.flangeT,  dragForces.flange_a)
       annotation (Line(points={{0,0},{40,0}},   color={0,127,0}));
     connect(longitudinalVelocity.flange,   dragForces.flange_a) annotation (Line(
@@ -649,8 +648,7 @@ Empty chassis model. Using this empty model in overall vehicle architecture the 
         color={95,95,95},
         thickness=0.5));
     connect(mountingR.flange_b, tyres.supportR) annotation (Line(
-        points={{-30,-10},{-20,-10}},
-        color={0,0,0}));
+        points={{-30,-10},{-20,-10}}));
     connect(constraint.support, tyres.supportT) annotation (Line(
         points={{54,-24},{60,-24},{60,-14},{0,-14},{0,-10}},
         color={0,127,0}));

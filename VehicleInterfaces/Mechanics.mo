@@ -17,8 +17,7 @@ package Mechanics "Collection of additional mechanical components"
           defaultComponentName="flange_a",
           Documentation(info="<html>
 <p>1D translational mechanical connector with normalized position as opposed to the <a href=\"Modelica://Modelica.Mechanics.Translational.Interfaces.flange_a\">Modelica.Mechanics.Translational.Interfaces.flange_a</a> connector.  The force is not normalized in this connector.</p>
-</HTML>
-"),       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
+</html>"),       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
                   {100,100}}), graphics={Polygon(
                 points={{-100,0},{0,100},{100,0},{0,-100},{-100,0}},
                 lineColor={0,127,0},
@@ -126,7 +125,7 @@ A collection of additional 1D translational mechanical connectors used for norma
       annotation (
         Diagram(coordinateSystem(preserveAspectRatio=true, extent={{-100,-100},
                 {100,100}}), graphics={
-            Line(points={{-50,-90},{30,-90}}, color={0,0,0}),
+            Line(points={{-50,-90},{30,-90}}),
             Polygon(
               points={{60,-90},{30,-80},{30,-100},{60,-90}},
               lineColor={128,128,128},
@@ -215,8 +214,7 @@ A collection of additional 1D translational mechanical connectors used for norma
           defaultComponentName="flange_a",
           Documentation(info="<html>
 <p>1D rotational mechanical connector with normalized position as opposed to the <a href=\"Modelica://Modelica.Mechanics.Rotational.Interfaces.Flange_a\">Modelica.Mechanics.Rotational.Interfaces.Flange_a</a> connector.  The torque is not normalized in this connector.</p>
-</HTML>
-"),       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
+</html>"),       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
                   {100,100}}), graphics={
               Ellipse(
                 extent={{-100,100},{100,-100}},
@@ -341,7 +339,7 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
       annotation (
         Diagram(coordinateSystem(preserveAspectRatio=true, extent={{-100,-100},
                 {100,100}}), graphics={
-            Line(points={{-50,-90},{30,-90}}, color={0,0,0}),
+            Line(points={{-50,-90},{30,-90}}),
             Polygon(
               points={{60,-90},{30,-80},{30,-100},{60,-90}},
               lineColor={128,128,128},
@@ -350,7 +348,6 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
             Line(
               points={{-84,0},{-60,30},{-32,52},{2,62},{32,56},{52,44},{68,28},
                   {80,14},{84,10}},
-              color={0,0,0},
               thickness=0.5),
             Polygon(
               points={{90,0},{70,58},{42,28},{90,0}},
@@ -375,7 +372,6 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
             Line(
               points={{-100,0},{-76,30},{-48,48},{-14,58},{16,56},{40,50},{56,
                   42},{66,32},{80,20}},
-              color={0,0,0},
               thickness=0.5)}),
         Documentation(info="<html>
 <p>Applies a torque to a 1D normalized rotational system.  Cannot be connected to components from the Modelica.Mechanics.Rotational library</p>
@@ -435,8 +431,7 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
         annotation (Placement(transformation(extent={{-20,30},{0,50}})));
     equation
       connect(zeroTorque1D.flange, flange.flange)   annotation (Line(
-          points={{0,40},{20,40},{20,0}},
-          color={0,0,0}));
+          points={{0,40},{20,40},{20,0}}));
       connect(zeroForceAndTorque.frame_a, flange.bearingFrame) annotation (Line(
           points={{-20,0},{20,0}},
           color={95,95,95},
@@ -454,8 +449,7 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
 <p>
 This component is used to end a chain of multi-body components by applying zero force and torque to the end of the chain.  Uses the <a href=\"Modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">FlangeWithBearing</a> connector where the <b>flange</b> connector has zero torque applied to it and the <b>bearingFrame</b> can be optionally included through the parameter <code>includeBearingConnector</code>.
 If <code>includeBearingConnector=true</code> then zero force and torque is applied to the bearingFrame.</p>
-</HTML>
-"),     Diagram(coordinateSystem(
+</html>"),     Diagram(coordinateSystem(
             preserveAspectRatio=true,
             extent={{-60,-80},{60,80}}), graphics={Rectangle(
               extent={{-66,18},{0,-24}},

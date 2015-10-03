@@ -75,8 +75,7 @@ package Blocks "Collection of input/output fixed causality blocks"
             textString="0..1"),
           Line(points={{-90,-78},{76,-78}}, color={192,192,192}),
           Line(
-            points={{-80,22},{32,-78}},
-            color={0,0,0}),
+            points={{-80,22},{32,-78}}),
           Text(
             extent={{28,54},{98,30}},
             lineColor={95,95,95},
@@ -115,9 +114,8 @@ package Blocks "Collection of input/output fixed causality blocks"
           Text(extent={{18,-7},{38,-27}}, textString="1"),
           Text(extent={{-92,77},{-72,57}}, textString="1"),
           Line(
-            points={{-58,64},{26,0}},
-            color={0,0,0})}),
-      Documentation(info="<HTML>
+            points={{-58,64},{26,0}})}),
+      Documentation(info="<html>
 <p>
 This block is used to invert a normalized input signal u from [0..1] to [1..0].
 Formally, the output <b>y</b> is computed as:
@@ -126,8 +124,7 @@ Formally, the output <b>y</b> is computed as:
     y = 1 - u;
 </pre>
 
-</HTML>
-"));
+</html>"));
   end InvertNormalizedInput;
 
   annotation (Documentation(info="<html>

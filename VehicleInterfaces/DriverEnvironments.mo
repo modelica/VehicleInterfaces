@@ -389,7 +389,7 @@ Empty driver environment. Using this empty model in overall vehicle architecture
     connect(clutchPosition.flange,   clutchPedal) annotation (Line(points={{-40,
             -70},{-40,-100}}, color={0,127,0}));
     connect(shiftInput.shiftConnector, shiftConnector) annotation (Line(points={{
-            -6.12323e-016,-70},{0,-70},{0,-100}},   color={0,0,0}));
+            -6.12323e-016,-70},{0,-70},{0,-100}}));
     connect(gear.y, shiftInput.gear) annotation (Line(points={{-2.02067e-015,
             -31},{7.34788e-016,-31},{7.34788e-016,-48}}, color={255,127,0}));
     connect(controlBus.driverBus, driverBus) annotation (Line(
