@@ -30,12 +30,12 @@ package EnergyStorage "Collection of energy storage subsystem definitions"
     partial model Base "Basic interface for an energy storage device"
       parameter Boolean includeGround=false
         "Include inner electrical ground at pin_n"
-        annotation(Evaluate=true, HideResult=true, choices(__Dymola_checkBox=true));
+        annotation(Evaluate=true, HideResult=true, choices(checkBox=true));
       parameter Boolean includeHeatPort = false "Include the battery heat port"
-        annotation(Evaluate=true, HideResult=true, choices(__Dymola_checkBox=true));
+        annotation(Evaluate=true, HideResult=true, choices(checkBox=true));
       parameter Boolean usingMultiBodyChassis=false
         "Include secondary ground node on the right port"
-            annotation(Evaluate=true, HideResult=true, choices(__Dymola_checkBox=true));
+            annotation(Evaluate=true, HideResult=true, choices(checkBox=true));
 
       VehicleInterfaces.Interfaces.ControlBus controlBus if not usingMultiBodyChassis
         "Control signal bus"
