@@ -1063,7 +1063,7 @@ This partial class is intended to design a default icon for an <em>empty element
 </html>"));
   end Empty;
 
-  partial model Engine "Icon for an egine subsystem"
+  partial model Engine "Icon for an engine subsystem"
 
     annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
               -100},{100,100}}), graphics={
