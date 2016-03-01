@@ -1,6 +1,7 @@
 within VehicleInterfaces;
 package Transmissions "Collection of transmission subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
+
   class Tutorial "Transmissions Tutorial"
     extends Modelica.Icons.Information;
 

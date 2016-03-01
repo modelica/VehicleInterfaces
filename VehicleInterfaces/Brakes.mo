@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package Brakes "Collection of brakes subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Brakes Tutorial"
     extends Modelica.Icons.Information;

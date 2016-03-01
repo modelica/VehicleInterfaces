@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package Drivelines "Collection of drivelines subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Driveline Tutorial"
     extends Modelica.Icons.Information;

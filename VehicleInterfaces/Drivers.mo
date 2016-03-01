@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package Drivers "Collection of driver subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Drivers Tutorial"
     extends Modelica.Icons.Information;
@@ -78,7 +78,7 @@ package Drivers "Collection of driver subsystem definitions"
         clutchPedal "Clutch pedal" annotation (Dialog);
       Integer gear
         "Selected gear for manual transmission (>0:forward gear, <0:rear gear)"
-                                                                                           annotation (Dialog);
+        annotation (Dialog);
       Boolean clutchLocked "Clutch locked flag" annotation (Dialog);
 
       annotation (Documentation(info="<html>

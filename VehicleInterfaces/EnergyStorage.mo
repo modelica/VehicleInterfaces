@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package EnergyStorage "Collection of energy storage subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Energy Storage Device Tutorial"
     extends Modelica.Icons.Information;

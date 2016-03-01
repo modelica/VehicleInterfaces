@@ -1,16 +1,20 @@
 within VehicleInterfaces;
 package Icons "Collection of icons"
-  extends Modelica.Icons.Package;
+  extends Modelica.Icons.IconsPackage;
 
   partial package VariantLibrary
-    "Icon for a package which contains several variants of one assembly or component"
+    "This icon will be removed in future library versions, use Modelica.Icons.VariantsPackage instead"
     extends Modelica.Icons.VariantsPackage;
+    extends Modelica.Icons.ObsoleteModel;
 
     annotation (
       Documentation(info="<html>
 <p>
-This partial package is intended to design a <em>default icon for a package class</em> which contains several <em>variants</em> of one assembly or component.
+<b>Obsolete</b> partial package intended to design a <em>default icon for a package class</em> which contains several <em>variants</em> of one assembly or component.
 </p>
+
+<h4>Note</h4>
+<p>This icon will be removed in future versions of the VehicleInterfaces Library. Instead, the icon <a href=\"modelica://Modelica.Icons.BasesPackage\">BasesPackage</a> shall be used.</p>
 </html>"));
   end VariantLibrary;
 
@@ -759,150 +763,58 @@ This partial class is intended to design a default icon for a <em>data dictionar
             lineColor={0,0,0},
             fillColor={255,255,255},
             fillPattern=FillPattern.Solid),
-          Polygon(
-            points={{-51,46},{-51,30},{15,-10},{15,6},{-51,46}},
+          Ellipse(
+            extent={{-64,50},{-48,34}},
             lineColor={0,0,0},
             pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={215,215,215}),
-          Polygon(
-            points={{-48,45},{-52,46},{15,5},{19,5},{-48,45}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={0,0,0}),
-          Polygon(
-            points={{-58,34},{-55,31},{11,-9},{8,-6},{-58,34}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={0,0,0}),
-          Polygon(
-            points={{-52,46},{-54,45},{12,5},{14,6},{-52,46}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={95,95,95}),
-          Polygon(
-            points={{-58,35},{-58,34},{9,-7},{8,-5},{-58,35}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={95,95,95}),
-          Polygon(
-            points={{-54,45},{-56,44},{10,4},{12,5},{-54,45}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={135,135,135}),
-          Polygon(
-            points={{-59,37},{-58,35},{8,-5},{7,-3},{-59,37}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={135,135,135}),
-          Polygon(
-            points={{-56,44},{-58,42},{8,2},{10,4},{-56,44}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={175,175,175}),
-          Polygon(
-            points={{-59,39},{-59,37},{7,-3},{7,-1},{-59,39}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={175,175,175}),
-          Polygon(
-            points={{-58,42},{-59,39},{7,-1},{8,2},{-58,42}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
+            fillPattern=FillPattern.Sphere,
             fillColor={215,215,215}),
           Rectangle(
-            extent={{-88,8},{2,-6}},
+            extent={{-40.7541,7.9458},{40.7541,-7.9458}},
             lineColor={0,0,0},
             pattern=LinePattern.None,
             fillPattern=FillPattern.HorizontalCylinder,
-            fillColor={215,215,215}),
-          Ellipse(
-            extent={{-6,18},{38,-22}},
+            fillColor={215,215,215},
+            origin={-21.1593,21.1992},
+            rotation=-31),
+          Rectangle(
+            extent={{-91,10},{-1,-10}},
             lineColor={0,0,0},
             pattern=LinePattern.None,
-            fillPattern=FillPattern.Sphere,
-            fillColor={215,215,215}),
-          Polygon(
-            points={{16,6},{16,-10},{82,-50},{82,-34},{16,6}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={215,215,215}),
-          Polygon(
-            points={{19,5},{15,6},{82,-35},{86,-35},{19,5}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={0,0,0}),
-          Polygon(
-            points={{9,-6},{12,-9},{78,-49},{75,-46},{9,-6}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={0,0,0}),
-          Polygon(
-            points={{15,6},{13,5},{79,-35},{81,-34},{15,6}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={95,95,95}),
-          Polygon(
-            points={{9,-5},{9,-6},{76,-47},{75,-45},{9,-5}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={95,95,95}),
-          Polygon(
-            points={{13,5},{11,4},{77,-36},{79,-35},{13,5}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={135,135,135}),
-          Polygon(
-            points={{8,-3},{9,-5},{75,-45},{74,-43},{8,-3}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={135,135,135}),
-          Polygon(
-            points={{11,4},{9,2},{75,-38},{77,-36},{11,4}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={175,175,175}),
-          Polygon(
-            points={{8,-1},{8,-3},{74,-43},{74,-41},{8,-1}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={175,175,175}),
-          Polygon(
-            points={{9,2},{8,-1},{74,-41},{75,-38},{9,2}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Solid,
-            fillColor={215,215,215}),
-          Ellipse(
-            extent={{74,-34},{90,-50}},
-            lineColor={0,0,0},
-            pattern=LinePattern.None,
-            fillPattern=FillPattern.Sphere,
+            fillPattern=FillPattern.HorizontalCylinder,
             fillColor={215,215,215}),
           Text(
             extent={{-100,-55},{100,-95}},
             lineColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
-            textString="%name")}),
+            textString="%name"),
+          Ellipse(
+            extent={{-12,25},{38,-25}},
+            lineColor={0,0,0},
+            pattern=LinePattern.None,
+            fillPattern=FillPattern.Sphere,
+            fillColor={215,215,215}),
+          Ellipse(
+            extent={{6,8},{22,-8}},
+            lineColor={0,0,0},
+            pattern=LinePattern.None,
+            fillPattern=FillPattern.Sphere,
+            fillColor={215,215,215}),
+          Rectangle(
+            extent={{-40.7541,7.9458},{40.7541,-7.9458}},
+            lineColor={0,0,0},
+            pattern=LinePattern.None,
+            fillPattern=FillPattern.HorizontalCylinder,
+            fillColor={215,215,215},
+            origin={48.8407,-20.8008},
+            rotation=-31),
+          Ellipse(
+            extent={{76,-34},{92,-50}},
+            lineColor={0,0,0},
+            pattern=LinePattern.None,
+            fillPattern=FillPattern.Sphere,
+            fillColor={215,215,215})}),
       Documentation(info="<html>
 <p>
 This partial class is intended to design a default icon for a <em>driveline assembly</em>.
@@ -1234,10 +1146,13 @@ This partial class is intended to design a default icon for a <em>road</em>.
             points={{-40,25},{40,25},{50,15},{40,-20},{30,-25},{-30,-25},{-40,
                 -20},{-50,15},{-40,25}},
             lineColor={0,0,0},
-            lineThickness=0.5)}),
+            lineThickness=0.5,
+            smooth=Smooth.Bezier)}),
       Documentation(info="<html>
 <p>
 This icon is designed for a <b>sub-bus</b> in a signal connector.
+It contains just an additional polygon as a graphical element in Diagram in order
+to highlight such a particular sub-bus.
 </p>
 </html>"));
   end SignalSubBusWithExplicitSignals;

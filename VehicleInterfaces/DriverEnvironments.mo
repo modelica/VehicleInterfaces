@@ -1,7 +1,7 @@
 within VehicleInterfaces;
 package DriverEnvironments
   "Collection of driver environment subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Driver Environment Tutorial"
     extends Modelica.Icons.Information;

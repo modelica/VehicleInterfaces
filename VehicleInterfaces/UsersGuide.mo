@@ -428,6 +428,26 @@ Copyright &copy; 2013-2015, Modelica Association
   end Tutorials;
 
   package ReleaseNotes "Release notes"
+    class Version_1_2_4 "Version 1.2.4 (Mar. 2, 2016)"
+      extends Modelica.Icons.ReleaseNotes;
+
+      annotation (Documentation(info="<html>
+<p>This version requires the <b>Modelica 3.2.2</b> Library.
+   This version is backwards compatible to versions&nbsp;1.1.x and 1.2.x of the VehicleInterfaces library.
+</p>
+
+<h4>Improvements in this version</h4>
+
+<ul>
+<li> Typos in the documentation fixed. </li>
+<li> Some FillPattern graphical annotations corrected
+     (e.g. in Icons). </li>
+<li> Icon <a href=\"modelica://VehicleInterfaces.Icons.VariantLibrary\">VariantLibrary</a>
+     marked as obsolete and no more used. Using <a href=\"modelica://Modelica.Icons.VariantsPackage\">Modelica.Icons.VariantsPackage</a> instead.</li>
+</ul>
+</html>"));
+    end Version_1_2_4;
+
     class Version_1_2_3 "Version 1.2.3 (Sept. 9, 2015)"
       extends Modelica.Icons.ReleaseNotes;
 
@@ -677,7 +697,8 @@ Copyright &copy; 2013-2015, Modelica Association
 
     annotation (Documentation(info="<html>
 <p>This library is maintained by the Modelica Association. Further development takes place on <a href=\"https://github.com/modelica/VehicleInterfaces\">https://github.com/modelica/VehicleInterfaces</a> where users can also report issues and/or supply pull-requests.</p>
-<h5>History</h5>
+
+<h4>History</h4>
 <p>A number of automotive library developers and consultants have co-operated to develop the VehicleInterfaces Library.  The developers were:</p>
 <ul>
 <li>Arsenal Research: Franz Pirker, Anton Haumer, Christian Kral</li>
@@ -692,8 +713,7 @@ Copyright &copy; 2013-2015, Modelica Association
 <p>Additional ideas from intermediate work by members of DLR Oberpfaffenhofen and Modelon has also been incorporated.  The above partners agreed to develop these ideas in to a new library and adopt this set of interface definitions.</p>
 <p>The implementation of the VehicleInterfaces library was led by Claytex Services Limited under contract to Dassault Syst&egrave;mes AB</p>
 </html>", revisions="<html>
-<p>Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-     Copyright &copy; 2013-2015, Modelica Association </p>
+<p>Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon</p><p>Copyright &copy; 2013-2016, Modelica Association </p>
 </html>"));
   end Contact;
 
