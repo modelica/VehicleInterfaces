@@ -14,9 +14,15 @@ This library also contains a proposal for a naming convention covering the whole
 
 ## Current release
 
-Download [VehicleInterfaces v1.2.3 (2015-09-09)](../../releases/tag/v1.2.3)
+Download [VehicleInterfaces v1.2.4 (2016-03-02)](../../releases/tag/v1.2.4)
 
 #### Release notes
+* [Version v1.2.4 (2016-03-02)](../../releases/tag/v1.2.4)
+  * This version is backwards compatible to versions 1.1.x and 1.2.x
+  * Typos in the documentation fixed.
+  * FillPattern graphical annotations corrected in a variety of Icons.
+  * Icon `VehicleInterfaces.Icons.VariantLibrary` marked as obsolete and no more used. Using `Modelica.Icons.VariantsPackage` instead.
+  * Copyright upgraded in `VehicleInterfaces.UsersGuide.License`.
 * [Version v1.2.3 (2015-09-09)](../../releases/tag/v1.2.3)
   * This version is backwards compatible to versions 1.1.x and 1.2.x
   * #3: Typos in the documentation fixed.
