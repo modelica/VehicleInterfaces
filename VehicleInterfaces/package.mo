@@ -14,9 +14,9 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.4) - Interface
       allowDuplicate=true),
     preferredView="info",
     version="1.2.4",
-    versionDate="2015-03-02",
+    versionDate="2016-03-02",
     versionBuild=1,
-    dateModified="2015-03-02",
+    dateModified="2016-03-02",
     uses(Modelica(version="3.2.2")),
     conversion(
       from(version="1.0", script="modelica://VehicleInterfaces/Resources/Scripts/ConvertVehicleInterfaces_from_1.0_to_1.1.mos"),
