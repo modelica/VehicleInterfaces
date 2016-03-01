@@ -603,7 +603,6 @@ on the library.
   end ReleaseNotes;
 
   class License "Copyright and License"
-    //extends Modelica.Icons.Information;
 
     annotation (
       Documentation(info="<html>
