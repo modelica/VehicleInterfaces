@@ -38,10 +38,9 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.4) - Interface
 The complete documentation of the VehicleInterfaces library in PDF format
 is available as <a href=\"modelica://VehicleInterfaces/Resources/Documentation/VehicleInterfaces.pdf\">VehicleInterfaces.pdf</a>
 </p>
-<p>The library has been developed as a co-operation between a number of vendors who are currently developing automotive libraries. Please see <a href=\"modelica://VehicleInterfaces.UsersGuide.Contact\">the contact information</a> on how to give feedback and for a list of the people involved in the development of this library.</p>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2016, Modelica Association
-</p>
+<p>The library has been developed as a co-operation between a number of vendors who are currently developing automotive libraries. Please see <a href=\"modelica://VehicleInterfaces.UsersGuide.Contact\">the contact information</a> on how to give feedback and for a list of the people involved in the development of this library.
+And last but not least, check also
+<a href=\"modelica://VehicleInterfaces.UsersGuide.License\">Copyright and License agreement</a>
+before using the library.</p>
 </html>"));
 end VehicleInterfaces;
