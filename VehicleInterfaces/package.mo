@@ -14,9 +14,9 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.4) - Interface
       allowDuplicate=true),
     preferredView="info",
     version="1.2.4",
-    versionDate="2016-03-02",
+    versionDate="2015-09-08",
     versionBuild=1,
-    dateModified="2016-03-02",
+    dateModified="2015-09-08",
     uses(Modelica(version="3.2.2")),
     conversion(
       from(version="1.0", script="modelica://VehicleInterfaces/Resources/Scripts/ConvertVehicleInterfaces_from_1.0_to_1.1.mos"),
@@ -34,13 +34,10 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.4) - Interface
 </p>
 <p>For an automotive library to be compatible with other libraries based on this set of interface definitions they should extend the interface definition from within this library and following the naming convention for the signal bus. </p>
 <p>This library also contains a proposal for a naming convention covering the whole model library and the developers of this library would recommend that this convention is followed by other developers to ensure a consistent naming convention across the whole set of automotive models.</p>
+<p>The library has been developed as a co-operation between a number of vendors who are currently developing automotive libraries. Please see <a href=\"modelica://VehicleInterfaces.UsersGuide.Contact\">the contact information</a> on how to give feedback and for a list of the people involved in the development of this library.</p>
 <p>
-The complete documentation of the VehicleInterfaces library in PDF format
-is available as <a href=\"modelica://VehicleInterfaces/Resources/Documentation/VehicleInterfaces.pdf\">VehicleInterfaces.pdf</a>
+Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
+Copyright &copy; 2013-2016, Modelica Association
 </p>
-<p>The library has been developed as a co-operation between a number of vendors who are currently developing automotive libraries. Please see <a href=\"modelica://VehicleInterfaces.UsersGuide.Contact\">the contact information</a> on how to give feedback and for a list of the people involved in the development of this library.
-And last but not least, check also
-<a href=\"modelica://VehicleInterfaces.UsersGuide.License\">Copyright and License agreement</a>
-before using the library.</p>
 </html>"));
 end VehicleInterfaces;
