@@ -666,7 +666,7 @@ even if advised of the possibility of such damage.
     extends Modelica.Icons.Contact;
 
     annotation (Documentation(info="<html>
-<p>This library is maintained by the Modelica Association. Further development takes place on <a href=\"https://github.com/modelica/VehicleInterfaces\">https://github.com/modelica/VehicleInterfaces</a> where users can also report issues and/or supply pull-requests.</p>
+<p>This library is maintained by the <a href=\"https://www.modelica.org/association\">Modelica Association</a>. Further development takes place on <a href=\"https://github.com/modelica/VehicleInterfaces\">https://github.com/modelica/VehicleInterfaces</a> where users can also report issues and/or supply pull-requests.</p>
 
 <h4>History</h4>
 <p>A number of automotive library developers and consultants have co-operated to develop the VehicleInterfaces Library.  The developers were:</p>
@@ -692,9 +692,5 @@ even if advised of the possibility of such damage.
 </p>
 <p>For an automotive library to be compatible with other libraries based on this set of interface definitions they should extend the interface definition from within this library and following the naming convention for the control signal bus and driver interaction bus if used. </p>
 <p>This library also contains a proposal for a naming convention covering the whole model library and the developers of this library would recommend that this convention is followed by other developers to ensure a consistent naming convention across the whole set of automotive models.</p>
-<p>
-The complete documentation of the VehicleInterfaces library in PDF format
-is available as <a href=\"modelica://VehicleInterfaces/Resources/Documentation/VehicleInterfaces.pdf\">VehicleInterfaces.pdf</a>
-</p>
 </html>"));
 end UsersGuide;
