@@ -19,11 +19,6 @@ package UsersGuide "User's Guide"
 <p>For example: The driveline subsystem contains an optional MultiBody connector called <b>drivelineMount</b>.  This is enabled via a parameter called <b>includeMount</b>.  To access the parameters, first extend the template to create your new driveline model.  Then go to the component browser and right click on the extended class and select parameters.  The parameter dialog will now be displayed and allow you access to the connector parameters.</p>
 <h4>Control Bus Structure</h4>
 <p>The control bus structure utilises expandable connectors to provide a flexible bus concept.  This approach makes it easy to add new signals to the control bus so that data can be passed around the model.  The control bus structure implemented is heirarchical so that signals are easily located.  The approach adopted is that physical measurements taken from, for example, the transmission are placed on a sub-bus called <b>transmissionBus</b>.  Signals output from control blocks, for example the transmission controller, are placed on a sub-bus called <b>transmissionControlBus</b>.</p>
-</html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2015, Modelica Association
-</p>
 </html>"));
   end QuickStart;
 
@@ -71,11 +66,6 @@ Parameters that represent initial values for simulation experiments are denoted 
 
 <h4>Wheel Identifiers</h4>
 <p>Wheels are identified by numbers from front left towards rear right. Those are, typically, used as indices in parameter or variable names. E.g., for a four-wheel car the front left wheel is \"1\", front right is \"2\", rear left \"3\", and rear right \"4\".</p>
-</html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2015, Modelica Association
-</p>
 </html>"));
   end NamingConventions;
 
@@ -104,11 +94,6 @@ Copyright &copy; 2013-2015, Modelica Association
 <li>You draw the connection as in step 4 above, and instead of selecting an option from the list in step 5 you would select the \"Add variable\" option and then type the name of the signal you would like to add to the controlBus.</li>
 <li>You extend from the chassisBus connector definition that can be found in <b>VehicleInterfaces.Chassis.Internal.StandardBus</b> and add the new signal definition.  Then, when you reach steps 4 and 5 (above) your new signal will appear in the list of options and can be selected.</li>
 </ol>
-</html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2015, Modelica Association
-</p>
 </html>"));
     end AddingSignals;
     annotation (Documentation(info="<html>
@@ -227,11 +212,6 @@ Copyright &copy; 2013-2015, Modelica Association
 <td>Driver selected gear</td>
 </tr>
 </table>
-</html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2015, Modelica Association
-</p>
 </html>"));
   end SignalBus;
 
@@ -328,11 +308,6 @@ Copyright &copy; 2013-2015, Modelica Association
 <li>0 = Pedal Fully Released</li>
 </ul>
 <p>For example: when the accelerator pedal position = 1, the driver is accelerating as fast as possible;  when the clutch pedal position = 1, the driver has pressed the clutch pedal and the clutch is actually disengaged.</p>
-</html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2015, Modelica Association
-</p>
 </html>"));
 
   end DriverInteractionBus;
@@ -350,11 +325,6 @@ Copyright &copy; 2013-2015, Modelica Association
 <li>When they are being modelled as a MultiBody system but they are rigidly connected together then the bearing frame between the engine and transmission should not be included. In this case the transmissionMount connector should support the MultiBody elements of the transmission. The rest of the model then needs to be consid-ered before deciding whether to include the bear-ing between the transmission and driveline or be-tween the engine and accessories subsystems.</li>
 <li>When they are being modelled as a MultiBody system but they are not rigidly connected together then the bearing frame between the engine and transmission will be required to support the intermediate drive shaft. </li>
 </ol>
-</html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2015, Modelica Association
-</p>
 </html>"));
   end ModelRotatingParts;
 
@@ -379,11 +349,6 @@ Copyright &copy; 2013-2015, Modelica Association
 <li><a href=\"Modelica://VehicleInterfaces.Roads\">Roads</a> - road definition</li>
 <li><a href=\"Modelica://VehicleInterfaces.Transmissions\">Transmissions</a> - transmission subsystem</li>
 </ul>
-</html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2015, Modelica Association
-</p>
 </html>"));
   end SubsystemDefinitions;
 
@@ -401,11 +366,6 @@ Copyright &copy; 2013-2015, Modelica Association
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewVehicleModel2.png\"><br><br></li>
 <li>When you have set the appropriate model for each subsystem your model is ready for parametisation and simulation.</li>
 </ol>
-</html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2015, Modelica Association
-</p>
 </html>"));
     end Tutorial1;
 
@@ -419,11 +379,6 @@ Copyright &copy; 2013-2015, Modelica Association
 </ol>
 <p>A tutorial session on the VehicleInterfaces package was run at the Modelica 2006 conference.  The tutorial material from this conference can be found at <a href=\"http://www.modelica.org/events/modelica2006/Proceedings/html/tutorials.html\">http://www.modelica.org/events/modelica2006/Proceedings/html/tutorials.html</a>.
 Some elements of the library may have been renamed since this tutorial but the principles are still utilised.</p>
-</html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2015, Modelica Association
-</p>
 </html>"));
   end Tutorials;
 
@@ -647,10 +602,16 @@ on the library.
 </html>"));
   end ReleaseNotes;
 
-  class License "VehicleInterfaces license"
-    extends Modelica.Icons.Information;
+  class License "Copyright and License"
 
-    annotation (Documentation(info="<html>
+    annotation (
+      Documentation(info="<html>
+<h4>Copyright</h4>
+<p>
+&copy; 2005-2013: Dassault Syst&egrave;mes, DLR and Modelon<br>
+&copy; since 2013: Modelica Association
+</p>
+<h4>License</h4>
 <p>The VehicleInterfaces library is distributed under the Modelica license (Version 1.1)</P>
 <p>Redistribution and use in source and binary forms, with or without
 modification are permitted, provided that the following conditions are met:
@@ -684,12 +645,21 @@ copyright holders, or any party who modify and/or redistribute the package,
 consequential damages, arising in any way out of the use of this software,
 even if advised of the possibility of such damage.
 </p>
-</html>", revisions="<html>
-<p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2015, Modelica Association
-</p>
-</html>"));
+</html>"),
+      Icon(graphics={
+          Ellipse(
+            extent={{-100,100},{100,-100}},
+            lineColor={0,0,0},
+            fillColor={245,245,245},
+            fillPattern=FillPattern.Solid),
+          Ellipse(
+            extent={{-50,50},{50,-54}},
+            lineColor={0,0,0}),
+          Rectangle(
+            extent={{38,22},{74,-20}},
+            lineColor={245,245,245},
+            fillColor={245,245,245},
+            fillPattern=FillPattern.Solid)}));
   end License;
 
   class Contact "Contact"
@@ -712,8 +682,6 @@ Copyright &copy; 2013-2015, Modelica Association
 <p>This library has been developed from work on the original Modelica VMA (<a href=\"http://www.modelica.org/events/Conference2003/papers/h32_vehicle_Tiller.pdf\">Paper from the Modelica Conference 2003</a>) developed by Michael Tiller et al and published by Ford Motor Company.</p>
 <p>Additional ideas from intermediate work by members of DLR Oberpfaffenhofen and Modelon has also been incorporated.  The above partners agreed to develop these ideas in to a new library and adopt this set of interface definitions.</p>
 <p>The implementation of the VehicleInterfaces library was led by Claytex Services Limited under contract to Dassault Syst&egrave;mes AB</p>
-</html>", revisions="<html>
-<p>Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon</p><p>Copyright &copy; 2013-2016, Modelica Association </p>
 </html>"));
   end Contact;
 
@@ -724,10 +692,9 @@ Copyright &copy; 2013-2015, Modelica Association
 </p>
 <p>For an automotive library to be compatible with other libraries based on this set of interface definitions they should extend the interface definition from within this library and following the naming convention for the control signal bus and driver interaction bus if used. </p>
 <p>This library also contains a proposal for a naming convention covering the whole model library and the developers of this library would recommend that this convention is followed by other developers to ensure a consistent naming convention across the whole set of automotive models.</p>
-</html>", revisions="<html>
 <p>
-Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon<br>
-Copyright &copy; 2013-2015, Modelica Association
+The complete documentation of the VehicleInterfaces library in PDF format
+is available as <a href=\"modelica://VehicleInterfaces/Resources/Documentation/VehicleInterfaces.pdf\">VehicleInterfaces.pdf</a>
 </p>
 </html>"));
 end UsersGuide;
