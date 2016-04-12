@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package Atmospheres "Collection of atmosphere subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Atmosphere Tutorial"
     extends Modelica.Icons.Information;

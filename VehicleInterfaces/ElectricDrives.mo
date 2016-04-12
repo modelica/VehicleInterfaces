@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package ElectricDrives "Collection of electric drive subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Electric Drives Tutorial"
     extends Modelica.Icons.Information;

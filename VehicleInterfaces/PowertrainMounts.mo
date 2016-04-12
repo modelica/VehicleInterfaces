@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package PowertrainMounts "Collection of powertrain mounts subsystem definition"
-  extends Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Powertrain Mounts Tutorial"
     extends Modelica.Icons.Information;

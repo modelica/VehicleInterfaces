@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package DataDictionaries "Collection of data dictionary definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Data Dictionary Tutorial"
     extends Modelica.Icons.Information;
@@ -95,7 +95,7 @@ Empty data dictionary model. Using this empty model in overall vehicle architect
         index=-1,
         extent={{-6,3},{-6,3}}));
     annotation (
-                         Documentation(info="<html>
+      Documentation(info="<html>
  <p>A simple data dictionary example that creates a new signal called <b>v_veh</b> within the <b>chassisBus</b> sub-bus of the control bus.</p>
 </html>"));
   end MinimalExample;

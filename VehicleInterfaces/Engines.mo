@@ -1,6 +1,7 @@
 within VehicleInterfaces;
 package Engines "Collection of combustion engine subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
+
   class Tutorial "Engines Tutorial"
     extends Modelica.Icons.Information;
 

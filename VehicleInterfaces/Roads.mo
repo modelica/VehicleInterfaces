@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package Roads "Collection of road definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Roads Tutorial"
     extends Modelica.Icons.Information;
@@ -479,7 +479,7 @@ of the functions.
       outer VehicleInterfaces.Roads.Interfaces.Base road;
 
       encapsulated function roadSurfaceCharacteristic
-      import  Modelica;
+      import Modelica;
       import VehicleInterfaces;
         extends
           Modelica.Mechanics.MultiBody.Interfaces.partialSurfaceCharacteristic(            final multiColoredSurface=false);

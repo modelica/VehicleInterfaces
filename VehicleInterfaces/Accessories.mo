@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package Accessories "Collection of accessory subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Accessories Tutorial"
     extends Modelica.Icons.Information;

@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package Chassis "Collection of chassis subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Chassis Tutorial"
     extends Modelica.Icons.Information;

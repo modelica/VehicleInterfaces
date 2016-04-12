@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package Types "Collection of type definitions"
-  extends Modelica.Icons.Package;
+  extends Modelica.Icons.TypesPackage;
 
   type NormalizedReal = Modelica.Icons.TypeReal (
       final quantity="",

@@ -1,6 +1,6 @@
 within VehicleInterfaces;
 package Controllers "Collection of controllers subsystem definitions"
-  extends VehicleInterfaces.Icons.VariantLibrary;
+  extends Modelica.Icons.VariantsPackage;
 
   class Tutorial "Controllers Tutorial"
     extends Modelica.Icons.Information;
