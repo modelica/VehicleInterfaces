@@ -431,10 +431,6 @@ gear number is ignored in this model.</p>
 
     parameter Real ratio=100/50
       "Number of ring_teeth/sun_teeth (e.g. ratio=100/50)";
-    Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing motorFlange(
-        final includeBearingConnector=includeTransmissionBearing or
-          usingMultiBodyEngine) "Connection to the engine"
-      annotation (Placement(transformation(extent={{-110,-70},{-90,-50}})));
     Modelica.Mechanics.Rotational.Sensors.SpeedSensor outputSpeed
       annotation (Placement(transformation(
           origin={60,60},
