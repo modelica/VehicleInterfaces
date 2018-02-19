@@ -165,14 +165,14 @@ See the <a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a>
         annotation (Dialog(tab="Advanced"));
 
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
-            includeTransmissionBearing or usingMultiBodyEngine)
+            includeMotorBearing or usingMultiBodyMotor)
         annotation (Placement(transformation(
             origin={-100,-82},
             extent={{-8,-6},{8,6}},
             rotation=90)));
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing motorFlange(
-          final includeBearingConnector=includeTransmissionBearing or
-            usingMultiBodyEngine) "Connection to the engine"
+          final includeBearingConnector=includeMotorBearing or
+            usingMultiBodyMotor) "Connection to the motor"
         annotation (Placement(transformation(extent={{-110,-70},{-90,-50}})));
     protected
       parameter Boolean includeMotorBearing=false
@@ -431,10 +431,6 @@ gear number is ignored in this model.</p>
 
     parameter Real ratio=100/50
       "Number of ring_teeth/sun_teeth (e.g. ratio=100/50)";
-    Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing motorFlange(
-        final includeBearingConnector=includeTransmissionBearing or
-          usingMultiBodyEngine) "Connection to the engine"
-      annotation (Placement(transformation(extent={{-110,-70},{-90,-50}})));
     Modelica.Mechanics.Rotational.Sensors.SpeedSensor outputSpeed
       annotation (Placement(transformation(
           origin={60,60},
