@@ -165,13 +165,13 @@ See the <a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a>
         annotation (Dialog(tab="Advanced"));
 
       Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
-            includeTransmissionBearing or usingMultiBodyMotor)
+            includeMotorBearing or usingMultiBodyMotor)
         annotation (Placement(transformation(
             origin={-100,-82},
             extent={{-8,-6},{8,6}},
             rotation=90)));
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing motorFlange(
-          final includeBearingConnector=includeTransmissionBearing or
+          final includeBearingConnector=includeMotorBearing or
             usingMultiBodyMotor) "Connection to the motor"
         annotation (Placement(transformation(extent={{-110,-70},{-90,-50}})));
     protected
