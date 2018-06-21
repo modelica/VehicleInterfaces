@@ -8,6 +8,7 @@ package Icons "Collection of icons"
     extends Modelica.Icons.ObsoleteModel;
 
     annotation (
+      obsolete = "Obsolete model - use Modelica.Icons.VariantsPackage instead",
       Documentation(info="<html>
 <p>
 <b>Obsolete</b> partial package intended to design a <em>default icon for a package class</em> which contains several <em>variants</em> of one assembly or component.
@@ -23,7 +24,9 @@ package Icons "Collection of icons"
     extends Modelica.Icons.BasesPackage;
     extends Modelica.Icons.ObsoleteModel;
 
-     annotation (Documentation(revisions="<html>
+    annotation (
+      obsolete = "Obsolete model - use Modelica.Icons.BasesPackage instead",
+      Documentation(revisions="<html>
 <p>Copyright &copy; 2006-2010, DLR Institute of Robotics and Mechatronics</p>
 </html>",   info="<html>
 <p><b>Obsolete</b> partial package intended to design a <i>default icon for a package class</i> which is called <i>BaseClasses</i> or <i>Internal</i>. </p>
@@ -677,7 +680,7 @@ This partial class is intended to design a default icon for <em>controllers</em>
 </html>"));
   end Controller;
 
-  model DataDictionary "Icon for a data dictionary"
+  partial model DataDictionary "Icon for a data dictionary"
 
     annotation (                         Icon(coordinateSystem(preserveAspectRatio=false,
             extent={{-100,-100},{100,100}}), graphics={
@@ -959,7 +962,7 @@ This partial class is intended to design a default icon for an <em>electric moto
 </html>"));
   end ElectricMotor;
 
-  model Empty "Icon for an empty component"
+  partial model Empty "Icon for an empty component"
 
     annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
               -100},{100,100}}), graphics={Ellipse(
