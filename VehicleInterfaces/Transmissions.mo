@@ -264,12 +264,10 @@ Empty transmission model (just rigid connection between engine and driveline fla
     Modelica.Blocks.Sources.IntegerConstant currentGear(k=1)
       annotation (Placement(transformation(extent={{40,80},{20,100}})));
   protected
-    replaceable VehicleInterfaces.Transmissions.Interfaces.StandardBus
-                                                 transmissionBus constrainedby
-      VehicleInterfaces.Interfaces.TransmissionBus
+    replaceable VehicleInterfaces.Transmissions.Interfaces.StandardBus transmissionBus
+      constrainedby VehicleInterfaces.Interfaces.TransmissionBus
       annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
-    replaceable VehicleInterfaces.Transmissions.Interfaces.StandardControlBus
-                                                        transmissionControlBus
+    replaceable VehicleInterfaces.Transmissions.Interfaces.StandardControlBus transmissionControlBus
       constrainedby VehicleInterfaces.Interfaces.TransmissionControlBus
       annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
     outer Modelica.Mechanics.MultiBody.World world;
@@ -280,27 +278,25 @@ Empty transmission model (just rigid connection between engine and driveline fla
         points={{-10,-60},{-10,-80},{0,-80},{0,-100}},
         color={95,95,95},
         thickness=0.5));
-    connect(gear.flange_b,outputSpeed.flange)    annotation (Line(points={{10,0},
+    connect(gear.flange_b,outputSpeed.flange) annotation (Line(points={{10,0},
             {80,0},{80,60}}));
-
     connect(controlBus.transmissionBus, transmissionBus) annotation (Line(
-        points={{-100,60},{-20,60}},
+        points={{-100.1,60.1},{-60,60.1},{-60,60},{-20,60}},
         color={255,204,51},
         thickness=0.5));
     connect(transmissionControlBus, controlBus.transmissionControlBus)
       annotation (Line(
-        points={{-20,90},{-20,90},{-20,60},{-100,60}},
+        points={{-20,90},{-20,90},{-20,60.1},{-100.1,60.1}},
         color={255,204,51},
         thickness=0.5));
     connect(currentGear.y, transmissionControlBus.currentGear) annotation (Line(
           points={{19,90},{-20,90}}, color={255,127,0}));
     connect(gear.flange_a, engineFlange.flange)
-      annotation (Line(points={{-10,0},{-100,0}}));
+      annotation (Line(points={{-10,0},{-54,0},{-54,0.05},{-99.95,0.05}}));
     connect(gear.flange_b, drivelineFlange.flange)
-      annotation (Line(points={{10,0},{100,0}}));
-
+      annotation (Line(points={{10,0},{100,0},{100,0.05},{100.05,0.05}}));
     connect(outputSpeed.w, transmissionBus.outputSpeed) annotation (Line(
-        points={{59,60},{-20,60}},
+        points={{59,60},{20,60},{20,60.05},{-19.95,60.05}},
         color={0,0,127}));
     annotation (
       Documentation(info="<html>
@@ -351,9 +347,8 @@ Empty transmission model (just rigid connection between engine and driveline fla
     Modelica.Blocks.Sources.BooleanExpression clutchLocked(y=clutch.locked)
       annotation (Placement(transformation(extent={{40,10},{20,30}})));
   protected
-    replaceable VehicleInterfaces.Transmissions.Interfaces.StandardBus
-                                                 transmissionBus constrainedby
-      VehicleInterfaces.Interfaces.TransmissionBus
+    replaceable VehicleInterfaces.Transmissions.Interfaces.StandardBus transmissionBus
+      constrainedby VehicleInterfaces.Interfaces.TransmissionBus
       annotation (Placement(transformation(extent={{-30,30},{-10,50}})));
     outer Modelica.Mechanics.MultiBody.World world;
   protected
@@ -387,19 +382,19 @@ Empty transmission model (just rigid connection between engine and driveline fla
     connect(pedalSpring.flange_a, forceSensor.flange_b) annotation (Line(points=
            {{-60,66},{-60,46}}, color={0,127,0}));
     connect(clutchLocked.y, transmissionBus.clutchLocked) annotation (Line(
-          points={{19,20},{0,20},{0,38},{-20,38},{-20,40}},
+          points={{19,20},{0,20},{0,38},{-19.95,38},{-19.95,40.05}},
                                                color={255,0,255}));
     connect(controlBus.transmissionBus, transmissionBus) annotation (Line(
-        points={{-100,60},{-20,60},{-20,40}},
+        points={{-100.1,60.1},{-20,60.1},{-20,40}},
         color={255,204,51},
         thickness=0.5));
     connect(clutch.flange_a, engineFlange.flange)
-      annotation (Line(points={{-80,0},{-100,0}}));
+      annotation (Line(points={{-80,0},{-90,0},{-90,0.05},{-99.95,0.05}}));
     connect(gear.flange_b, drivelineFlange.flange)
-      annotation (Line(points={{10,0},{100,0}}));
+      annotation (Line(points={{10,0},{100,0},{100,0.05},{100.05,0.05}}));
     connect(transmissionControlBus, controlBus.transmissionControlBus)
       annotation (Line(
-        points={{-20,60},{-100,60}},
+        points={{-20,60},{-20,60.1},{-100.1,60.1}},
         color={255,204,51},
         thickness=0.5));
     connect(shiftOutput.gear, transmissionControlBus.currentGear) annotation (Line(
@@ -413,7 +408,7 @@ Empty transmission model (just rigid connection between engine and driveline fla
         color={0,0,127}));
 
     connect(outputSpeed.w, transmissionBus.outputSpeed) annotation (Line(
-        points={{59,40},{-20,40}},
+        points={{59,40},{20,40},{20,40.05},{-19.95,40.05}},
         color={0,0,127}));
     annotation (
       Documentation(info="<html>
@@ -427,49 +422,47 @@ gear number is ignored in this model.</p>
     "Simple power split device based on an ideal epicyclic gear"
     extends Interfaces.BaseTwoInputTransmission;
 
-    parameter Real ratio=100/50
-      "Number of ring_teeth/sun_teeth (e.g. ratio=100/50)";
+    parameter Real ratio=100/50 "Number of ring_teeth/sun_teeth (e.g. ratio=100/50)";
+
     Modelica.Mechanics.Rotational.Sensors.SpeedSensor outputSpeed
       annotation (Placement(transformation(
           origin={60,60},
           extent={{-10,-10},{10,10}},
           rotation=180)));
     Modelica.Mechanics.Rotational.Components.IdealPlanetary idealPlanetary(
-                                                                ratio=ratio)
+      ratio=ratio)
       annotation (Placement(transformation(extent={{-10,10},{10,-10}})));
     Modelica.Blocks.Sources.IntegerConstant currentGear(k=1)
       annotation (Placement(transformation(extent={{30,80},{10,100}})));
   protected
-    replaceable Interfaces.StandardBus           transmissionBus constrainedby
-      VehicleInterfaces.Interfaces.TransmissionBus
+    replaceable Interfaces.StandardBus transmissionBus constrainedby VehicleInterfaces.Interfaces.TransmissionBus
       annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
     outer Modelica.Mechanics.MultiBody.World world;
-    replaceable Interfaces.StandardControlBus           transmissionControlBus
+    replaceable Interfaces.StandardControlBus transmissionControlBus
       constrainedby VehicleInterfaces.Interfaces.TransmissionControlBus
       annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
   equation
-    connect(outputSpeed.flange,   drivelineFlange.flange) annotation (Line(
-        points={{70,60},{80,60},{80,0},{100,0}}));
+    connect(outputSpeed.flange, drivelineFlange.flange) annotation (Line(
+        points={{70,60},{80,60},{80,0.05},{100.05,0.05}}));
     connect(controlBus.transmissionBus, transmissionBus) annotation (Line(
-        points={{-100,60},{-20,60}},
+        points={{-100.1,60.1},{-100,60.1},{-100,60},{-20,60}},
         color={255,204,51},
         thickness=0.5));
     connect(idealPlanetary.ring, drivelineFlange.flange) annotation (Line(
-        points={{10,0},{100,0}}));
+        points={{10,0},{56,0},{56,0.05},{100.05,0.05}}));
     connect(idealPlanetary.sun, engineFlange.flange) annotation (Line(
-        points={{-10,0},{-100,0}}));
+        points={{-10,0},{-54,0},{-54,0.05},{-99.95,0.05}}));
     connect(idealPlanetary.carrier, motorFlange.flange) annotation (Line(
-        points={{-10,-4},{-40,-4},{-40,-60},{-100,-60}}));
-    connect(transmissionControlBus, controlBus.transmissionControlBus)
+        points={{-10,-4},{-40,-4},{-40,-59.95},{-99.95,-59.95}}));
+    connect(controlBus.transmissionControlBus, transmissionControlBus)
       annotation (Line(
-        points={{-20,90},{-40,90},{-40,60},{-100,60}},
+        points={{-100.1,60.1},{-100,60.1},{-100,60},{-40,60},{-40,90},{-20,90}},
         color={255,204,51},
         thickness=0.5));
     connect(currentGear.y, transmissionControlBus.currentGear) annotation (Line(
           points={{9,90},{-20,90}}, color={255,127,0}));
-
     connect(outputSpeed.w, transmissionBus.outputSpeed) annotation (Line(
-        points={{49,60},{-20,60}},
+        points={{49,60},{14,60},{14,60.05},{-19.95,60.05}},
         color={0,0,127}));
     annotation (
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
