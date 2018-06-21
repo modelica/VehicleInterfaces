@@ -16,7 +16,12 @@ package Mechanics "Collection of additional mechanical components"
         annotation (
           defaultComponentName="flange_a",
           Documentation(info="<html>
-<p>1D translational mechanical connector with normalized position as opposed to the <a href=\"Modelica://Modelica.Mechanics.Translational.Interfaces.flange_a\">Modelica.Mechanics.Translational.Interfaces.flange_a</a> connector.  The force is not normalized in this connector.</p>
+<p>
+One-dimensional translational mechanical connector with normalized
+position as opposed to the
+<a href=\"Modelica://Modelica.Mechanics.Translational.Interfaces.Flange_a\">Modelica.Mechanics.Translational.Interfaces.Flange_a</a>
+connector. The force is not normalized in this connector.
+</p>
 </html>"),       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
                   {100,100}}), graphics={Polygon(
                 points={{-100,0},{0,100},{100,0},{0,-100},{-100,0}},
