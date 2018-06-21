@@ -383,6 +383,22 @@ Some elements of the library may have been renamed since this tutorial but the p
   end Tutorials;
 
   package ReleaseNotes "Release notes"
+    class Version_1_2_5 "Version 1.2.5 (Apr. 1, 2018)"
+      extends Modelica.Icons.ReleaseNotes;
+
+      annotation (Documentation(info="<html>
+<p>This version requires the <b>Modelica 3.2.3</b> Library.
+   This version is backwards compatible to versions&nbsp;1.1.x and 1.2.x of the VehicleInterfaces library.
+</p>
+
+<h4>Improvements in this version</h4>
+
+<ul>
+<li> .... </li>
+</ul>
+</html>"));
+    end Version_1_2_5;
+
     class Version_1_2_4 "Version 1.2.4 (Mar. 2, 2016)"
       extends Modelica.Icons.ReleaseNotes;
 
