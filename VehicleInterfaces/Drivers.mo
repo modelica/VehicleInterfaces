@@ -123,8 +123,7 @@ Empty driver model. Using this empty model in overall vehicle architecture the f
     parameter Modelica.SIunits.Time accelTime=10 "Time of accel apply";
     parameter Modelica.SIunits.Time brakeTime=10 "Time of brake apply";
     parameter VehicleInterfaces.Types.GearMode.Temp selectedGearboxMode=
-        VehicleInterfaces.Types.GearMode.Drive "Current gearbox mode"
-      annotation (__Dymola_choicesFromPackage=true);
+        VehicleInterfaces.Types.GearMode.Drive "Current gearbox mode";
     parameter VehicleInterfaces.Types.Gear manualGearRequest=0
       "Requested gear in manual mode";
 
