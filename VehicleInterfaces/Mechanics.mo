@@ -128,25 +128,15 @@ A collection of additional 1D translational mechanical connectors used for norma
               lineColor={128,128,128},
               fillColor={128,128,128},
               fillPattern=FillPattern.Solid),
-            Rectangle(
-              extent={{-100,10},{26,-10}},
-              lineColor={0,127,0},
-              fillColor={0,127,0},
-              fillPattern=FillPattern.Solid),
             Polygon(
-              points={{20,41},{90,0},{20,-41},{20,41}},
+              points={{-100,10},{-100,-10},{20,-10},{20,-40},{90,0},{20,40},{20,10},{-100,10}},
               lineColor={0,127,0},
               fillColor={0,127,0},
               fillPattern=FillPattern.Solid)}),
         Icon(coordinateSystem(preserveAspectRatio=true, extent={{-100,-100},{
                 100,100}}), graphics={
-            Polygon(
-              points={{20,41},{90,0},{20,-41},{20,41}},
-              lineColor={0,127,0},
-              fillColor={0,127,0},
-              fillPattern=FillPattern.Solid),
             Text(
-              extent={{-100,-30},{-47,-78}},
+              extent={{-100,-30},{-40,-70}},
               lineColor={95,95,95},
               textString="f",
               fillColor={95,95,95},
@@ -155,8 +145,8 @@ A collection of additional 1D translational mechanical connectors used for norma
               extent={{-150,100},{150,60}},
               textString="%name",
               lineColor={0,0,255}),
-            Rectangle(
-              extent={{-100,10},{26,-10}},
+            Polygon(
+              points={{-100,10},{-100,-10},{20,-10},{20,-40},{90,0},{20,40},{20,10},{-100,10}},
               lineColor={0,127,0},
               fillColor={0,127,0},
               fillPattern=FillPattern.Solid)}),
