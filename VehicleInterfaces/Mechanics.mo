@@ -22,10 +22,7 @@ package Mechanics "Collection of additional mechanical components"
                 points={{-100,0},{0,100},{100,0},{0,-100},{-100,0}},
                 lineColor={0,127,0},
                 fillColor={0,127,0},
-                fillPattern=FillPattern.Solid), Text(
-                extent={{-100,140},{100,100}},
-                lineColor={0,127,0},
-                textString="%name")}),
+                fillPattern=FillPattern.Solid)}),
           Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
                   -100},{100,100}}), graphics={Polygon(
                 points={{-52,0},{0,52},{52,0},{0,-52},{-52,0}},
@@ -225,11 +222,7 @@ A collection of additional 1D translational mechanical connectors used for norma
                 points={{-70,0},{0,70},{70,0},{0,-70},{-70,0}},
                 lineColor={255,255,255},
                 fillColor={255,255,255},
-                fillPattern=FillPattern.Solid),
-              Text(
-                extent={{-100,140},{100,100}},
-                lineColor={95,95,95},
-                textString="%name")}),
+                fillPattern=FillPattern.Solid)}),
           Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
                   -100},{100,100}}), graphics={
               Ellipse(
