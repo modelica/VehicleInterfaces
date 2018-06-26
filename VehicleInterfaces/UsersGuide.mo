@@ -394,7 +394,15 @@ Some elements of the library may have been renamed since this tutorial but the p
 <h4>Improvements in this version</h4>
 
 <ul>
-<li> .... </li>
+<li>Obsolete blocks
+    <a href=\"modelica://VehicleInterfaces.Blocks.RealPassThrough\">RealPassThrough</a>,
+    <a href=\"modelica://VehicleInterfaces.Blocks.IntegerPassThrough\">IntegerPassThrough</a>,
+    <a href=\"modelica://VehicleInterfaces.Blocks.BooleanPassThrough\">BooleanPassThrough</a>.</li>
+<li>Resolved usage of obsolete <a href=\"modelica://VehicleInterfaces.Blocks.IntegerPassThrough\">IntegerPassThrough</a> in
+    <a href=\"modelica://VehicleInterfaces.DriverEnvironments.DriveByWireAutomaticExternalDriver\">DriveByWireAutomaticExternalDriver</a>.</li>
+<li>Deleted text string \"name\" from icons of
+    <a href=\"modelica://VehicleInterfaces.Mechanics.NormalisedTranslational.Interfaces.Flange\">normalized translational flange</a> and
+    <a href=\"modelica://VehicleInterfaces.Mechanics.NormalisedRotational.Interfaces.Flange\">normalized rotational flange</a>.</li>
 </ul>
 </html>"));
     end Version_1_2_5;
