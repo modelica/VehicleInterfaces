@@ -341,7 +341,8 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
             Line(
               points={{-84,0},{-60,30},{-32,52},{2,62},{32,56},{52,44},{68,28},
                   {80,14},{84,10}},
-              thickness=0.5),
+              thickness=0.5,
+              smooth=Smooth.Bezier),
             Polygon(
               points={{90,0},{70,58},{42,28},{90,0}},
               lineColor={0,0,0},
@@ -365,7 +366,8 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
             Line(
               points={{-100,0},{-76,30},{-48,48},{-14,58},{16,56},{40,50},{56,
                   42},{66,32},{80,20}},
-              thickness=0.5)}),
+              thickness=0.5,
+              smooth=Smooth.Bezier)}),
         Documentation(info="<html>
 <p>Applies a torque to a 1D normalized rotational system.  Cannot be connected to components from the Modelica.Mechanics.Rotational library</p>
 </html>"));
