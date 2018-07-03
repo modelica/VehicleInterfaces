@@ -20,7 +20,7 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.5) - Interface
     revisionId="$Format:%h %ci$",
     uses(Modelica(version="3.2.3")),
     conversion(
-      from(version="1.0", script="modelica://VehicleInterfaces/Resources/Scripts/ConvertVehicleInterfaces_from_1.0_to_1.1.mos"),
+      from(version="1.0", script="modelica://VehicleInterfaces/Resources/Scripts/Dymola/ConvertVehicleInterfaces_from_1.0_to_1.1.mos"),
       noneFromVersion="1.1",
       noneFromVersion="1.1.1",
       noneFromVersion="1.1.2",
