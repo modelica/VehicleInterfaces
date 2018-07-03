@@ -897,7 +897,7 @@ This partial class is intended to design a default icon for a <em>driver environ
             lineColor={0,0,0},
             fillColor={255,255,255},
             fillPattern=FillPattern.Solid),
-          Bitmap(extent={{-70,-60},{82,96}}, fileName="modelica://VehicleInterfaces/Resources/Images/driver.jpg"),
+          Bitmap(extent={{-70,-60},{82,96}}, fileName="modelica://VehicleInterfaces/Resources/Images/Icons/driver.jpg"),
           Text(
             extent={{-100,-50},{100,-90}},
             lineColor={0,0,255},

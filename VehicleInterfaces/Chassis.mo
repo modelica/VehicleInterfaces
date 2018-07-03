@@ -10,9 +10,9 @@ package Chassis "Collection of chassis subsystem definitions"
 <p>The following process will demonstrate how to create a new chassis model using these interface definitions.  This tutorial will guide you through building a chassis for a passenger car, i.e., a vehicle with 4 wheels.</p>
 <ol>
 <li>Create a new model that extends <b>VehicleInterfaces.Chassis.Interfaces.FourWheelBase</b>, it should look like this:
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewChassis1.png\"><br><br></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis1.png\"><br><br></li>
 <li>In the component browser, right click on <b>FourWheelBase</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewChassis2.png\"><br><br></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis2.png\"><br><br></li>
 <li>This dialog allows you to enable/disable the optional connections by setting <b>includeWheelBearings</b>, <b>includeSteeringWheel</b> and <b>includeChassisFrame</b> as required for your new chassis model.  The wheelHub connectors are of the type <a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>, the parameter <b>includeWheelBearings</b> controls whether the bearing connectors within the wheelHubs is enabled or not.</li>
 <li>You can now define your chassis model as required</li>
 </ol>
@@ -21,16 +21,16 @@ package Chassis "Collection of chassis subsystem definitions"
 <p>Starting from step 3 above.</p>
 <ol>
 <li>First, decide which of the optional connectors are required in the model.  For this example we don't need any of the optional connections
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewChassis3.png\"><br><br></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis3.png\"><br><br></li>
 <li>Add the following blocks and connections to the diagram.  When you draw the connections to the wheelHub connectors the dialog box shown below will appear asking which connector within the wheelHub connector you would like to make the connection to.  As we are modelling the wheels as a 1D system you should select <b>flange</b> from the list of options which is the 1D connector within the wheelHub connector.
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewChassis4.png\">
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriveline5.png\"><br><br></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis4.png\">
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Drivelines/buildNewDriveline5.png\"><br><br></li>
 <li>Next, we need to check to see if any connections to the control signal bus are required for the chassis, see <a href=\"Modelica://VehicleInterfaces.UsersGuide.SignalBus\">here</a> for a complete list of the minimum connections required.  In this case we need to add the vehicle longitudinal velocity to the control signal bus and this can be done by connecting a speed sensor to the vehicle body and then connecting this to the signal bus. As the longitudinal speed signals are added to the chassisBus we first need to add this connector.  The chassisBus connector is <b>VehicleInterfaces.Interfaces.ChassisBus</b>.  This should be connected to the <b>controlBus</b>, when this connection is made the following dialog is produced and should be completed as shown.
-<p><br><img src=\"modelica://VehicleInterfaces/Resources/Images/signalNaming2.png\"><br><br></p></li>
+<p><br><img src=\"modelica://VehicleInterfaces/Resources/Images/UsersGuide/SignalBus/signalNaming2.png\"><br><br></p></li>
 <li>When the connection between the sensor and the chassisBus connector is added the dialog below appears and should be completed as shown
-<p><br><img src=\"modelica://VehicleInterfaces/Resources/Images/signalNaming.png\"><br><br></p></li>
+<p><br><img src=\"modelica://VehicleInterfaces/Resources/Images/UsersGuide/SignalBus/signalNaming.png\"><br><br></p></li>
 <li>The model is now complete and should check successfully and can be used in any model compatible with the VehicleInterfaces library assuming the selected Driver model doesn't use the steering wheel or chassis frame connections
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewChassis5.png\"></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis5.png\"></li>
 </ol>
 </html>"));
   end Tutorial;
@@ -535,8 +535,7 @@ Empty chassis model. Using this empty model in overall vehicle architecture the 
       annotation (Placement(transformation(extent={{5,20},{-15,40}})));
   protected
     replaceable VehicleInterfaces.Chassis.Interfaces.StandardBus
-                                            chassisBus constrainedby
-      VehicleInterfaces.Interfaces.ChassisBus
+      chassisBus constrainedby VehicleInterfaces.Interfaces.ChassisBus
       annotation (Placement(transformation(extent={{-130,30},{-110,50}})));
   public
     Modelica.Mechanics.Rotational.Components.Fixed fixed
@@ -615,8 +614,7 @@ Empty chassis model. Using this empty model in overall vehicle architecture the 
       annotation (Placement(transformation(extent={{100,-40},{80,-20}})));
   protected
     replaceable VehicleInterfaces.Chassis.Interfaces.StandardBus
-                                            chassisBus constrainedby
-      VehicleInterfaces.Interfaces.ChassisBus
+      chassisBus constrainedby VehicleInterfaces.Interfaces.ChassisBus
       annotation (Placement(transformation(extent={{-130,30},{-110,50}})));
   public
     Modelica.Mechanics.MultiBody.Parts.Mounting1D mountingR(n=constraint.n)

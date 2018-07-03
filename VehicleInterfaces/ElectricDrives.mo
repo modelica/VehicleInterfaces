@@ -10,9 +10,9 @@ package ElectricDrives "Collection of electric drive subsystem definitions"
 <p>The following process will demonstrate how to create a new electric motor model using these interface definitions.  This tutorial will guide you through building a simple DC electric motor.</p>
 <ol>
 <li>Create a new model that extends <b>VehicleInterfaces.ElectricDrives.Interfaces.BaseDCMachine</b>, it should look like this:
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewElectricDrive1.png\"><br><br></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/ElectricDrives/buildNewElectricDrive1.png\"><br><br></li>
 <li>In the component browser, right click on <b>BaseDCMachine</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewElectricDrive2.png\"><br><br></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/ElectricDrives/buildNewElectricDrive2.png\"><br><br></li>
 <li>This dialog allows you to enable/disable the optional connections by setting <b>includeBearing</b> as required for your new motor model.  The shaft_b connector is of the type <a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>, the parameter <b>includeBearing</b> controls whether the bearing connector within the shaft_b connector is enabled or not.</li>
 <li>You can now define your driveline model as required</li>
 </ol>
@@ -22,7 +22,7 @@ package ElectricDrives "Collection of electric drive subsystem definitions"
 <ol>
 <li>First, decide if the bearing connector is required in the model and set the internal parameter appropriately.
 <li>Add the following blocks and connections to the diagram.
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewElectricDrive3.png\"><br><br></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/ElectricDrives/buildNewElectricDrive3.png\"><br><br></li>
 </ol>
 </html>"));
   end Tutorial;
