@@ -432,49 +432,41 @@ Fixed gear and constant clutch position.</p>
         color={255,204,51},
         thickness=0.5));
     connect(driverInterface.gearboxMode, gearboxMode.u) annotation (
-      Text(
-        string="%first",
-        index=-1,
-        extent=[-6, 3; -6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-100,0},{-70,0},{-42,0}},
-          color={255,127,0}));
+        Text(
+          string="%first",
+          index=-1,
+          extent={{-6,3},{-6,3}}),
+        Line(points={{-100,0},{-42,0}}, color={255,127,0}));
     connect(gearboxMode.y, driverBus.gearboxMode) annotation (
-      Text(
-        string="%second",
-        index=1,
-        extent=[6, 3; 6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-19,0},{58,0},{58,60.05},{60.05,60.05}},
-                      color={255,127,0}));
+        Text(
+          string="%second",
+          index=1,
+          extent={{6,3},{6,3}}),
+        Line(points={{-19,0},{58,0},{58,60.05},{60.05,60.05}}, color={255,127,0}));
     connect(driverInterface.requestedGear, requestedGear.u) annotation (
-      Text(
-        string="%first",
-        index=-1,
-        extent=[-6, 3; -6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-100,0},{-100,-2},{-80,
-            -2},{-80,-30},{-42,-30}}, color={255,127,0}));
+        Text(
+          string="%first",
+          index=-1,
+          extent={{-6,3},{-6,3}}),
+        Line(points={{-100,0},{-100,-2},{-80,-2},{-80,-30},{-42,-30}}, color={255,127,0}));
     connect(requestedGear.y, driverBus.requestedGear) annotation (
-      Text(
-        string="%second",
-        index=1,
-        extent=[6, 3; 6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-19,-30},{60.05,-30},{60.05,60.05}},
-                     color={255,127,0}));
+        Text(
+          string="%second",
+          index=1,
+          extent={{6,3},{6,3}}),
+        Line(points={{-19,-30},{60.05,-30},{60.05,60.05}}, color={255,127,0}));
     connect(driverInterface.ignition, ignition.u) annotation (
-      Text(
-        string="%first",
-        index=-1,
-        extent=[-6, 3; -6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-100,0},{-100,-4},{-82,
-            -4},{-82,-60},{-42,-60}},
-                       color={255,127,0}));
+        Text(
+          string="%first",
+          index=-1,
+          extent={{-6,3},{-6,3}}),
+        Line(points={{-100,0},{-100,-4},{-82,-4},{-82,-60},{-42,-60}}, color={255,127,0}));
     connect(ignition.y, driverBus.ignition) annotation (
-      Text(
-        string="%second",
-        index=1,
-        extent=[6, 3; 6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-19,-60},{62,-60},{62,60},
-            {60,60}},        color={255,127,0}));
-
+        Text(
+          string="%second",
+          index=1,
+          extent={{6,3},{6,3}}),
+        Line(points={{-19,-60},{62,-60},{62,60},{60,60}}, color={255,127,0}));
     connect(driverInterface.brakePedal, brakePosition.flange_a) annotation (Line(
         points={{-100,0},{-98,0},{-98,2},{-80,2},{-80,40},{-40,40}},
         color={0,127,0}), Text(
