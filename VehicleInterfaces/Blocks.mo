@@ -3,7 +3,8 @@ package Blocks "Collection of input/output fixed causality blocks"
   extends Modelica.Icons.Package;
   model RealPassThrough "Pass a Real signal through without modification"
 
-    extends Modelica.Blocks.Interfaces.BlockIcon;
+    extends Modelica.Blocks.Icons.Block;
+    extends Modelica.Icons.ObsoleteModel;
 
     Modelica.Blocks.Interfaces.RealInput u "Input signal"
       annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
@@ -12,13 +13,16 @@ package Blocks "Collection of input/output fixed causality blocks"
   equation
     y = u;
 
-    annotation (                      Documentation(info="<html>
+    annotation (
+      obsolete = "Obsolete model - use Modelica.Blocks.Routing.RealPassThrough instead",
+      Documentation(info="<html>
 <p>Passes a Real signal through without modification.  Enables signals to be read out of one bus, have their name changed and be sent back to a bus.</p>
 </html>"));
   end RealPassThrough;
 
   model IntegerPassThrough "Pass a Integer signal through without modification"
-    extends Modelica.Blocks.Interfaces.IntegerBlockIcon;
+    extends Modelica.Blocks.Icons.IntegerBlock;
+    extends Modelica.Icons.ObsoleteModel;
 
     Modelica.Blocks.Interfaces.IntegerInput u "Input signal"
       annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
@@ -27,13 +31,16 @@ package Blocks "Collection of input/output fixed causality blocks"
   equation
     y = u;
 
-    annotation (                      Documentation(info="<html>
+    annotation (
+      obsolete = "Obsolete model - use Modelica.Blocks.Routing.IntegerPassThrough instead",
+      Documentation(info="<html>
 <p>Passes a Integer signal through without modification.  Enables signals to be read out of one bus, have their name changed and be sent back to a bus.</p>
 </html>"));
   end IntegerPassThrough;
 
   model BooleanPassThrough "Pass a Boolean signal through without modification"
-    extends Modelica.Blocks.Interfaces.BooleanBlockIcon;
+    extends Modelica.Blocks.Icons.BooleanBlock;
+    extends Modelica.Icons.ObsoleteModel;
 
     Modelica.Blocks.Interfaces.BooleanInput u "Input signal"
       annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
@@ -42,7 +49,9 @@ package Blocks "Collection of input/output fixed causality blocks"
   equation
     y = u;
 
-    annotation (                         Documentation(info="<html>
+    annotation (
+      obsolete = "Obsolete model - use Modelica.Blocks.Routing.BooleanPassThrough instead",
+      Documentation(info="<html>
 <p>Passes a Boolean signal through without modification.  Enables signals to be read out of one bus, have their name changed and be sent back to a bus.</p>
 </html>"));
   end BooleanPassThrough;
@@ -126,7 +135,6 @@ Formally, the output <b>y</b> is computed as:
 
 </html>"));
   end InvertNormalizedInput;
-
   annotation (Documentation(info="<html>
 <p>
 A collection of additional input and output fixed causality blocks.</p>

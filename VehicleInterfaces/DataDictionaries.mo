@@ -13,7 +13,7 @@ model using these interface definitions.
 </p>
 <ol>
 <li>Create a new model that extends <b>VehicleInterfaces.DataDictionaries.Interfaces.Base</b>,it should look like this:
-<br>&nbsp;<br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDataDictionary1.png\"><br>&nbsp;</li>
+<br>&nbsp;<br><img src=\"modelica://VehicleInterfaces/Resources/Images/DataDictionaries/buildNewDataDictionary1.png\"><br>&nbsp;</li>
 <li>You can now define your data dictionary model as required</li>
 </ol>
 <h4>Adding an alias signal to the data dictionary</h4>
@@ -30,7 +30,7 @@ connector which can be found at <b>VehicleInterfaces.Interfaces.ChassisBus</b>.<
 <li>Then add two connections between the RealSignal connector and the chassisBus connector.
 The first connects to the <b>longitudinalVelocity</b> signal within the chassisBus,
 the second creates a new signal called <b>v_veh</b>.
-<br>&nbsp;<br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDataDictionary2.png\"><br>&nbsp;</li>
+<br>&nbsp;<br><img src=\"modelica://VehicleInterfaces/Resources/Images/DataDictionaries/buildNewDataDictionary2.png\"><br>&nbsp;</li>
 </ol>
 </html>"));
   end Tutorial;
@@ -73,8 +73,7 @@ Empty data dictionary model. Using this empty model in overall vehicle architect
       annotation (Placement(transformation(extent={{6,-6},{-6,6}}),
           iconTransformation(extent={{-14,-6},{6,6}})));
     replaceable VehicleInterfaces.Chassis.Interfaces.StandardBus
-                                            chassisBus constrainedby
-      VehicleInterfaces.Interfaces.ChassisBus
+      chassisBus constrainedby VehicleInterfaces.Interfaces.ChassisBus
       annotation (Placement(transformation(extent={{-10,-60},{10,-40}})));
 
   equation

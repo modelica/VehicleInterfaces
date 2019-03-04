@@ -13,9 +13,9 @@ package DriverEnvironments
 <p>The following process will demonstrate how to create a new driver environment model using these interface definitions.  This tutorial will guide you through building a driver environment for a conventional passenger car with a manual transmission.</p>
 <ol>
 <li>Create a new model that extends <b>VehicleInterfaces.DriverEnvironments.Interfaces.BaseManualTransmission</b>, it should look like this:
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriverEnvironment1.png\"><br><br></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/DriverEnvironments/buildNewDriverEnvironment1.png\"><br><br></li>
 <li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewDriverEnvironment2.png\"><br><br></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/DriverEnvironments/buildNewDriverEnvironment2.png\"><br><br></li>
 <li>This dialog allows you to enable/disable the optional connections by setting the various parameters as required for your new driver environment model.</li>
 <li>You can now define your driver environment model as required</li>
 </ol>
@@ -262,24 +262,23 @@ Empty driver environment. Using this empty model in overall vehicle architecture
   protected
     replaceable
       VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission
-                                           driverBus constrainedby
-      VehicleInterfaces.Interfaces.DriverBus
+      driverBus constrainedby VehicleInterfaces.Interfaces.DriverBus
       annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(controlBus.driverBus, driverBus) annotation (Line(
-        points={{100,60},{80,60},{60,60}},
+        points={{100.1,59.9},{80,60},{60,60}},
         color={255,204,51},
         thickness=0.5));
     connect(acceleratorDemand.y, driverBus.acceleratorPedalPosition)
       annotation (Line(points={{1,80},{60,80},{60,62},{60,60}},
                                                   color={0,0,127}));
-    connect(gearSelect.y, driverBus.requestedGear) annotation (Line(points={{1,0},{
-            64,0},{64,60},{60,60}},             color={255,127,0}));
+    connect(gearSelect.y, driverBus.requestedGear) annotation (Line(points={{1,0},{64,0},{64,60.05},{60.05,60.05}},
+                                                color={255,127,0}));
     connect(driverBus.brakePedalPosition, brakeDemand.y) annotation (Line(
           points={{60,60},{-39,60}},                               color={0,0,
             127}));
-    connect(gearMode.y, driverBus.gearboxMode) annotation (Line(points={{-39,20},
-            {62,20},{62,60},{60,60}},color={255,127,0}));
+    connect(gearMode.y, driverBus.gearboxMode) annotation (Line(points={{-39,20},{62,20},{62,60.05},{60.05,60.05}},
+                                     color={255,127,0}));
     connect(ignition.y, driverBus.ignition) annotation (Line(points={{1,40},{60,
             40},{60,60}}, color={255,127,0}));
 
@@ -371,8 +370,7 @@ Empty driver environment. Using this empty model in overall vehicle architecture
       annotation (Placement(transformation(extent={{0,50},{20,70}})));
   protected
     replaceable VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus
-                                           driverBus constrainedby
-      VehicleInterfaces.Interfaces.DriverBus
+      driverBus constrainedby VehicleInterfaces.Interfaces.DriverBus
       annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(acceleratorDemand.y, acceleratorPosition.s_ref) annotation (Line(
@@ -392,12 +390,11 @@ Empty driver environment. Using this empty model in overall vehicle architecture
     connect(gear.y, shiftInput.gear) annotation (Line(points={{-2.02067e-015,
             -31},{7.34788e-016,-31},{7.34788e-016,-48}}, color={255,127,0}));
     connect(controlBus.driverBus, driverBus) annotation (Line(
-        points={{100,60},{60,60}},
+        points={{100.1,59.9},{80,59.9},{80,60},{60,60}},
         color={255,204,51},
         thickness=0.5));
 
-    connect(ignition.y, driverBus.ignition) annotation (Line(points={{21,60},{
-            21,60},{60,60}},
+    connect(ignition.y, driverBus.ignition) annotation (Line(points={{21,60},{21,60.05},{60.05,60.05}},
                      color={255,127,0}));
 
     annotation (
@@ -417,67 +414,58 @@ Fixed gear and constant clutch position.</p>
       annotation (Placement(transformation(extent={{-40,50},{-20,70}})));
     Mechanics.NormalisedTranslational.PositionSensor brakePosition
       annotation (Placement(transformation(extent={{-40,30},{-20,50}})));
-    Blocks.IntegerPassThrough gearboxMode annotation (Placement(transformation(
+    Modelica.Blocks.Routing.IntegerPassThrough gearboxMode annotation (Placement(transformation(
             extent={{-40,-10},{-20,10}})));
-    Blocks.IntegerPassThrough requestedGear
+    Modelica.Blocks.Routing.IntegerPassThrough requestedGear
       annotation (Placement(transformation(extent={{-40,-40},{-20,-20}})));
-    Blocks.IntegerPassThrough ignition annotation (Placement(transformation(
+    Modelica.Blocks.Routing.IntegerPassThrough ignition annotation (Placement(transformation(
             extent={{-40,-70},{-20,-50}})));
   protected
     replaceable
-      VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission
-                                           driverBus constrainedby
-      VehicleInterfaces.Interfaces.DriverBus
+      VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission driverBus
+      constrainedby VehicleInterfaces.Interfaces.DriverBus
       annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(driverBus, controlBus.driverBus) annotation (Line(
-        points={{60,60},{100,60}},
+        points={{60,60},{80,60},{80,59.9},{100.1,59.9}},
         color={255,204,51},
         thickness=0.5));
     connect(driverInterface.gearboxMode, gearboxMode.u) annotation (
-      Text(
-        string="%first",
-        index=-1,
-        extent=[-6, 3; -6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-100,0},{-70,0},{-42,0}},
-          color={255,127,0}));
+        Text(
+          string="%first",
+          index=-1,
+          extent={{-6,3},{-6,3}}),
+        Line(points={{-100,0},{-42,0}}, color={255,127,0}));
     connect(gearboxMode.y, driverBus.gearboxMode) annotation (
-      Text(
-        string="%second",
-        index=1,
-        extent=[6, 3; 6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-19,0},{58,0},{58,60},{
-            60,60}},  color={255,127,0}));
+        Text(
+          string="%second",
+          index=1,
+          extent={{6,3},{6,3}}),
+        Line(points={{-19,0},{58,0},{58,60.05},{60.05,60.05}}, color={255,127,0}));
     connect(driverInterface.requestedGear, requestedGear.u) annotation (
-      Text(
-        string="%first",
-        index=-1,
-        extent=[-6, 3; -6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-100,0},{-100,-2},{-80,
-            -2},{-80,-30},{-42,-30}}, color={255,127,0}));
+        Text(
+          string="%first",
+          index=-1,
+          extent={{-6,3},{-6,3}}),
+        Line(points={{-100,0},{-100,-2},{-80,-2},{-80,-30},{-42,-30}}, color={255,127,0}));
     connect(requestedGear.y, driverBus.requestedGear) annotation (
-      Text(
-        string="%second",
-        index=1,
-        extent=[6, 3; 6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-19,-30},{60,-30},{60,60}},
-                     color={255,127,0}));
+        Text(
+          string="%second",
+          index=1,
+          extent={{6,3},{6,3}}),
+        Line(points={{-19,-30},{60.05,-30},{60.05,60.05}}, color={255,127,0}));
     connect(driverInterface.ignition, ignition.u) annotation (
-      Text(
-        string="%first",
-        index=-1,
-        extent=[-6, 3; -6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-100,0},{-100,-4},{-82,
-            -4},{-82,-60},{-42,-60}},
-                       color={255,127,0}));
+        Text(
+          string="%first",
+          index=-1,
+          extent={{-6,3},{-6,3}}),
+        Line(points={{-100,0},{-100,-4},{-82,-4},{-82,-60},{-42,-60}}, color={255,127,0}));
     connect(ignition.y, driverBus.ignition) annotation (
-      Text(
-        string="%second",
-        index=1,
-        extent=[6, 3; 6, 3],
-        style(color=0, rgbcolor={0,0,0})), Line(points={{-19,-60},{62,-60},{62,60},
-            {60,60}},        color={255,127,0}));
-
+        Text(
+          string="%second",
+          index=1,
+          extent={{6,3},{6,3}}),
+        Line(points={{-19,-60},{62,-60},{62,60},{60,60}}, color={255,127,0}));
     connect(driverInterface.brakePedal, brakePosition.flange_a) annotation (Line(
         points={{-100,0},{-98,0},{-98,2},{-80,2},{-80,40},{-40,40}},
         color={0,127,0}), Text(

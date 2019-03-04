@@ -27,10 +27,7 @@ connector. The force is not normalized in this connector.
                 points={{-100,0},{0,100},{100,0},{0,-100},{-100,0}},
                 lineColor={0,127,0},
                 fillColor={0,127,0},
-                fillPattern=FillPattern.Solid), Text(
-                extent={{-100,140},{100,100}},
-                lineColor={0,127,0},
-                textString="%name")}),
+                fillPattern=FillPattern.Solid)}),
           Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
                   -100},{100,100}}), graphics={Polygon(
                 points={{-52,0},{0,52},{52,0},{0,-52},{-52,0}},
@@ -136,25 +133,15 @@ A collection of additional 1D translational mechanical connectors used for norma
               lineColor={128,128,128},
               fillColor={128,128,128},
               fillPattern=FillPattern.Solid),
-            Rectangle(
-              extent={{-100,10},{26,-10}},
-              lineColor={0,127,0},
-              fillColor={0,127,0},
-              fillPattern=FillPattern.Solid),
             Polygon(
-              points={{20,41},{90,0},{20,-41},{20,41}},
+              points={{-100,10},{-100,-10},{20,-10},{20,-40},{90,0},{20,40},{20,10},{-100,10}},
               lineColor={0,127,0},
               fillColor={0,127,0},
               fillPattern=FillPattern.Solid)}),
         Icon(coordinateSystem(preserveAspectRatio=true, extent={{-100,-100},{
                 100,100}}), graphics={
-            Polygon(
-              points={{20,41},{90,0},{20,-41},{20,41}},
-              lineColor={0,127,0},
-              fillColor={0,127,0},
-              fillPattern=FillPattern.Solid),
             Text(
-              extent={{-100,-30},{-47,-78}},
+              extent={{-100,-30},{-40,-70}},
               lineColor={95,95,95},
               textString="f",
               fillColor={95,95,95},
@@ -163,8 +150,8 @@ A collection of additional 1D translational mechanical connectors used for norma
               extent={{-150,100},{150,60}},
               textString="%name",
               lineColor={0,0,255}),
-            Rectangle(
-              extent={{-100,10},{26,-10}},
+            Polygon(
+              points={{-100,10},{-100,-10},{20,-10},{20,-40},{90,0},{20,40},{20,10},{-100,10}},
               lineColor={0,127,0},
               fillColor={0,127,0},
               fillPattern=FillPattern.Solid)}),
@@ -230,11 +217,7 @@ A collection of additional 1D translational mechanical connectors used for norma
                 points={{-70,0},{0,70},{70,0},{0,-70},{-70,0}},
                 lineColor={255,255,255},
                 fillColor={255,255,255},
-                fillPattern=FillPattern.Solid),
-              Text(
-                extent={{-100,140},{100,100}},
-                lineColor={95,95,95},
-                textString="%name")}),
+                fillPattern=FillPattern.Solid)}),
           Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
                   -100},{100,100}}), graphics={
               Ellipse(
@@ -353,7 +336,8 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
             Line(
               points={{-84,0},{-60,30},{-32,52},{2,62},{32,56},{52,44},{68,28},
                   {80,14},{84,10}},
-              thickness=0.5),
+              thickness=0.5,
+              smooth=Smooth.Bezier),
             Polygon(
               points={{90,0},{70,58},{42,28},{90,0}},
               lineColor={0,0,0},
@@ -377,7 +361,8 @@ A collection of additional 1D rotational mechanical connectors used for normaliz
             Line(
               points={{-100,0},{-76,30},{-48,48},{-14,58},{16,56},{40,50},{56,
                   42},{66,32},{80,20}},
-              thickness=0.5)}),
+              thickness=0.5,
+              smooth=Smooth.Bezier)}),
         Documentation(info="<html>
 <p>Applies a torque to a 1D normalized rotational system.  Cannot be connected to components from the Modelica.Mechanics.Rotational library</p>
 </html>"));

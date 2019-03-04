@@ -1,5 +1,5 @@
 within ;
-package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.4) - Interface definitions and architectures for vehicle system modeling"
+package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.5) - Interface definitions and architectures for vehicle system modeling"
   extends Modelica.Icons.Package;
 
   import SI = Modelica.SIunits;
@@ -13,13 +13,14 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.4) - Interface
       showStatistics=true,
       allowDuplicate=true),
     preferredView="info",
-    version="1.2.4",
-    versionDate="2016-03-02",
+    version="1.2.5",
+    versionDate="2018-09-05",
     versionBuild=1,
-    dateModified="2016-03-02",
-    uses(Modelica(version="3.2.2")),
+    dateModified="2018-09-05",
+    revisionId="$Format:%h %ci$",
+    uses(Modelica(version="3.2.3")),
     conversion(
-      from(version="1.0", script="modelica://VehicleInterfaces/Resources/Scripts/ConvertVehicleInterfaces_from_1.0_to_1.1.mos"),
+      from(version="1.0", script="modelica://VehicleInterfaces/Resources/Scripts/Dymola/ConvertVehicleInterfaces_from_1.0_to_1.1.mos"),
       noneFromVersion="1.1",
       noneFromVersion="1.1.1",
       noneFromVersion="1.1.2",

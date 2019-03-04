@@ -10,7 +10,7 @@ package EnergyStorage "Collection of energy storage subsystem definitions"
 <p>The following process will demonstrate how to create a new energy storage device model using these interface definitions.  This tutorial will guide you through building a simple battery.</p>
 <ol>
 <li>Create a new model that extends <b>VehicleInterfaces.EnergyStorage.Interfaces.Base</b>, it should look like this:
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEnergyStorage1.png\"><br><br></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/EnergyStorage/buildNewEnergyStorage1.png\"><br><br></li>
 <li>Unlike most of the other systems in the VehicleInterfaces package, the energy storage device interface definition does not contain any optional connectors.</li>
 <li>You can now define your energy storage device model as required</li>
 </ol>
@@ -19,7 +19,7 @@ package EnergyStorage "Collection of energy storage subsystem definitions"
 <p>Starting from step 2 above.</p>
 <ol>
 <li>Add the following blocks and connections to the diagram.
-<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/buildNewEnergyStorage2.png\"><br><br></li>
+<br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/EnergyStorage/buildNewEnergyStorage2.png\"><br><br></li>
 </ol>
 </html>"));
   end Tutorial;
