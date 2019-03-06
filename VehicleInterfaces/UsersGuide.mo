@@ -383,7 +383,7 @@ Some elements of the library may have been renamed since this tutorial but the p
   end Tutorials;
 
   package ReleaseNotes "Release notes"
-    class Version_1_2_5 "Version 1.2.5 (Apr. 1, 2018)"
+    class Version_1_2_5 "Version 1.2.5 (Mar. 6, 2019)"
       extends Modelica.Icons.ReleaseNotes;
 
       annotation (Documentation(info="<html>

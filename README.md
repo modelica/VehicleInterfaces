@@ -14,9 +14,16 @@ This library also contains a proposal for a naming convention covering the whole
 
 ## Current release
 
-Download [VehicleInterfaces v1.2.4 (2016-03-02)](../../releases/tag/v1.2.4)
+Download [VehicleInterfaces v1.2.5 (2019-03-06)](../../releases/tag/v1.2.5)
 
 #### Release notes
+* [Version v1.2.5 (2019-03-06)](../../releases/tag/v1.2.5)
+  * This version requires the <b>Modelica 3.2.3</b> Library.
+  * This version is backwards compatible to versions&nbsp;1.1.x and 1.2.x of the VehicleInterfaces library.
+  * Blocks marked as obsolete: VehicleInterfaces.Blocks.RealPassThrough, VehicleInterfaces.Blocks.IntegerPassThrough, VehicleInterfaces.Blocks.BooleanPassThrough
+  * Resolved usage of obsolete block in VehicleInterfaces.DriverEnvironments.DriveByWireAutomaticExternalDriver
+  * Deleted text string from icons of VehicleInterfaces.Mechanics.NormalisedTranslational.Interfaces.Flange and VehicleInterfaces.Mechanics.NormalisedRotational.Interfaces.Flange
+  * Restructured Images and Scripts directories to match Modelica Standard Library conventions, removed unused files
 * [Version v1.2.4 (2016-03-02)](../../releases/tag/v1.2.4)
   * This version is backwards compatible to versions 1.1.x and 1.2.x
   * Typos in the documentation fixed.
