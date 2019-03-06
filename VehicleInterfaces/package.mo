@@ -14,9 +14,9 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.5) - Interface
       allowDuplicate=true),
     preferredView="info",
     version="1.2.5",
-    versionDate="2018-09-05",
+    versionDate="2019-03-06",
     versionBuild=1,
-    dateModified="2018-09-05",
+    dateModified="2019-03-06",
     revisionId="$Format:%h %ci$",
     uses(Modelica(version="3.2.3")),
     conversion(
@@ -27,7 +27,8 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 1.2.5) - Interface
       noneFromVersion="1.2",
       noneFromVersion="1.2.1",
       noneFromVersion="1.2.2",
-      noneFromVersion="1.2.3"),
+      noneFromVersion="1.2.3",
+      noneFromVersion="1.2.4"),
     Documentation(info="<html>
 <p>This Modelica library provides standard interface definitions for automotive subsystems and vehicle models.  These are designed to promote compatibility between the various automotive libraries and provide a flexible, powerful structure for vehicle modelling.  The main focus of the library is on defining the interfaces for the individual subsystems and a number of vehicle model examples are included to demonstrate how they might be used.</p>
 <p>
