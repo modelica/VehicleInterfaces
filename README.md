@@ -18,7 +18,7 @@ Download [VehicleInterfaces v1.2.5 (2019-03-06)](../../releases/tag/v1.2.5)
 
 #### Release notes
 * [Version v1.2.5 (2019-03-06)](../../releases/tag/v1.2.5)
-  * This version requires the <b>Modelica 3.2.3</b> Library.
+  * This version requires the <b>[Modelica 3.2.3](https://github.com/modelica/ModelicaStandardLibrary/releases/tag/v3.2.3)</b> Library.
   * This version is backwards compatible to versions&nbsp;1.1.x and 1.2.x of the VehicleInterfaces library.
   * Blocks marked as obsolete: VehicleInterfaces.Blocks.RealPassThrough, VehicleInterfaces.Blocks.IntegerPassThrough, VehicleInterfaces.Blocks.BooleanPassThrough
   * Resolved usage of obsolete block in VehicleInterfaces.DriverEnvironments.DriveByWireAutomaticExternalDriver
