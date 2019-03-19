@@ -95,6 +95,18 @@ package Roads "Collection of road definitions"
 </html>"));
   end Tutorial;
 
+  package Examples "Examples that demonstrate the usage of road models"
+    extends Modelica.Icons.ExamplesPackage;
+
+    annotation (Documentation(info="<html>
+<p>
+This package contains example models to demonstrate the usage of the
+roads. Open the models and simulate them according to the provided
+description in the models.
+</p>
+</html>"));
+  end Examples;
+
   package Interfaces "Collection of interface definitions for roads"
     extends Modelica.Icons.InterfacesPackage;
 
@@ -335,8 +347,7 @@ The point s=0, w=0 has position vector r={0, 0, 0};
       redeclare final function normal = circleNormal,
       redeclare final function headingDirection = circleHeadingDirection (
         radius=radius),
-      redeclare final function frictionCoefficient = circleFrictionCoefficient
-          (
+      redeclare final function frictionCoefficient = circleFrictionCoefficient (
         mue_fixed=mue));
 
     parameter Boolean animation=true "= true, if road shall be visualized";
