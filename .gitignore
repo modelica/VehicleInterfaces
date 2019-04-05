@@ -1,10 +1,12 @@
+# exclude following files
 *~
+*.bak
+*.bak-mo
+*.exe
+*.exp
 buildlog.txt
 dsfinal.txt
 dsin.txt
 dslog.txt
-dsmodelext1.c
-dsmodel.c
-dymosim.exe
-dymosim.exp
-dymosim.lib
+dsmodel*
+dymosim*
