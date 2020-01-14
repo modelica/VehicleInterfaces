@@ -4,3 +4,5 @@
 convertClear();
 
 // Change references to classes that are obsolete
+convertClass("VehicleInterfaces.Brakes.Interfaces.StandardBus",
+             "VehicleInterfaces.Interfaces.BrakesBus");
