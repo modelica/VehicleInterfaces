@@ -8,3 +8,7 @@ convertClass("VehicleInterfaces.Brakes.Interfaces.StandardBus",
              "VehicleInterfaces.Interfaces.BrakesBus");
 convertClass("VehicleInterfaces.Chassis.Interfaces.StandardBus",
              "VehicleInterfaces.Interfaces.ChassisBus");
+convertClass({"VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus",
+	            "VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission",
+	            "VehicleInterfaces.DriverEnvironments.Interfaces.BusForManualTransmission"},
+              "VehicleInterfaces.Interfaces.DriverBus");

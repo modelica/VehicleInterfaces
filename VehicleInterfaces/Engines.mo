@@ -207,8 +207,7 @@ Empty engine model (just rigid connection between accessory and transmission fla
     replaceable VehicleInterfaces.Engines.Interfaces.StandardBus
       engineBus constrainedby VehicleInterfaces.Interfaces.EngineBus
       annotation (Placement(transformation(extent={{-70,50},{-50,70}})));
-    replaceable VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus
-      driverBus constrainedby VehicleInterfaces.Interfaces.DriverBus
+    VehicleInterfaces.Interfaces.DriverBus driverBus
       annotation (Placement(transformation(extent={{-90,30},{-70,50}})));
     outer Modelica.Mechanics.MultiBody.World world;
   equation

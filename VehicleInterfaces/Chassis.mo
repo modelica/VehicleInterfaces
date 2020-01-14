@@ -757,7 +757,8 @@ Empty chassis model. Using this empty model in overall vehicle architecture the 
 <p>
 An expandable connector that defines the minimum set of signals required on the <b>chassisBus</b>.
 This connector shall <b>not</b> be used in models and is included here to enable
-connection dialog (i.e. the GUI) for signal buses.</p>
+connection dialog (i.e. the GUI) for signal buses.
+</p>
 </html>"), Diagram(graphics={
                           Text(
               extent={{-100,-40},{100,-80}},

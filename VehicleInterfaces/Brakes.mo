@@ -600,8 +600,7 @@ Using this empty model in overall vehicle architecture the functionality of brak
     outer Modelica.Mechanics.MultiBody.World world;
     VehicleInterfaces.Interfaces.BrakesBus brakesBus
       annotation (Placement(transformation(extent={{-70,10},{-50,30}})));
-    replaceable VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus driverBus
-      constrainedby VehicleInterfaces.Interfaces.DriverBus
+    VehicleInterfaces.Interfaces.DriverBus driverBus
       annotation (Placement(transformation(extent={{-90,-20},{-70,0}})));
   equation
     connect(computeTorque.y, brake_1.f_normalized) annotation (Line(points={{-19,-10},
@@ -866,7 +865,8 @@ Using this empty model in overall vehicle architecture the functionality of brak
 <p>
 An expandable connector that defines the minimum set of signals required on the <b>brakesBus</b>.
 This connector shall <b>not</b> be used in models and is included here to enable
-connection dialog (i.e. the GUI) for signal buses.</p>
+connection dialog (i.e. the GUI) for signal buses.
+</p>
 </html>"), Diagram(graphics={
                           Text(
               extent={{-100,-40},{100,-80}},
