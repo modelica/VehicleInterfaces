@@ -72,8 +72,7 @@ Empty data dictionary model. Using this empty model in overall vehicle architect
     Modelica.Blocks.Routing.RealPassThrough v_veh
       annotation (Placement(transformation(extent={{6,-6},{-6,6}}),
           iconTransformation(extent={{-14,-6},{6,6}})));
-    replaceable VehicleInterfaces.Chassis.Interfaces.StandardBus
-      chassisBus constrainedby VehicleInterfaces.Interfaces.ChassisBus
+    VehicleInterfaces.Interfaces.ChassisBus chassisBus
       annotation (Placement(transformation(extent={{-10,-60},{10,-40}})));
 
   equation
