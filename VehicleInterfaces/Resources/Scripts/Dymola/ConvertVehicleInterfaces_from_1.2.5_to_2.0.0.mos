@@ -14,3 +14,7 @@ convertClass({"VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus",
               "VehicleInterfaces.Interfaces.DriverBus");
 convertClass("VehicleInterfaces.Engines.Interfaces.StandardBus",
              "VehicleInterfaces.Interfaces.EngineBus");
+convertClass("VehicleInterfaces.Transmissions.Interfaces.StandardBus",
+             "VehicleInterfaces.Interfaces.TransmissionBus");
+convertClass("VehicleInterfaces.Transmissions.Interfaces.StandardControlBus",
+             "VehicleInterfaces.Interfaces.TransmissionControlBus");
