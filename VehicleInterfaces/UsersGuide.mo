@@ -383,6 +383,40 @@ Some elements of the library may have been renamed since this tutorial but the p
   end Tutorials;
 
   package ReleaseNotes "Release notes"
+    class Version_2_0_0 "Version 2.0.0 (mmm. dd, yyyy)"
+      extends Modelica.Icons.ReleaseNotes;
+
+      annotation (Documentation(info="<html>
+<p>
+This version requires the <b>Modelica 4.0.0</b> Library.
+This version is <strong>not</strong> backwards compatible to
+versions&nbsp;1.1.x or 1.2.x of the VehicleInterfaces library.
+</p>
+
+
+<h4>Improvements in this version</h4>
+<ul>
+<li>&hellip;</li>
+</ul>
+
+
+<h4>Non-backward compatible changes</h4>
+<p>
+The following existing components have been changed in a&nbsp;non-backward
+compatible way:
+</p>
+<ul>
+<li>Reintroducing the idea of expandable connectors for signal buses, see
+    issue <a href=\"https://github.com/modelica/VehicleInterfaces/issues/28\"># 28</a>:
+    <ul>
+    <li>
+        </li>
+    </ul>
+    </li>
+</ul>
+</html>"));
+    end Version_2_0_0;
+
     class Version_1_2_5 "Version 1.2.5 (Mar. 6, 2019)"
       extends Modelica.Icons.ReleaseNotes;
 

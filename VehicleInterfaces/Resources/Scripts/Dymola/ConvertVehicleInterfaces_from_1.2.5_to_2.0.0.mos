@@ -1,0 +1,6 @@
+// Convert from VehicleInterfaces 1.0 to VehicleInterfaces 1.1
+
+// clear
+convertClear();
+
+// Change references to classes that are obsolete
