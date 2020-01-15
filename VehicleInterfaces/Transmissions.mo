@@ -434,12 +434,11 @@ gear number is ignored in this model.</p>
     Modelica.Blocks.Sources.IntegerConstant currentGear(k=1)
       annotation (Placement(transformation(extent={{30,80},{10,100}})));
   protected
-    replaceable Interfaces.StandardBus transmissionBus constrainedby VehicleInterfaces.Interfaces.TransmissionBus
+    VehicleInterfaces.Interfaces.TransmissionBus transmissionBus
       annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
-    outer Modelica.Mechanics.MultiBody.World world;
-    replaceable Interfaces.StandardControlBus transmissionControlBus
-      constrainedby VehicleInterfaces.Interfaces.TransmissionControlBus
+    VehicleInterfaces.Interfaces.TransmissionControlBus transmissionControlBus
       annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
+    outer Modelica.Mechanics.MultiBody.World world;
   equation
     connect(outputSpeed.flange, drivelineFlange.flange) annotation (Line(
         points={{70,60},{80,60},{80,0.05},{100.05,0.05}}));
