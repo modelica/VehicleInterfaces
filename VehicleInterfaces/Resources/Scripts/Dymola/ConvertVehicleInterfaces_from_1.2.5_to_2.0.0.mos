@@ -4,17 +4,23 @@
 convertClear();
 
 // Change references to classes that are obsolete
-convertClass("VehicleInterfaces.Brakes.Interfaces.StandardBus",
-             "VehicleInterfaces.Interfaces.BrakesBus");
-convertClass("VehicleInterfaces.Chassis.Interfaces.StandardBus",
-             "VehicleInterfaces.Interfaces.ChassisBus");
+convertClass({"VehicleInterfaces.Brakes.Interfaces.StandardBus",
+              "VehicleInterfaces.Brakes.Internal.StandardBus"},
+              "VehicleInterfaces.Interfaces.BrakesBus");
+convertClass({"VehicleInterfaces.Chassis.Interfaces.StandardBus",
+              "VehicleInterfaces.Chassis.Internal.StandardBus"},
+              "VehicleInterfaces.Interfaces.ChassisBus");
 convertClass({"VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus",
 	            "VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission",
-	            "VehicleInterfaces.DriverEnvironments.Interfaces.BusForManualTransmission"},
+	            "VehicleInterfaces.DriverEnvironments.Interfaces.BusForManualTransmission",
+	            "VehicleInterfaces.DriverEnvironments.Internal.StandardBus"},
               "VehicleInterfaces.Interfaces.DriverBus");
-convertClass("VehicleInterfaces.Engines.Interfaces.StandardBus",
-             "VehicleInterfaces.Interfaces.EngineBus");
-convertClass("VehicleInterfaces.Transmissions.Interfaces.StandardBus",
-             "VehicleInterfaces.Interfaces.TransmissionBus");
-convertClass("VehicleInterfaces.Transmissions.Interfaces.StandardControlBus",
-             "VehicleInterfaces.Interfaces.TransmissionControlBus");
+convertClass({"VehicleInterfaces.Engines.Interfaces.StandardBus",
+              "VehicleInterfaces.Engines.Internal.StandardBus"},
+              "VehicleInterfaces.Interfaces.EngineBus");
+convertClass({"VehicleInterfaces.Transmissions.Interfaces.StandardBus",
+              "VehicleInterfaces.Transmissions.Internal.StandardBus"},
+              "VehicleInterfaces.Interfaces.TransmissionBus");
+convertClass({"VehicleInterfaces.Transmissions.Interfaces.StandardControlBus",
+              "VehicleInterfaces.Transmissions.Internal.StandardControlBus"},
+              "VehicleInterfaces.Interfaces.TransmissionControlBus");
