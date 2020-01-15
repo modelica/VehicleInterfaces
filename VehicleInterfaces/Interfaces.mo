@@ -37,7 +37,11 @@ package Interfaces "Collection of general interface definitions"
         transmissionControlBus "TransmissionControlBus";
 
       annotation (Documentation(info="<html>
-<p>An expandable connector that defines the structure for the control signal bus.  This connector should <b>NOT</b> be used in models and is included to enable Dymola to generate appropriate connection dialogs for signal buses.</p>
+<p>
+An expandable connector that defines the structure for the control signal bus.
+This connector shall <b>not</b> be used in models and is included here to enable
+connection dialog (i.e. the GUI) for signal buses.
+</p>
 </html>"), Diagram(graphics={
                           Text(
               extent={{-100,-40},{100,-80}},
