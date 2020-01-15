@@ -33,6 +33,7 @@ package Drivers "Collection of driver subsystem definitions"
       "Bus of VehicleInterfaces.Drivers: MinimalBus (minimal set of signals for any type of transmissions)"
       extends .VehicleInterfaces.Interfaces.DriverInterface;
       extends .VehicleInterfaces.Icons.SignalSubBusWithExplicitSignals;
+      extends Modelica.Icons.ObsoleteModel;
 
       VehicleInterfaces.Mechanics.NormalisedTranslational.Interfaces.Flange
         acceleratorPedal "Accelerator pedal" annotation (Dialog);
@@ -45,7 +46,9 @@ package Drivers "Collection of driver subsystem definitions"
 
       SI.Velocity vehicleSpeed "Vehicle speed" annotation (Dialog);
       SI.AngularVelocity engineSpeed "Engine speed" annotation (Dialog);
-      annotation (Documentation(info="<html>
+      annotation (
+        obsolete = "Obsolete model - use VehicleInterfaces.Interfaces.DriverInterface instead",
+        Documentation(info="<html>
 <p>An expandable connector that defines the minimum set of signals required
   on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.
   </p>
@@ -55,6 +58,7 @@ package Drivers "Collection of driver subsystem definitions"
     expandable connector BusForAutomaticTransmission
       "Bus of VehicleInterfaces.Drivers: BusForAutomaticTransmission"
       extends .VehicleInterfaces.Drivers.Interfaces.MinimalBus;
+      extends Modelica.Icons.ObsoleteModel;
 
       VehicleInterfaces.Types.Gear requestedGear
         "Requested gear for automatic transmission if gearboxMode=Manual or =Limited"
@@ -63,7 +67,9 @@ package Drivers "Collection of driver subsystem definitions"
         "Selected gearbox mode (Park, Drive, Neutral, Rear, Manual, Limited)"
         annotation (Dialog);
 
-      annotation (Documentation(info="<html>
+      annotation (
+        obsolete = "Obsolete model - use VehicleInterfaces.Interfaces.DriverInterface instead",
+        Documentation(info="<html>
 <p>An expandable connector that defines the minimum set of signals required
   on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.
   </p>
@@ -73,6 +79,7 @@ package Drivers "Collection of driver subsystem definitions"
     expandable connector BusForManualTransmission
       "Bus of VehicleInterfaces.Drivers: BusForManualTransmission"
       extends .VehicleInterfaces.Drivers.Interfaces.MinimalBus;
+      extends Modelica.Icons.ObsoleteModel;
 
       VehicleInterfaces.Mechanics.NormalisedTranslational.Interfaces.Flange
         clutchPedal "Clutch pedal" annotation (Dialog);
@@ -81,7 +88,9 @@ package Drivers "Collection of driver subsystem definitions"
         annotation (Dialog);
       Boolean clutchLocked "Clutch locked flag" annotation (Dialog);
 
-      annotation (Documentation(info="<html>
+      annotation (
+        obsolete = "Obsolete model - use VehicleInterfaces.Interfaces.DriverInterface instead",
+        Documentation(info="<html>
 <p>An expandable connector that defines the minimum set of signals required on the <b>driverInteractionBus</b> for a driver of a manual vehicle.</p>
 </html>"));
     end BusForManualTransmission;
@@ -210,7 +219,7 @@ Empty driver model. Using this empty model in overall vehicle architecture the f
     extends Modelica.Icons.InternalPackage;
 
     expandable connector StandardDriverInterfaceForAutomaticTransmission
-      "Obsolete bus: Do not use (provided for backwards compatibility)"
+      "Do not use - Expandable connector defining signals for driver bus for automatic transmissions"
       extends VehicleInterfaces.Interfaces.DriverInterface;
 
       VehicleInterfaces.Mechanics.NormalisedTranslational.Interfaces.Flange
@@ -222,12 +231,17 @@ Empty driver model. Using this empty model in overall vehicle architecture the f
       SI.Velocity vehicleSpeed "Vehicle speed" annotation (Dialog);
       SI.AngularVelocity engineSpeed "Engine speed" annotation (Dialog);
       annotation (Documentation(info="<html>
-<p>An expandable connector that defines the minimum set of signals required on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.  This connector should <b>NOT</b> be used in models and is included to enable Dymola to generate appropriate connection dialogs for signal buses.</p>
+<p>
+An expandable connector that defines the minimum set of signals required on
+the <b>driverInteractionBus</b> for a driver of an automatic vehicle.
+This connector shall <b>not</b> be used in models and is included here to enable
+connection dialog (i.e. the GUI) for signal buses.
+</p>
 </html>"));
     end StandardDriverInterfaceForAutomaticTransmission;
 
     expandable connector StandardDriverInterfaceForManualTransmission
-      "Obsolete bus: Do not use (provided for backwards compatibility)"
+      "Do not use - Expandable connector defining signals for driver bus for manual transmissions"
       extends VehicleInterfaces.Interfaces.DriverInterface;
 
       VehicleInterfaces.Mechanics.NormalisedTranslational.Interfaces.Flange
@@ -243,7 +257,12 @@ Empty driver model. Using this empty model in overall vehicle architecture the f
       Integer gear "Selected gear" annotation (Dialog);
       Boolean clutchLocked "Clutch locked flag" annotation (Dialog);
       annotation (Documentation(info="<html>
-<p>An expandable connector that defines the minimum set of signals required on the <b>driverInteractionBus</b> for a driver of a manual vehicle.  This connector should <b>NOT</b> be used in models and is included to enable Dymola to generate appropriate connection dialogs for signal buses.</p>
+<p>
+An expandable connector that defines the minimum set of signals required on
+the <b>driverInteractionBus</b> for a driver of a manual vehicle.
+This connector shall <b>not</b> be used in models and is included here to enable
+connection dialog (i.e. the GUI) for signal buses.
+</p>
 </html>"));
     end StandardDriverInterfaceForManualTransmission;
 

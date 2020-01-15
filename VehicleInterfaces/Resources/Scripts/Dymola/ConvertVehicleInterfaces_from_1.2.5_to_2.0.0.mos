@@ -15,6 +15,12 @@ convertClass({"VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus",
 	            "VehicleInterfaces.DriverEnvironments.Interfaces.BusForManualTransmission",
 	            "VehicleInterfaces.DriverEnvironments.Internal.StandardBus"},
               "VehicleInterfaces.Interfaces.DriverBus");
+convertClass({"VehicleInterfaces.Drivers.Interfaces.MinimalBus",
+	            "VehicleInterfaces.Drivers.Interfaces.BusForAutomaticTransmission",
+	            "VehicleInterfaces.Drivers.Interfaces.BusForManualTransmission",
+	            "VehicleInterfaces.Drivers.Internal.StandardDriverInterfaceForAutomaticTransmission",
+	            "VehicleInterfaces.Drivers.Internal.StandardDriverInterfaceForManualTransmission"},
+              "VehicleInterfaces.Interfaces.DriverInterface");
 convertClass({"VehicleInterfaces.Engines.Interfaces.StandardBus",
               "VehicleInterfaces.Engines.Internal.StandardBus"},
               "VehicleInterfaces.Interfaces.EngineBus");
