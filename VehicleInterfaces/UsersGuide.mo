@@ -383,9 +383,56 @@ Some elements of the library may have been renamed since this tutorial but the p
   end Tutorials;
 
   package ReleaseNotes "Release notes"
-    class Version_2_0_0 "Version 2.0.0 (mmm. dd, yyyy)"
+    package Version_2_0_0 "Version 2.0.0 (mmm. dd, yyyy)"
       extends Modelica.Icons.ReleaseNotes;
 
+      model ReintroduceExpandableConnectors "Reintroduce expandable connectors"
+        annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(coordinateSystem(preserveAspectRatio=false)),
+          Documentation(info="<html>
+<p>
+As documented in the
+<a href=\"modelica://VehicleInterfaces.UsersGuide.SignalBus\">User&apos;s Guide</a>,
+control signal buses are widely used within the library to easily
+exchange signals between vehicle&apos;s subsystems.
+In the previous versions of the VehicleInterfaces, the buses from
+&lt;subsystem&gt;.Interfaces were directly instantiated in the subsystem
+models, with the prefix &quot;replaceable&quot;.
+This possibly led to some troubles especially when redeclaring
+a&nbsp;subsystem within a&nbsp;vehicle architecture, since the
+compatibility of the corresponding buses had to be granted.
+</p>
+<p>
+In version 2.0.0 of the VehicleInterfaces, the original idea described in
+the <a href=\"modelica://VehicleInterfaces.UsersGuide.SignalBus\">User&apos;s Guide</a>
+is introduced again. Consequently, only the buses from
+<a href=\"modelica://VehicleInterfaces.Interfaces\">VehicleInterfaces.Interfaces</a>
+are instantiated in the subsystem models and base classes.
+The prefix &quot;replaceable&quot; is omited. The bus signals are defined
+in buses located in &lt;subsystem&gt;.Internal packages, but those particular
+buses are only intended to enable a&nbsp;buildup of signal connection
+dialog (i.e. the GUI) when connecting a&nbsp;signal.
+Those particular buses shall not be used in models.
+</p>
+<p>
+The buses from &lt;subsystem&gt;.Interfaces are all marked obsolete.
+Since they will be deleted from the library in a&nbsp;future version,
+the user shall replace them by buses from
+<a href=\"modelica://VehicleInterfaces.Interfaces\">VehicleInterfaces.Interfaces</a>
+if she/he uses these buses in her/his own models.
+For example, a&nbsp;previous instantiation of the engineBus such as
+</p>
+<blockquote><pre>
+<strong>replaceable</strong> VehicleInterfaces.Engines.Interfaces.StandardBus engineBus
+  <strong>constrainedby</strong> VehicleInterfaces.Interfaces.EngineBus ;</p>
+</pre></blockquote>
+<p>
+shall be replaced by
+</p>
+<blockquote><pre>
+VehicleInterfaces.Interfaces.EngineBus engineBus;
+</pre></blockquote>
+</html>"));
+      end ReintroduceExpandableConnectors;
       annotation (Documentation(info="<html>
 <p>
 This version requires the <b>Modelica 4.0.0</b> Library.
@@ -406,12 +453,9 @@ The following existing components have been changed in a&nbsp;non-backward
 compatible way:
 </p>
 <ul>
-<li>Reintroducing the idea of expandable connectors for signal buses, see
-    issue <a href=\"https://github.com/modelica/VehicleInterfaces/issues/28\"># 28</a>:
-    <ul>
-    <li>
-        </li>
-    </ul>
+<li>GitHub issue <a href=\"https://github.com/modelica/VehicleInterfaces/issues/28\"># 28</a>:
+    Reintroducing the idea of expandable connectors for signal buses, see also
+    <a href=\"modelica://VehicleInterfaces.UsersGuide.ReleaseNotes.Version_2_0_0.ReintroduceExpandableConnectors\">detailed description</a>.
     </li>
 </ul>
 </html>"));
