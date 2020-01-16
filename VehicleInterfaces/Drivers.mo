@@ -228,8 +228,17 @@ Empty driver model. Using this empty model in overall vehicle architecture the f
         brakePedal "Brake pedal" annotation (Dialog);
       VehicleInterfaces.Mechanics.NormalisedRotational.Interfaces.Flange
         steeringWheel "Steering wheel" annotation (Dialog);
+      VehicleInterfaces.Types.IgnitionSetting.Temp ignition
+        "Engine ignition (Off, On or Start)" annotation (Dialog);
       SI.Velocity vehicleSpeed "Vehicle speed" annotation (Dialog);
       SI.AngularVelocity engineSpeed "Engine speed" annotation (Dialog);
+      VehicleInterfaces.Types.Gear requestedGear
+        "Requested gear for automatic transmission if gearboxMode=Manual or =Limited"
+        annotation (Dialog);
+      VehicleInterfaces.Types.GearMode.Temp gearboxMode
+        "Selected gearbox mode (Park, Drive, Neutral, Rear, Manual, Limited)"
+        annotation (Dialog);
+
       annotation (Documentation(info="<html>
 <p>
 An expandable connector that defines the minimum set of signals required on
@@ -252,6 +261,8 @@ connection dialog (i.e. the GUI) for signal buses.
         clutchPedal "Clutch pedal" annotation (Dialog);
       VehicleInterfaces.Mechanics.NormalisedRotational.Interfaces.Flange
         steeringWheel "Steering wheel" annotation (Dialog);
+      VehicleInterfaces.Types.IgnitionSetting.Temp ignition
+        "Engine ignition (Off, On or Start)" annotation (Dialog);
       SI.Velocity vehicleSpeed "Vehicle speed" annotation (Dialog);
       SI.AngularVelocity engineSpeed "Engine speed" annotation (Dialog);
       Integer gear "Selected gear" annotation (Dialog);
