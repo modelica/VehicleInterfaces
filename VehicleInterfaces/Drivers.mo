@@ -19,9 +19,9 @@ package Drivers "Collection of driver subsystem definitions"
     extends Modelica.Icons.InterfacesPackage;
     partial model Base "Basic interface definition for a driver"
 
-      replaceable VehicleInterfaces.Interfaces.DriverInterface driverInterface
-        "Driver Interaction Bus" annotation (Placement(transformation(extent={{-10,-10},
-                {10,10}},          rotation=-90,
+      VehicleInterfaces.Interfaces.DriverInterface driverInterface
+        "Driver Interaction Bus"
+        annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=-90,
             origin={100,0})));
       annotation (
         Documentation(info="<html>
