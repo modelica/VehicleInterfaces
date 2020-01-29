@@ -286,7 +286,8 @@ It is defined as an empty expandable connector.</p>
                 -40},{-100,30},{-80,50}},
             lineColor={0,0,0},
             fillColor={85,85,255},
-            fillPattern=FillPattern.Solid),
+            fillPattern=FillPattern.Solid,
+            smooth=Smooth.Bezier),
           Ellipse(
             extent={{-55,25},{-45,15}},
             lineColor={0,0,0},
@@ -312,7 +313,8 @@ It is defined as an empty expandable connector.</p>
                 {-50,15},{-40,25}},
             lineColor={0,0,0},
             fillColor={85,85,255},
-            fillPattern=FillPattern.Solid),
+            fillPattern=FillPattern.Solid,
+            smooth=Smooth.Bezier),
           Ellipse(
             extent={{-22.5,7.5},{-17.5,12.5}},
             lineColor={0,0,0},
