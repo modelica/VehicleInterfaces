@@ -162,7 +162,13 @@ package DriverEnvironments
 <p>
 An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
-</html>"));
+</html>"),
+        Diagram(graphics={
+            Rectangle(
+              extent={{-102,82},{102,-52}},
+              lineColor={255,0,0},
+              pattern=LinePattern.Dash,
+              lineThickness=0.5)}));
     end MinimalBus;
 
     expandable connector BusForAutomaticTransmission
@@ -181,7 +187,13 @@ An expandable connector that defines the minimum set of signals required on the 
 <p>
 An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
-</html>"));
+</html>"),
+        Diagram(graphics={
+            Rectangle(
+              extent={{-102,82},{102,-52}},
+              lineColor={255,0,0},
+              pattern=LinePattern.Dash,
+              lineThickness=0.5)}));
     end BusForAutomaticTransmission;
 
     expandable connector BusForManualTransmission
@@ -201,7 +213,13 @@ An expandable connector that defines the minimum set of signals required on the 
 <p>
 An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
-</html>"));
+</html>"),
+        Diagram(graphics={
+            Rectangle(
+              extent={{-102,82},{102,-52}},
+              lineColor={255,0,0},
+              pattern=LinePattern.Dash,
+              lineThickness=0.5)}));
     end BusForManualTransmission;
 
     annotation (Documentation(info="<html>

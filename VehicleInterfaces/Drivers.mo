@@ -52,7 +52,13 @@ package Drivers "Collection of driver subsystem definitions"
 <p>An expandable connector that defines the minimum set of signals required
   on the <b>driverInteractionBus</b> for a driver of an automatic vehicle.
   </p>
-</html>"));
+</html>"),
+        Diagram(graphics={
+            Rectangle(
+              extent={{-102,82},{102,-52}},
+              lineColor={255,0,0},
+              pattern=LinePattern.Dash,
+              lineThickness=0.5)}));
     end MinimalBus;
 
     expandable connector BusForAutomaticTransmission
