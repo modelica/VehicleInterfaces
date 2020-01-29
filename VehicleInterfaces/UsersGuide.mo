@@ -435,7 +435,8 @@ VehicleInterfaces.Interfaces.EngineBus engineBus;
       end ReintroduceExpandableConnectors;
       annotation (Documentation(info="<html>
 <p>
-This version requires the <b>Modelica 4.0.0</b> Library.
+This version requires <strong>version 4.0.0</strong> of the 
+<a href=\"https://github.com/modelica/ModelicaStandardLibrary\">Modelica Standard Library</a>.
 This version is <strong>not</strong> backwards compatible to
 versions&nbsp;1.1.x or 1.2.x of the VehicleInterfaces library.
 </p>
