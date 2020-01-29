@@ -7,7 +7,7 @@ package Interfaces "Collection of general interface definitions"
     extends Modelica.Icons.InternalPackage;
 
     expandable connector StandardControlBus
-      "Obsolete bus: Do not use (provided for backwards compatibility)"
+      "Do not use - Expandable connector defining sub-buses for control bus"
       extends VehicleInterfaces.Interfaces.ControlBus;
       VehicleInterfaces.Interfaces.AccessoriesBus accessoriesBus
         "AccessoriesBus";
