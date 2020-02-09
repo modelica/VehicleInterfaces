@@ -13,7 +13,7 @@ package Transmissions "Collection of transmission subsystem definitions"
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Transmissions/buildNewTransmission1.png\"><br><br></li>
 <li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Transmissions/buildNewTransmission2.png\"><br><br></li>
-<li>This dialog allows you to enable/disable the optional connections by setting <b>includeClutchPedal</b>, <b>includeManualShiftConnector</b> and <b>includeMount</b> as required for your new transmission model.  The <b>engineFlange</b> and <b>drivelineFlange</b> connectors are of the type <a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>, the parameters <b>includeTransmissionBearing</b> and <b>includeDrivelineBearing</b> controls whether the bearing connectors within these connections are enabled or not.</li>
+<li>This dialog allows you to enable/disable the optional connections by setting <b>includeClutchPedal</b>, <b>includeManualShiftConnector</b> and <b>includeMount</b> as required for your new transmission model.  The <b>engineFlange</b> and <b>drivelineFlange</b> connectors are of the type <a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>, the parameters <b>includeEngineBearing</b> and <b>includeDrivelineBearing</b> controls whether the bearing connectors within these connections are enabled or not.</li>
 <li>You can now define your transmission model as required</li>
 </ol>
 <h4>Creating the MinimalTransmission example</h4>
@@ -50,7 +50,7 @@ package Transmissions "Collection of transmission subsystem definitions"
         annotation (Dialog(tab="Advanced"));
 
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing engineFlange(
-          final includeBearingConnector=includeTransmissionBearing or
+          final includeBearingConnector=includeEngineBearing or
             usingMultiBodyEngine) "Connection to the engine"
         annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing drivelineFlange(
@@ -75,7 +75,7 @@ package Transmissions "Collection of transmission subsystem definitions"
             extent={{-8,-6},{8,6}},
             rotation=270)));
       Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
-            includeTransmissionBearing or usingMultiBodyEngine)
+            includeEngineBearing or usingMultiBodyEngine)
         annotation (Placement(transformation(
             origin={-100,22},
             extent={{-8,-6},{8,6}},
@@ -85,7 +85,7 @@ package Transmissions "Collection of transmission subsystem definitions"
         "Include the transmission mount connection";
       parameter Boolean includeDrivelineBearing=false
         "Include the driveline bearing";
-      parameter Boolean includeTransmissionBearing=false
+      parameter Boolean includeEngineBearing=false
         "Include the engine bearing";
 
     equation
