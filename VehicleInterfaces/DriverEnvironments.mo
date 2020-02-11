@@ -146,6 +146,7 @@ package DriverEnvironments
       "Bus of VehicleInterfaces.DriverEnvironment: MinimalBus (minimal set of signals for any type of transmissions)"
       extends VehicleInterfaces.Interfaces.DriverBus;
       extends .VehicleInterfaces.Icons.SignalSubBusWithExplicitSignals;
+      extends Modelica.Icons.ObsoleteModel;
 
       VehicleInterfaces.Types.NormalizedReal acceleratorPedalPosition
         "Normalized accelerator pedal position (0=fully released ... 1=fully pressed)"
@@ -155,11 +156,19 @@ package DriverEnvironments
         annotation (Dialog);
       VehicleInterfaces.Types.IgnitionSetting.Temp ignition
         "Engine ignition (Off, On or Start)" annotation (Dialog);
-      annotation (Documentation(info="<html>
+      annotation (
+        obsolete = "Obsolete model - use VehicleInterfaces.Interfaces.DriverBus instead",
+        Documentation(info="<html>
 <p>
 An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
-</html>"));
+</html>"),
+        Diagram(graphics={
+            Rectangle(
+              extent={{-102,82},{102,-52}},
+              lineColor={255,0,0},
+              pattern=LinePattern.Dash,
+              lineThickness=0.5)}));
     end MinimalBus;
 
     expandable connector BusForAutomaticTransmission
@@ -172,16 +181,24 @@ An expandable connector that defines the minimum set of signals required on the 
       VehicleInterfaces.Types.GearMode.Temp gearboxMode
         "Selected gearbox mode (Park, Drive, Neutral, Rear, Manual, Limited)"
         annotation (Dialog);
-      annotation (Documentation(info="<html>
+      annotation (
+        obsolete = "Obsolete model - use VehicleInterfaces.Interfaces.DriverBus instead",
+        Documentation(info="<html>
 <p>
 An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
-</html>"));
+</html>"),
+        Diagram(graphics={
+            Rectangle(
+              extent={{-102,82},{102,-52}},
+              lineColor={255,0,0},
+              pattern=LinePattern.Dash,
+              lineThickness=0.5)}));
     end BusForAutomaticTransmission;
 
     expandable connector BusForManualTransmission
       "Bus of VehicleInterfaces.DriverEnvironment: BusForManualTransmission"
-       extends VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus;
+      extends VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus;
 
       VehicleInterfaces.Types.NormalizedReal clutchPedalPosition
         "Clutch pedal position (0=fully released ... 1=fully pressed)"
@@ -190,11 +207,19 @@ An expandable connector that defines the minimum set of signals required on the 
         "Selected gear for manual transmission (>0:forward gear, <0:rear gear)"
         annotation (Dialog);
 
-      annotation (Documentation(info="<html>
+      annotation (
+        obsolete = "Obsolete model - use VehicleInterfaces.Interfaces.DriverBus instead",
+        Documentation(info="<html>
 <p>
 An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
 </p>
-</html>"));
+</html>"),
+        Diagram(graphics={
+            Rectangle(
+              extent={{-102,82},{102,-52}},
+              lineColor={255,0,0},
+              pattern=LinePattern.Dash,
+              lineThickness=0.5)}));
     end BusForManualTransmission;
 
     annotation (Documentation(info="<html>
@@ -260,9 +285,7 @@ Empty driver environment. Using this empty model in overall vehicle architecture
       offset=VehicleInterfaces.Types.IgnitionSetting.Start)
       annotation (Placement(transformation(extent={{-20,30},{0,50}})));
   protected
-    replaceable
-      VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission
-      driverBus constrainedby VehicleInterfaces.Interfaces.DriverBus
+    VehicleInterfaces.Interfaces.DriverBus driverBus
       annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(controlBus.driverBus, driverBus) annotation (Line(
@@ -369,8 +392,7 @@ Empty driver environment. Using this empty model in overall vehicle architecture
       offset=VehicleInterfaces.Types.IgnitionSetting.Start)
       annotation (Placement(transformation(extent={{0,50},{20,70}})));
   protected
-    replaceable VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus
-      driverBus constrainedby VehicleInterfaces.Interfaces.DriverBus
+    VehicleInterfaces.Interfaces.DriverBus driverBus
       annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(acceleratorDemand.y, acceleratorPosition.s_ref) annotation (Line(
@@ -421,9 +443,7 @@ Fixed gear and constant clutch position.</p>
     Modelica.Blocks.Routing.IntegerPassThrough ignition annotation (Placement(transformation(
             extent={{-40,-70},{-20,-50}})));
   protected
-    replaceable
-      VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission driverBus
-      constrainedby VehicleInterfaces.Interfaces.DriverBus
+    VehicleInterfaces.Interfaces.DriverBus driverBus
       annotation (Placement(transformation(extent={{50,50},{70,70}})));
   equation
     connect(driverBus, controlBus.driverBus) annotation (Line(
@@ -504,7 +524,7 @@ Fixed gear and constant clutch position.</p>
     extends Modelica.Icons.InternalPackage;
 
     expandable connector StandardBus
-      "Obsolete bus: Do not use (provided for backwards compatibility)"
+      "Do not use - Expandable connector defining signals for driver bus"
       extends VehicleInterfaces.Interfaces.DriverBus;
 
       VehicleInterfaces.Types.NormalizedReal acceleratorPedalPosition
@@ -529,7 +549,9 @@ Fixed gear and constant clutch position.</p>
         "Engine ignition (Off, On or Start)" annotation (Dialog);
       annotation (Documentation(info="<html>
 <p>
-An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.  This connector should <b>NOT</b> be used in models and is included to enable Dymola to generate appropriate connection dialogs for signal buses.
+An expandable connector that defines the minimum set of signals required on the <b>driverBus</b>.
+This connector shall <b>not</b> be used in models and is included here to enable
+connection dialog (i.e. the GUI) for signal buses.
 </p>
 </html>"), Diagram(graphics={
                           Text(

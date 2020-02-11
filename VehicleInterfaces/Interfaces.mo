@@ -7,7 +7,7 @@ package Interfaces "Collection of general interface definitions"
     extends Modelica.Icons.InternalPackage;
 
     expandable connector StandardControlBus
-      "Obsolete bus: Do not use (provided for backwards compatibility)"
+      "Do not use - Expandable connector defining sub-buses for control bus"
       extends VehicleInterfaces.Interfaces.ControlBus;
       VehicleInterfaces.Interfaces.AccessoriesBus accessoriesBus
         "AccessoriesBus";
@@ -37,7 +37,11 @@ package Interfaces "Collection of general interface definitions"
         transmissionControlBus "TransmissionControlBus";
 
       annotation (Documentation(info="<html>
-<p>An expandable connector that defines the structure for the control signal bus.  This connector should <b>NOT</b> be used in models and is included to enable Dymola to generate appropriate connection dialogs for signal buses.</p>
+<p>
+An expandable connector that defines the structure for the control signal bus.
+This connector shall <b>not</b> be used in models and is included here to enable
+connection dialog (i.e. the GUI) for signal buses.
+</p>
 </html>"), Diagram(graphics={
                           Text(
               extent={{-100,-40},{100,-80}},
@@ -282,7 +286,8 @@ It is defined as an empty expandable connector.</p>
                 -40},{-100,30},{-80,50}},
             lineColor={0,0,0},
             fillColor={85,85,255},
-            fillPattern=FillPattern.Solid),
+            fillPattern=FillPattern.Solid,
+            smooth=Smooth.Bezier),
           Ellipse(
             extent={{-55,25},{-45,15}},
             lineColor={0,0,0},
@@ -308,7 +313,8 @@ It is defined as an empty expandable connector.</p>
                 {-50,15},{-40,25}},
             lineColor={0,0,0},
             fillColor={85,85,255},
-            fillPattern=FillPattern.Solid),
+            fillPattern=FillPattern.Solid,
+            smooth=Smooth.Bezier),
           Ellipse(
             extent={{-22.5,7.5},{-17.5,12.5}},
             lineColor={0,0,0},
