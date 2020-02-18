@@ -504,7 +504,8 @@ Basic interface definition of a generic road as parameterized surface.
       s_max=x_max,
       w_min=-width/2,
       w_max=width/2,
-      color=roadColor) if animation and world.enableAnimation;
+      color=roadColor,
+      redeclare function position=linePosition) if animation and world.enableAnimation;
 
     function linePosition "Determine point on road"
       extends VehicleInterfaces.Roads.Interfaces.positionBase;
@@ -587,7 +588,8 @@ The point s=0, w=0 has position vector r={0, 0, 0};
       s_max=2*pi*radius,
       w_min=-width/2,
       w_max=width/2,
-      color=roadColor) if animation and world.enableAnimation;
+      color=roadColor,
+      redeclare function position = circlePosition(radius=radius, width=width)) if animation and world.enableAnimation;
 
     function r_middle
       "Determine point on road in the middle of the circle (w=0"
@@ -697,7 +699,7 @@ of the functions.
         final nv=nw,
         redeclare final function surfaceCharacteristic =
             roadSurfaceCharacteristic (
-          final position=road.position,
+          final position=position,
           final s_min=s_min,
           final s_max=s_max,
           final w_min=w_min,
@@ -706,10 +708,10 @@ of the functions.
       parameter Real s_max=1 "Maximum value of s";
       parameter Real w_min=-1 "Minimum value of w";
       parameter Real w_max=1 "Maximum value of w";
+      replaceable function position = VehicleInterfaces.Roads.Interfaces.positionBase constrainedby CrtVehicle.VehicleInterfaces.Roads.Interfaces.Base.position "Function that has to be the same as the road.position in use";
+
 
     protected
-      outer VehicleInterfaces.Roads.Interfaces.Base road;
-
       encapsulated function roadSurfaceCharacteristic
       import Modelica;
       import VehicleInterfaces;
