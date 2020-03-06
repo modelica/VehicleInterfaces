@@ -708,7 +708,7 @@ of the functions.
       parameter Real s_max=1 "Maximum value of s";
       parameter Real w_min=-1 "Minimum value of w";
       parameter Real w_max=1 "Maximum value of w";
-      replaceable function position = VehicleInterfaces.Roads.Interfaces.positionBase constrainedby CrtVehicle.VehicleInterfaces.Roads.Interfaces.Base.position "Function that has to be the same as the road.position in use";
+      replaceable function position = VehicleInterfaces.Roads.Interfaces.positionBase constrainedby VehicleInterfaces.Roads.Interfaces.Base.position "Function that has to be the same as the road.position in use";
 
 
     protected
