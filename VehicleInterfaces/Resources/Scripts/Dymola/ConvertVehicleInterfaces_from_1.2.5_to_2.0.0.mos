@@ -1,6 +1,8 @@
-// Convert from VehicleInterfaces 1.0 to VehicleInterfaces 1.1
+// Convert from VehicleInterfaces 1.2.5 to VehicleInterfaces 2.0.0
 
 // clear
 convertClear();
 
-// Change references to classes that are obsolete
+// Parameter renamed
+convertElement("VehicleInterfaces.Transmissions.Interfaces.Base",
+               "includeTransmissionBearing", "includeEngineBearing");
