@@ -232,10 +232,10 @@ package Chassis "Collection of chassis subsystem definitions"
         annotation (Placement(transformation(extent={{62,92},{74,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_5(
         includeBearingConnector=includeWheelBearings or usingMultiBodyDriveline)
-        annotation (Placement(transformation(extent={{223,92},{235,108}})));
+        annotation (Placement(transformation(extent={{223,-108},{235,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_6(
         includeBearingConnector=includeWheelBearings or usingMultiBodyDriveline)
-        annotation (Placement(transformation(extent={{223,-108},{235,-92}})));
+        annotation (Placement(transformation(extent={{223,92},{235,108}})));
     equation
       connect(end_1.flange, wheelHub_1) annotation (Line(
           points={{-110,-100},{-90,-100}},
@@ -253,11 +253,11 @@ package Chassis "Collection of chassis subsystem definitions"
           points={{70,100},{90,100}},
           color={135,135,135},
           thickness=0.5));
-      connect(end_6.flange, wheelHub_5) annotation (Line(
+      connect(end_5.flange, wheelHub_5) annotation (Line(
           points={{231,-100},{250,-100}},
           color={135,135,135},
           thickness=0.5));
-      connect(end_5.flange, wheelHub_6) annotation (Line(
+      connect(end_6.flange, wheelHub_6) annotation (Line(
           points={{231,100},{250,100}},
           color={135,135,135},
           thickness=0.5));
@@ -373,16 +373,16 @@ package Chassis "Collection of chassis subsystem definitions"
         annotation (Placement(transformation(extent={{63,92},{75,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_5(
         includeBearingConnector=includeWheelBearings or usingMultiBodyDriveline)
-        annotation (Placement(transformation(extent={{224,92},{236,108}})));
+        annotation (Placement(transformation(extent={{224,-108},{236,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_6(
         includeBearingConnector=includeWheelBearings or usingMultiBodyDriveline)
-        annotation (Placement(transformation(extent={{224,-108},{236,-92}})));
+        annotation (Placement(transformation(extent={{224,92},{236,108}})));
       Mechanics.MultiBody.MultiBodyEnd end_7(
         includeBearingConnector=includeWheelBearings or usingMultiBodyDriveline)
-        annotation (Placement(transformation(extent={{382,92},{394,108}})));
+        annotation (Placement(transformation(extent={{382,-108},{394,-92}})));
       Mechanics.MultiBody.MultiBodyEnd end_8(
         includeBearingConnector=includeWheelBearings or usingMultiBodyDriveline)
-        annotation (Placement(transformation(extent={{382,-108},{394,-92}})));
+        annotation (Placement(transformation(extent={{382,92},{394,108}})));
     equation
       connect(end_1.flange, wheelHub_1) annotation (Line(
           points={{-109,-100},{-90,-100}},
@@ -400,19 +400,19 @@ package Chassis "Collection of chassis subsystem definitions"
           points={{71,100},{90,100}},
           color={135,135,135},
           thickness=0.5));
-      connect(end_5.flange, wheelHub_6) annotation (Line(
+      connect(end_6.flange, wheelHub_6) annotation (Line(
           points={{232,100},{250,100}},
           color={135,135,135},
           thickness=0.5));
-      connect(end_6.flange, wheelHub_5) annotation (Line(
+      connect(end_5.flange, wheelHub_5) annotation (Line(
           points={{232,-100},{250,-100}},
           color={135,135,135},
           thickness=0.5));
-      connect(end_7.flange, wheelHub_8) annotation (Line(
+      connect(end_8.flange, wheelHub_8) annotation (Line(
           points={{390,100},{410,100}},
           color={135,135,135},
           thickness=0.5));
-      connect(end_8.flange, wheelHub_7) annotation (Line(
+      connect(end_7.flange, wheelHub_7) annotation (Line(
           points={{390,-100},{401,-100},{401,-100},{410,-100}},
           color={135,135,135},
           thickness=0.5));
