@@ -43,50 +43,48 @@ package Transmissions "Collection of transmission subsystem definitions"
 
     partial model Base "Basic interface definition for a transmission"
       parameter Boolean usingMultiBodyEngine=false
-        "=true if using MultiBody engine with a 1D transmission"
+        "=true, if using MultiBody engine with a 1D transmission"
         annotation (Dialog(tab="Advanced"));
       parameter Boolean usingMultiBodyDriveline=false
-        "=true if using a MultiBody driveline with a 1D transmission"
+        "=true, if using a MultiBody driveline with a 1D transmission"
         annotation (Dialog(tab="Advanced"));
+    protected
+      parameter Boolean includeMount=false "Include the transmission mount connection";
+      parameter Boolean includeDrivelineBearing=false "Include the driveline bearing";
+      parameter Boolean includeEngineBearing=false "Include the engine bearing";
 
+    public
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing engineFlange(
-          final includeBearingConnector=includeEngineBearing or
-            usingMultiBodyEngine) "Connection to the engine"
+        final includeBearingConnector=includeEngineBearing or usingMultiBodyEngine)
+        "Connection to the engine"
         annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing drivelineFlange(
-          final includeBearingConnector=includeDrivelineBearing or
-            usingMultiBodyDriveline) "Connection to the driveline"
+        final includeBearingConnector=includeDrivelineBearing or usingMultiBodyDriveline)
+        "Connection to the driveline"
         annotation (Placement(transformation(extent={{90,-10},{110,10}})));
-      VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
-        annotation (Placement(transformation(
-            origin={-100,60},
-            extent={{-20,-20},{20,20}},
-            rotation=90)));
       Modelica.Mechanics.MultiBody.Interfaces.Frame_a transmissionMount if
         includeMount "Transmission mount connection (optional)"
         annotation (Placement(transformation(
             origin={0,-100},
             extent={{-16,-16},{16,16}},
             rotation=90)));
-      Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
-            includeDrivelineBearing or usingMultiBodyDriveline)
+      VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
         annotation (Placement(transformation(
-            origin={100,22},
-            extent={{-8,-6},{8,6}},
-            rotation=270)));
-      Mechanics.MultiBody.MultiBodyEnd end_1(final includeBearingConnector=
-            includeEngineBearing or usingMultiBodyEngine)
+            origin={-100,60},
+            extent={{-20,-20},{20,20}},
+            rotation=90)));
+      Mechanics.MultiBody.MultiBodyEnd end_1(
+        final includeBearingConnector=includeEngineBearing or usingMultiBodyEngine)
         annotation (Placement(transformation(
             origin={-100,22},
             extent={{-8,-6},{8,6}},
             rotation=270)));
-    protected
-      parameter Boolean includeMount=false
-        "Include the transmission mount connection";
-      parameter Boolean includeDrivelineBearing=false
-        "Include the driveline bearing";
-      parameter Boolean includeEngineBearing=false
-        "Include the engine bearing";
+      Mechanics.MultiBody.MultiBodyEnd end_2(
+        final includeBearingConnector=includeDrivelineBearing or usingMultiBodyDriveline)
+        annotation (Placement(transformation(
+            origin={100,22},
+            extent={{-8,-6},{8,6}},
+            rotation=270)));
 
     equation
       connect(end_1.flange, engineFlange) annotation (Line(
@@ -129,6 +127,7 @@ See the <a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a>
     partial model BaseManualTransmission
       "Interface definition for a manual transmission"
       extends Base;
+
     protected
       parameter Boolean includeManualShiftConnector=false
         "Include the manual shift connection";
@@ -161,22 +160,23 @@ See the <a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a>
       extends Base;
 
       parameter Boolean usingMultiBodyMotor=false
-        "=true if using MultiBody motor with a 1D transmission"
+        "=true, if using MultiBody motor with a 1D transmission"
         annotation (Dialog(tab="Advanced"));
+    protected
+      parameter Boolean includeMotorBearing=false
+        "Include the motor bearing connection";
 
-      Mechanics.MultiBody.MultiBodyEnd end_3(final includeBearingConnector=
-            includeMotorBearing or usingMultiBodyMotor)
+    public
+      Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing motorFlange(
+        final includeBearingConnector=includeMotorBearing or usingMultiBodyMotor)
+        "Connection to the electric machine"
+        annotation (Placement(transformation(extent={{-110,-70},{-90,-50}})));
+      Mechanics.MultiBody.MultiBodyEnd end_3(
+        final includeBearingConnector=includeMotorBearing or usingMultiBodyMotor)
         annotation (Placement(transformation(
             origin={-100,-82},
             extent={{-8,-6},{8,6}},
             rotation=90)));
-      Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing motorFlange(
-          final includeBearingConnector=includeMotorBearing or
-            usingMultiBodyMotor) "Connection to the motor"
-        annotation (Placement(transformation(extent={{-110,-70},{-90,-50}})));
-    protected
-      parameter Boolean includeMotorBearing=false
-        "Include the motor bearing connection";
     equation
       connect(end_3.flange, motorFlange) annotation (Line(
           points={{-100,-79.3333},{-100,-60}},
