@@ -32,28 +32,28 @@ package Accessories "Collection of accessory subsystem definitions"
     extends Modelica.Icons.InterfacesPackage;
     partial model Base "Basic interface definition for the accessories"
 
+      parameter Boolean usingMultiBodyEngine=false
+        "=true, if using a MultiBody engine with a 1D accessories model"
+        annotation (Dialog(tab="Advanced"));
+    protected
+      parameter Boolean includeAccessoriesBearing=false "Include the engine bearing";
+
     public
       Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing engineFlange(
-          final includeBearingConnector=includeAccessoriesBearing or
-            usingMultiBodyEngine) "Source of drive torque"
+        final includeBearingConnector=includeAccessoriesBearing or usingMultiBodyEngine)
+        "Source of drive torque"
         annotation (Placement(transformation(extent={{90,-10},{110,10}})));
-      Mechanics.MultiBody.MultiBodyEnd end_2(final includeBearingConnector=
-            includeAccessoriesBearing or usingMultiBodyEngine)
-        annotation (Placement(transformation(
-            origin={100,22},
-            extent={{-8,-6},{8,6}},
-            rotation=270)));
       VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
         annotation (Placement(transformation(
             origin={-100,60},
             extent={{-20,-20},{20,20}},
             rotation=90)));
-      parameter Boolean usingMultiBodyEngine=false
-        "=true if using a MultiBody engine with a 1D accessories model"
-        annotation (Dialog(tab="Advanced"));
-    protected
-      parameter Boolean includeAccessoriesBearing=false
-        "Include the engine bearing";
+      Mechanics.MultiBody.MultiBodyEnd end_2(
+        final includeBearingConnector=includeAccessoriesBearing or usingMultiBodyEngine)
+        annotation (Placement(transformation(
+            origin={100,22},
+            extent={{-8,-6},{8,6}},
+            rotation=270)));
     equation
       connect(end_2.flange, engineFlange) annotation (Line(
           points={{100,19.3333},{100,0}},
