@@ -16,7 +16,7 @@ model MinimalAccessories
     n=axisOfRotation)
     annotation (Placement(transformation(extent={{20,-10}, {40,10}})));
   Modelica.Mechanics.Rotational.Sources.SignTorque torqueLoss(
-    tau_constant=accessoriesLoad,
+    tau_constant=-accessoriesLoad,
     useSupport=includeAccessoriesBearing)
     annotation (Placement(transformation(extent={{-20,-10}, {0,10}})));
   Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction(
