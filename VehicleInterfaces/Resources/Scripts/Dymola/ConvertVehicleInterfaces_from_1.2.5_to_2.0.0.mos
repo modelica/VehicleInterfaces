@@ -32,6 +32,8 @@ convertClass({"VehicleInterfaces.Transmissions.Interfaces.StandardControlBus",
               "VehicleInterfaces.Interfaces.TransmissionControlBus");
 
 // Parameter renamed
+convertElement("VehicleInterfaces.Accessories.Interfaces.Base",
+               "includeAccessoriesBearing", "includeEngineBearing");
 convertElement("VehicleInterfaces.Transmissions.Interfaces.Base",
                "includeTransmissionBearing", "includeEngineBearing");
 convertElement("VehicleInterfaces.Chassis.Interfaces.ThreeAxleBase",

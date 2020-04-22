@@ -5,11 +5,11 @@ partial model Base "Basic interface definition for the accessories"
     "=true, if using a MultiBody engine with a 1D accessories model"
     annotation (Dialog(tab="Advanced"));
 protected
-  parameter Boolean includeAccessoriesBearing=false "Include the engine bearing";
+  parameter Boolean includeEngineBearing=false "Include the engine bearing";
 
 public
   Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing engineFlange(
-    final includeBearingConnector=includeAccessoriesBearing or usingMultiBodyEngine)
+    final includeBearingConnector=includeEngineBearing or usingMultiBodyEngine)
     "Source of drive torque"
     annotation (Placement(transformation(extent={{90,-10},{110,10}})));
   VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
@@ -18,7 +18,7 @@ public
         extent={{-20,-20},{20,20}},
         rotation=90)));
   Mechanics.MultiBody.MultiBodyEnd end_2(
-    final includeBearingConnector=includeAccessoriesBearing or usingMultiBodyEngine)
+    final includeBearingConnector=includeEngineBearing or usingMultiBodyEngine)
     annotation (Placement(transformation(
         origin={100,22},
         extent={{-8,-6},{8,6}},
