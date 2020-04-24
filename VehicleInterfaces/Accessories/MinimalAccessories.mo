@@ -13,33 +13,33 @@ model MinimalAccessories
 
   Modelica.Mechanics.MultiBody.Parts.Rotor1D inertia(
     J=accessoriesInertia,
-    n=axisOfRotation)   annotation (Placement(transformation(extent={{20,-10},
-            {40,10}})));
-  Modelica.Mechanics.Rotational.Sources.ConstantTorque torqueLoss(
-    tau_constant=accessoriesLoad,
+    n=axisOfRotation)
+    annotation (Placement(transformation(extent={{20,-10}, {40,10}})));
+  Modelica.Mechanics.Rotational.Sources.SignTorque torqueLoss(
+    tau_constant=-accessoriesLoad,
     useSupport=includeAccessoriesBearing)
-                         annotation (Placement(transformation(extent={{-20,-10},
-            {0,10}})));
+    annotation (Placement(transformation(extent={{-20,-10}, {0,10}})));
   Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction(
     n=axisOfRotation) if includeAccessoriesBearing
-    annotation (Placement(transformation(extent={{110,-20},{90,-40}})));
+    annotation (Placement(transformation(extent={{100,-30},{80,-50}})));
 protected
   outer Modelica.Mechanics.MultiBody.World world;
 equation
-  connect(torqueLoss.flange, inertia.flange_a) annotation (Line(points={{0,0},{
-          10,0},{20,0}}));
+  connect(torqueLoss.flange, inertia.flange_a) annotation (Line(points={{0,0},{10,0},{20,0}}));
   connect(inertia.flange_b, engineFlange.flange)
-    annotation (Line(points={{40,0},{100,0}}));
+    annotation (Line(points={{40,0},{70,0},{70,0.05},{100.05,0.05}}));
   connect(torqueReaction.frame_a, engineFlange.bearingFrame) annotation (Line(
-      points={{100,-20},{100,0}},
-      thickness=0.5));
-  connect(torqueReaction.flange_b,torqueLoss.support)  annotation (Line(
-        points={{90,-30},{-10,-30},{-10,-10}}));
+      points={{90,-30},{90,-20},{100,-20},{100,0.05},{100.05,0.05}},
+      thickness=0.5,
+      color={95,95,95}));
+  connect(torqueReaction.flange_b,torqueLoss.support) annotation (Line(
+        points={{80,-40},{-10,-40},{-10,-10}}));
   connect(inertia.frame_a, torqueReaction.frame_a) annotation (Line(
-      points={{30,-10},{30,-20},{100,-20}},
+      points={{30,-10},{30,-20},{90,-20},{90,-30}},
       color={95,95,95},
       thickness=0.5));
-  annotation (                         Documentation(info="<html>
+  annotation (
+    Documentation(info="<html>
 <p>Simple accessory model with a single inertia and constant torque loss.</p>
 </html>"));
 end MinimalAccessories;

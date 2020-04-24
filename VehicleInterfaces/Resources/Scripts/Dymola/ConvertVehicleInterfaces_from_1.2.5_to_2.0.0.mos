@@ -40,3 +40,9 @@ convertElement("VehicleInterfaces.Chassis.Interfaces.ThreeAxleBase",
                 {"end_5", "end_6"}, {"end_6", "end_5"})
 convertElement("VehicleInterfaces.Chassis.Interfaces.FourAxleBase",
                 {"end_5", "end_6", "end_7", "end_8"}, {"end_6", "end_5", "end_8", "end_7"})
+
+// Change modifier
+convertModifiers("VehicleInterfaces.Accessories.MinimalAccessories",
+                 {"accessoriesLoad"},
+                 {"accessoriesLoad=if (%accessoriesLoad%<0) then (-1*%accessoriesLoad%) else %accessoriesLoad%"},
+                 true);
