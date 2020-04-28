@@ -4,32 +4,28 @@
 convertClear();
 
 // Change references to classes that are obsolete
-convertClass({"VehicleInterfaces.Brakes.Interfaces.StandardBus",
-              "VehicleInterfaces.Brakes.Internal.StandardBus"},
-               "VehicleInterfaces.Interfaces.BrakesBus");
-convertClass({"VehicleInterfaces.Chassis.Interfaces.StandardBus",
-              "VehicleInterfaces.Chassis.Internal.StandardBus"},
-               "VehicleInterfaces.Interfaces.ChassisBus");
-convertClass({"VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus",
-              "VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission",
-              "VehicleInterfaces.DriverEnvironments.Interfaces.BusForManualTransmission",
-              "VehicleInterfaces.DriverEnvironments.Internal.StandardBus"},
-               "VehicleInterfaces.Interfaces.DriverBus");
-convertClass({"VehicleInterfaces.Drivers.Interfaces.MinimalBus",
-              "VehicleInterfaces.Drivers.Interfaces.BusForAutomaticTransmission",
-              "VehicleInterfaces.Drivers.Interfaces.BusForManualTransmission",
-              "VehicleInterfaces.Drivers.Internal.StandardDriverInterfaceForAutomaticTransmission",
-              "VehicleInterfaces.Drivers.Internal.StandardDriverInterfaceForManualTransmission"},
-               "VehicleInterfaces.Interfaces.DriverInterface");
-convertClass({"VehicleInterfaces.Engines.Interfaces.StandardBus",
-              "VehicleInterfaces.Engines.Internal.StandardBus"},
-               "VehicleInterfaces.Interfaces.EngineBus");
-convertClass({"VehicleInterfaces.Transmissions.Interfaces.StandardBus",
-              "VehicleInterfaces.Transmissions.Internal.StandardBus"},
-               "VehicleInterfaces.Interfaces.TransmissionBus");
-convertClass({"VehicleInterfaces.Transmissions.Interfaces.StandardControlBus",
-              "VehicleInterfaces.Transmissions.Internal.StandardControlBus"},
-               "VehicleInterfaces.Interfaces.TransmissionControlBus");
+convertClass("VehicleInterfaces.Brakes.Interfaces.StandardBus",
+              "ObsoleteVehicleInterfaces2.Brakes.Interfaces.StandardBus");
+convertClass("VehicleInterfaces.Chassis.Interfaces.StandardBus",
+              "ObsoleteVehicleInterfaces2.Chassis.Interfaces.StandardBus");
+convertClass("VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus",
+              "ObsoleteVehicleInterfaces2.DriverEnvironments.Interfaces.MinimalBus");
+convertClass("VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission",
+              "ObsoleteVehicleInterfaces2.DriverEnvironments.Interfaces.BusForAutomaticTransmission");
+convertClass("VehicleInterfaces.DriverEnvironments.Interfaces.BusForManualTransmission",
+              "ObsoleteVehicleInterfaces2.DriverEnvironments.Interfaces.BusForManualTransmission");
+convertClass("VehicleInterfaces.Drivers.Interfaces.MinimalBus",
+              "ObsoleteVehicleInterfaces2.Drivers.Interfaces.MinimalBus");
+convertClass("VehicleInterfaces.Drivers.Interfaces.BusForAutomaticTransmission",
+              "ObsoleteVehicleInterfaces2.Drivers.Interfaces.BusForAutomaticTransmission");
+convertClass("VehicleInterfaces.Drivers.Interfaces.BusForManualTransmission",
+              "ObsoleteVehicleInterfaces2.Drivers.Interfaces.BusForManualTransmission");
+convertClass("VehicleInterfaces.Engines.Interfaces.StandardBus",
+              "ObsoleteVehicleInterfaces2.Engines.Interfaces.StandardBus");
+convertClass("VehicleInterfaces.Transmissions.Interfaces.StandardBus",
+              "ObsoleteVehicleInterfaces2.Transmissions.Interfaces.StandardBus");
+convertClass("VehicleInterfaces.Transmissions.Interfaces.StandardControlBus",
+              "ObsoleteVehicleInterfaces2.Transmissions.Interfaces.StandardControlBus");
 
 convertClass("VehicleInterfaces.Blocks.RealPassThrough",
               "Modelica.Blocks.Routing.RealPassThrough");
