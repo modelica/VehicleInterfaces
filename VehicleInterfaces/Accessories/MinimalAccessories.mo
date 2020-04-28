@@ -2,7 +2,7 @@ within VehicleInterfaces.Accessories;
 model MinimalAccessories
   "Constant torque loss and inertia due to the accessories"
   extends VehicleInterfaces.Icons.Accessories;
-  extends Interfaces.Base(includeAccessoriesBearing=world.driveTrainMechanics3D);
+  extends Interfaces.Base(includeEngineBearing=world.driveTrainMechanics3D);
 
   parameter Modelica.SIunits.Inertia accessoriesInertia=0.001
     "Total effective rotational inertia of the accessories";
@@ -17,10 +17,10 @@ model MinimalAccessories
     annotation (Placement(transformation(extent={{20,-10}, {40,10}})));
   Modelica.Mechanics.Rotational.Sources.SignTorque torqueLoss(
     tau_constant=-accessoriesLoad,
-    useSupport=includeAccessoriesBearing)
+    useSupport=includeEngineBearing)
     annotation (Placement(transformation(extent={{-20,-10}, {0,10}})));
   Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction(
-    n=axisOfRotation) if includeAccessoriesBearing
+    n=axisOfRotation) if includeEngineBearing
     annotation (Placement(transformation(extent={{100,-30},{80,-50}})));
 protected
   outer Modelica.Mechanics.MultiBody.World world;
