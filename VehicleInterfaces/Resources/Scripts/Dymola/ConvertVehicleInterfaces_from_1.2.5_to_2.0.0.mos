@@ -6,30 +6,41 @@ convertClear();
 // Change references to classes that are obsolete
 convertClass({"VehicleInterfaces.Brakes.Interfaces.StandardBus",
               "VehicleInterfaces.Brakes.Internal.StandardBus"},
-              "VehicleInterfaces.Interfaces.BrakesBus");
+               "VehicleInterfaces.Interfaces.BrakesBus");
 convertClass({"VehicleInterfaces.Chassis.Interfaces.StandardBus",
               "VehicleInterfaces.Chassis.Internal.StandardBus"},
-              "VehicleInterfaces.Interfaces.ChassisBus");
+               "VehicleInterfaces.Interfaces.ChassisBus");
 convertClass({"VehicleInterfaces.DriverEnvironments.Interfaces.MinimalBus",
               "VehicleInterfaces.DriverEnvironments.Interfaces.BusForAutomaticTransmission",
               "VehicleInterfaces.DriverEnvironments.Interfaces.BusForManualTransmission",
               "VehicleInterfaces.DriverEnvironments.Internal.StandardBus"},
-              "VehicleInterfaces.Interfaces.DriverBus");
+               "VehicleInterfaces.Interfaces.DriverBus");
 convertClass({"VehicleInterfaces.Drivers.Interfaces.MinimalBus",
               "VehicleInterfaces.Drivers.Interfaces.BusForAutomaticTransmission",
               "VehicleInterfaces.Drivers.Interfaces.BusForManualTransmission",
               "VehicleInterfaces.Drivers.Internal.StandardDriverInterfaceForAutomaticTransmission",
               "VehicleInterfaces.Drivers.Internal.StandardDriverInterfaceForManualTransmission"},
-              "VehicleInterfaces.Interfaces.DriverInterface");
+               "VehicleInterfaces.Interfaces.DriverInterface");
 convertClass({"VehicleInterfaces.Engines.Interfaces.StandardBus",
               "VehicleInterfaces.Engines.Internal.StandardBus"},
-              "VehicleInterfaces.Interfaces.EngineBus");
+               "VehicleInterfaces.Interfaces.EngineBus");
 convertClass({"VehicleInterfaces.Transmissions.Interfaces.StandardBus",
               "VehicleInterfaces.Transmissions.Internal.StandardBus"},
-              "VehicleInterfaces.Interfaces.TransmissionBus");
+               "VehicleInterfaces.Interfaces.TransmissionBus");
 convertClass({"VehicleInterfaces.Transmissions.Interfaces.StandardControlBus",
               "VehicleInterfaces.Transmissions.Internal.StandardControlBus"},
-              "VehicleInterfaces.Interfaces.TransmissionControlBus");
+               "VehicleInterfaces.Interfaces.TransmissionControlBus");
+
+convertClass("VehicleInterfaces.Blocks.RealPassThrough",
+              "Modelica.Blocks.Routing.RealPassThrough");
+convertClass("VehicleInterfaces.Blocks.IntegerPassThrough",
+              "Modelica.Blocks.Routing.IntegerPassThrough");
+convertClass("VehicleInterfaces.Blocks.BooleanPassThrough",
+              "Modelica.Blocks.Routing.BooleanPassThrough");
+convertClass("VehicleInterfaces.Icons.VariantLibrary",
+              "Modelica.Icons.VariantsPackage");
+convertClass("VehicleInterfaces.Icons.BaseClassPackage",
+              "Modelica.Icons.BasesPackage");
 
 // Parameter renamed
 convertElement("VehicleInterfaces.Accessories.Interfaces.Base",
@@ -37,9 +48,9 @@ convertElement("VehicleInterfaces.Accessories.Interfaces.Base",
 convertElement("VehicleInterfaces.Transmissions.Interfaces.Base",
                "includeTransmissionBearing", "includeEngineBearing");
 convertElement("VehicleInterfaces.Chassis.Interfaces.ThreeAxleBase",
-                {"end_5", "end_6"}, {"end_6", "end_5"})
+               {"end_5", "end_6"}, {"end_6", "end_5"})
 convertElement("VehicleInterfaces.Chassis.Interfaces.FourAxleBase",
-                {"end_5", "end_6", "end_7", "end_8"}, {"end_6", "end_5", "end_8", "end_7"})
+               {"end_5", "end_6", "end_7", "end_8"}, {"end_6", "end_5", "end_8", "end_7"})
 
 // Change modifier
 convertModifiers("VehicleInterfaces.Accessories.MinimalAccessories",
