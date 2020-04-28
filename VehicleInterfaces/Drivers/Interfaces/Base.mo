@@ -1,8 +1,7 @@
 within VehicleInterfaces.Drivers.Interfaces;
 partial model Base "Basic interface definition for a driver"
 
-  VehicleInterfaces.Interfaces.DriverInterface driverInterface
-    "Driver Interaction Bus"
+  VehicleInterfaces.Interfaces.DriverInterface driverInterface "Driver Interaction Bus"
     annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=-90,
         origin={100,0})));
   annotation (
