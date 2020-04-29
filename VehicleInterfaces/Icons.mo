@@ -2,40 +2,6 @@ within VehicleInterfaces;
 package Icons "Collection of icons"
   extends Modelica.Icons.IconsPackage;
 
-  partial package VariantLibrary
-    "This icon will be removed in future library versions, use Modelica.Icons.VariantsPackage instead"
-    extends Modelica.Icons.VariantsPackage;
-    extends Modelica.Icons.ObsoleteModel;
-
-    annotation (
-      obsolete = "Obsolete model - use Modelica.Icons.VariantsPackage instead",
-      Documentation(info="<html>
-<p>
-<b>Obsolete</b> partial package intended to design a <em>default icon for a package class</em> which contains several <em>variants</em> of one assembly or component.
-</p>
-
-<h4>Note</h4>
-<p>This icon will be removed in future versions of the VehicleInterfaces Library. Instead, the icon <a href=\"modelica://Modelica.Icons.BasesPackage\">BasesPackage</a> shall be used.</p>
-</html>"));
-  end VariantLibrary;
-
-  partial package BaseClassPackage
-    "This icon will be removed in future library versions, use Modelica.Icons.BasesPackage instead"
-    extends Modelica.Icons.BasesPackage;
-    extends Modelica.Icons.ObsoleteModel;
-
-    annotation (
-      obsolete = "Obsolete model - use Modelica.Icons.BasesPackage instead",
-      Documentation(revisions="<html>
-<p>Copyright &copy; 2006-2010, DLR Institute of Robotics and Mechatronics</p>
-</html>",   info="<html>
-<p><b>Obsolete</b> partial package intended to design a <i>default icon for a package class</i> which is called <i>BaseClasses</i> or <i>Internal</i>. </p>
-
-<h4>Note</h4>
-<p>This icon will be removed in future versions of the VehicleInterfaces Library. Instead, the icon <a href=\"modelica://Modelica.Icons.BasesPackage\">BasesPackage</a> shall be used.</p>
-</html>"));
-  end BaseClassPackage;
-
   partial model Accessories "Icon for an accessories subsystem"
 
     annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
