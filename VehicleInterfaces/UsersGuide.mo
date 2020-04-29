@@ -223,89 +223,95 @@ Parameters that represent initial values for simulation experiments are denoted 
 <p>The Driver Interaction bus can contain both normalised physical connectors and sensed values as signal connections.</p>
 <h4>Naming of Driver Interaction bus components</h4>
 <p>Connectors placed on the Driver Interaction bus should be named following the same rules as naming the instance of a class.  This is based on the view that the items placed on to the control signal bus are actually connectors rather than simple variable values.</p>
-<p>This means that connectors placed on the bus are written with a lower-case initial letter and then initial capital letters for each word, like in \"acceleratorPedal\".</p>
+<p>This means that connectors placed on the bus are written with a lower-case initial letter and then initial capital letters for each word, like in &quot;acceleratorPedal&quot;.</p>
+
+
 <h4>Standard names</h4>
 <p>The following table defines the standard names and associated connector types and units used.</p>
-<table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">
-<tr>
-<td>Name on the bus</td>
-<td>Connector Type</td>
-<td>Units</td>
-<td>Description</td>
-</tr>
-<tr>
-<td><b>acceleratorPedal</b></td>
-<td>NTI.Flange</td>
-<td>-</td>
-<td>Accelerator pedal connection using a normalised physical connector</td>
-</tr>
-<tr>
-<td><b>brakePedal</b></td>
-<td>NTI.Flange</td>
-<td>-</td>
-<td>Brake pedal connection using a normalised physical connector</td>
-</tr>
-<tr>
-<td><b>clutchPedal</b></td>
-<td>NTI.Flange</td>
-<td>-</td>
-<td>Clutch pedal connection using a normalised physical connector</td>
-</tr>
-<tr>
-<td><b>steeringWheel</b></td>
-<td>NRI.Flange_a</td>
-<td>-</td>
-<td>Steering wheel connection using a normalised physical connector</td>
-</tr>
-<tr>
-<td><b>vehicleSpeed</b></td>
-<td>RealSignal</td>
-<td>m/s</td>
-<td>Vehicle longitudinal speed in kmh</td>
-</tr>
-<tr>
-<td><b>engineSpeed</b></td>
-<td>RealSignal</td>
-<td>rad/s</td>
-<td>Engine speed in rpm</td>
-</tr>
-<tr>
-<td><b>gear</b></td>
-<td>IntegerSignal</td>
-<td>-</td>
-<td>Gear selected by the driver (manual transmission only)</td>
-</tr>
-<tr>
-<td><b>clutchLocked</b></td>
-<td>BooleanSignal</td>
-<td>-</td>
-<td>Flag for clutch state, true=clutch in stuck mode (manual transmission only)</td>
-</tr>
-<tr>
-<td><b>gearboxMode</b></td>
-<td>IntegerSignal</td>
-<td>Enumeration</td>
-<td>Gearbox mode selected by the driver (automatic transmission only)</td>
-</tr>
-<tr>
-<td><b>requestedGear</b></td>
-<td>IntegerSignal</td>
-<td>-</td>
-<td>Gear selected by the driver if the automatic is in a manual mode (automatic transmission only)</td>
-</tr>
+<table cellspacing=\"0\" cellpadding=\"2\" border=\"1\">
+  <tr>
+    <th>Name on the bus</th>
+    <th>Connector Type</th>
+    <th>Units</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>acceleratorPedal</td>
+    <td>NTI.Flange</td>
+    <td>-</td>
+    <td>Accelerator pedal connection using a normalised physical connector</td>
+  </tr>
+  <tr>
+    <td>brakePedal</td>
+    <td>NTI.Flange</td>
+    <td>-</td>
+    <td>Brake pedal connection using a normalised physical connector</td>
+  </tr>
+  <tr>
+    <td>clutchPedal</td>
+    <td>NTI.Flange</td>
+    <td>-</td>
+    <td>Clutch pedal connection using a normalised physical connector</td>
+  </tr>
+  <tr>
+    <td>steeringWheel</td>
+    <td>NRI.Flange_a</td>
+    <td>-</td>
+    <td>Steering wheel connection using a normalised physical connector</td>
+  </tr>
+  <tr>
+    <td>vehicleSpeed</td>
+    <td>RealSignal</td>
+    <td>m/s</td>
+    <td>Vehicle longitudinal speed in kmh</td>
+  </tr>
+  <tr>
+    <td>engineSpeed</td>
+    <td>RealSignal</td>
+    <td>rad/s</td>
+    <td>Engine speed in rpm</td>
+  </tr>
+  <tr>
+    <td>gear</td>
+    <td>IntegerSignal</td>
+    <td>-</td>
+    <td>Gear selected by the driver (manual transmission only)</td>
+  </tr>
+  <tr>
+    <td>clutchLocked</td>
+    <td>BooleanSignal</td>
+    <td>-</td>
+    <td>Flag for clutch state, true=clutch in stuck mode (manual transmission only)</td>
+  </tr>
+  <tr>
+    <td>gearboxMode</td>
+    <td>IntegerSignal</td>
+    <td>Enumeration</td>
+    <td>Gearbox mode selected by the driver (automatic transmission only)</td>
+  </tr>
+  <tr>
+    <td>requestedGear</td>
+    <td>IntegerSignal</td>
+    <td>-</td>
+    <td>Gear selected by the driver if the automatic is in a manual mode (automatic transmission only)</td>
+  </tr>
 </table>
-<p><b>Key:</b></p>
-<p><b>NTI</b> = NormalisedTranslational.Interfaces<br>
-<b>NRI</b> = NormalisedRotational.Interfaces<br>
-<b>RealSignal</b> = Modelica.Blocks.Interfaces.RealSignal<br>
-<b>IntegerSignal</b> = Modelica.Blocks.Interfaces.IntegerSignal<br>
-<b>BooleanSignal</b> = Modelica.Blocks.Interfaces.BooleanSignal<br>
-<b>VI</b> = VehicleInterfaces</p>
+
+<p><strong>Key:</strong></p>
+<ul>
+  <li>NTI = NormalisedTranslational.Interfaces</li>
+  <li>NRI = NormalisedRotational.Interfaces</li>
+  <li>RealSignal = Modelica.Blocks.Interfaces.RealSignal</li>
+  <li>IntegerSignal = Modelica.Blocks.Interfaces.IntegerSignal</li>
+  <li>BooleanSignal = Modelica.Blocks.Interfaces.BooleanSignal</li>
+  <li>VI = VehicleInterfaces</li>
+</ul>
+
 <h4>Pedal Conventions</h4>
 <p>For the driver the following conventions are used to describe the pedal positions as normalised values.</p>
 <ul>
-<li>1 = Pedal Fully Pressed</li>
-<li>0 = Pedal Fully Released</li>
+  <li>1 = Pedal Fully Pressed</li>
+  <li>0 = Pedal Fully Released</li>
 </ul>
 <p>For example: when the accelerator pedal position = 1, the driver is accelerating as fast as possible;  when the clutch pedal position = 1, the driver has pressed the clutch pedal and the clutch is actually disengaged.</p>
 </html>"));
