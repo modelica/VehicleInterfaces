@@ -30,18 +30,18 @@ package UsersGuide "User's Guide"
 <p>The convention on the naming of bus signals is the most important aspect of the convention that needs to be followed to ensure compatibility between libraries.</p>
 
 <h4>Naming of classes and components</h4>
-<p>Classes (for packages, models, records, etc.) are written with initial capital letters for each word, like in \"DriverEnvironments\".</p>
-<p>Instances are written with a lower-case initial letter and then initial capital letters for each word, like in \"driverEnvironment\".</p>
-<p>Variables and parameters that are derived from atomic types (Boolean, Integer, Real, String) names are written with a lower-case initial letter and then initial capital letters for each word, like in \"engineSpeed\". Abbreviated variable/parameter names are written with lower case letters, unless there is a strong convention, e.g. temperature is normally written \"T\". </p>
-<p>Indices are denoted with an underscore, like in \"r_x\". </p>
+<p>Classes (for packages, models, records, etc.) are written with initial capital letters for each word, like in &quot;DriverEnvironments&quot;.</p>
+<p>Instances are written with a lower-case initial letter and then initial capital letters for each word, like in &quot;driverEnvironment&quot;.</p>
+<p>Variables and parameters that are derived from atomic types (Boolean, Integer, Real, String) names are written with a lower-case initial letter and then initial capital letters for each word, like in &quot;engineSpeed&quot;. Abbreviated variable/parameter names are written with lower case letters, unless there is a strong convention, e.g. temperature is normally written &quot;T&quot;. </p>
+<p>Indices are denoted with an underscore, like in &quot;r_x&quot;. </p>
 
 <h4>Naming of Variables and Parameters</h4>
-<p>Class instances normally have names that refer to the function/position of the instances, rather than the class name, like in \"leftLinkage\" for an instance of a \"TrailingArm\" linkage. </p>
-<p>Parameters and variables have descriptive names, like in \"engineSpeed\", when it is practical. Short (single-letter) names or abbreviations are used when that is considered more natural, and are then named after the property they describe, like in \"v_x\". For short names, indices are separated by underscore.</p>
+<p>Class instances normally have names that refer to the function/position of the instances, rather than the class name, like in &quot;leftLinkage&quot; for an instance of a &quot;TrailingArm&quot; linkage. </p>
+<p>Parameters and variables have descriptive names, like in &quot;engineSpeed&quot;, when it is practical. Short (single-letter) names or abbreviations are used when that is considered more natural, and are then named after the property they describe, like in &quot;v_x&quot;. For short names, indices are separated by underscore.</p>
 
 <h4>Initial Values</h4>
 <p>
-Parameters that represent initial values for simulation experiments are denoted with the index <strong>start</strong>, like \"v_start\".</p>
+Parameters that represent initial values for simulation experiments are denoted with the index <strong>start</strong>, like &quot;v_start&quot;.</p>
 
 <h4>Naming of Properties</h4>
 <p>Physical properties are named according to the standards established in the Modelica Standard Library:</p>
@@ -65,7 +65,7 @@ Parameters that represent initial values for simulation experiments are denoted 
 <p>&nbsp;</p>
 
 <h4>Wheel Identifiers</h4>
-<p>Wheels are identified by numbers from front left towards rear right. Those are, typically, used as indices in parameter or variable names. E.g., for a four-wheel car the front left wheel is \"1\", front right is \"2\", rear left \"3\", and rear right \"4\".</p>
+<p>Wheels are identified by numbers from front left towards rear right. Those are, typically, used as indices in parameter or variable names. E.g., for a four-wheel car the front left wheel is &quot;1&quot;, front right is &quot;2&quot;, rear left &quot;3&quot;, and rear right &quot;4&quot;.</p>
 </html>"));
   end NamingConventions;
 
@@ -91,7 +91,7 @@ Parameters that represent initial values for simulation experiments are denoted 
 <p><br><img src=\"modelica://VehicleInterfaces/Resources/Images/UsersGuide/SignalBus/controlSignalExample2.png\"><br><br></p>
 <p>There are two methods for adding a new signal to the controlBus.</p>
 <ol>
-<li>You draw the connection as in step 4 above, and instead of selecting an option from the list in step 5 you would select the \"Add variable\" option and then type the name of the signal you would like to add to the controlBus.</li>
+<li>You draw the connection as in step 4 above, and instead of selecting an option from the list in step 5 you would select the &quot;Add variable&quot; option and then type the name of the signal you would like to add to the controlBus.</li>
 <li>You extend from the chassisBus connector definition that can be found in <strong>VehicleInterfaces.Chassis.Internal.StandardBus</strong> and add the new signal definition.  Then, when you reach steps 4 and 5 (above) your new signal will appear in the list of options and can be selected.</li>
 </ol>
 </html>"));
@@ -101,8 +101,8 @@ Parameters that represent initial values for simulation experiments are denoted 
 <p>The control signal bus should not contain physical connectors but should contain sensed or actuation values as signal connections.</p>
 <h4>Naming of bus signals</h4>
 <p>Signals placed on the control signal bus should be named following the same rules as naming the instance of a class.  This is based on the view that the items placed on to the control signal bus are actually connectors rather than simple variable values.</p>
-<p>Signals placed on the bus are written with a lower-case initial letter and then initial capital letters for each word, like in \"driverEnvironment\".</p>
-<p>The names of the connectors placed on to the bus should start with the name of the subsystem that is outputting the connector on to the bus.  This should then be followed by \"Bus.\" and then a descriptive name for the connector, like \"engineBus.engineSpeed\" or \"chassisBus.longitudinalVelocity\"</p>
+<p>Signals placed on the bus are written with a lower-case initial letter and then initial capital letters for each word, like in &quot;driverEnvironment&quot;.</p>
+<p>The names of the connectors placed on to the bus should start with the name of the subsystem that is outputting the connector on to the bus.  This should then be followed by &quot;Bus&quot;. and then a descriptive name for the connector, like &quot;engineBus.engineSpeed&quot; or &quot;chassisBus.longitudinalVelocity&quot;</p>
 <h4>Minimal signal set</h4>
 <p>The signals in the following table are common to all vehicle types and should be combined with the additional signals defined for the different vehicle variants (i.e. manual and automatic transmission equipped vehicles).</p>
 <table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">
@@ -519,7 +519,7 @@ compatible way:
     <a href=\"modelica://VehicleInterfaces.Blocks.BooleanPassThrough\">BooleanPassThrough</a>.</li>
 <li>Resolved usage of obsolete <a href=\"modelica://VehicleInterfaces.Blocks.IntegerPassThrough\">IntegerPassThrough</a> in
     <a href=\"modelica://VehicleInterfaces.DriverEnvironments.DriveByWireAutomaticExternalDriver\">DriveByWireAutomaticExternalDriver</a>.</li>
-<li>Deleted text string \"name\" from icons of
+<li>Deleted text string &quot;name&quot; from icons of
     <a href=\"modelica://VehicleInterfaces.Mechanics.NormalisedTranslational.Interfaces.Flange\">normalized translational flange</a> and
     <a href=\"modelica://VehicleInterfaces.Mechanics.NormalisedRotational.Interfaces.Flange\">normalized rotational flange</a>.</li>
 </ul>
@@ -620,7 +620,7 @@ compatible way:
 </li>
 
 <li>Adapted to the conventions of the Modelica Standard Library 3.2<br>
-    (directory \"VehicleInterfaces/Extras\" moved to the new directory \"VehicleInterfaces/Resources\";
+    (directory &quot;VehicleInterfaces/Extras&quot; moved to the new directory &quot;VehicleInterfaces/Resources&quot;;
      all links to images, scripts, documentation etc. have been changed to URIs such as
      modelica://VehicleInterfaces/Resources/Images/xx.png; icon layout adapted to MSL 3.2 layout).<br>
 </li>
@@ -649,8 +649,8 @@ compatible way:
 <p>As enabled by Dymola 7, the library check was performed on the VehicleInterfaces library utilizing the ModelManagement Library. Consequently, especially the documentation has been upgraded and fulfilled. Main changes with respect to the version 1.1: </p>
 <ul>
 <li><a href=\"modelica://VehicleInterfaces.Mechanics\">VehicleInterfaces.Mechanics</a>: Small changes at icon and diagram layer to be Modelica 3 compliant. </li>
-<li><a href=\"modelica://VehicleInterfaces.Mechanics.MultiBody.MultiBodyEnd\">VehicleInterfaces.Mechanics.MultiBody.MultiBodyEnd</a> adapted, so that \"Mixing of components and equations\" is avoided. </li>
-<li><a href=\"modelica://VehicleInterfaces.UsersGuide.NamingConventions\">VehicleInterfaces.UsersGuide.NamingConventions</a>: changed \"a\" to \"z\" for an <em>angular</em> acceleration. </li>
+<li><a href=\"modelica://VehicleInterfaces.Mechanics.MultiBody.MultiBodyEnd\">VehicleInterfaces.Mechanics.MultiBody.MultiBodyEnd</a> adapted, so that &quot;Mixing of components and equations&quot; is avoided. </li>
+<li><a href=\"modelica://VehicleInterfaces.UsersGuide.NamingConventions\">VehicleInterfaces.UsersGuide.NamingConventions</a>: changed &quot;a&quot; to &quot;z&quot; for an <em>angular</em> acceleration. </li>
 <li>Changed icon for VehicleInterfaces.Examples.</li>
 <li>Added icon <a href=\"modelica://VehicleInterfaces.Icons.BaseClassPackage\">BaseClassPackage</a> to be used for packages with base classes and internal material.</li>
 </ul>
@@ -687,14 +687,14 @@ convert to the new version. Changes with respect to version 1.0:
      <br>&nbsp;</li>
 
 <li> VehicleInterfaces.Engines.MinimalEngine, VehicleInterfaces.Engines.MinimalEngineUsingPedal:<br>
-     Replaced \"NonSI.AngularVelocity_rpm engineSpeed_start\" by
-     SI.AngularVelocity with displayUnit=\"r/min\" and adapted
+     Replaced &quot;NonSI.AngularVelocity_rpm engineSpeed_start&quot; by
+     SI.AngularVelocity with displayUnit=&quot;r/min&quot; and adapted
      flywheel Inertia initialization correspondingly.
      <br>&nbsp;</li>
 
 <li> VehicleInterfaces.Roads.Internal.CheckContactCalculation adapted,
      so that it is according to Modelica 3 (equations for input variables of
-     \"tyre\" moved from equation section into modifier of \"tyre\").
+     &quot;tyre&quot; moved from equation section into modifier of &quot;tyre&quot;).
      <br>&nbsp;</li>
 
 <li> VehicleInterfaces.Atmospheres.ConstantAtmosphere icon corrected:
@@ -705,11 +705,11 @@ convert to the new version. Changes with respect to version 1.0:
      <br>&nbsp;</li>
 
 <li> VehicleInterfaces.Atmospheres.ConstantAtmosphere:<br>
-     Removed \"...degC(20)\" function call by \"20\", since displayUnit of
-     temperatures is \"degC\".
+     Removed &quot;...degC(20)&quot; function call by &quot;20&quot;, since displayUnit of
+     temperatures is &quot;degC&quot;.
      <br>&nbsp;</li>
 
-<li> Removed definition \"import NonSI = xx\" at the top level
+<li> Removed definition &quot;import NonSI = xx&quot; at the top level
      (is no longer referenced).
      <br>&nbsp;</li>
 
@@ -780,7 +780,7 @@ provided that it is not advertised as a product of your own.</li>
 <h4>Disclaimer</h4>
 <p>The software (sources, binaries, etc.) in their original or in a modified
 form are provided
-\"as is\" and the copyright holders assume no responsibility for its contents
+&quot;as is&quot; and the copyright holders assume no responsibility for its contents
 what so ever. Any express or implied warranties, including, but not
 limited to, the implied warranties of merchantability and fitness for a
 particular purpose are <strong>disclaimed</strong>. <strong>In no event</strong> shall the
