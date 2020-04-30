@@ -755,9 +755,10 @@ on the library.
 &copy; since 2013: Modelica Association
 </p>
 <h4>License</h4>
-<p>The VehicleInterfaces library is distributed under the Modelica license (Version 1.1)</P>
+<p>The VehicleInterfaces library is distributed under the Modelica license (Version 1.1)</p>
 <p>Redistribution and use in source and binary forms, with or without
 modification are permitted, provided that the following conditions are met:
+</p>
 <ol>
 <li>
 The author and copyright notices in the source files, these license conditions

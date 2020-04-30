@@ -17,7 +17,7 @@ class Tutorial "Electric Drives Tutorial"
 <p>The following steps demonstrate how to create a simple rear-wheel drive driveline model.  The driveline model will transmit the torque from the transmission to the rear wheels via a propshaft, differential with final drive and then two halfshafts.  No torque reaction in to the transmission housings will be modelled.</p>
 <p>Starting from step 3 above.</p>
 <ol>
-<li>First, decide if the bearing connector is required in the model and set the internal parameter appropriately.
+<li>First, decide if the bearing connector is required in the model and set the internal parameter appropriately.</li>
 <li>Add the following blocks and connections to the diagram.
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/ElectricDrives/buildNewElectricDrive3.png\"><br><br></li>
 </ol>

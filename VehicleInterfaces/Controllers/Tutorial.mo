@@ -10,6 +10,7 @@ class Tutorial "Controllers Tutorial"
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Controllers/buildNewController1.png\"><br><br></li>
 <li>You can now define your controller model as required</li>
 </ol>
+
 <h4>Creating a simple idle speed controller example</h4>
 <p>The following steps demonstrate how to create a simple idle speed controller model.  The controller model will sense the engine speed, coolant temperature and accelerator pedal position and adjust the throttle signal to the engine to attempt to maintain the correct idle speed.</p>
 <p>Starting from step 2 above.</p>
@@ -21,6 +22,7 @@ class Tutorial "Controllers Tutorial"
 <li>engineBus.coolantTemperature</li>
 <li>engineBus.acceleratorPedalPosition</li>
 <li>engineControlBus.throttlePosition</li>
+</li>
 </ul>
 <li>To add these control signals we first need to add the <b>engineBus</b> and <b>engineControlBus</b> connectors and connect them to the <b>controlBus</b>.  These connectors are <b>VehicleInterfaces.Interfaces.EngineBus</b> and <b>VehicleInterfaces.Interfaces.EngineControlBus</b>.  When connecting these to the controlBus the following dialog will be produced and should be completed as following substituting <b>engineControlBus</b> for <b>engineBus</b> as appropriate.
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Controllers/buildNewController4.png\"><br><br></li>
