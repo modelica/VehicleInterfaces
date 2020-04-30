@@ -3,25 +3,25 @@ class Tutorial "Roads Tutorial"
   extends Modelica.Icons.Information;
 
   annotation (DocumentationClass=true,Documentation(info="<html>
-<p><b>Tutorial - Defining a new road</b></p>
+<p><strong>Tutorial - Defining a new road</strong></p>
 <p>This tutorial will guide you through the steps required to build the FlatRoad model.</p>
 <ol>
-<li>Create a new road model by extending the base definition which is <b>VehicleInterfaces.Roads.Interfaces.Base</b></li>
+<li>Create a new road model by extending the base definition which is <strong>VehicleInterfaces.Roads.Interfaces.Base</strong></li>
 <li>The minimum steps necessary to define a road model are to provide definitions to the following partial function definitions included in the base road model.
 <ul>
-<li><b>position</b></li>
-<li><b>trackOffset</b></li>
-<li><b>normal</b></li>
-<li><b>headingDirection</b></li>
-<li><b>frictionCoefficient</b></li>
+<li><strong>position</strong></li>
+<li><strong>trackOffset</strong></li>
+<li><strong>normal</strong></li>
+<li><strong>headingDirection</strong></li>
+<li><strong>frictionCoefficient</strong></li>
 </ul></li>
-<li>Define the position function.  The road is to be defined as a line along the x-axis with the lateral direction along the y-axis.  The inputs to the base position function are <b>s</b> and <b>w</b> and these have the following meaning in this road definition:<br>
+<li>Define the position function.  The road is to be defined as a line along the x-axis with the lateral direction along the y-axis.  The inputs to the base position function are <strong>s</strong> and <strong>w</strong> and these have the following meaning in this road definition:<br>
 <pre>
 
    s: x-coordinate in world frame (x-axis is road heading direction)
    w: y-coordinate in world frame (y-axis is lateral displacement)
 </pre>
-<br>The input arguments <b>s</b> and <b>w</b> are common to all the road functions that we need to define and are included in the base function definitions.  These definitions can then be used to define our position function as follows:
+<br>The input arguments <strong>s</strong> and <strong>w</strong> are common to all the road functions that we need to define and are included in the base function definitions.  These definitions can then be used to define our position function as follows:
 <br><br><pre>
   function linePosition \"Determine point on road\"
     extends VehicleInterfaces.Roads.Interfaces.Base.position;
@@ -70,7 +70,7 @@ class Tutorial "Roads Tutorial"
   end lineFrictionCoefficient;
 
 </pre></li>
-<li>We now need to redeclare the functions in the base road definition to be the functions shown above.  We do this with the following code assuming that the above functions have been defined within the class <b>FlatRoad</b>:
+<li>We now need to redeclare the functions in the base road definition to be the functions shown above.  We do this with the following code assuming that the above functions have been defined within the class <strong>FlatRoad</strong>:
 <br><br><pre>
   model FlatRoad \"Straight road along x-axis (perpendicular to world z-axis)\"
     extends VehicleInterfaces.Roads.Interfaces.Base(
@@ -85,8 +85,8 @@ class Tutorial "Roads Tutorial"
   end FlatRoad;
 
 </pre></li>
-<li>In redeclaring the functions we have also introduced new parameters <b>mue</b> and <b>offset</b> that need to be added to the model to define the friction coefficient of the road and the track offset from the road centre line.</li>
-<li>The <b>FlatRoad</b> model included in this package also includes animation of the road surface but this is not essential to the definition of the road and will not be described in this tutorial.</li>
+<li>In redeclaring the functions we have also introduced new parameters <strong>mue</strong> and <strong>offset</strong> that need to be added to the model to define the friction coefficient of the road and the track offset from the road centre line.</li>
+<li>The <strong>FlatRoad</strong> model included in this package also includes animation of the road surface but this is not essential to the definition of the road and will not be described in this tutorial.</li>
 <li>The road model is complete and can now be used</li>
 </ol>
 </html>"));

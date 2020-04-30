@@ -34,7 +34,7 @@ equation
           fillPattern=FillPattern.Solid)}),
     Documentation(info="<html>
 <p>
-This component is used to end a chain of multi-body components by applying zero force and torque to the end of the chain.  Uses the <a href=\"Modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">FlangeWithBearing</a> connector where the <b>flange</b> connector has zero torque applied to it and the <b>bearingFrame</b> can be optionally included through the parameter <code>includeBearingConnector</code>.
+This component is used to end a chain of multi-body components by applying zero force and torque to the end of the chain.  Uses the <a href=\"Modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">FlangeWithBearing</a> connector where the <strong>flange</strong> connector has zero torque applied to it and the <strong>bearingFrame</strong> can be optionally included through the parameter <code>includeBearingConnector</code>.
 If <code>includeBearingConnector=true</code> then zero force and torque is applied to the bearingFrame.</p>
 </html>"), Diagram(coordinateSystem(
         preserveAspectRatio=true,

@@ -3,14 +3,14 @@ class Tutorial "Accessories Tutorial"
   extends Modelica.Icons.Information;
 
   annotation (DocumentationClass=true, Documentation(info="<html>
-<p><b>Tutorial - Defining a new accessories model</b></p>
+<p><strong>Tutorial - Defining a new accessories model</strong></p>
 <p>The following process will demonstrate how to create a new accessories model using these interface definitions.  This tutorial will guide you through building an accessory subsystem with a power steering pump and alternator.  Both will be modelled using speed dependant torque loss maps.</p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.Accessories.Interfaces.Base</b>, it should look like this:
+<li>Create a new model that extends <strong>VehicleInterfaces.Accessories.Interfaces.Base</strong>, it should look like this:
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Accessories/buildNewAccessories1.png\"><br><br></li>
-<li>In the component browser, right click on <b>Base</b> and select <b>Parameters</b> from the context menu to produce the following parameter dialog:
+<li>In the component browser, right click on <strong>Base</strong> and select <strong>Parameters</strong> from the context menu to produce the following parameter dialog:
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Accessories/buildNewAccessories3.png\"><br><br></li>
-<li>This dialog allows you to enable/disable the optional bearing connectors within the engineFlange by setting <b>includeEngineBearing</b> as required.</li>
+<li>This dialog allows you to enable/disable the optional bearing connectors within the engineFlange by setting <strong>includeEngineBearing</strong> as required.</li>
 <li>You can now define your accessory model as required</li>
 </ol>
 <h4>Adding an alternator and power steering pump</h4>

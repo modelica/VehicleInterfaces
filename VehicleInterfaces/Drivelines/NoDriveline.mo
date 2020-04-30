@@ -8,7 +8,7 @@ protected
   annotation (
     Documentation(info="<html>
 <p>
-Zero torque is applied to all the wheelhubs and the reaction paths in to the wheel hubs included if the <b>driveTrainMechanics3D</b> flag in the world object is true.</p>
+Zero torque is applied to all the wheelhubs and the reaction paths in to the wheel hubs included if the <strong>driveTrainMechanics3D</strong> flag in the world object is true.</p>
 <p>
 Using this empty model in overall vehicle architecture the functionality of driveline can be eliminated.
 </p>

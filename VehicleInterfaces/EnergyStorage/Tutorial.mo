@@ -3,10 +3,10 @@ class Tutorial "Energy Storage Device Tutorial"
   extends Modelica.Icons.Information;
 
   annotation (DocumentationClass=true, Documentation(info="<html>
-<p><b>Tutorial - Defining a new energy storage device model</b></p>
+<p><strong>Tutorial - Defining a new energy storage device model</strong></p>
 <p>The following process will demonstrate how to create a new energy storage device model using these interface definitions.  This tutorial will guide you through building a simple battery.</p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.EnergyStorage.Interfaces.Base</b>, it should look like this:
+<li>Create a new model that extends <strong>VehicleInterfaces.EnergyStorage.Interfaces.Base</strong>, it should look like this:
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/EnergyStorage/buildNewEnergyStorage1.png\"><br><br></li>
 <li>Unlike most of the other systems in the VehicleInterfaces package, the energy storage device interface definition does not contain any optional connectors.</li>
 <li>You can now define your energy storage device model as required</li>

@@ -13,12 +13,12 @@ package UsersGuide "User's Guide"
 <p>A number of vehicle model examples are included for four wheeled vehicles and could be duplicated or extended to create your own vehicle models.  All the subsystems are defined as replaceable so they can be changed to the required definition after extending from the example.  Control system blocks can be added as required by dragging the controller model into the vehicle model and connecting the controller to the control bus.</p>
 <h4>WheelHub connectors</h4>
 <p>The WheelHub connectors are based on a new connector found in Modelica.Mechanics.MultiBody.Interfaces called FlangeWithBearing.  This connector contains a 1D rotational connector and an optional MultiBody connector.  The MultiBody connector can be enabled/disabled via a parameter in the connector definition.  In the case of the VehicleInterfaces subsystem definitions these parameters are propogated to the subsystem level so that they can all be set by one parameter.  The MultiBody connector is used to provide the support for the rotating component.</p>
-<p>For example, the MultiBody connector in the WheelHub connection between the driveline and chassis subsystems provides a way to support the ends of the halfshafts when modelling the driveline as a MultiBody system.  In the driveline and chassis subsystem templates this MultiBody connector is enabled via a parameter called <b>includeWheelBearings</b>.  Both subsystems must have the same setting for this parameter for them to be compatible.  Dymola generates a warning about unmatched connectors if this is not the case.  To access the parameters, first extend the template to create your new driveline model.  Then go to the component browser and right click on the extended class and select parameters.  The parameter dialog will now be displayed and allow you access to the connector parameters.</p>
+<p>For example, the MultiBody connector in the WheelHub connection between the driveline and chassis subsystems provides a way to support the ends of the halfshafts when modelling the driveline as a MultiBody system.  In the driveline and chassis subsystem templates this MultiBody connector is enabled via a parameter called <strong>includeWheelBearings</strong>.  Both subsystems must have the same setting for this parameter for them to be compatible.  Dymola generates a warning about unmatched connectors if this is not the case.  To access the parameters, first extend the template to create your new driveline model.  Then go to the component browser and right click on the extended class and select parameters.  The parameter dialog will now be displayed and allow you access to the connector parameters.</p>
 <h4>Optional connectors</h4>
 <p>Many of the subsystem templates contain optional connectors.  These are highlighted in the template diagrams by an orange dashed line around the connector.  These connectors are enabled by parameters.</p>
-<p>For example: The driveline subsystem contains an optional MultiBody connector called <b>drivelineMount</b>.  This is enabled via a parameter called <b>includeMount</b>.  To access the parameters, first extend the template to create your new driveline model.  Then go to the component browser and right click on the extended class and select parameters.  The parameter dialog will now be displayed and allow you access to the connector parameters.</p>
+<p>For example: The driveline subsystem contains an optional MultiBody connector called <strong>drivelineMount</strong>.  This is enabled via a parameter called <strong>includeMount</strong>.  To access the parameters, first extend the template to create your new driveline model.  Then go to the component browser and right click on the extended class and select parameters.  The parameter dialog will now be displayed and allow you access to the connector parameters.</p>
 <h4>Control Bus Structure</h4>
-<p>The control bus structure utilises expandable connectors to provide a flexible bus concept.  This approach makes it easy to add new signals to the control bus so that data can be passed around the model.  The control bus structure implemented is heirarchical so that signals are easily located.  The approach adopted is that physical measurements taken from, for example, the transmission are placed on a sub-bus called <b>transmissionBus</b>.  Signals output from control blocks, for example the transmission controller, are placed on a sub-bus called <b>transmissionControlBus</b>.</p>
+<p>The control bus structure utilises expandable connectors to provide a flexible bus concept.  This approach makes it easy to add new signals to the control bus so that data can be passed around the model.  The control bus structure implemented is heirarchical so that signals are easily located.  The approach adopted is that physical measurements taken from, for example, the transmission are placed on a sub-bus called <strong>transmissionBus</strong>.  Signals output from control blocks, for example the transmission controller, are placed on a sub-bus called <strong>transmissionControlBus</strong>.</p>
 </html>"));
   end QuickStart;
 
@@ -41,26 +41,26 @@ package UsersGuide "User's Guide"
 
 <h4>Initial Values</h4>
 <p>
-Parameters that represent initial values for simulation experiments are denoted with the index <b>start</b>, like \"v_start\".</p>
+Parameters that represent initial values for simulation experiments are denoted with the index <strong>start</strong>, like \"v_start\".</p>
 
 <h4>Naming of Properties</h4>
 <p>Physical properties are named according to the standards established in the Modelica Standard Library:</p>
 <table>
-<tr><td> <b>r</b>  </td><td>&nbsp;</td><td> Position</td></tr>
-<tr><td> <b>v</b>  </td><td>&nbsp;</td><td> Velocity</td></tr>
-<tr><td> <b>a</b>  </td><td>&nbsp;</td><td> Acceleration</td></tr>
-<tr><td> <b>phi</b></td><td>&nbsp;</td><td> Rotation angle </td></tr>
-<tr><td> <b>w</b>  </td><td>&nbsp;</td><td> Angular velocity</td></tr>
-<tr><td> <b>z</b>  </td><td>&nbsp;</td><td> Angular acceleration</td></tr>
-<tr><td> <b>f</b>  </td><td>&nbsp;</td><td> Force </td></tr>
-<tr><td> <b>tau</b></td><td>&nbsp;</td><td> Torque</td></tr>
-<tr><td> <b>n</b>  </td><td>&nbsp;</td><td> Direction of rotation or translation</td></tr>
-<tr><td> <b>m</b>  </td><td>&nbsp;</td><td> Mass</td></tr>
-<tr><td> <b>c</b>  </td><td>&nbsp;</td><td> Stiffness</td></tr>
-<tr><td> <b>d</b>  </td><td>&nbsp;</td><td> Damping</td></tr>
-<tr><td> <b>J</b>  </td><td>&nbsp;</td><td> Inertia element, (gear) ratio</td></tr>
-<tr><td> <b>k</b>  </td><td>&nbsp;</td><td> Amplification/gain </td></tr>
-<tr><td> <b>s</b>  </td><td>&nbsp;</td><td> Distance </td></tr>
+<tr><td> <strong>r</strong>  </td><td>&nbsp;</td><td> Position</td></tr>
+<tr><td> <strong>v</strong>  </td><td>&nbsp;</td><td> Velocity</td></tr>
+<tr><td> <strong>a</strong>  </td><td>&nbsp;</td><td> Acceleration</td></tr>
+<tr><td> <strong>phi</strong></td><td>&nbsp;</td><td> Rotation angle </td></tr>
+<tr><td> <strong>w</strong>  </td><td>&nbsp;</td><td> Angular velocity</td></tr>
+<tr><td> <strong>z</strong>  </td><td>&nbsp;</td><td> Angular acceleration</td></tr>
+<tr><td> <strong>f</strong>  </td><td>&nbsp;</td><td> Force </td></tr>
+<tr><td> <strong>tau</strong></td><td>&nbsp;</td><td> Torque</td></tr>
+<tr><td> <strong>n</strong>  </td><td>&nbsp;</td><td> Direction of rotation or translation</td></tr>
+<tr><td> <strong>m</strong>  </td><td>&nbsp;</td><td> Mass</td></tr>
+<tr><td> <strong>c</strong>  </td><td>&nbsp;</td><td> Stiffness</td></tr>
+<tr><td> <strong>d</strong>  </td><td>&nbsp;</td><td> Damping</td></tr>
+<tr><td> <strong>J</strong>  </td><td>&nbsp;</td><td> Inertia element, (gear) ratio</td></tr>
+<tr><td> <strong>k</strong>  </td><td>&nbsp;</td><td> Amplification/gain </td></tr>
+<tr><td> <strong>s</strong>  </td><td>&nbsp;</td><td> Distance </td></tr>
 </table>
 <p>&nbsp;</p>
 
@@ -79,12 +79,12 @@ Parameters that represent initial values for simulation experiments are denoted 
 <p>This method demonstrates how to add signals to the control signal bus.  To place an existing signal such as vehicle longitudinal velocity on to the signal bus in the chassis subsystem use the following process:</p>
 <p>Working within your chassis model...</p>
 <ol>
-<li>If not already there, drag the <b>VehicleInterfaces.Interface.ChassisBus</b> connector in to the model.  It should get the default name <b>chassisBus</b> but rename it to this if it doesn't.</li>
+<li>If not already there, drag the <strong>VehicleInterfaces.Interface.ChassisBus</strong> connector in to the model.  It should get the default name <strong>chassisBus</strong> but rename it to this if it doesn't.</li>
 <li>Draw a connection from this new connector to the controlBus connector.</li>
-<li>In the connection dialog generated by Dymola select the following name: <b>chassisBus</b>
+<li>In the connection dialog generated by Dymola select the following name: <strong>chassisBus</strong>
 <br><img src=\"modelica://VehicleInterfaces/Resources/Images/UsersGuide/SignalBus/signalNaming2.png\"><br><br></li>
-<li>Add a sensor to measure the vehicle speed and drag a connection to the <b>chassisBus</b> connector just added.</li>
-<li>In the connection dialog generated by Dymola select <b>longitudinalVelocity</b> from the list of options.
+<li>Add a sensor to measure the vehicle speed and drag a connection to the <strong>chassisBus</strong> connector just added.</li>
+<li>In the connection dialog generated by Dymola select <strong>longitudinalVelocity</strong> from the list of options.
 <br><img src=\"modelica://VehicleInterfaces/Resources/Images/UsersGuide/SignalBus/signalNaming.png\"><br><br></li>
 </ol>
 <p>The chassis subsystem should look something like:</p>
@@ -92,7 +92,7 @@ Parameters that represent initial values for simulation experiments are denoted 
 <p>There are two methods for adding a new signal to the controlBus.</p>
 <ol>
 <li>You draw the connection as in step 4 above, and instead of selecting an option from the list in step 5 you would select the \"Add variable\" option and then type the name of the signal you would like to add to the controlBus.</li>
-<li>You extend from the chassisBus connector definition that can be found in <b>VehicleInterfaces.Chassis.Internal.StandardBus</b> and add the new signal definition.  Then, when you reach steps 4 and 5 (above) your new signal will appear in the list of options and can be selected.</li>
+<li>You extend from the chassisBus connector definition that can be found in <strong>VehicleInterfaces.Chassis.Internal.StandardBus</strong> and add the new signal definition.  Then, when you reach steps 4 and 5 (above) your new signal will appear in the list of options and can be selected.</li>
 </ol>
 </html>"));
     end AddingSignals;
@@ -112,39 +112,39 @@ Parameters that represent initial values for simulation experiments are denoted 
 <td>Signal description</td>
 </tr>
 <tr>
-<td><b>brakesBus.wheelSpeed_n</b></td>
+<td><strong>brakesBus.wheelSpeed_n</strong></td>
 <td>rad/s</td>
-<td>Individual wheel speed where <b>n</b> is an integer describing which wheel this is from.</td>
+<td>Individual wheel speed where <strong>n</strong> is an integer describing which wheel this is from.</td>
 </tr>
 <tr>
-<td><b>chassisBus.longitudinalVelocity</b></td>
+<td><strong>chassisBus.longitudinalVelocity</strong></td>
 <td>m/s</td>
 <td>Vehicle Longitundinal Velocity</td>
 </tr>
 <tr>
-<td><b>driverBus.ignition</b></td>
+<td><strong>driverBus.ignition</strong></td>
 <td>Enumeration</td>
 <td>Signals whether the driver wants the vehice to be operating.  There are 3 possible values:  Off, On or Start
 (<a href=\"Modelica://VehicleInterfaces.Types.IgnitionSetting\">VehicleInterfaces.Types.IgnitionSetting</a>)
 </td>
 </tr>
 <tr>
-<td><b>engineBus.speed</b></td>
+<td><strong>engineBus.speed</strong></td>
 <td>rad/s</td>
 <td>Engine speed</td>
 </tr>
 <tr>
-<td><b>transmissionBus.outputSpeed</b></td>
+<td><strong>transmissionBus.outputSpeed</strong></td>
 <td>rad/s</td>
 <td>Transmission output shaft speed</td>
 </tr>
 <tr>
-<td><b>transmissionControlBus.currentGear</b></td>
+<td><strong>transmissionControlBus.currentGear</strong></td>
 <td>Integer</td>
 <td>Currently selected gear</td>
 </tr>
 </table>
-<p>The following additional signals are required for <b>manual</b> transmission vehicles.</p>
+<p>The following additional signals are required for <strong>manual</strong> transmission vehicles.</p>
 <table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">
 <tr>
 <td>Signal name</td>
@@ -152,12 +152,12 @@ Parameters that represent initial values for simulation experiments are denoted 
 <td>Signal description</td>
 </tr>
 <tr>
-<td><b>transmissionBus.clutchLocked</b></td>
+<td><strong>transmissionBus.clutchLocked</strong></td>
 <td>Boolean</td>
 <td>True if the clutch is locked, otherwise false</td>
 </tr>
 </table>
-<p>The following additional signals are required for an <b>automatic</b> transmission vehicles.</p>
+<p>The following additional signals are required for an <strong>automatic</strong> transmission vehicles.</p>
 <table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">
 <tr>
 <td>Signal name</td>
@@ -165,12 +165,12 @@ Parameters that represent initial values for simulation experiments are denoted 
 <td>Signal description</td>
 </tr>
 <tr>
-<td><b>driverBus.gearboxMode</b></td>
+<td><strong>driverBus.gearboxMode</strong></td>
 <td>Enumeration</td>
 <td>Gearbox Mode (enumeration when supported, currently uses Integers defined according to <a href=\"Modelica://VehicleInterfaces.Types.GearMode\">VehicleInterfaces.Types.GearMode</a>)</td>
 </tr>
 <tr>
-<td><b>driverBus.requestedGear</b></td>
+<td><strong>driverBus.requestedGear</strong></td>
 <td>Integer</td>
 <td>Driver requested gear for use in manual or limited gearbox modes</td>
 </tr>
@@ -184,17 +184,17 @@ Parameters that represent initial values for simulation experiments are denoted 
 <td>Signal description</td>
 </tr>
 <tr>
-<td><b>driverBus.acceleratorPedalPosition</b></td>
+<td><strong>driverBus.acceleratorPedalPosition</strong></td>
 <td>None</td>
 <td>Driver accelerator pedal position - normalised Real, 0 = pedal released, 1 = pedal fully pressed</td>
 </tr>
 <tr>
-<td><b>driverBus.brakePedalPosition</b></td>
+<td><strong>driverBus.brakePedalPosition</strong></td>
 <td>None</td>
 <td>Driver brake pedal position - normalised Real, 0 = pedal released, 1 = pedal fully pressed</td>
 </tr>
 </table>
-<p>The following additional signals are required for a <b>manual</b> transmission drive-by-wire vehicle.</p>
+<p>The following additional signals are required for a <strong>manual</strong> transmission drive-by-wire vehicle.</p>
 <table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">
 <tr>
 <td>Signal name</td>
@@ -202,12 +202,12 @@ Parameters that represent initial values for simulation experiments are denoted 
 <td>Signal description</td>
 </tr>
 <tr>
-<td><b>driverBus.clutchPedalPosition</b></td>
+<td><strong>driverBus.clutchPedalPosition</strong></td>
 <td>None</td>
 <td>Driver clutch pedal position - normalised Real, 0 = pedal released, 1 = pedal fully pressed</td>
 </tr>
 <tr>
-<td><b>driverBus.gear</b></td>
+<td><strong>driverBus.gear</strong></td>
 <td>None</td>
 <td>Driver selected gear</td>
 </tr>
@@ -366,7 +366,7 @@ Parameters that represent initial values for simulation experiments are denoted 
       annotation (Documentation(info="<html>
 <p>The following process will demonstrate how to create a new vehicle model using one of the example model architectures as a template.  This tutorial will guide you through building a conventional passenger car, i.e. a vehicle with 4 wheels.</p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.Exmaples.ConventionalManualVehicle</b>, it should look like this:
+<li>Create a new model that extends <strong>VehicleInterfaces.Exmaples.ConventionalManualVehicle</strong>, it should look like this:
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/UsersGuide/Tutorials/buildNewVehicleModel1.png\"><br><br></li>
 <li>By right clicking on each subsystem in turn you can now select the appropriate models for each subsystem.<br>Using Dymola, the context menu should look like below when changing the engine subsystem
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/UsersGuide/Tutorials/buildNewVehicleModel2.png\"><br><br></li>
@@ -506,7 +506,7 @@ compatible way:
       extends Modelica.Icons.ReleaseNotes;
 
       annotation (Documentation(info="<html>
-<p>This version requires the <b>Modelica 3.2.3</b> Library.
+<p>This version requires the <strong>Modelica 3.2.3</strong> Library.
    This version is backwards compatible to versions&nbsp;1.1.x and 1.2.x of the VehicleInterfaces library.
 </p>
 
@@ -530,7 +530,7 @@ compatible way:
       extends Modelica.Icons.ReleaseNotes;
 
       annotation (Documentation(info="<html>
-<p>This version requires the <b>Modelica 3.2.2</b> Library.
+<p>This version requires the <strong>Modelica 3.2.2</strong> Library.
    This version is backwards compatible to versions&nbsp;1.1.x and 1.2.x of the VehicleInterfaces library.
 </p>
 
@@ -550,7 +550,7 @@ compatible way:
       extends Modelica.Icons.ReleaseNotes;
 
       annotation (Documentation(info="<html>
-<p>This version requires the <b>Modelica 3.2.1</b> Library.
+<p>This version requires the <strong>Modelica 3.2.1</strong> Library.
    This version is backwards compatible to versions&nbsp;1.1.x and 1.2.x of the VehicleInterfaces library.</p>
 
 <h4>Improvements in this version:</h4>
@@ -569,7 +569,7 @@ compatible way:
       extends Modelica.Icons.ReleaseNotes;
 
       annotation (Documentation(info="<html>
-<p>This version requires the <b>Modelica 3.2.1</b> Library.
+<p>This version requires the <strong>Modelica 3.2.1</strong> Library.
    This version is backwards compatible to versions&nbsp;1.1.x of the VehicleInterfaces library.</p>
 
 <h4>Improvements in this version:</h4>
@@ -586,7 +586,7 @@ compatible way:
       extends Modelica.Icons.ReleaseNotes;
 
       annotation (Documentation(info="<html>
-<p>This version requires the <b>Modelica 3.2.1</b> Library.
+<p>This version requires the <strong>Modelica 3.2.1</strong> Library.
    This version is backwards compatible to versions&nbsp;1.1.x of the VehicleInterfaces library.</p>
 
 <h4>Improvements in this version:</h4>
@@ -608,7 +608,7 @@ compatible way:
 <h4>Improvements in this version:</h4>
 
 <ul>
-<li><b>Improved buses</b><br>
+<li><strong>Improved buses</strong><br>
     In order to simplify working with buses, all buses in VehicleInterfaces
     are defined as replaceable expandable empty connectors.
     Whenever the buses are used concretely, they are redeclared to a connector
@@ -625,7 +625,7 @@ compatible way:
      modelica://VehicleInterfaces/Resources/Images/xx.png; icon layout adapted to MSL 3.2 layout).<br>
 </li>
 
-<li> VehicleInterfaces.<b>EnergyStorage</b>.Interfaces.Base:<br>
+<li> VehicleInterfaces.<strong>EnergyStorage</strong>.Interfaces.Base:<br>
      A optional ground and an optional heat port have been added. Both components
      can be enabled via a corresponding parameter</li>
 
@@ -783,9 +783,9 @@ form are provided
 \"as is\" and the copyright holders assume no responsibility for its contents
 what so ever. Any express or implied warranties, including, but not
 limited to, the implied warranties of merchantability and fitness for a
-particular purpose are <b>disclaimed</b>. <b>In no event</b> shall the
+particular purpose are <strong>disclaimed</strong>. <strong>In no event</strong> shall the
 copyright holders, or any party who modify and/or redistribute the package,
-<b>be liable</b> for any direct, indirect, incidental, special, exemplary, or
+<strong>be liable</strong> for any direct, indirect, incidental, special, exemplary, or
 consequential damages, arising in any way out of the use of this software,
 even if advised of the possibility of such damage.
 </p>

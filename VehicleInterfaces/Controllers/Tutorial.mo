@@ -3,10 +3,10 @@ class Tutorial "Controllers Tutorial"
   extends Modelica.Icons.Information;
 
   annotation (DocumentationClass=true,Documentation(info="<html>
-<p><b>Tutorial - Defining a new controller model</b></p>
+<p><strong>Tutorial - Defining a new controller model</strong></p>
 <p>The following process will demonstrate how to create a new controller model using these interface definitions.  This tutorial will guide you through building a simple idle speed controller for an engine.</p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.Controllers.Interfaces.Base</b>, it should look like this:
+<li>Create a new model that extends <strong>VehicleInterfaces.Controllers.Interfaces.Base</strong>, it should look like this:
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Controllers/buildNewController1.png\"><br><br></li>
 <li>You can now define your controller model as required</li>
 </ol>
@@ -24,7 +24,7 @@ class Tutorial "Controllers Tutorial"
 <li>engineControlBus.throttlePosition</li>
 </li>
 </ul>
-<li>To add these control signals we first need to add the <b>engineBus</b> and <b>engineControlBus</b> connectors and connect them to the <b>controlBus</b>.  These connectors are <b>VehicleInterfaces.Interfaces.EngineBus</b> and <b>VehicleInterfaces.Interfaces.EngineControlBus</b>.  When connecting these to the controlBus the following dialog will be produced and should be completed as following substituting <b>engineControlBus</b> for <b>engineBus</b> as appropriate.
+<li>To add these control signals we first need to add the <strong>engineBus</strong> and <strong>engineControlBus</strong> connectors and connect them to the <strong>controlBus</strong>.  These connectors are <strong>VehicleInterfaces.Interfaces.EngineBus</strong> and <strong>VehicleInterfaces.Interfaces.EngineControlBus</strong>.  When connecting these to the controlBus the following dialog will be produced and should be completed as following substituting <strong>engineControlBus</strong> for <strong>engineBus</strong> as appropriate.
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Controllers/buildNewController4.png\"><br><br></li>
 <li>We can then complete the model by connecting the blocks to the control bus connectors and using the appropriate signal names.  The finished model should look like:
 <br><br><img src=\"modelica://VehicleInterfaces/Resources/Images/Controllers/buildNewController3.png\"><br><br></li>

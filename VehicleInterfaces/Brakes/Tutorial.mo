@@ -10,17 +10,17 @@ interface definitions.  This tutorial will guide you through building a braking 
 for a passenger car, i.e. a vehicle with 4 wheels.
 </p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.Brakes.Interfaces.TwoAxleBase</b>,
+<li>Create a new model that extends <strong>VehicleInterfaces.Brakes.Interfaces.TwoAxleBase</strong>,
 it should look like this:
 <br><img src=\"modelica://VehicleInterfaces/Resources/Images/Brakes/buildNewBrakes1.png\"><br>&nbsp;</li>
-<li>In the component browser, right click on <b>TwoAxleBase</b> and select <b>Parameters</b>
+<li>In the component browser, right click on <strong>TwoAxleBase</strong> and select <strong>Parameters</strong>
 from the context menu to produce the following parameter dialog
 <br><img src=\"modelica://VehicleInterfaces/Resources/Images/Brakes/buildNewBrakes2.png\"><br>&nbsp;</li>
 <li>This dialog allows you to enable/disable the optional connections by setting
-<b>includeWheelBearings</b> and <b>includeBrakePedal</b> as required for your new brakes model.
+<strong>includeWheelBearings</strong> and <strong>includeBrakePedal</strong> as required for your new brakes model.
 The wheelHub connectors are of the type
 <a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing</a>,
-the parameter <b>includeWheelBearings</b> controls whether the bearing connectors within
+the parameter <strong>includeWheelBearings</strong> controls whether the bearing connectors within
 the wheelHubs is enabled or not.</li>
 <li>You can now define your brakes model as required.</li>
 </ol>
@@ -43,7 +43,7 @@ For this example we need the brake pedal connection but not the wheel bearing co
 <li>Add the following blocks and connections to the diagram.  When you draw the connections
 from the brake components to the wheelHub connectors the dialog box shown below will appear
 asking which connector within the wheelHub connector you would like to make the connection to.
-As we are modelling the brakes as a 1D system you should select <b>flange</b> from the list
+As we are modelling the brakes as a 1D system you should select <strong>flange</strong> from the list
 of options which is the 1D connector within the wheelHub connector.
 <br><img src=\"modelica://VehicleInterfaces/Resources/Images/Brakes/buildNewBrakes4.png\">
 <br><img src=\"modelica://VehicleInterfaces/Resources/Images/Brakes/buildNewBrakes5.png\"><br>&nbsp;</li>
@@ -54,8 +54,8 @@ required.  In this case we need to add the four individual wheel speeds to the c
 bus and this can be done by connecting speed sensors to each wheel and then connecting these
 to the signal bus.  As the wheel speed signals are added to the brakesBus we first need to add
 this connector.
-The brakesBus connector is <b>VehicleInterfaces.Interfaces.BrakesBus</b>.
-This should be connected to the <b>controlBus</b>; when this connection is made the following
+The brakesBus connector is <strong>VehicleInterfaces.Interfaces.BrakesBus</strong>.
+This should be connected to the <strong>controlBus</strong>; when this connection is made the following
 dialog is produced and should be completed as shown.
 <br><img src=\"modelica://VehicleInterfaces/Resources/Images/Brakes/buildNewBrakes6.png\"><br>&nbsp;</li>
 <li>When the connections between the sensors and the brakesBus connector are added the dialog
