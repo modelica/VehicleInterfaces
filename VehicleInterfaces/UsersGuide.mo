@@ -401,8 +401,8 @@ As documented in the
 control signal buses are widely used within the library to easily
 exchange signals between vehicle&apos;s subsystems.
 In the previous versions of the VehicleInterfaces, the buses from
-&lt;subsystem&gt;.Interfaces were directly instantiated in the subsystem
-models, with the prefix &quot;replaceable&quot;.
+packages <code>&lt;subsystem&gt;.Interfaces</code> were directly instantiated
+in the subsystem models, with the prefix &quot;replaceable&quot;.
 This possibly led to some troubles especially when redeclaring
 a&nbsp;subsystem within a&nbsp;vehicle architecture, since the
 compatibility of the corresponding buses had to be granted.
@@ -420,22 +420,27 @@ dialog (i.e. the GUI) when connecting a&nbsp;signal.
 Those particular buses shall not be used in models.
 </p>
 <p>
-The buses from &lt;subsystem&gt;.Interfaces are all marked obsolete.
-Since they will be deleted from the library in a&nbsp;future version,
-the user shall replace them by buses from
-<a href=\"modelica://VehicleInterfaces.Interfaces\">VehicleInterfaces.Interfaces</a>
-if she/he uses these buses in her/his own models.
-For example, a&nbsp;previous instantiation of the engineBus such as
+The buses formerly placed in packages <code>&lt;subsystem&gt;.Interfaces</code> are all
+marked obsolete and they were moved into a&nbsp;separate library
+<a href=\"modelica://ObsoleteVehicleInterfaces2\">ObsoleteVehicleInterfaces2</a>.
+In user models, these obsolete connectors shall by replaced by buses from
+<a href=\"modelica://VehicleInterfaces.Interfaces\">VehicleInterfaces.Interfaces</a>.
+For example, a&nbsp;previous instantiation of engine bus such as
 </p>
+
 <blockquote><pre>
 <strong>replaceable</strong> VehicleInterfaces.Engines.Interfaces.StandardBus engineBus
-  <strong>constrainedby</strong> VehicleInterfaces.Interfaces.EngineBus ;</p>
+  <strong>constrainedby</strong> VehicleInterfaces.Interfaces.EngineBus
+  <strong>annotation</strong>(...);
 </pre></blockquote>
+
 <p>
 shall be replaced by
 </p>
+
 <blockquote><pre>
-VehicleInterfaces.Interfaces.EngineBus engineBus;
+VehicleInterfaces.Interfaces.EngineBus engineBus
+  <strong>annotation</strong>(...);
 </pre></blockquote>
 </html>"));
       end ReintroduceExpandableConnectors;
