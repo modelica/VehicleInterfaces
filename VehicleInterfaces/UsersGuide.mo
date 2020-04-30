@@ -650,7 +650,7 @@ compatible way:
 <ul>
 <li><a href=\"modelica://VehicleInterfaces.Mechanics\">VehicleInterfaces.Mechanics</a>: Small changes at icon and diagram layer to be Modelica 3 compliant. </li>
 <li><a href=\"modelica://VehicleInterfaces.Mechanics.MultiBody.MultiBodyEnd\">VehicleInterfaces.Mechanics.MultiBody.MultiBodyEnd</a> adapted, so that \"Mixing of components and equations\" is avoided. </li>
-<li><a href=\"modelica://VehicleInterfaces.UsersGuide.NamingConventions\">VehicleInterfaces.UsersGuide.NamingConventions</a>: changed \"a\" to \"z\" for an <i>angular</i> acceleration. </li>
+<li><a href=\"modelica://VehicleInterfaces.UsersGuide.NamingConventions\">VehicleInterfaces.UsersGuide.NamingConventions</a>: changed \"a\" to \"z\" for an <em>angular</em> acceleration. </li>
 <li>Changed icon for VehicleInterfaces.Examples.</li>
 <li>Added icon <a href=\"modelica://VehicleInterfaces.Icons.BaseClassPackage\">BaseClassPackage</a> to be used for packages with base classes and internal material.</li>
 </ul>
