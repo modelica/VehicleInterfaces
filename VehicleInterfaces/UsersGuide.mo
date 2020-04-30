@@ -448,14 +448,35 @@ VehicleInterfaces.Interfaces.EngineBus engineBus
 <p>
 This version requires <strong>version 4.0.0</strong> of the 
 <a href=\"https://github.com/modelica/ModelicaStandardLibrary\">Modelica Standard Library</a>.
-This version is <strong>not</strong> backwards compatible to
-versions&nbsp;1.1.x or 1.2.x of the VehicleInterfaces library.
+This version is <strong>not</strong> backward compatible to previous
+versions&nbsp;1.x.y of the VehicleInterfaces library.
 </p>
+
+<p>
+A tested conversion script is provided to transform models and libraries
+of previous versions 1.x.y to the new version.
+Short Overview:
+</p>
+<ul>
+  <li>This version is based on the recent Modelica language standard version 3.4.</li>
+  <li>Obsolete classes of previous versions 1.x.y have been replaced.</li>
+  <li>Obsolete classes, that could not be automatically converted to alternative
+      implementations, have been moved to library ObsoleteVehicleInterfaces2.</li>
+  <li>The license has been changed to the BSD 3-clause license.</li>
+</ul>
 
 
 <h4>Improvements in this version</h4>
 <ul>
-<li>&hellip;</li>
+  <li><a href=\"modelica://VehicleInterfaces.Accessories.MinimalAccessories\">MinimalAccessories</a>:
+      load torque changes its sign with direction of rotation.</li>
+  <li>Road examples were moved into a&nbsp;particular package:
+      <a href=\"modelica://VehicleInterfaces.Roads.Examples\">Roads.Examples</a>.</li>
+  <li>Variable <code>currentGear</code> was deleted from
+      <a href=\"modelica://VehicleInterfaces.Interfaces.TransmissionControlBus\">Interfaces.TransmissionControlBus</a>
+      since it is yet properly defined in
+      <a href=\"modelica://VehicleInterfaces.Transmissions.Internal.StandardControlBus\">
+      Transmissions.Internal.StandardControlBus</a>.</li>
 </ul>
 
 
@@ -465,10 +486,18 @@ The following existing components have been changed in a&nbsp;non-backward
 compatible way:
 </p>
 <ul>
-<li>GitHub issue <a href=\"https://github.com/modelica/VehicleInterfaces/issues/28\"># 28</a>:
-    Reintroducing the idea of expandable connectors for signal buses, see also
-    <a href=\"modelica://VehicleInterfaces.UsersGuide.ReleaseNotes.Version_2_0_0.ReintroduceExpandableConnectors\">detailed description</a>.
-    </li>
+  <li>GitHub issue <a href=\"https://github.com/modelica/VehicleInterfaces/issues/28\">#28</a>:
+      Reintroducing the idea of expandable connectors for signal buses, see also
+      <a href=\"modelica://VehicleInterfaces.UsersGuide.ReleaseNotes.Version_2_0_0.ReintroduceExpandableConnectors\">detailed description</a>.
+      </li>
+  <li>GitHub issues <a href=\"https://github.com/modelica/VehicleInterfaces/issues/56\">#56</a>
+      and <a href=\"https://github.com/modelica/VehicleInterfaces/pull/46\">#46</a>:
+      renaming of protected parameter includeAccessoriesBearing and
+      includeTransmissionBearing, respectively.</li>
+  <li>GitHub issue <a href=\"https://github.com/modelica/VehicleInterfaces/issues/38\">#38</a>:
+      A&nbsp;<em>positive</em> load parameter <code>accessoriesLoad</code> of
+      <a href=\"modelica://VehicleInterfaces.Accessories.MinimalAccessories\">MinimalAccessories</a>
+      indicates accessories load now.</li>
 </ul>
 </html>"));
     end Version_2_0_0;
