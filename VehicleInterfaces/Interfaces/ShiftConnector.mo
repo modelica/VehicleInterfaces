@@ -67,6 +67,6 @@ connector ShiftConnector "Manual transmission shift connector"
           fillColor={128,128,128},
           fillPattern=FillPattern.Solid)}),
     Documentation(info="<html>
-<p>Manual transmission shift connector.  It contains two 1D translational connectors that represent the position of the shift lever across the shift gate (<b>crossGate</b>) and forwards/backwards within the gate (<b>intoGear</b>).</p>
+<p>Manual transmission shift connector.  It contains two 1D translational connectors that represent the position of the shift lever across the shift gate (<strong>crossGate</strong>) and forwards/backwards within the gate (<strong>intoGear</strong>).</p>
 </html>"));
 end ShiftConnector;

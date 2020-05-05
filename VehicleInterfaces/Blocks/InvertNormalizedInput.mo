@@ -70,7 +70,7 @@ equation
     Documentation(info="<html>
 <p>
 This block is used to invert a normalized input signal u from [0..1] to [1..0].
-Formally, the output <b>y</b> is computed as:
+Formally, the output <strong>y</strong> is computed as:
 </p>
 <pre>
     y = 1 - u;

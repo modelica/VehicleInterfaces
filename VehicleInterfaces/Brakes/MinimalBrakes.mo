@@ -159,6 +159,6 @@ equation
 
   annotation (
     Documentation(info="<html>
-<p>Brakes subsystem model that uses the driver <b>brakePedalPosition</b> signal to determine the brake torque demand being requested by the driver.</p>
+<p>Brakes subsystem model that uses the driver <strong>brakePedalPosition</strong> signal to determine the brake torque demand being requested by the driver.</p>
 </html>"));
 end MinimalBrakes;

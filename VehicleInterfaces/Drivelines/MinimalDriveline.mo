@@ -53,6 +53,6 @@ equation
     annotation (Line(points={{-80,0},{-100,0}}));
   annotation (
     Documentation(info="<html>
-<p>This driveline model is of a front-wheel drive 4-wheeled vehicle.  The front differential is modelled using an ideal gear and planetary gear.  The model does include the 3D mount effects if the <b>driveTrainMechanics3D</b> in the world object is set to true.  To properly include these effects the additional constant and FrameForceAndTorque actuators are required on the front wheel hubs.  A constant zero torque is applied to the rear wheelhubs and the reaction paths in to the wheelhubs are included.</p>
+<p>This driveline model is of a front-wheel drive 4-wheeled vehicle.  The front differential is modelled using an ideal gear and planetary gear.  The model does include the 3D mount effects if the <strong>driveTrainMechanics3D</strong> in the world object is set to true.  To properly include these effects the additional constant and FrameForceAndTorque actuators are required on the front wheel hubs.  A constant zero torque is applied to the rear wheelhubs and the reaction paths in to the wheelhubs are included.</p>
 </html>"));
 end MinimalDriveline;

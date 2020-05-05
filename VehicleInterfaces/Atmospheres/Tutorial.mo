@@ -3,10 +3,10 @@ class Tutorial "Atmosphere Tutorial"
   extends Modelica.Icons.Information;
 
   annotation (DocumentationClass=true,Documentation(info="<html>
-<p><b>Tutorial - Defining a new atmosphere model</b></p>
-<p>This tutorial will guide you through the definition of the <b>ConstantAtmosphere</b> model.</p>
+<p><strong>Tutorial - Defining a new atmosphere model</strong></p>
+<p>This tutorial will guide you through the definition of the <strong>ConstantAtmosphere</strong> model.</p>
 <ol>
-<li>Start creating a new model by extending the base atmosphere definition which can be found at <b>VehicleInterfaces.Atmospheres.Interfaces.Base</b></li>
+<li>Start creating a new model by extending the base atmosphere definition which can be found at <strong>VehicleInterfaces.Atmospheres.Interfaces.Base</strong></li>
 <li>This base atmosphere definition includes 4 partial function definitions that we need to provide complete functions for in our new atmosphere model.  The following functions need to be defined:
 <ul>
 <li>windVelocity</li>
@@ -59,7 +59,7 @@ class Tutorial "Atmosphere Tutorial"
   end constantTemperature;
 
 </pre></li>
-<li>We now need to redeclare the functions in the base atmosphere definition to be the functions shown above.  We do this with the following code assuming that the above functions have been defined within the class <b>ConstantAtmosphere</b>:
+<li>We now need to redeclare the functions in the base atmosphere definition to be the functions shown above.  We do this with the following code assuming that the above functions have been defined within the class <strong>ConstantAtmosphere</strong>:
 <pre>
 
   model ConstantAtmosphere \"Atmosphere with constant conditions\"
@@ -74,7 +74,7 @@ class Tutorial "Atmosphere Tutorial"
   end ConstantAtmosphere;
 
 </pre></li>
-<li>Adding these redeclares also means we need to add 4 parameters to the model <b>v</b>, <b>rho</b>, <b>h</b> and <b>T</b> which are the constant wind velocity, density, humidity and temperature respectively.</li>
+<li>Adding these redeclares also means we need to add 4 parameters to the model <strong>v</strong>, <strong>rho</strong>, <strong>h</strong> and <strong>T</strong> which are the constant wind velocity, density, humidity and temperature respectively.</li>
 <li>This model is now complete and can be used.  The ConstantAtmosphere definition included in VehicleInterfaces actually has pressure, temperature and wind velocity as it's parameters and automatically calculates the air density.</li>
 </ol>
 </html>"));

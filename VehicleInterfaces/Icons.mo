@@ -1119,7 +1119,7 @@ This partial class is intended to design a default icon for a <em>road</em>.
             smooth=Smooth.Bezier)}),
       Documentation(info="<html>
 <p>
-This icon is designed for a <b>sub-bus</b> in a signal connector.
+This icon is designed for a <strong>sub-bus</strong> in a signal connector.
 It contains just an additional polygon as a graphical element in Diagram in order
 to highlight such a particular sub-bus.
 </p>

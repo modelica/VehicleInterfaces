@@ -102,6 +102,6 @@ equation
           fillColor={255,128,0},
           fillPattern=FillPattern.Solid)}),
     Documentation(info="<html>
-<p>Converts an integer signal in to positions on the <b>intoGear</b> and <b>crossGate</b> sub-connectors of the ShiftConnector.</p>
+<p>Converts an integer signal in to positions on the <strong>intoGear</strong> and <strong>crossGate</strong> sub-connectors of the ShiftConnector.</p>
 </html>"));
 end ShiftInput;

@@ -9,7 +9,7 @@ The following process will demonstrate how to create a new data dictionary
 model using these interface definitions.
 </p>
 <ol>
-<li>Create a new model that extends <b>VehicleInterfaces.DataDictionaries.Interfaces.Base</b>,it should look like this:
+<li>Create a new model that extends <strong>VehicleInterfaces.DataDictionaries.Interfaces.Base</strong>,it should look like this:
 <br>&nbsp;<br><img src=\"modelica://VehicleInterfaces/Resources/Images/DataDictionaries/buildNewDataDictionary1.png\"><br>&nbsp;</li>
 <li>You can now define your data dictionary model as required</li>
 </ol>
@@ -19,14 +19,14 @@ The following steps demonstrate how to add a new alias signal to the control sig
 An alias signal for the vehicle longitudinal velocity in the chassisBus will be added called v_veh.
 </p>
 <ol>
-<li>Add a block <b>Modelica.Blocks.Routing.RealPassThrough </b> and give it the name
-of the alias signal that you would like to create, in this case <b>v_veh</b>.
+<li>Add a block <strong>Modelica.Blocks.Routing.RealPassThrough </strong> and give it the name
+of the alias signal that you would like to create, in this case <strong>v_veh</strong>.
 Note, this block passes Real signal through without modification.</li>
 <li>Then add the bus connector for the appropriate sub-bus, in this case the chassisBus
-connector which can be found at <b>VehicleInterfaces.Interfaces.ChassisBus</b>.</li>
+connector which can be found at <strong>VehicleInterfaces.Interfaces.ChassisBus</strong>.</li>
 <li>Then add two connections between the RealSignal connector and the chassisBus connector.
-The first connects to the <b>longitudinalVelocity</b> signal within the chassisBus,
-the second creates a new signal called <b>v_veh</b>.
+The first connects to the <strong>longitudinalVelocity</strong> signal within the chassisBus,
+the second creates a new signal called <strong>v_veh</strong>.
 <br>&nbsp;<br><img src=\"modelica://VehicleInterfaces/Resources/Images/DataDictionaries/buildNewDataDictionary2.png\"><br>&nbsp;</li>
 </ol>
 </html>"));

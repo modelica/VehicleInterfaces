@@ -6,8 +6,8 @@ expandable connector StandardControlBus
   Integer currentGear "Currently selected gear" annotation (Dialog);
   annotation (Documentation(info="<html>
 <p>
-An expandable connector that defines the minimum set of signals required on the <b>transmissionControlBus</b>.
-This connector shall <b>not</b> be used in models and is included here to enable
+An expandable connector that defines the minimum set of signals required on the <strong>transmissionControlBus</strong>.
+This connector shall <strong>not</strong> be used in models and is included here to enable
 connection dialog (i.e. the GUI) for signal buses.
 </p>
 </html>"),
