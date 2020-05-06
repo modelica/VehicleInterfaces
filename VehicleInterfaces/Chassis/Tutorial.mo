@@ -45,7 +45,7 @@ Starting from step 3&nbsp;above.
 </p>
 <ol>
   <li>First, decide which of the optional connectors are required in the model.
-      For this example we don't need any of the optional connections
+      For this example we don&apos;t need any of the optional connections
       <br><br>
       <img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis3.png\">
       <br><br></li>
@@ -82,7 +82,7 @@ Starting from step 3&nbsp;above.
       <br><br></li>
   <li>The model is now complete and should check successfully and can be
       used in any model compatible with the VehicleInterfaces library
-      assuming the selected Driver model doesn't use the steering wheel
+      assuming the selected Driver model doesn&apos;t use the steering wheel
       or chassis frame connections
       <br><br>
       <img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis5.png\"></li>

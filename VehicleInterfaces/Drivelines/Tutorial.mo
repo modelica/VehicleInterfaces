@@ -46,7 +46,7 @@ Starting from step&nbsp;3 above.
 </p>
 <ol>
   <li>First, decide which of the optional connectors are required in the model.
-      For this example we don't need any of the optional connections
+      For this example we don&apos;t need any of the optional connections
       <br><br>
       <img src=\"modelica://VehicleInterfaces/Resources/Images/Drivelines/buildNewDriveline3.png\">
       <br><br></li>
@@ -66,7 +66,7 @@ Starting from step&nbsp;3 above.
       bus are required for the driveline, see
       <a href=\"Modelica://VehicleInterfaces.UsersGuide.SignalBus\">here</a> for
       a&nbsp;complete list of the minimum connections required. In this case
-      we don't need to add any signals to the control signal bus.</li>
+      we don&apos;t need to add any signals to the control signal bus.</li>
   <li>The model is now complete and should check successfully and can be used
     in any model compatible with the VehicleInterfaces library assuming the
     selected Driver model also uses the accelerator pedal connection</li>
