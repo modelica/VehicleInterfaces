@@ -25,7 +25,7 @@ protected
   Real e_CP[3]
     "Unit vector from wheel center to contact point, resolved in world frame";
   Real d_CP[3];
-  Modelica.SIunits.Radius reducedRadius;
+  SI.Radius reducedRadius;
 equation
   r_CP = road.position(s, w);
   e_n = road.normal(s, w);

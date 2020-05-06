@@ -8,8 +8,8 @@ model CircleRoad "Circular road (perpendicular to world z-axis)"
     redeclare final function frictionCoefficient = circleFrictionCoefficient (mue_fixed=mue));
 
   parameter Boolean animation=true "= true, if road shall be visualized";
-  parameter Modelica.SIunits.Radius radius "Radius of road";
-  parameter Modelica.SIunits.Length width "Width of road";
+  parameter SI.Radius radius "Radius of road";
+  parameter SI.Length width "Width of road";
   parameter Real mue "Friction coefficient of road";
   parameter Modelica.Mechanics.MultiBody.Types.Color roadColor={255,0,0}
     "Color of road";
@@ -39,8 +39,8 @@ protected
   function circlePosition "Determine point on road"
     import Modelica.Math.Vectors.normalize;
     extends VehicleInterfaces.Roads.Interfaces.positionBase;
-    input Modelica.SIunits.Radius radius=1 "Radius of circle";
-    input Modelica.SIunits.Length width=1 "Width of road";
+    input SI.Radius radius=1 "Radius of circle";
+    input SI.Length width=1 "Width of road";
   algorithm
     r_0 := r_middle(s, radius) + w*normalize(r_middle(s, radius));
   end circlePosition;
@@ -60,7 +60,7 @@ protected
 
   function circleHeadingDirection "Determine unit heading direction on road"
     extends VehicleInterfaces.Roads.Interfaces.headingDirectionBase;
-    input Modelica.SIunits.Radius radius=1 "Radius of circle";
+    input SI.Radius radius=1 "Radius of circle";
   algorithm
     e_s_0 := {cos(s/radius),sin(s/radius),0};
   end circleHeadingDirection;

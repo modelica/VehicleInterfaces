@@ -4,8 +4,8 @@ model MinimalChassis2
   extends VehicleInterfaces.Icons.Chassis;
   extends VehicleInterfaces.Chassis.Interfaces.TwoAxleBase(includeChassisFrame=true);
 
-  parameter Modelica.SIunits.Mass vehicleMass=1200 "Vehicle mass";
-  parameter Modelica.SIunits.Radius tyreRadius=0.34 "Tyre rolling radius";
+  parameter SI.Mass vehicleMass=1200 "Vehicle mass";
+  parameter SI.Radius tyreRadius=0.34 "Tyre rolling radius";
   parameter Real drag=1 "Drag force (force = drag*vehicle_speed)";
 
   Modelica.Mechanics.Rotational.Components.IdealRollingWheel tyres(
