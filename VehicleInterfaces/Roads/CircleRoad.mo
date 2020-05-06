@@ -81,10 +81,10 @@ protected
 The road is a circle described by \"radius\" and \"width\".
 The road surface parameters are defined as:
 </p>
-<pre>
-   s: arc length along circle
-   w: lateral displacement of road, perpendiular to circle
-</pre>
+<blockquote><pre>
+s: arc length along circle
+w: lateral displacement of road, perpendiular to circle
+</pre></blockquote>
 <p>
 The point s=0, w=0 has position vector r={0,-radius, 0};
 </p>

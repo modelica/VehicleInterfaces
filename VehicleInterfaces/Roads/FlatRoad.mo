@@ -74,10 +74,10 @@ protected
 The road is a line along the x-axis of the world system.
 The road surface parameters are defined as:
 </p>
-<pre>
-   s: x-coordinate in world frame (x-axis is road heading direction)
-   w: y-coordinate in world frame (y-axis is lateral displacement)
-</pre>
+<blockquote><pre>
+s: x-coordinate in world frame (x-axis is road heading direction)
+w: y-coordinate in world frame (y-axis is lateral displacement)
+</pre></blockquote>
 <p>
 The point s=0, w=0 has position vector r={0, 0, 0};
 </p>
