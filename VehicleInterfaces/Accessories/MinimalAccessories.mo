@@ -17,7 +17,8 @@ model MinimalAccessories
     annotation (Placement(transformation(extent={{20,-10}, {40,10}})));
   Modelica.Mechanics.Rotational.Sources.SignTorque torqueLoss(
     tau_constant=-accessoriesLoad,
-    useSupport=includeEngineBearing)
+    useSupport=includeEngineBearing,
+    w0=1)
     annotation (Placement(transformation(extent={{-20,-10}, {0,10}})));
   Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction(
     n=axisOfRotation) if includeEngineBearing
