@@ -37,7 +37,7 @@ model using this interface definition.
 <p>
 The following steps demonstrate how to create a&nbsp;simple engine model.
 The engine model will apply torque at the flywheel inertia based on
-a&nbsp;simple gain from the driver's accelerator pedal. No torque reaction
+a&nbsp;simple gain from the driver&apos;s accelerator pedal. No torque reaction
 in to the engine block will be modelled.
 </p>
 <p>
