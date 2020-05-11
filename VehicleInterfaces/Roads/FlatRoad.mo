@@ -12,15 +12,15 @@ model FlatRoad "Straight road along x-axis (perpendicular to world z-axis)"
   parameter Real mue=0.5 "Friction coefficient of road";
   parameter Modelica.Mechanics.MultiBody.Types.Color roadColor={255,0,0}
     "Color of road" annotation (Dialog(group="Animation",enable=animation));
-  parameter Modelica.SIunits.Length width=8 "Width of road"
+  parameter SI.Length width=8 "Width of road"
     annotation (Dialog(group="Animation", enable=animation));
-  parameter Modelica.SIunits.Position x_min=-100
+  parameter SI.Position x_min=-100
     "Roads is visualized in the range [x_min .. x_max]"
     annotation (Dialog(group="Animation", enable=animation));
-  parameter Modelica.SIunits.Position x_max=100
+  parameter SI.Position x_max=100
     "Roads is visualized in the range [x_min .. x_max]"
     annotation (Dialog(group="Animation", enable=animation));
-  parameter Modelica.SIunits.Distance offset=0
+  parameter SI.Distance offset=0
     "Offset from the road centre line";
 protected
   outer Modelica.Mechanics.MultiBody.World world;
@@ -41,7 +41,7 @@ protected
 
   function constantOffset "Determine offset from road centre line"
     extends VehicleInterfaces.Roads.Interfaces.trackOffsetBase;
-    input Modelica.SIunits.Distance offset=0;
+    input SI.Distance offset=0;
   algorithm
     trackOffset := {0,offset,0};
   end constantOffset;

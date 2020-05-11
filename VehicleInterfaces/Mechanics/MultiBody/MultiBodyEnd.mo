@@ -8,7 +8,7 @@ model MultiBodyEnd "Ends a MultiBody chain"
     "Flange with zero force and torque applied"
     annotation (Placement(transformation(extent={{0,-20},{40,20}})));
 protected
-  Modelica.Mechanics.MultiBody.Sensors.Internal.ZeroForceAndTorque
+  Modelica.Mechanics.MultiBody.Forces.Internal.ZeroForceAndTorque
     zeroForceAndTorque if includeBearingConnector
     annotation (Placement(transformation(extent={{-20,-10},{-40,10}})));
 

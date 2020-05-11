@@ -4,7 +4,7 @@ model MinimalBrakes
   extends VehicleInterfaces.Icons.Brakes;
   extends VehicleInterfaces.Brakes.Interfaces.TwoAxleBase(includeWheelBearings=world.driveTrainMechanics3D);
 
-  parameter Modelica.SIunits.Torque maxTorque=1000
+  parameter SI.Torque maxTorque=1000
     "Maximum combined brake torque (for all brakes together)";
 
   Modelica.Blocks.Math.Gain computeTorque(k=maxTorque/4.0)
@@ -13,7 +13,7 @@ model MinimalBrakes
         extent={{10,-10},{-10,10}},
         rotation=180)));
   Modelica.Mechanics.Rotational.Components.Brake brake_1(
-    mue_pos=[0, 1],
+    mu_pos=[0,1],
     useSupport=true,
     fn_max=1)
     annotation (Placement(transformation(
@@ -21,7 +21,7 @@ model MinimalBrakes
         extent={{-10,-10},{10,10}},
         rotation=270)));
   Modelica.Mechanics.Rotational.Components.Brake brake_2(
-    mue_pos=[0, 1],
+    mu_pos=[0,1],
     useSupport=true,
     fn_max=1)
     annotation (Placement(transformation(
@@ -29,7 +29,7 @@ model MinimalBrakes
         extent={{-10,-10},{10,10}},
         rotation=270)));
   Modelica.Mechanics.Rotational.Components.Brake brake_3(
-    mue_pos=[0, 1],
+    mu_pos=[0,1],
     useSupport=true,
     fn_max=1)
     annotation (Placement(transformation(
@@ -37,7 +37,7 @@ model MinimalBrakes
         extent={{-10,-10},{10,10}},
         rotation=90)));
   Modelica.Mechanics.Rotational.Components.Brake brake_4(
-    mue_pos=[0, 1],
+    mu_pos=[0,1],
     useSupport=true,
     fn_max=1)
     annotation (Placement(transformation(
@@ -118,15 +118,15 @@ equation
       color={255,204,51},
       thickness=0.5));
   connect(computeTorque.u, driverBus.brakePedalPosition) annotation (Line(
-        points={{-42,-10},{-79.95,-10},{-79.95,-9.95}},
+        points={{-42,-10},{-80,-10},{-80,-10}},
         color={0,0,127}));
-  connect(wheelSpeed_1.w, brakesBus.wheelSpeed_1) annotation (Line(points={{-60,-39.5},{-60,-10},{-60,20.05},{-59.95,20.05}},
+  connect(wheelSpeed_1.w, brakesBus.wheelSpeed_1) annotation (Line(points={{-60,-39.5},{-60,-10},{-60,20},{-60,20}},
                                 color={0,0,127}));
-  connect(wheelSpeed_2.w, brakesBus.wheelSpeed_2) annotation (Line(points={{-60,39.5},{-60,30},{-60,20.05},{-59.95,20.05}},
+  connect(wheelSpeed_2.w, brakesBus.wheelSpeed_2) annotation (Line(points={{-60,39.5},{-60,30},{-60,20},{-60,20}},
                                color={0,0,127}));
-  connect(wheelSpeed_3.w, brakesBus.wheelSpeed_3) annotation (Line(points={{60,-39.5},{60,19},{-59.95,19},{-59.95,20.05}},
+  connect(wheelSpeed_3.w, brakesBus.wheelSpeed_3) annotation (Line(points={{60,-39.5},{60,19},{-60,19},{-60,20}},
                                                 color={0,0,127}));
-  connect(wheelSpeed_4.w, brakesBus.wheelSpeed_4) annotation (Line(points={{60,39.5},{60,21},{-59.95,21},{-59.95,20.05}},
+  connect(wheelSpeed_4.w, brakesBus.wheelSpeed_4) annotation (Line(points={{60,39.5},{60,21},{-60,21},{-60,20}},
                                                color={0,0,127}));
   connect(controlBus.brakesBus, brakesBus) annotation (Line(
       points={{-100.1,60.1},{-90,60.1},{-90,20},{-60,20}},

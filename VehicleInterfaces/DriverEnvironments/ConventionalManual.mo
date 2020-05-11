@@ -22,8 +22,8 @@ public
   parameter Real finalBrakeRequest(
     min=0,
     max=1) = 0 "Final brake pedal position";
-  parameter Modelica.SIunits.Time accelTime=10 "Time of accel apply";
-  parameter Modelica.SIunits.Time brakeTime=10 "Time of brake apply";
+  parameter SI.Time accelTime=10 "Time of accel apply";
+  parameter SI.Time brakeTime=10 "Time of brake apply";
   parameter VehicleInterfaces.Types.Gear selectedGear=2
     "Requested gear in manual mode";
   parameter Real clutchRequest=0

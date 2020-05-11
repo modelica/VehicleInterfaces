@@ -7,33 +7,33 @@ model ConstantAtmosphere "Atmospheres with constant conditions"
     redeclare final function temperature = constantTemperature (T0=T),
     redeclare final function humidity = constantHumidity (h0=h));
 
-  parameter Modelica.SIunits.Velocity[3] v=zeros(3) "Wind velocity";
-  parameter Modelica.SIunits.AbsolutePressure ambientPressure=101300
+  parameter SI.Velocity[3] v=zeros(3) "Wind velocity";
+  parameter SI.AbsolutePressure ambientPressure=101300
     "Air pressure";
-  parameter Modelica.SIunits.Temperature T=293.15 "Air temperature";
+  parameter SI.Temperature T=293.15 "Air temperature";
   parameter Real h=0.5 "Air humidity (0-1)";
   constant Real R=287.0512249529787 "Gas constant for air";
 
 protected
-  parameter Modelica.SIunits.Density rho=ambientPressure/(R*T);
+  parameter SI.Density rho=ambientPressure/(R*T);
 
   function constantWindVelocity
     extends VehicleInterfaces.Atmospheres.Interfaces.windVelocityBase;
-    input Modelica.SIunits.Velocity[3] windVelocity={0,0,0};
+    input SI.Velocity[3] windVelocity={0,0,0};
   algorithm
     v := windVelocity;
   end constantWindVelocity;
 
   function constantDensity "Determine density"
     extends VehicleInterfaces.Atmospheres.Interfaces.densityBase;
-    input Modelica.SIunits.Density density=1.18 "Density";
+    input SI.Density density=1.18 "Density";
   algorithm
     rho := density;
   end constantDensity;
 
   function constantTemperature "Determine temperature"
     extends VehicleInterfaces.Atmospheres.Interfaces.temperatureBase;
-    input Modelica.SIunits.Temperature T0=293 "Constant temperature";
+    input SI.Temperature T0=293 "Constant temperature";
   algorithm
     T := T0;
   end constantTemperature;

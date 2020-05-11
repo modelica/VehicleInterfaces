@@ -8,11 +8,12 @@ model MinimalEngineUsingPedal
     includeAcceleratorPedal=true,
     includeAccessoriesBearing=world.driveTrainMechanics3D);
 
-  parameter Modelica.SIunits.AngularVelocity engineSpeed_start(displayUnit="r/min") = 104.7197551196598
+  parameter SI.AngularVelocity engineSpeed_start(displayUnit="r/min") = 104.7197551196598
     "Initial engine speed";
-  parameter Modelica.SIunits.Force pedalPositionToTorque = 50
+  parameter SI.Force pedalPositionToTorque=50
     "Engine torque = pedalPositionToTorque*accelerator_pedal_position";
-  parameter Modelica.SIunits.Inertia flywheelInertia=0.08 "Flywheel inertia";
+  parameter SI.Inertia flywheelInertia=0.08
+    "Flywheel inertia";
   parameter Modelica.Mechanics.MultiBody.Types.Axis axisOfRotation={1,0,0}
     "Axis of rotation resolved in engineMount";
 

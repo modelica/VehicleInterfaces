@@ -53,3 +53,23 @@ convertModifiers("VehicleInterfaces.Accessories.MinimalAccessories",
                  {"accessoriesLoad"},
                  {"accessoriesLoad=if (%accessoriesLoad%<0) then (-1*%accessoriesLoad%) else %accessoriesLoad%"},
                  true);
+
+// Changes due to conversion to Modelica Standard Library 4.0.0
+convertElement("VehicleInterfaces.Brakes.MinimalBrakes","brake_1.mue0","brake_1.mu0");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakes","brake_1.mue_pos","brake_1.mu_pos");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakes","brake_2.mue0","brake_2.mu0");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakes","brake_2.mue_pos","brake_2.mu_pos");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakes","brake_3.mue0","brake_3.mu0");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakes","brake_3.mue_pos","brake_3.mu_pos");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakes","brake_4.mue0","brake_4.mu0");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakes","brake_4.mue_pos","brake_4.mu_pos");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakesUsingPedal","brake_1.mue0","brake_1.mu0");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakesUsingPedal","brake_1.mue_pos","brake_1.mu_pos");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakesUsingPedal","brake_2.mue0","brake_2.mu0");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakesUsingPedal","brake_2.mue_pos","brake_2.mu_pos");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakesUsingPedal","brake_3.mue0","brake_3.mu0");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakesUsingPedal","brake_3.mue_pos","brake_3.mu_pos");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakesUsingPedal","brake_4.mue0","brake_4.mu0");
+convertElement("VehicleInterfaces.Brakes.MinimalBrakesUsingPedal","brake_4.mue_pos","brake_4.mu_pos");
+convertElement("VehicleInterfaces.Transmissions.SingleGearManualTransmission","clutch.mue0","clutch.mu0");
+convertElement("VehicleInterfaces.Transmissions.SingleGearManualTransmission","clutch.mue_pos","clutch.mu_pos");
