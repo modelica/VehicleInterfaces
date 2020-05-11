@@ -98,9 +98,9 @@ w: y-coordinate in world frame (y-axis is lateral displacement)
 <strong>function</strong> lineFrictionCoefficient
   \"Determine friction coefficient at point on road\"
   <strong>extends</strong> VehicleInterfaces.Roads.Interfaces.Base.frictionCoefficient;
-  <strong>input</strong> Real mue_fixed \"Friction coefficient\";
+  <strong>input</strong> Real mu_fixed \"Friction coefficient\";
 <strong>algorithm</strong>
-  mue := mue_fixed;
+  mu := mu_fixed;
 <strong>end</strong> lineFrictionCoefficient;
       </pre></blockquote>
       </li>
@@ -117,7 +117,7 @@ w: y-coordinate in world frame (y-axis is lateral displacement)
     <strong>redeclare final function</strong> trackOffset = constantOffset(offset=offset)
     <strong>redeclare final function</strong> normal = lineNormal,
     <strong>redeclare final function</strong> headingDirection = lineHeadingDirection,
-    <strong>redeclare final function</strong> frictionCoefficient = lineFrictionCoefficient(mue_fixed=mue));
+    <strong>redeclare final function</strong> frictionCoefficient = lineFrictionCoefficient(mu_fixed=mu));
 
   //rest of definition
   ...
@@ -126,7 +126,7 @@ w: y-coordinate in world frame (y-axis is lateral displacement)
       </li>
 
   <li>In redeclaring the functions we have also introduced new parameters
-      <strong>mue</strong> and <strong>offset</strong> that need to be added
+      <strong>mu</strong> and <strong>offset</strong> that need to be added
       to the model to define the friction coefficient of the road and
       the track offset from the road centre line.</li>
 
@@ -135,7 +135,7 @@ w: y-coordinate in world frame (y-axis is lateral displacement)
       to the definition of the road and will not be described in this
       tutorial.</li>
 
-  <li>The road model is complete and can now be used</li>
+  <li>The road model is complete and can now be used.</li>
   </ol>
 </html>"));
 end Tutorial;
