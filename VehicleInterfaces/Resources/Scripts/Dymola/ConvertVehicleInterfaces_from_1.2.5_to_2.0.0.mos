@@ -38,15 +38,29 @@ convertClass("VehicleInterfaces.Icons.VariantLibrary",
 convertClass("VehicleInterfaces.Icons.BaseClassPackage",
               "Modelica.Icons.BasesPackage");
 
+//convertClass("VehicleInterfaces.Roads.Interfaces.Base",
+//              "ObsoleteVehicleInterfaces2.Roads.Interfaces.Base");
+//convertClass("VehicleInterfaces.Roads.Interfaces.frictionCoefficientBase",
+//            "ObsoleteVehicleInterfaces2.Roads.Interfaces.frictionCoefficientBase");
+
 // Parameter renamed
 convertElement("VehicleInterfaces.Accessories.Interfaces.Base",
                "includeAccessoriesBearing", "includeEngineBearing");
 convertElement("VehicleInterfaces.Transmissions.Interfaces.Base",
                "includeTransmissionBearing", "includeEngineBearing");
 convertElement("VehicleInterfaces.Chassis.Interfaces.ThreeAxleBase",
-               {"end_5", "end_6"}, {"end_6", "end_5"})
+               {"end_5", "end_6"}, {"end_6", "end_5"});
 convertElement("VehicleInterfaces.Chassis.Interfaces.FourAxleBase",
-               {"end_5", "end_6", "end_7", "end_8"}, {"end_6", "end_5", "end_8", "end_7"})
+               {"end_5", "end_6", "end_7", "end_8"}, {"end_6", "end_5", "end_8", "end_7"});
+
+convertElement({"VehicleInterfaces.Roads.CircleRoad",
+                "VehicleInterfaces.Roads.FlatRoad",
+                "VehicleInterfaces.Roads.Examples.Utilities.DummyTyre",
+                "VehicleInterfaces.Roads.Interfaces.frictionCoefficientBase"},
+                "mue", "mu");
+convertElement({"VehicleInterfaces.Roads.CircleRoad.frictionCoefficient",
+                "VehicleInterfaces.Roads.FlatRoad.frictionCoefficient"},
+                "mue_fixed", "mu_fixed");
 
 // Change modifier
 convertModifiers("VehicleInterfaces.Accessories.MinimalAccessories",
