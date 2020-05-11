@@ -2,18 +2,19 @@ within VehicleInterfaces.Roads.Examples;
 model CheckFunctionDifferentiation_CircleRoads "Check that road functions can be differentiated"
   import Modelica.Mechanics.MultiBody.Frames;
   extends Modelica.Icons.Example;
-  parameter Real k=0.8 "Constant acceleration";
-  Real phi;
-  Real s;
-  Real r[3];
+
+  parameter SI.AngularAcceleration k=0.8 "Constant acceleration";
+  SI.Angle phi;
+  SI.PathLength s;
+  SI.Position r[3];
   Real e_s[3];
   Real e_n[3];
   Real e_y[3];
   Real T[3, 3];
-  Real v[3];
-  Real a[3];
-  Real w[3];
-  Real z[3];
+  SI.Velocity v[3];
+  SI.Acceleration a[3];
+  SI.AngularVelocity w[3];
+  SI.AngularAcceleration z[3];
   Frames.Orientation R;
   inner Modelica.Mechanics.MultiBody.World world(enableAnimation=true, n={0,
         0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,
