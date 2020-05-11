@@ -6,10 +6,10 @@ model FlatRoad "Straight road along x-axis (perpendicular to world z-axis)"
     redeclare final function trackOffset = constantOffset (offset=offset),
     redeclare final function normal = lineNormal,
     redeclare final function headingDirection = lineHeadingDirection,
-    redeclare final function frictionCoefficient = lineFrictionCoefficient (mue_fixed=mue));
+    redeclare final function frictionCoefficient = lineFrictionCoefficient (mu_fixed=mu));
 
   parameter Boolean animation=true "= true, if road shall be visualized";
-  parameter Real mue=0.5 "Friction coefficient of road";
+  parameter Real mu=0.5 "Friction coefficient of road";
   parameter Modelica.Mechanics.MultiBody.Types.Color roadColor={255,0,0}
     "Color of road" annotation (Dialog(group="Animation",enable=animation));
   parameter SI.Length width=8 "Width of road"
@@ -61,9 +61,9 @@ protected
   function lineFrictionCoefficient
     "Determine friction coefficient at point on road"
     extends VehicleInterfaces.Roads.Interfaces.frictionCoefficientBase;
-    input Real mue_fixed=1 "Friction coefficient";
+    input Real mu_fixed=1 "Friction coefficient";
   algorithm
-    mue := mue_fixed;
+    mu := mu_fixed;
   end lineFrictionCoefficient;
 
   annotation (
