@@ -2,9 +2,9 @@ within VehicleInterfaces.Interfaces;
 model ShiftOutput
   "Convert a position in the manual shift connector to an integer value"
   parameter Integer numberOfGears=5 "Number of forward gears";
-  parameter Modelica.SIunits.Distance crossGateDisplacement=0.1
+  parameter SI.Distance crossGateDisplacement=0.1
     "Total distance across the gate";
-  parameter Modelica.SIunits.Distance intoGearDisplacement=0.1
+  parameter SI.Distance intoGearDisplacement=0.1
     "Distance to move in to gear";
   ShiftConnector shiftConnector "Gear shift connection"
     annotation (Placement(transformation(extent={{-130,-30},{-70,30}})));

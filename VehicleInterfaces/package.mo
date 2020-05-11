@@ -2,7 +2,7 @@ within ;
 package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.0-dev) - Interface definitions and architectures for vehicle system modeling"
   extends Modelica.Icons.Package;
 
-  import SI = Modelica.SIunits;
+  import Modelica.Units.SI;
 
   annotation (
     Protection(
@@ -18,7 +18,7 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.0-dev) - Inter
     versionBuild=1,
     dateModified="2020-01-14",
     revisionId="$Format:%h %ci$",
-    uses(Modelica(version="3.2.3")),
+    uses(Modelica(version="4.0.0")),
     conversion(
       from(version="1.0", script="modelica://VehicleInterfaces/Resources/Scripts/Dymola/ConvertVehicleInterfaces_from_1.0_to_1.1.mos"),
       noneFromVersion="1.1",

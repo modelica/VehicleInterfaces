@@ -3,7 +3,7 @@ model MinimalDriveline "Front wheel drive, 4 wheeled vehicle"
   extends VehicleInterfaces.Icons.Driveline;
   extends VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase(includeMount=world.driveTrainMechanics3D);
 
-  parameter Modelica.SIunits.Inertia halfshaftInertia=0.1
+  parameter SI.Inertia halfshaftInertia=0.1
     "Inertia of each halfshaft";
   parameter Real finalDriveRatio=3 "Final drive ratio";
 
