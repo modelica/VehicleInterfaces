@@ -14,7 +14,7 @@ model CheckContactCalculation "Check that wheel contact point calculation is pro
   inner VehicleInterfaces.Roads.CircleRoad road(
     radius=50,
     width=8,
-    mue=0.5,
+    mu=0.5,
     roadColor={100,100,100}) annotation (Placement(transformation(extent={{-40,40},{0,80}})));
   inner Modelica.Mechanics.MultiBody.World world(
     enableAnimation=true,
