@@ -140,9 +140,9 @@ package VehicleInterfacesTestConversion2
     model Issue70_BaseExtends "Conversion test for issue #70"
       extends VehicleInterfaces.Roads.Interfaces.Base(
         redeclare final function frictionCoefficient = testFrictionCoefficient (
-          mue_fixed=mu));
+          mue_fixed=mu_low));
 
-      parameter Real mu=0.5 "Friction coefficient of road";
+      parameter Real mu_low=0.25;
     protected
       outer Modelica.Mechanics.MultiBody.World world;
 
@@ -156,14 +156,23 @@ package VehicleInterfacesTestConversion2
 
     end Issue70_BaseExtends;
 
-    model Issue70_CallFriction "Conversion test for issue #70"
+    model Issue70_CircleRoad "Conversion test for issue #70"
       inner VehicleInterfaces.Roads.CircleRoad road(
-        mue=0.5, radius=100, width=5);
+        mue=0.77, radius=100, width=5);
       Real friction;
     equation
       friction = road.frictionCoefficient(0,0);
 
-    end Issue70_CallFriction;
+    end Issue70_CircleRoad;
+
+    model Issue70_FlatRoad "Conversion test for issue #70"
+      inner VehicleInterfaces.Roads.FlatRoad road(
+        mue=0.8);
+      Real friction;
+    equation
+      friction = road.frictionCoefficient(0,0);
+
+    end Issue70_FlatRoad;
   end Roads;
   annotation (
     uses(
