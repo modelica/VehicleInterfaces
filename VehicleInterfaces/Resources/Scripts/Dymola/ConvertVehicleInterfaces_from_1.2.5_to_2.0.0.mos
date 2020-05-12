@@ -38,11 +38,6 @@ convertClass("VehicleInterfaces.Icons.VariantLibrary",
 convertClass("VehicleInterfaces.Icons.BaseClassPackage",
               "Modelica.Icons.BasesPackage");
 
-//convertClass("VehicleInterfaces.Roads.Interfaces.Base",
-//              "ObsoleteVehicleInterfaces2.Roads.Interfaces.Base");
-//convertClass("VehicleInterfaces.Roads.Interfaces.frictionCoefficientBase",
-//            "ObsoleteVehicleInterfaces2.Roads.Interfaces.frictionCoefficientBase");
-
 // Parameter renamed
 convertElement("VehicleInterfaces.Accessories.Interfaces.Base",
                "includeAccessoriesBearing", "includeEngineBearing");
