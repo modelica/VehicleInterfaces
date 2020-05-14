@@ -7,18 +7,20 @@ model MinimalDriveline "Front wheel drive, 4 wheeled vehicle"
     "Inertia of each halfshaft";
   parameter Real finalDriveRatio=3 "Final drive ratio";
 
-  Modelica.Mechanics.MultiBody.Parts.Rotor1D rightHalfShaft(J=
-        halfshaftInertia) annotation (Placement(transformation(
+  Modelica.Mechanics.MultiBody.Parts.Rotor1D rightHalfShaft(
+    J=halfshaftInertia)
+    annotation (Placement(transformation(
         origin={-40,50},
         extent={{-10,10},{10,-10}},
         rotation=270)));
-  Modelica.Mechanics.MultiBody.Parts.Rotor1D leftHalfShaft(J=halfshaftInertia)
+  Modelica.Mechanics.MultiBody.Parts.Rotor1D leftHalfShaft(
+    J=halfshaftInertia)
     annotation (Placement(transformation(
         origin={-40,-50},
         extent={{-10,-10},{10,10}},
         rotation=90)));
   Modelica.Mechanics.Rotational.Components.IdealPlanetary differential(
-                                                            ratio=1)
+    ratio=1)
     annotation (Placement(transformation(
         origin={-40,20},
         extent={{-10,-10},{10,10}},
@@ -27,8 +29,8 @@ protected
   outer Modelica.Mechanics.MultiBody.World world;
 public
   Modelica.Mechanics.Rotational.Components.IdealGear finalDrive(
-                                                     ratio=finalDriveRatio,
-      useSupport=false)
+    ratio=finalDriveRatio,
+    useSupport=false)
     annotation (Placement(transformation(extent={{-80,-10},{-60,10}})));
 equation
   connect(rightHalfShaft.flange_a, wheelHub_2.flange) annotation (Line(points=
@@ -53,6 +55,15 @@ equation
     annotation (Line(points={{-80,0},{-100,0}}));
   annotation (
     Documentation(info="<html>
-<p>This driveline model is of a front-wheel drive 4-wheeled vehicle.  The front differential is modelled using an ideal gear and planetary gear.  The model does include the 3D mount effects if the <strong>driveTrainMechanics3D</strong> in the world object is set to true.  To properly include these effects the additional constant and FrameForceAndTorque actuators are required on the front wheel hubs.  A constant zero torque is applied to the rear wheelhubs and the reaction paths in to the wheelhubs are included.</p>
+<p>
+This driveline model is of a&nbsp;front-wheel drive 4-wheeled vehicle.
+The front differential is modelled using an ideal gear and planetary gear.
+The model does include the 3D mount effects if the
+<strong>driveTrainMechanics3D</strong> in the world object is set to true.
+To properly include these effects the additional constant and
+FrameForceAndTorque actuators are required on the front wheel hubs.
+A&nbsp;constant zero torque is applied to the rear wheelhubs and the reaction
+paths in to the wheelhubs are included.
+</p>
 </html>"));
 end MinimalDriveline;

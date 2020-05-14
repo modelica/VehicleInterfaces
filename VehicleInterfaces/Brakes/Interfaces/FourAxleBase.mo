@@ -118,7 +118,13 @@ equation
       thickness=0.5));
   annotation (
     Documentation(info="<html>
-<p>This partial model defines the interfaces required for the brakes subsystem of a four axled vehicle within the VehicleInterfaces package. See the <a href=\"Modelica://VehicleInterfaces.Brakes\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Brakes.Tutorial\">tutorial</a> for more information.</p>
+<p>
+This partial model defines the interfaces required for the brakes subsystem
+of a four axled vehicle within the VehicleInterfaces package. See the
+<a href=\"Modelica://VehicleInterfaces.Brakes\">documentation</a> and
+<a href=\"Modelica://VehicleInterfaces.Brakes.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"),
     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
             {300,100}}), graphics={

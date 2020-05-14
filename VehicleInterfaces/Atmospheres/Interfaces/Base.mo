@@ -35,7 +35,13 @@ Dummy model to demonstrate how the air humidity model should be defined and incl
     defaultComponentName="atmosphere",
     defaultComponentPrefixes="inner",
     Documentation(info="<html>
-<p>This partial model defines the interfaces required for an atmosphere subsystem.  See the <a href=\"Modelica://VehicleInterfaces.Atmospheres\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Atmospheres.Tutorial\">tutorial</a> for more information.</p>
+<p>
+This partial model defines the interfaces required for an atmosphere
+subsystem.  See the
+<a href=\"Modelica://VehicleInterfaces.Atmospheres\">documentation</a> and
+<a href=\"Modelica://VehicleInterfaces.Atmospheres.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"));
 
 end Base;

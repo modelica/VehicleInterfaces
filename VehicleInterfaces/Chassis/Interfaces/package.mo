@@ -7,7 +7,7 @@ package Interfaces "Collection of interface definitions for chassis"
 
   annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for chassis models.
+A&nbsp;collection of partial base classes which define interfaces for chassis models.
 </p>
 </html>"));
 end Interfaces;

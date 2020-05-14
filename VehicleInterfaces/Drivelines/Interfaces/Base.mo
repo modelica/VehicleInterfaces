@@ -50,6 +50,14 @@ equation
           lineColor={255,128,0},
           pattern=LinePattern.Dot)}),
     Documentation(info="<html>
-<p>This partial model defines the basic interfaces required for any driveline subsystem.  This class should be extended to form a driveline interface definition with the correct number of wheelHub connectors for the type of vehicle being modelled. See the <a href=\"Modelica://VehicleInterfaces.Drivelines\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Drivelines.Tutorial\">tutorial</a> for more information.</p>
+<p>
+This partial model defines the basic interfaces required for any driveline
+subsystem. This class should be extended to form a&nbsp;driveline interface
+definition with the correct number of wheelHub connectors for the type of
+vehicle being modelled. See the
+<a href=\"Modelica://VehicleInterfaces.Drivelines\">documentation</a> and
+<a href=\"Modelica://VehicleInterfaces.Drivelines.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"));
 end Base;

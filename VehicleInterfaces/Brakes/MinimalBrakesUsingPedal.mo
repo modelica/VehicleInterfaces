@@ -2,7 +2,9 @@ within VehicleInterfaces.Brakes;
 model MinimalBrakesUsingPedal
   "Simple proportional (constant gain) braking model for 4 wheeled vehicles, uses the brake pedal connection"
   extends VehicleInterfaces.Icons.Brakes;
-  extends VehicleInterfaces.Brakes.Interfaces.TwoAxleBase(includeBrakePedal=true, includeWheelBearings=world.driveTrainMechanics3D);
+  extends VehicleInterfaces.Brakes.Interfaces.TwoAxleBase(
+    includeBrakePedal=true,
+    includeWheelBearings=world.driveTrainMechanics3D);
 
   parameter Modelica.SIunits.Torque maxTorque=1000
     "Maximum combined brake torque";
@@ -160,6 +162,9 @@ equation
          {{-80,-75},{-80,-60},{-70,-60}}));
   annotation (
     Documentation(info="<html>
-<p>Brakes subsystem model that uses the physical pedal connection to determine the brake torque demand being requested by the driver.</p>
+<p>
+Brakes subsystem model that uses the physical pedal connection to determine
+the brake torque demand being requested by the driver.
+</p>
 </html>"));
 end MinimalBrakesUsingPedal;

@@ -48,8 +48,7 @@ protected
   annotation (
     defaultComponentName="atmosphere",
     defaultComponentPrefixes="inner",
-    Icon(coordinateSystem(preserveAspectRatio=false, extent={{-200,-100},{200,
-            100}},
+    Icon(coordinateSystem(preserveAspectRatio=false, extent={{-200,-100},{200,100}},
         grid={2,2})),
     Documentation(info="<html>
 <p>

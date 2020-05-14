@@ -62,7 +62,11 @@ equation
 
   annotation (Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-160,
             -100},{160,100}})),
-                       Documentation(info="<html>
-<p>Single degree-of-freedom chassis model with mass and speed dependant drag model.  Uses MultiBody wheelHub connections and positions these relative to the vehicle body position.</p>
+    Documentation(info="<html>
+<p>
+Single degree-of-freedom chassis model with mass and speed dependant drag model.
+Uses MultiBody wheelHub connections and positions these relative to the
+vehicle body position.
+</p>
 </html>"));
 end MinimalChassis3;
