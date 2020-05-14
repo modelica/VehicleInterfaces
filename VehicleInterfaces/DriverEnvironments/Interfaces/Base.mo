@@ -51,6 +51,13 @@ protected
           lineColor={255,128,0},
           pattern=LinePattern.Dot)}),
     Documentation(info="<html>
-<p>This partial model defines the interfaces required for the driver environment subsystem.  See the <a href=\"Modelica://VehicleInterfaces.DriverEnvironments\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.DriverEnvironments.Tutorial\">tutorial</a> for more information.</p>
+<p>
+This partial model defines the interfaces required for the driver environment
+subsystem. See the
+<a href=\"Modelica://VehicleInterfaces.DriverEnvironments\">documentation</a>
+and
+<a href=\"Modelica://VehicleInterfaces.DriverEnvironments.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"));
 end Base;

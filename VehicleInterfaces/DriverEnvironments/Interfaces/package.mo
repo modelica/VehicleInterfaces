@@ -11,7 +11,8 @@ package Interfaces "Collection of interface definitions for driver environment"
 
   annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for driver environment models.
+A&nbsp;collection of partial base classes which define interfaces for
+driver environment models.
 </p>
 </html>"));
 end Interfaces;

@@ -22,8 +22,7 @@ model MinimalEngineUsingPedal
     a(fixed=false),
     phi(fixed=false),
     w(fixed=true, start=engineSpeed_start))
-    annotation (Placement(transformation(extent={{
-            -10,-10},{10,10}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
   Modelica.Mechanics.Rotational.Sources.Torque engine(useSupport=true)
     annotation (Placement(transformation(extent={{-40,-30},{-20,-10}})));
   Modelica.Mechanics.Rotational.Sensors.SpeedSensor engineSpeed
@@ -52,7 +51,7 @@ protected
 equation
   connect(engine.flange,   flywheel.flange_a)
     annotation (Line(points={{-20,-20},{-20,0},{-10,0}}));
-  connect(flywheel.flange_b,engineSpeed.flange)    annotation (Line(points={{
+  connect(flywheel.flange_b,engineSpeed.flange) annotation (Line(points={{
           10,0},{20,0},{20,60}}));
   connect(flywheel.flange_b, engineTorque.flange_a) annotation (Line(points={
           {10,0},{30,0}}));
@@ -65,12 +64,12 @@ equation
       points={{0,-10},{0,-100}},
       thickness=0.5));
   connect(mounting1D.flange_b,engine.support)  annotation (Line(points={{-30,-40},
-          {-30,-40},{-30,-30}},                                       color={
+          {-30,-40},{-30,-30}}, color={
           0,0,0}));
   connect(mounting1D.frame_a, engineMount) annotation (Line(
       points={{-40,-50},{-40,-60},{0,-60},{0,-100}},
       thickness=0.5));
-  connect(acceleratorPedalPosition.flange,   acceleratorPedal) annotation (Line(
+  connect(acceleratorPedalPosition.flange, acceleratorPedal) annotation (Line(
         points={{-40,90},{0,90},{0,100}}, color={0,127,0}));
   connect(acceleratorPedalPosition.s, gain.u) annotation (Line(points={{-61,90},
           {-80,90},{-80,-20},{-67.2,-20}}, color={0,0,127}));
@@ -85,12 +84,16 @@ equation
   connect(accessoryFlange.bearingFrame, mounting1D.frame_a) annotation (Line(
       points={{-100,0},{-100,-60},{-40,-60},{-40,-50}},
       thickness=0.5));
-
   connect(engineSpeed.w, engineBus.speed) annotation (Line(
       points={{-1,60},{-60,60}},
       color={0,0,127}));
-  annotation (                         Documentation(info="<html>
-<p>A simple engine model with flywheel and where the torque output is proportional to the accelerator pedal position.
-This engine model uses the physical connection between the driver and the engine for the accelerator pedal.</p>
+  annotation (
+    Documentation(info="<html>
+<p>
+A&nbsp;simple engine model with flywheel and where the torque output
+is proportional to the accelerator pedal position. This engine model
+uses the physical connection between the driver and the engine for
+the accelerator pedal.
+</p>
 </html>"));
 end MinimalEngineUsingPedal;

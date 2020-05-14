@@ -26,5 +26,6 @@ passenger car.
       are provided in the
       <a href=\"Modelica://VehicleInterfaces.Mechanics\">VehicleInterfaces.Mechanics</a>
       package.</li>
-</ol></html>"));
+</ol>
+</html>"));
 end Tutorial;

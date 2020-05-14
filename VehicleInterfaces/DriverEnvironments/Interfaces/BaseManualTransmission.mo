@@ -15,7 +15,8 @@ public
     includeManualShiftConnector
     "Manual transmission shift connection (optional)"
     annotation (Placement(transformation(extent={{-10,-110},{10,-90}})));
-  annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
+  annotation (
+    Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
             -100,-100},{100,100}}), graphics={Rectangle(
           extent={{-58,-88},{-34,-112}},
           lineColor={255,128,0},
@@ -23,7 +24,10 @@ public
           extent={{-12,-88},{12,-114}},
           lineColor={255,128,0},
           pattern=LinePattern.Dot)}),
-                        Documentation(info="<html>
- <p>Base class for driver models for vehicles with manual transmissions where the driver control logic is contained within the derived model.</p>
+    Documentation(info="<html>
+<p>
+Base class for driver models for vehicles with manual transmissions where
+the driver control logic is contained within the derived model.
+</p>
 </html>"));
 end BaseManualTransmission;

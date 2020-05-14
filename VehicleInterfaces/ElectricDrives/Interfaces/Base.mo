@@ -29,7 +29,16 @@ equation
       color={135,135,135},
       thickness=0.5));
 
-  annotation (        Documentation(info="<html>
-<p>This partial model defines the interfaces required for an electric machine subsystem. This class should be extended to form an electric machine interface definition with propper electrical connectors. See the <a href=\"Modelica://VehicleInterfaces.ElectricDrives\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.ElectricDrives.Tutorial\">tutorial</a> for more information.</p>
+  annotation (
+    Documentation(info="<html>
+<p>
+This partial model defines the interfaces required for an electric machine
+subsystem. This class should be extended to form an electric machine
+interface definition with propper electrical connectors. See the
+<a href=\"Modelica://VehicleInterfaces.ElectricDrives\">documentation</a>
+and
+<a href=\"Modelica://VehicleInterfaces.ElectricDrives.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"));
 end Base;

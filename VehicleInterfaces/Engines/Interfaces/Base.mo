@@ -76,6 +76,12 @@ equation
           lineColor={255,128,0},
           pattern=LinePattern.Dot)}),
     Documentation(info="<html>
-<p>This partial model defines the interfaces required for an engine subsystem. This class should be extended to form a particular engine model. See the <a href=\"Modelica://VehicleInterfaces.Engines\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Engines.Tutorial\">tutorial</a> for more information.</p>
+<p>
+This partial model defines the interfaces required for an engine subsystem.
+This class should be extended to form a particular engine model. See the
+<a href=\"Modelica://VehicleInterfaces.Engines\">documentation</a> and
+<a href=\"Modelica://VehicleInterfaces.Engines.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"));
 end Base;
