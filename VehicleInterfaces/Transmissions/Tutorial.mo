@@ -46,7 +46,7 @@ Starting from step&nbsp;3 above.
 </p>
 <ol>
   <li>First, decide which of the optional connectors are required to model.
-      For this example we don't need any of the optional connections</li>
+      For this example we don&apos;t need any of the optional connections</li>
   <li>Add the following blocks and connections to the diagram
       <br><br>
       <img src=\"modelica://VehicleInterfaces/Resources/Images/Transmissions/buildNewTransmission3.png\">

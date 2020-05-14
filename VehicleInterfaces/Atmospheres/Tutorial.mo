@@ -108,7 +108,7 @@ This tutorial will guide you through the definition of the
 
   <li>This model is now complete and can be used. The ConstantAtmosphere
       definition included in VehicleInterfaces actually has pressure,
-      temperature and wind velocity as it's parameters and automatically 
+      temperature and wind velocity as it&apos;s parameters and automatically 
       calculates the air density.</li>
 </ol>
 </html>"));

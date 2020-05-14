@@ -11,7 +11,7 @@ VehicleInterfaces library. The atmosphere subsystem has no connectors but
 contains standard functions that can be redeclared to implement different
 ambient conditions. When an atmosphere subsystem is used in a model
 architecture it should be declared as an <strong>inner</strong> system
-so that it's functions can be accessed by other components in the model.
+so that it&apos;s functions can be accessed by other components in the model.
 </p>
 
 <h4>Effects to be modelled in this subsystem</h4>
