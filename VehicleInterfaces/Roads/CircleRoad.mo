@@ -5,12 +5,12 @@ model CircleRoad "Circular road (perpendicular to world z-axis)"
     redeclare final function trackOffset = constantOffset,
     redeclare final function normal = circleNormal,
     redeclare final function headingDirection = circleHeadingDirection (radius=radius),
-    redeclare final function frictionCoefficient = circleFrictionCoefficient (mue_fixed=mue));
+    redeclare final function frictionCoefficient = circleFrictionCoefficient (mu_fixed=mu));
 
   parameter Boolean animation=true "= true, if road shall be visualized";
   parameter SI.Radius radius "Radius of road";
   parameter SI.Length width "Width of road";
-  parameter Real mue "Friction coefficient of road";
+  parameter Real mu "Friction coefficient of road";
   parameter Modelica.Mechanics.MultiBody.Types.Color roadColor={255,0,0}
     "Color of road";
   constant Real pi=Modelica.Constants.pi;
@@ -68,9 +68,9 @@ protected
   function circleFrictionCoefficient
     "Determine friction coefficient at point on road"
     extends VehicleInterfaces.Roads.Interfaces.frictionCoefficientBase;
-    input Real mue_fixed=1 "Friction coefficient";
+    input Real mu_fixed=1 "Friction coefficient";
   algorithm
-    mue := mue_fixed;
+    mu := mu_fixed;
   end circleFrictionCoefficient;
 
   annotation (

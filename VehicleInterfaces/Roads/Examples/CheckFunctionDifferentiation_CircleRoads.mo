@@ -22,7 +22,7 @@ model CheckFunctionDifferentiation_CircleRoads "Check that road functions can be
   inner CircleRoad road(
     radius=1,
     width=0.2,
-    mue=0.5) annotation (Placement(transformation(extent={{-40,40},{0,80}})));
+    mu=0.5) annotation (Placement(transformation(extent={{-40,40},{0,80}})));
 equation
   phi = (k/2)*time*time;
   s = road.radius*phi;
