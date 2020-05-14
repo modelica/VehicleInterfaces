@@ -54,6 +54,12 @@ protected
   end roadSurfaceCharacteristic;
 
   annotation (preferredView="info", Documentation(info="<html>
-<p>Object used for visualization of road surface. Road position evaluation is performed internally to enable correct visualization of the road surface. The road length and width can be given via parameters (see list below). The road visualization object consists of segments. Their number is dependent on the number of points along <em>s</em> and <em>w</em>.</p>
+<p>
+Object used for visualization of road surface. Road position evaluation
+is performed internally to enable correct visualization of the road surface.
+The road length and width can be given via parameters (see list below).
+The road visualization object consists of segments. Their number is
+dependent on the number of points along <em>s</em> and <em>w</em>.
+</p>
 </html>"));
 end VisualizeSimpleRoads;

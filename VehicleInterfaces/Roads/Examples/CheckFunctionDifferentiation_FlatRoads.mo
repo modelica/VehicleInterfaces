@@ -15,11 +15,12 @@ model CheckFunctionDifferentiation_FlatRoads "Check that road functions can be d
   Real w[3];
   Real z[3];
   Frames.Orientation R;
-  inner Modelica.Mechanics.MultiBody.World world(enableAnimation=true, n={0,
-        0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,
-            60}})));
-  inner FlatRoad road annotation (Placement(transformation(extent={{-40,40},
-            {0,60}})));
+
+  inner Modelica.Mechanics.MultiBody.World world(
+    enableAnimation=true,
+    n={0,0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,60}})));
+  inner FlatRoad road annotation (Placement(transformation(extent={{-40,40},{0,60}})));
+
 equation
   s = (k/2)*time*time;
   r = road.position(s, 0);
@@ -36,9 +37,12 @@ equation
   // Angular velocity and angular acceleration
   w = Frames.angularVelocity2(R);
   z = der(w);
+
   annotation (
     experiment(StopTime=1),
     Documentation(info="<html>
-<p>Model to check that the road functions can be differentiated correctly</p>
+<p>
+Model to check that the road functions can be differentiated correctly.
+</p>
 </html>"));
 end CheckFunctionDifferentiation_FlatRoads;

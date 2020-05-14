@@ -82,6 +82,5 @@ w: y-coordinate in world frame (y-axis is lateral displacement)
 The point s=0, w=0 has position vector r={0, 0, 0};
 </p>
 </html>"),
-    Icon(coordinateSystem(preserveAspectRatio=true, extent={{-200,-100},{200,
-            100}})));
+    Icon(coordinateSystem(preserveAspectRatio=true, extent={{-200,-100},{200,100}})));
 end FlatRoad;

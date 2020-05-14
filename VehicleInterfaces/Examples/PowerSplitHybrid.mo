@@ -4,44 +4,46 @@ model PowerSplitHybrid "Power-split hybrid vehicle model"
   replaceable Engines.MinimalEngine engine(
     flywheel(phi(fixed=true)))
     constrainedby VehicleInterfaces.Engines.Interfaces.Base
-    "Engine subsystem"                                           annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-100,60},{-70,90}})));
-  replaceable Accessories.MinimalAccessories accessories constrainedby VehicleInterfaces.Accessories.Interfaces.Base
-                                                  "Accessories subsystem"
+    "Engine subsystem" annotation (
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-100,60},{-70,90}})));
+  replaceable Accessories.MinimalAccessories accessories
+    constrainedby VehicleInterfaces.Accessories.Interfaces.Base
+    "Accessories subsystem"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-141,65},{-121,85}})));
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-141,65},{-121,85}})));
   replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC motor1(
     inductor(
       i(start=0, fixed=true)))
     constrainedby ElectricDrives.Interfaces.BaseDCMachine "Electric Motor 1"
-                                                               annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-101,26},{-71,-6}})));
+    annotation (
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-101,26},{-71,-6}})));
   replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC motor2(
     inductor(
       i(start=0, fixed=true)))
     constrainedby ElectricDrives.Interfaces.BaseDCMachine "Electric Motor 2"
-                                                               annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-101,-67},{-71,-39}})));
-  replaceable Transmissions.PowerSplitDevice powerSplitDevice constrainedby Transmissions.Interfaces.BaseTwoInputTransmission
-                                                      "Power-split device"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-54,-40},{-24,-10}})));
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-101,-67},{-71,-39}})));
+  replaceable Transmissions.PowerSplitDevice powerSplitDevice
+    constrainedby Transmissions.Interfaces.BaseTwoInputTransmission
+    "Power-split device"
+    annotation (
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-54,-40},{-24,-10}})));
   replaceable EnergyStorage.Battery battery(V=1)
     constrainedby EnergyStorage.Interfaces.Base "Energy storage subsystem"
-                                                             annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-141,-36},{-111,-6}})));
+    annotation (
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-141,-36},{-111,-6}})));
   Modelica.Electrical.Analog.Basic.Ground ground
     annotation (Placement(transformation(extent={{-114,-65},{-94,-45}})));
 equation
@@ -56,8 +58,8 @@ equation
       color={255,204,51},
       thickness=0.5));
   connect(driverEnvironment.acceleratorPedal, engine.acceleratorPedal)
-    annotation (Line(points={{23,50},{23,44},{-40,44},{-40,100},{-85,100},{
-          -85,90}}, color={0,127,0}));
+    annotation (Line(points={{23,50},{23,44},{-40,44},{-40,100},{-85,100},{-85,90}},
+        color={0,127,0}));
   connect(motor2.shaft_b, driveline.transmissionFlange) annotation (Line(
       points={{-71,-53},{-15,-53},{-15,-25},{-6,-25}},
       color={135,135,135},
@@ -120,12 +122,16 @@ equation
       thickness=0.5));
 
   annotation (
+    experiment(StopTime=10),
     Diagram(coordinateSystem(
         preserveAspectRatio=true,
         extent={{-160,-100},{160,100}},
         grid={1,1})),
     Documentation(info="<html>
-<p>Example model architecture of a passenger car with a power-split hybrid powertrain.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
-</html>"),
-    experiment(StopTime=10));
+<p>
+Example model architecture of a&nbsp;passenger car with a&nbsp;power-split
+hybrid powertrain. In this architecture variant the PowerTrain systems are
+rigidly mounted to the chassis when MultiBody effects are included.
+</p>
+</html>"));
 end PowerSplitHybrid;

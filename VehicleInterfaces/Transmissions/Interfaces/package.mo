@@ -10,7 +10,7 @@ package Interfaces "Collection of interface definitions for transmission"
 
   annotation (Documentation(info="<html>
 <p>
-A collection of partial base classes which define interfaces for transmission models.
+A&nbsp;collection of partial base classes which define interfaces for transmission models.
 </p>
 </html>"));
 end Interfaces;

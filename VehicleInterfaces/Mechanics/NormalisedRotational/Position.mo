@@ -65,6 +65,9 @@ initial equation
           textString="%name",
           lineColor={0,0,255})}),
     Documentation(info="<html>
-<p>Applies a normalized angle to a 1D normalized rotational system.  Cannot be connected to components from the Modelica.Mechanics.Rotational library</p>
+<p>
+Applies a&nbsp;normalized angle to a&nbsp;1D normalized rotational system.
+Cannot be connected to components from the Modelica.Mechanics.Rotational library.
+</p>
 </html>"));
 end Position;

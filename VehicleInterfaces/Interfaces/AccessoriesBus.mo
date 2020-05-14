@@ -11,6 +11,9 @@ expandable connector AccessoriesBus
           lineColor={255,204,51},
           lineThickness=0.5)}),
     Documentation(info="<html>
-<p>Should be used to contain signals measured in the accessories subsystem.  It is defined as an empty expandable connector.</p>
+<p>
+Should be used to contain signals measured in the accessories subsystem.
+It is defined as an empty expandable connector.
+</p>
 </html>"));
 end AccessoriesBus;

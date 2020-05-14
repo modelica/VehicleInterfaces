@@ -5,6 +5,8 @@ package Interfaces "Collection of connector definitions"
 
   annotation (Documentation(info="<html>
 <p>
-A collection of additional 1D translational mechanical connectors used for normalized translational elements.</p>
+A collection of additional 1D translational mechanical connectors used for
+normalized translational elements.
+</p>
 </html>"));
 end Interfaces;

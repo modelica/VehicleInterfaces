@@ -52,7 +52,7 @@ initial equation
             color={128,128,128})}),
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
             100,100}}), graphics={
-                       Text(
+        Text(
           extent={{-150,80},{150,40}},
           textString="%name",
           lineColor={0,0,255}), Rectangle(
@@ -61,6 +61,9 @@ initial equation
           fillColor={0,127,0},
           fillPattern=FillPattern.Solid)}),
     Documentation(info="<html>
-<p>Applies a normalized position to a 1D normalized translational system.  Cannot be connected to components from the Modelica.Mechanics.Translational library</p>
+<p>
+Applies a normalized position to a 1D normalized translational system.
+Cannot be connected to components from the Modelica.Mechanics.Translational library.
+</p>
 </html>"));
 end Position;

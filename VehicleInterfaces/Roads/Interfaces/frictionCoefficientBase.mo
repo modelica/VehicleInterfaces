@@ -8,7 +8,8 @@ partial function frictionCoefficientBase
   output Real mue=1 "Roads friction coefficient at (s,w)";
   annotation (Documentation(info="<html>
 <p>
-Partial base model for friction coefficient at point on road. Extend this model appropriately to define final user model.
+Partial base model for friction coefficient at point on road.
+Extend this model appropriately to define final user model.
 </p>
 </html>"));
 end frictionCoefficientBase;

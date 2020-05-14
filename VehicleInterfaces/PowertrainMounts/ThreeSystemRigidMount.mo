@@ -50,9 +50,13 @@ equation
       color={95,95,95},
       thickness=0.5));
 
-  annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
+  annotation (
+    Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
             -150,-100},{150,100}})),
     Documentation(info="<html>
-<p>Rigidly mounts 3 power train systems such as the engine, transmission and driveline on one supporting system, usually the chassis</p>
+<p>
+Rigidly mounts three power train systems such as the engine, transmission
+and driveline on one supporting system, usually the chassis.
+</p>
 </html>"));
 end ThreeSystemRigidMount;

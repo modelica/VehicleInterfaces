@@ -1,43 +1,47 @@
 within VehicleInterfaces.Examples;
 model SeriesHybrid "Series hybrid vehicle model"
-  extends VehicleInterfaces.Examples.PartialVehicle(redeclare DriverEnvironments.DriveByWireAutomatic driverEnvironment(
+  extends VehicleInterfaces.Examples.PartialVehicle(
+    redeclare DriverEnvironments.DriveByWireAutomatic driverEnvironment(
       initialAccelRequest=0,
       finalAccelRequest=0.9,
-      accelTime=2), chassis(body(v(fixed=true))));
+      accelTime=2),
+    chassis(
+      body(v(fixed=true))));
   replaceable Engines.MinimalEngine engine(
     flywheel(phi(fixed=true)))
     constrainedby VehicleInterfaces.Engines.Interfaces.Base "Engine model"
-                                                             annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-98,50},{-68,80}})));
-  replaceable Accessories.MinimalAccessories accessories constrainedby VehicleInterfaces.Accessories.Interfaces.Base
-                                                  "Accessories model"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-138,55},{-118,75}})));
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-98,50},{-68,80}})));
+  replaceable Accessories.MinimalAccessories accessories
+    constrainedby VehicleInterfaces.Accessories.Interfaces.Base
+    "Accessories model"
+    annotation (
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-138,55},{-118,75}})));
   replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC generator(
     inductor(i(start=0, fixed=true)))
     constrainedby ElectricDrives.Interfaces.BaseDCMachine
     "Generator subsystem"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-20,80},{-50,50}})));
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-20,80},{-50,50}})));
   replaceable VehicleInterfaces.ElectricDrives.SimpleMotorDC driveMotor(
     inductor(i(start=0, fixed=true)))
     constrainedby ElectricDrives.Interfaces.BaseDCMachine
     "Traction motor subsystem" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-70,-40},{-40,-10}})));
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-70,-40},{-40,-10}})));
   replaceable EnergyStorage.Battery battery(V=1)
-                                            constrainedby EnergyStorage.Interfaces.Base
-                                  "Energy storage subsystem" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-130,-6},{-100,24}})));
+    constrainedby EnergyStorage.Interfaces.Base
+    "Energy storage subsystem" annotation (
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-130,-6},{-100,24}})));
   Modelica.Electrical.Analog.Basic.Ground ground
     annotation (Placement(transformation(extent={{-100,-24},{-80,-4}})));
 equation
@@ -101,12 +105,16 @@ equation
       thickness=0.5));
 
   annotation (
+    experiment(StopTime=10),
     Diagram(coordinateSystem(
         preserveAspectRatio=true,
         extent={{-160,-100},{160,100}},
         grid={1,1})),
     Documentation(info="<html>
-<p>Example model architecture of a passenger car with a series hybrid powertrain.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
-</html>"),
-    experiment(StopTime=10));
+<p>
+Example model architecture of a passenger car with a&nbsp;series hybrid
+powertrain. In this architecture variant the PowerTrain systems are
+rigidly mounted to the chassis when MultiBody effects are included.
+</p>
+</html>"));
 end SeriesHybrid;

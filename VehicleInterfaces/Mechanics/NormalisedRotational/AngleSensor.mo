@@ -14,7 +14,10 @@ equation
 
   annotation (
     Documentation(info="<html>
-<p>Measures a normalized angle in a 1D normalized rotational system.  Cannot be connected to components from the Modelica.Mechanics.Rotational library</p>
+<p>
+Measures a&nbsp;normalized angle in a&nbsp;1D normalized rotational system.
+Cannot be connected to components from the Modelica.Mechanics.Rotational library.
+</p>
 </html>"),
     Diagram(graphics={Line(points={{-96,0},{-70,0}}, color={95,95,95}),
           Line(points={{70,0},{100,0}}, color={95,95,95})}),

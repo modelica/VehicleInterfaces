@@ -78,7 +78,7 @@ protected
     defaultComponentPrefixes="inner",
     Documentation(info="<html>
 <p>
-The road is a circle described by \"radius\" and \"width\".
+The road is a&nbsp;circle described by \"radius\" and \"width\".
 The road surface parameters are defined as:
 </p>
 <blockquote><pre>
@@ -86,11 +86,12 @@ s: arc length along circle
 w: lateral displacement of road, perpendiular to circle
 </pre></blockquote>
 <p>
-The point s=0, w=0 has position vector r={0,-radius, 0};
+The point s&nbsp;=&nbsp;0, w&nbsp;=&nbsp;0 has position vector
+r&nbsp;=&nbsp;{0,&nbsp;-radius,&nbsp;0};
 </p>
 <p>
 The functions are defined in such a way that Dymola inlines
-all the functions. As a result, it is easy to get derivatives
+all the functions. As a&nbsp;result, it is easy to get derivatives
 of the functions.
 </p>
 </html>"),

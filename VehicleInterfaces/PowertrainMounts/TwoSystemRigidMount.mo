@@ -7,15 +7,14 @@ model TwoSystemRigidMount "2 system rigid mount"
   parameter Modelica.SIunits.Position r_ChassisToMount2[3]={0,0,0}
     "Vector from chassis frame to mount_2 frame" annotation (Evaluate=false);
 
-  Modelica.Mechanics.MultiBody.Parts.FixedTranslation chassisFrameToMount1(r=
-        r_ChassisToMount1)
+  Modelica.Mechanics.MultiBody.Parts.FixedTranslation chassisFrameToMount1(
+    r=r_ChassisToMount1)
     annotation (Placement(transformation(
         origin={-50,20},
         extent={{-20,10},{20,-10}},
         rotation=180)));
-  Modelica.Mechanics.MultiBody.Parts.FixedTranslation chassisFrameToMount2(r=
-        r_ChassisToMount2) annotation (Placement(transformation(extent={{30,
-            10},{70,30}})));
+  Modelica.Mechanics.MultiBody.Parts.FixedTranslation chassisFrameToMount2(
+    r=r_ChassisToMount2) annotation (Placement(transformation(extent={{30,10},{70,30}})));
 equation
   connect(chassisFrameToMount1.frame_a, chassisFrame) annotation (Line(
       points={{-30,20},{0,20},{0,-100}},
@@ -35,11 +34,12 @@ equation
       thickness=0.5));
 
   annotation (
-    Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-150,-100},{
-            150,100}})),
-    Icon(coordinateSystem(preserveAspectRatio=false, extent={{-150,-100},{150,
-            100}})),
+    Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-150,-100},{150,100}})),
+    Icon(coordinateSystem(preserveAspectRatio=false, extent={{-150,-100},{150,100}})),
     Documentation(info="<html>
-<p>Rigidly mounts 2 power train systems such as the engine and transmission on one supporting system, usually the chassis</p>
+<p>
+Rigidly mounts two power train systems such as the engine and transmission
+on one supporting system, usually the chassis.
+</p>
 </html>"));
 end TwoSystemRigidMount;

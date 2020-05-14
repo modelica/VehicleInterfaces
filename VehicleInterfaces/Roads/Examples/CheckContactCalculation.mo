@@ -19,8 +19,8 @@ model CheckContactCalculation "Check that wheel contact point calculation is pro
   inner Modelica.Mechanics.MultiBody.World world(
     enableAnimation=true,
     axisLength=20,
-    n={0,0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,
-            60}})));
+    n={0,0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,60}})));
+
 equation
   // Define movement of center of wheel r_wheel and of wheel axis axis_wheel
   phi = time;
@@ -30,6 +30,9 @@ equation
   annotation (
     experiment(StopTime=6.2),
     Documentation(info="<html>
-<p>Model to check that the tire contact patch calculation is working correctly with the road models.</p>
+<p>
+Model to check that the tire contact patch calculation is working
+correctly with the road models.
+</p>
 </html>"));
 end CheckContactCalculation;

@@ -99,6 +99,9 @@ equation
           fillPattern=FillPattern.Solid,
           textString="%name")}),
     Documentation(info="<html>
-<p>Simple power-split device based on an ideal epicyclic gear. No losses are included in this model</p>
+<p>
+Simple power-split device based on an ideal epicyclic gear.
+No losses are included in this model.
+</p>
 </html>"));
 end PowerSplitDevice;

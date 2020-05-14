@@ -8,7 +8,16 @@ partial model SingleSystemMount
         origin={0,100},
         extent={{-16,-16},{16,16}},
         rotation=90)));
-  annotation (        Documentation(info="<html>
-<p>This partial model defines the interfaces required for a single powertrain system mounting subsystem. This class should be extended to form a particular powertrain mounting model. See the <a href=\"Modelica://VehicleInterfaces.PowertrainMounts\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.PowertrainMounts.Tutorial\">tutorial</a> for more information.</p>
+  annotation (
+    Documentation(info="<html>
+<p>
+This partial model defines the interfaces required for a&nbsp;single
+powertrain system mounting subsystem. This class should be extended to
+form a particular powertrain mounting model. See the
+<a href=\"Modelica://VehicleInterfaces.PowertrainMounts\">documentation</a>
+and
+<a href=\"Modelica://VehicleInterfaces.PowertrainMounts.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"));
 end SingleSystemMount;
