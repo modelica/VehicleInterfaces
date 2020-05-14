@@ -41,8 +41,11 @@ convertClass("VehicleInterfaces.Icons.BaseClassPackage",
 // Parameter renamed
 convertElement("VehicleInterfaces.Accessories.Interfaces.Base",
                "includeAccessoriesBearing", "includeEngineBearing");
-convertElement("VehicleInterfaces.Transmissions.Interfaces.Base",
-               "includeTransmissionBearing", "includeEngineBearing");
+convertElement({"VehicleInterfaces.Transmissions.Interfaces.Base",
+                "VehicleInterfaces.Transmissions.Interfaces.BaseAutomaticTransmission",
+                "VehicleInterfaces.Transmissions.Interfaces.BaseManualTransmission",
+                "VehicleInterfaces.Transmissions.Interfaces.BaseTwoInputTransmission"},
+                "includeTransmissionBearing", "includeEngineBearing");
 convertElement("VehicleInterfaces.Chassis.Interfaces.ThreeAxleBase",
                {"end_5", "end_6"}, {"end_6", "end_5"})
 convertElement("VehicleInterfaces.Chassis.Interfaces.FourAxleBase",
