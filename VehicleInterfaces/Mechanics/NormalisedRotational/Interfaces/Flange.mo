@@ -8,7 +8,7 @@ connector Flange "1D normalized rotational flange"
     Documentation(info="<html>
 <p>
 1D rotational mechanical connector with normalized position as opposed to the
-<a href=\"Modelica://Modelica.Mechanics.Rotational.Interfaces.Flange_a\">Modelica.Mechanics.Rotational.Interfaces.Flange_a</a>
+<a href=\"modelica://Modelica.Mechanics.Rotational.Interfaces.Flange_a\">Modelica.Mechanics.Rotational.Interfaces.Flange_a</a>
 connector. The torque is not normalized in this connector.
 </p>
 </html>"), Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},

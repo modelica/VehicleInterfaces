@@ -9,8 +9,8 @@ partial model Base "Basic interface definition for a driver"
 <p>
 This partial model defines the interfaces required for the driver subsystem.
 This class should be extended to form a particular driver model. See the
-<a href=\"Modelica://VehicleInterfaces.Drivers\">documentation</a> and
-<a href=\"Modelica://VehicleInterfaces.Drivers.Tutorial\">tutorial</a>
+<a href=\"modelica://VehicleInterfaces.Drivers\">documentation</a> and
+<a href=\"modelica://VehicleInterfaces.Drivers.Tutorial\">tutorial</a>
 for more information.
 </p>
 </html>"));

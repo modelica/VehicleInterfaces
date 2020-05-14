@@ -9,7 +9,7 @@ partial model BaseAutomaticTransmissionExternalDriver
 <p>
 Base class for driver models for vehicles with automatic transmissions
 where the driver control logic is contained in an
-<a href=\"Modelica://VehicleInterfaces.Drivers\">external driver model</a>.
+<a href=\"modelica://VehicleInterfaces.Drivers\">external driver model</a>.
 </p>
 </html>"));
 end BaseAutomaticTransmissionExternalDriver;

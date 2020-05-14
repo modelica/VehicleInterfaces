@@ -9,7 +9,7 @@ connector Flange "1D normalized translational flange"
 <p>
 One-dimensional translational mechanical connector with normalized
 position as opposed to the
-<a href=\"Modelica://Modelica.Mechanics.Translational.Interfaces.Flange_a\">Modelica.Mechanics.Translational.Interfaces.Flange_a</a>
+<a href=\"modelica://Modelica.Mechanics.Translational.Interfaces.Flange_a\">Modelica.Mechanics.Translational.Interfaces.Flange_a</a>
 connector. The force is not normalized in this connector.
 </p>
 </html>"), Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},

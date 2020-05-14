@@ -60,9 +60,9 @@ pin_n. It can be disabled when <code>includeGround=false</code>.
 <p>
 This class should be extended to form a&nbsp;particular battery model.
 See the
-<a href=\"Modelica://VehicleInterfaces.EnergyStorage\">documentation</a>
+<a href=\"modelica://VehicleInterfaces.EnergyStorage\">documentation</a>
 and
-<a href=\"Modelica://VehicleInterfaces.EnergyStorage.Tutorial\">tutorial</a>
+<a href=\"modelica://VehicleInterfaces.EnergyStorage.Tutorial\">tutorial</a>
 for more information.
 </p>
 </html>"));

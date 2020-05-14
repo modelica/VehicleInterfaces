@@ -35,9 +35,9 @@ equation
 This partial model defines the interfaces required for an electric machine
 subsystem. This class should be extended to form an electric machine
 interface definition with propper electrical connectors. See the
-<a href=\"Modelica://VehicleInterfaces.ElectricDrives\">documentation</a>
+<a href=\"modelica://VehicleInterfaces.ElectricDrives\">documentation</a>
 and
-<a href=\"Modelica://VehicleInterfaces.ElectricDrives.Tutorial\">tutorial</a>
+<a href=\"modelica://VehicleInterfaces.ElectricDrives.Tutorial\">tutorial</a>
 for more information.
 </p>
 </html>"));

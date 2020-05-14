@@ -10,9 +10,9 @@ partial model Base "Basic interface definition for a mounting system"
 <p>
 This partial model defines the common interfaces required for
 a&nbsp;mounting subsystem. See the
-<a href=\"Modelica://VehicleInterfaces.PowertrainMounts\">documentation</a>
+<a href=\"modelica://VehicleInterfaces.PowertrainMounts\">documentation</a>
 and
-<a href=\"Modelica://VehicleInterfaces.PowertrainMounts.Tutorial\">tutorial</a>
+<a href=\"modelica://VehicleInterfaces.PowertrainMounts.Tutorial\">tutorial</a>
 for more information.
 </p>
 </html>"));

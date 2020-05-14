@@ -157,8 +157,8 @@ equation
 <p>
 This partial model defines the interfaces required for the driveline subsystem
 of a&nbsp;four axled vehicle within the VehicleInterfaces package.  See the
-<a href=\"Modelica://VehicleInterfaces.Drivelines\">documentation</a> and
-<a href=\"Modelica://VehicleInterfaces.Drivelines.Tutorial\">tutorial</a>
+<a href=\"modelica://VehicleInterfaces.Drivelines\">documentation</a> and
+<a href=\"modelica://VehicleInterfaces.Drivelines.Tutorial\">tutorial</a>
 for more information.
 </p>
 </html>"));

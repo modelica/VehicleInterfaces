@@ -161,8 +161,8 @@ equation
 <p>
 This partial model defines the interfaces required for the chassis subsystem
 of a&nbsp;four axled vehicle within the VehicleInterfaces package. See the
-<a href=\"Modelica://VehicleInterfaces.Chassis\">documentation</a> and
-<a href=\"Modelica://VehicleInterfaces.Chassis.Tutorial\">tutorial</a>
+<a href=\"modelica://VehicleInterfaces.Chassis\">documentation</a> and
+<a href=\"modelica://VehicleInterfaces.Chassis.Tutorial\">tutorial</a>
 for more information.
 </p>
 </html>"));

@@ -24,7 +24,7 @@ equation
 <p>
 Example model architecture of a&nbsp;passenger car with an automatic
 transmission. Based on
-<a href=\"Modelica://VehicleInterfaces.Examples.ConventionalAutomaticVehicle\">ConventionalAutomaticVehicle</a>
+<a href=\"modelica://VehicleInterfaces.Examples.ConventionalAutomaticVehicle\">ConventionalAutomaticVehicle</a>
 this example shows how the DataDictionary can be used.
 </p>
 </html>"));

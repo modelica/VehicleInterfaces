@@ -21,10 +21,10 @@ passenger car.
       the Driver model doesn&apos;t include optional connections. It simply uses
       an expandable connector to exchange information with the
       DriverEnvironment subsystem. The required signals are defined in the
-      <a href=\"Modelica://VehicleInterfaces.UsersGuide.DriverInteractionBus\">Driver interaction bus</a>
+      <a href=\"modelica://VehicleInterfaces.UsersGuide.DriverInteractionBus\">Driver interaction bus</a>
       section of the Users Guide. Normalised mechanical sensors and actuators
       are provided in the
-      <a href=\"Modelica://VehicleInterfaces.Mechanics\">VehicleInterfaces.Mechanics</a>
+      <a href=\"modelica://VehicleInterfaces.Mechanics\">VehicleInterfaces.Mechanics</a>
       package.</li>
 </ol>
 </html>"));

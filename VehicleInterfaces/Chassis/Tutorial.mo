@@ -62,7 +62,7 @@ Starting from step 3&nbsp;above.
       <br><br></li>
   <li>Next, we need to check to see if any connections to the control signal bus
       are required for the chassis, see
-      <a href=\"Modelica://VehicleInterfaces.UsersGuide.SignalBus\">here</a> for
+      <a href=\"modelica://VehicleInterfaces.UsersGuide.SignalBus\">here</a> for
       a&nbsp;complete list of the minimum connections required. In this case
       we need to add the vehicle longitudinal velocity to the control signal
       bus and this can be done by connecting a&nbsp;speed sensor to the vehicle

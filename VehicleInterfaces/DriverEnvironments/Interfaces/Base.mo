@@ -54,9 +54,9 @@ protected
 <p>
 This partial model defines the interfaces required for the driver environment
 subsystem. See the
-<a href=\"Modelica://VehicleInterfaces.DriverEnvironments\">documentation</a>
+<a href=\"modelica://VehicleInterfaces.DriverEnvironments\">documentation</a>
 and
-<a href=\"Modelica://VehicleInterfaces.DriverEnvironments.Tutorial\">tutorial</a>
+<a href=\"modelica://VehicleInterfaces.DriverEnvironments.Tutorial\">tutorial</a>
 for more information.
 </p>
 </html>"));

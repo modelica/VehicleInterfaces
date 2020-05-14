@@ -62,7 +62,7 @@ Starting from step&nbsp;3 above.
       <br>&nbsp;</li>
   <li>Next, we need to check to see if any connections to the control signal bus
       are required for the brakes, see
-      <a href=\"Modelica://VehicleInterfaces.UsersGuide.SignalBus\">a complete list of the minimum connections</a>
+      <a href=\"modelica://VehicleInterfaces.UsersGuide.SignalBus\">a complete list of the minimum connections</a>
       required. In this case we need to add the four individual wheel speeds to
       the control signal bus and this can be done by connecting speed sensors
       to each wheel and then connecting these to the signal bus. As the wheel

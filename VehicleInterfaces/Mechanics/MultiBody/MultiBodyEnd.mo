@@ -28,7 +28,7 @@ equation
 <p>
 This component is used to end a chain of multi-body components by applying
 zero force and torque to the end of the chain. Uses the
-<a href=\"Modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">FlangeWithBearing</a>
+<a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">FlangeWithBearing</a>
 connector where the <strong>flange</strong> connector has zero torque
 applied to it and the <strong>bearingFrame</strong> can be optionally
 included through the parameter <code>includeBearingConnector</code>.

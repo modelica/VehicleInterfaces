@@ -301,7 +301,7 @@ vehicle variants (i.e. manual and automatic transmission equipped vehicles).
     <td>Enumeration</td>
     <td>Signals whether the driver wants the vehice to be operating.
         There are 3 possible values: Off, On or Start
-        (<a href=\"Modelica://VehicleInterfaces.Types.IgnitionSetting\">VehicleInterfaces.Types.IgnitionSetting</a>)
+        (<a href=\"modelica://VehicleInterfaces.Types.IgnitionSetting\">VehicleInterfaces.Types.IgnitionSetting</a>)
     </td>
   </tr>
   <tr>
@@ -355,7 +355,7 @@ transmission vehicles.
     <td>Enumeration</td>
     <td>Gearbox Mode (enumeration when supported, currently uses Integers
         defined according to
-        <a href=\"Modelica://VehicleInterfaces.Types.GearMode\">VehicleInterfaces.Types.GearMode</a>)
+        <a href=\"modelica://VehicleInterfaces.Types.GearMode\">VehicleInterfaces.Types.GearMode</a>)
     </td>
   </tr>
   <tr>
@@ -565,7 +565,7 @@ Within VehicleInterfaces rather than limiting our-selves to modelling
 rotating components as a&nbsp;simple 1D rotation we have built in
 the flexibility to model rotating components as MultiBody systems.
 This has been possible through the development of a&nbsp;new connector called
-<a href=\"Modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">FlangeWithBearing</a>.
+<a href=\"modelica://Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearing\">FlangeWithBearing</a>.
 This is a&nbsp;hierarchical connector that contains a&nbsp;1D rotational
 connector and a&nbsp;conditional MultiBody connector.
 The use of the MultiBody connector is controlled by a&nbsp;parameter
@@ -618,33 +618,33 @@ models:
 The library contains the following subsystem definitions:
 </p>
 <ul>
-  <li><a href=\"Modelica://VehicleInterfaces.Accessories\">Accessories</a>
+  <li><a href=\"modelica://VehicleInterfaces.Accessories\">Accessories</a>
       &ndash; engine driven accessories</li>
-  <li><a href=\"Modelica://VehicleInterfaces.Atmospheres\">Atmospheres</a>
+  <li><a href=\"modelica://VehicleInterfaces.Atmospheres\">Atmospheres</a>
       &ndash; ambient conditions</li>
-  <li><a href=\"Modelica://VehicleInterfaces.Brakes\">Brakes</a>
+  <li><a href=\"modelica://VehicleInterfaces.Brakes\">Brakes</a>
       &ndash; brake system</li>
-  <li><a href=\"Modelica://VehicleInterfaces.Chassis\">Chassis</a>
+  <li><a href=\"modelica://VehicleInterfaces.Chassis\">Chassis</a>
       &ndash; chassis system</li>
-  <li><a href=\"Modelica://VehicleInterfaces.Controllers\">Controllers</a>
+  <li><a href=\"modelica://VehicleInterfaces.Controllers\">Controllers</a>
       &ndash; generic controller interface</li>
-  <li><a href=\"Modelica://VehicleInterfaces.DataDictionaries\">DataDictionaries</a>
+  <li><a href=\"modelica://VehicleInterfaces.DataDictionaries\">DataDictionaries</a>
       &ndash; for signal aliasing</li>
-  <li><a href=\"Modelica://VehicleInterfaces.Drivelines\">Drivelines</a>
+  <li><a href=\"modelica://VehicleInterfaces.Drivelines\">Drivelines</a>
       &ndash; driveline system</li>
-  <li><a href=\"Modelica://VehicleInterfaces.DriverEnvironments\">DriverEnvironments</a>
+  <li><a href=\"modelica://VehicleInterfaces.DriverEnvironments\">DriverEnvironments</a>
       &ndash; driver vehicle interface</li>
-  <li><a href=\"Modelica://VehicleInterfaces.Drivers\">Drivers</a>
+  <li><a href=\"modelica://VehicleInterfaces.Drivers\">Drivers</a>
       &ndash; optional driver subsystem</li>
-  <li><a href=\"Modelica://VehicleInterfaces.ElectricDrives\">ElectricDrives</a>
+  <li><a href=\"modelica://VehicleInterfaces.ElectricDrives\">ElectricDrives</a>
       &ndash; electric machine interface</li>
-  <li><a href=\"Modelica://VehicleInterfaces.Engines\">Engines</a>
+  <li><a href=\"modelica://VehicleInterfaces.Engines\">Engines</a>
       &ndash; engine interface</li>
-  <li><a href=\"Modelica://VehicleInterfaces.PowertrainMounts\">PowertrainMounts</a>
+  <li><a href=\"modelica://VehicleInterfaces.PowertrainMounts\">PowertrainMounts</a>
       &ndash; powertrain mounting systems</li>
-  <li><a href=\"Modelica://VehicleInterfaces.Roads\">Roads</a>
+  <li><a href=\"modelica://VehicleInterfaces.Roads\">Roads</a>
       &ndash; road definition</li>
-  <li><a href=\"Modelica://VehicleInterfaces.Transmissions\">Transmissions</a>
+  <li><a href=\"modelica://VehicleInterfaces.Transmissions\">Transmissions</a>
       &ndash; transmission subsystem</li>
 </ul>
 </html>"));
@@ -689,7 +689,7 @@ Tutorials are provided as part of the VehicleInterfaces Users Guide
 and these demonstrate:
 </p>
 <ol>
-  <li><a href=\"Modelica://VehicleInterfaces.UsersGuide.Tutorials.Tutorial1\">How to create a
+  <li><a href=\"modelica://VehicleInterfaces.UsersGuide.Tutorials.Tutorial1\">How to create a
       vehicle model using one of the example architectures</a></li>
   <li>Each subsystem also contains a Tutorial class that demonstrates
       the use of that subsystem.</li>
