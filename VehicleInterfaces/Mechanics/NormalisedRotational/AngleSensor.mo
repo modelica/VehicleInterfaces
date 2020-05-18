@@ -1,6 +1,6 @@
 within VehicleInterfaces.Mechanics.NormalisedRotational;
 model AngleSensor "Ideal sensor to measure the rotation of a Flange"
-  extends Modelica.Icons.RotationalSensor;
+  extends Modelica.Icons.RoundSensor;
 
   Interfaces.Flange flange_a "flange to be measured"
     annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
@@ -16,8 +16,6 @@ equation
     Documentation(info="<html>
 <p>Measures a normalized angle in a 1D normalized rotational system.  Cannot be connected to components from the Modelica.Mechanics.Rotational library</p>
 </html>"),
-    Diagram(graphics={Line(points={{-96,0},{-70,0}}, color={95,95,95}),
-          Line(points={{70,0},{100,0}}, color={95,95,95})}),
     Icon(graphics={
         Line(points={{70,0},{100,0}}, color={95,95,95}),
         Line(points={{-96,0},{-70,0}}, color={95,95,95}),

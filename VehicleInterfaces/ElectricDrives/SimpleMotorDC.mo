@@ -10,7 +10,7 @@ model SimpleMotorDC "Simple DC electric motor"
     annotation (Placement(transformation(extent={{20,-40},{40,-20}})));
   Modelica.Electrical.Analog.Basic.Inductor inductor(L=L)
     annotation (Placement(transformation(extent={{-40,-40},{-20,-20}})));
-  Modelica.Electrical.Analog.Basic.EMF eMF(k=k)
+  Modelica.Electrical.Analog.Basic.RotationalEMF eMF(k=k)
     annotation (Placement(transformation(extent={{50,-10},{70,10}})));
 equation
   connect(eMF.flange,   shaft_b.flange) annotation (Line(

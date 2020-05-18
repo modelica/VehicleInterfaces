@@ -10,7 +10,7 @@ model DummyTyre "Dummy wheel model to test contact point calculation of wheel wi
     "Position vector to contact point of wheel with road, resolved in world frame";
   output SI.Length penetrationDepth
     "Penetration depth of wheel with respect to road";
-  output Real mue "friction coefficient";
+  output Real mu "Friction coefficient";
 
   // Auxiliary variables
   Real s(start=0);
@@ -24,8 +24,8 @@ protected
   Real e_w[3] "Unit vector along road \"lateral\" direction";
   Real e_CP[3]
     "Unit vector from wheel center to contact point, resolved in world frame";
-  Real d_CP[3];
-  Modelica.SIunits.Radius reducedRadius;
+  SI.Position d_CP[3];
+  SI.Radius reducedRadius;
 equation
   r_CP = road.position(s, w);
   e_n = road.normal(s, w);
@@ -48,7 +48,7 @@ equation
   0 = e_w*d_CP - reducedRadius*(e_w*e_CP);
 
   // Friction coefficient at contact point
-  mue = road.frictionCoefficient(s, w);
+  mu = road.frictionCoefficient(s, w);
   annotation (Documentation(info="<html>
 <p>A dummy wheel model used in test models to check the road definitions. Within this model, no tire force calculation is performed. Only kinematic relationships between wheel input <code>e_axis</code> (unit vector in direction of wheel axis) and <code>r_wheel</code> (wheel center position) and road definition are given. </p>
 <p>
