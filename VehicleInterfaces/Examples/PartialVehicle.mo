@@ -3,50 +3,55 @@ partial model PartialVehicle
   "Basic model for a four wheeled vehicle, requires powertrain components"
   extends Modelica.Icons.Example;
 
-  replaceable Chassis.MinimalChassis chassis constrainedby VehicleInterfaces.Chassis.Interfaces.TwoAxleBase
-                                                     "Chassis subsystem"
+  replaceable Chassis.MinimalChassis chassis
+    constrainedby VehicleInterfaces.Chassis.Interfaces.TwoAxleBase
+    "Chassis subsystem"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{44,-50},{104,-10}})));
-  replaceable Drivelines.MinimalDriveline driveline constrainedby VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase
-                                                        "Driveline subsystem"
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{44,-50},{104,-10}})));
+  replaceable Drivelines.MinimalDriveline driveline
+    constrainedby VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase
+    "Driveline subsystem"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-6,-40},{24,-10}})));
-  replaceable Brakes.MinimalBrakes brakes constrainedby VehicleInterfaces.Brakes.Interfaces.TwoAxleBase
-                                                    "Brakes subsystem"
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-6,-40},{24,-10}})));
+  replaceable Brakes.MinimalBrakes brakes
+    constrainedby VehicleInterfaces.Brakes.Interfaces.TwoAxleBase
+    "Brakes subsystem"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{120,-40},{150,-10}})));
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{120,-40},{150,-10}})));
   replaceable DriverEnvironments.DriveByWireAutomatic driverEnvironment
     constrainedby VehicleInterfaces.DriverEnvironments.Interfaces.BaseAutomaticTransmission
     "Driver environment" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Driver Models"),
-    Placement(transformation(extent={{20,50},{50,80}})));
-  inner replaceable Roads.FlatRoad road constrainedby VehicleInterfaces.Roads.Interfaces.Base
-                                            "Road model" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Conditions"),
-    Placement(transformation(extent={{-120,-100},{-80,-80}})));
-  inner replaceable Atmospheres.ConstantAtmosphere atmosphere constrainedby VehicleInterfaces.Atmospheres.Interfaces.Base
-                                                  "Atmospheric model"
+      choicesAllMatching=true,
+      Dialog(group="Driver Models"),
+      Placement(transformation(extent={{20,50},{50,80}})));
+  inner replaceable Roads.FlatRoad road
+    constrainedby VehicleInterfaces.Roads.Interfaces.Base
+    "Road model" annotation (
+      choicesAllMatching=true,
+      Dialog(group="Conditions"),
+      Placement(transformation(extent={{-120,-100},{-80,-80}})));
+  inner replaceable Atmospheres.ConstantAtmosphere atmosphere
+    constrainedby VehicleInterfaces.Atmospheres.Interfaces.Base
+    "Atmospheric model"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Conditions"),
-    Placement(transformation(extent={{-70,-100},{-30,-80}})));
+      choicesAllMatching=true,
+      Dialog(group="Conditions"),
+      Placement(transformation(extent={{-70,-100},{-30,-80}})));
   inner replaceable Modelica.Mechanics.MultiBody.World world(
     enableAnimation=false,
     n={0,0,-1},
     driveTrainMechanics3D=false)
     constrainedby Modelica.Mechanics.MultiBody.World
     "Global co-ordinate system" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Conditions"),
-    Placement(transformation(extent={{-150,-100},{-130,-80}})));
+      choicesAllMatching=true,
+      Dialog(group="Conditions"),
+      Placement(transformation(extent={{-150,-100},{-130,-80}})));
 protected
   Interfaces.ControlBus controlBus "Control bus connector"
     annotation (Placement(transformation(
@@ -124,6 +129,11 @@ equation
         extent={{-160,-100},{160,100}},
         grid={1,1})),
     Documentation(info="<html>
-<p>Base model architecture of a passenger car that can be extended to add any type of powertrain.  In this architecture variant the Driveline subsystem is rigidly mounted to the chassis when MultiBody effects are included.</p>
+<p>
+Base model architecture of a&nbsp;passenger car that can be extended to
+add any type of powertrain. In this architecture variant the Driveline
+subsystem is rigidly mounted to the chassis when MultiBody effects are
+included.
+</p>
 </html>"));
 end PartialVehicle;

@@ -47,7 +47,7 @@ Starting from step&nbsp;2 above.
       <br><br></li>
   <li>Next, we need to check to see if any connections to the control signal
       bus are required for the driveline, see
-      <a href=\"Modelica://VehicleInterfaces.UsersGuide.SignalBus\">a complete list</a>
+      <a href=\"modelica://VehicleInterfaces.UsersGuide.SignalBus\">a complete list</a>
       of the minimum connections required. In this case we don&apos;t need to add
       any signals to the control signal bus.</li>
   <li>The model is now complete and should check successfully and can be used

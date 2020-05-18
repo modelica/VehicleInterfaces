@@ -9,7 +9,8 @@ partial function trackOffsetBase
     "Track offset vector from road centre line to desired trajectory point";
   annotation (Documentation(info="<html>
 <p>
-Partial base model for track offset from road centre line. Extend this model appropriately to define final user model.
+Partial base model for track offset from road centre line.
+Extend this model appropriately to define final user model.
 </p>
 </html>"));
 end trackOffsetBase;

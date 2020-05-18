@@ -6,7 +6,8 @@ model NoDriver "Empty driver"
 
   annotation (Documentation(info="<html>
 <p>
-Empty driver model. Using this empty model in overall vehicle architecture the functionality of driver can be eliminated.
+Empty driver model. Using this empty model in overall vehicle architecture
+the functionality of driver can be eliminated.
 </p>
 </html>"));
 end NoDriver;

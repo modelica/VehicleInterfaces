@@ -5,6 +5,8 @@ package NormalisedRotational "Collection of normalized rotational mechanics"
 
 
   annotation (Documentation(info="<html>
-<p>Additional 1D rotational mechanical components with normalized angle of rotation.</p>
+<p>
+Additional 1D rotational mechanical components with normalized angle of rotation.
+</p>
 </html>"));
 end NormalisedRotational;

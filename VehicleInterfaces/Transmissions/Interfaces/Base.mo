@@ -68,7 +68,13 @@ equation
           lineColor={255,128,0},
           pattern=LinePattern.Dot)}),
     Documentation(info="<html>
-<p>This partial model defines the common interfaces required for a transmission subsystem.
-See the <a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a> and <a href=\"modelica://VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>
+<p>
+This partial model defines the common interfaces required for
+a&nbsp;transmission subsystem. See the
+<a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a>
+and
+<a href=\"modelica://VehicleInterfaces.Transmissions.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"));
 end Base;

@@ -86,6 +86,12 @@ equation
         extent={{-160,-100},{160,100}},
         grid={1,1})),
     Documentation(info="<html>
-<p>This partial model defines the interfaces required for the chassis subsystem of a two axled vehicle within the VehicleInterfaces package.  See the <a href=\"Modelica://VehicleInterfaces.Chassis\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Chassis.Tutorial\">tutorial</a> for more information.</p>
+<p>
+This partial model defines the interfaces required for the chassis subsystem
+of a&nbsp;two axled vehicle within the VehicleInterfaces package. See the
+<a href=\"modelica://VehicleInterfaces.Chassis\">documentation</a> and
+<a href=\"modelica://VehicleInterfaces.Chassis.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"));
 end TwoAxleBase;

@@ -16,13 +16,14 @@ model CheckFunctionDifferentiation_CircleRoads "Check that road functions can be
   SI.AngularVelocity w[3];
   SI.AngularAcceleration z[3];
   Frames.Orientation R;
-  inner Modelica.Mechanics.MultiBody.World world(enableAnimation=true, n={0,
-        0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,
-            60}})));
+  inner Modelica.Mechanics.MultiBody.World world(
+    enableAnimation=true,
+    n={0,0,-1}) annotation (Placement(transformation(extent={{-80,40},{-60,60}})));
   inner CircleRoad road(
     radius=1,
     width=0.2,
     mu=0.5) annotation (Placement(transformation(extent={{-40,40},{0,80}})));
+
 equation
   phi = (k/2)*time*time;
   s = road.radius*phi;
@@ -40,9 +41,12 @@ equation
   // Angular velocity and angular acceleration
   w = Frames.angularVelocity2(R);
   z = der(w);
+
   annotation (
     experiment(StopTime=1),
     Documentation(info="<html>
-<p>Model to check that the road functions can be differentiated correctly</p>
+<p>
+Model to check that the road functions can be differentiated correctly
+</p>
 </html>"));
 end CheckFunctionDifferentiation_CircleRoads;

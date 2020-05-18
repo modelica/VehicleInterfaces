@@ -7,6 +7,8 @@ package NormalisedTranslational "Collection of normalized translational mechanic
 
 
   annotation (Documentation(info="<html>
-<p>Additional 1D translational mechanical components with normalized position.</p>
+<p>
+Additional 1D translational mechanical components with normalized position.
+</p>
 </html>"));
 end NormalisedTranslational;

@@ -39,6 +39,14 @@ public
         extent={{-160,-100},{160,100}},
         grid={1,1})),
     Documentation(info="<html>
-<p>This partial model defines the basic interfaces required for any chassis subsystem.  This class should be extended to form a chassis interface definition with the correct number of wheelHub connectors for the type of vehicle being modelled. See the <a href=\"Modelica://VehicleInterfaces.Chassis\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Chassis.Tutorial\">tutorial</a> for more information.</p>
+<p>
+This partial model defines the basic interfaces required for any chassis
+subsystem. This class should be extended to form a&nbsp;chassis interface
+definition with the correct number of wheelHub connectors for the type
+of vehicle being modelled. See the
+<a href=\"modelica://VehicleInterfaces.Chassis\">documentation</a> and
+<a href=\"modelica://VehicleInterfaces.Chassis.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"));
 end Base;

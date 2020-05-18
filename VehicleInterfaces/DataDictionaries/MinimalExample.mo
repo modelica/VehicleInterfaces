@@ -28,6 +28,10 @@ equation
       extent={{-6,3},{-6,3}}));
   annotation (
     Documentation(info="<html>
- <p>A simple data dictionary example that creates a new signal called <strong>v_veh</strong> within the <strong>chassisBus</strong> sub-bus of the control bus.</p>
+<p>
+A&nbsp;simple data dictionary example that creates a&nbsp;new signal called
+<strong>v_veh</strong> within the <strong>chassisBus</strong> sub-bus of
+the control bus.
+</p>
 </html>"));
 end MinimalExample;

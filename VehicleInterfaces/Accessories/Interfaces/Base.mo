@@ -33,7 +33,13 @@ equation
           extent={{92,28},{108,16}},
           lineColor={255,128,0},
           pattern=LinePattern.Dot)}),
-                       Documentation(info="<html>
-<p>This partial model defines the interfaces required for an accessories subsystem. This class should be extended to form a particular accessory model. See the <a href=\"Modelica://VehicleInterfaces.Accessories\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.Accessories.Tutorial\">tutorial</a> for more information.</p>
+    Documentation(info="<html>
+<p>
+This partial model defines the interfaces required for an accessories subsystem.
+This class should be extended to form a particular accessory model. See the
+<a href=\"modelica://VehicleInterfaces.Accessories\">documentation</a> and
+<a href=\"modelica://VehicleInterfaces.Accessories.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"));
 end Base;

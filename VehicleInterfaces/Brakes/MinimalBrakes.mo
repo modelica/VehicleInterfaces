@@ -92,15 +92,14 @@ protected
     annotation (Placement(transformation(extent={{-90,-20},{-70,0}})));
 equation
   connect(computeTorque.y, brake_1.f_normalized) annotation (Line(points={{-19,-10},
-          {0,-10},{0,-60},{-49,-60}},          color={0,0,127}));
+          {0,-10},{0,-60},{-49,-60}}, color={0,0,127}));
   connect(computeTorque.y, brake_2.f_normalized) annotation (Line(points={{-19,-10},
           {0,-10},{0,60},{-49,60}},
         color={0,0,127}));
   connect(computeTorque.y, brake_3.f_normalized) annotation (Line(points={{-19,-10},
-          {0,-10},{0,-60},{49,-60}},          color={0,0,127}));
+          {0,-10},{0,-60},{49,-60}}, color={0,0,127}));
   connect(computeTorque.y, brake_4.f_normalized) annotation (Line(points={{-19,-10},
-          {0,-10},{0,60},{49,60}},                                      color=
-         {0,0,127}));
+          {0,-10},{0,60},{49,60}}, color={0,0,127}));
   connect(brake_1.flange_b, wheelHub_1.flange) annotation (Line(points={{-60,-70},{-60,-84},{-60,-99.95},{-60.05,-99.95}}));
   connect(brake_2.flange_a, wheelHub_2.flange) annotation (Line(points={{-60,70},{-60,86},{-60,100.05},{-60.05,100.05}}));
   connect(brake_3.flange_a, wheelHub_3.flange) annotation (Line(points={{60,-70},{60,-84},{60,-99.95},{59.95,-99.95}}));
@@ -159,6 +158,9 @@ equation
 
   annotation (
     Documentation(info="<html>
-<p>Brakes subsystem model that uses the driver <strong>brakePedalPosition</strong> signal to determine the brake torque demand being requested by the driver.</p>
+<p>
+Brakes subsystem model that uses the driver <strong>brakePedalPosition</strong>
+signal to determine the brake torque demand being requested by the driver.
+</p>
 </html>"));
 end MinimalBrakes;

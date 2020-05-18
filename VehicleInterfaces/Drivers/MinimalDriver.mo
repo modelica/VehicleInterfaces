@@ -2,18 +2,10 @@ within VehicleInterfaces.Drivers;
 model MinimalDriver "Constant acceleration Driver"
   extends VehicleInterfaces.Icons.Driver;
   extends VehicleInterfaces.Drivers.Interfaces.Base;
-  parameter Real initialAccelRequest(
-    min=0,
-    max=1) = 1 "Initial accelerator pedal position";
-  parameter Real initialBrakeRequest(
-    min=0,
-    max=1) = 0 "Initial brake pedal position";
-  parameter Real finalAccelRequest(
-    min=0,
-    max=1) = 1 "Final accelerator pedal position";
-  parameter Real finalBrakeRequest(
-    min=0,
-    max=1) = 0 "Final brake pedal position";
+  parameter Real initialAccelRequest(min=0, max=1) = 1 "Initial accelerator pedal position";
+  parameter Real initialBrakeRequest(min=0, max=1) = 0 "Initial brake pedal position";
+  parameter Real finalAccelRequest(min=0, max=1) = 1 "Final accelerator pedal position";
+  parameter Real finalBrakeRequest(min=0, max=1) = 0 "Final brake pedal position";
   parameter SI.Time accelTime=10 "Time of accel apply";
   parameter SI.Time brakeTime=10 "Time of brake apply";
   parameter VehicleInterfaces.Types.GearMode.Temp selectedGearboxMode=
@@ -96,6 +88,9 @@ equation
   annotation (
     defaultComponentName="driver",
     Documentation(info="<html>
-<p>Constant acceleration driver with the capabilitiy to step between two constant throttle values.</p>
+<p>
+Constant acceleration driver with the capabilitiy to step between two
+constant throttle values.
+</p>
 </html>"));
 end MinimalDriver;

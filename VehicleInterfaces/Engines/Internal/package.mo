@@ -5,7 +5,8 @@ package Internal "Collection of internal material involving engine"
 
   annotation (Documentation(info="<html>
 <p>
-A collection of internal material for engine models. Control bus definitions are mainly included.
+A collection of internal material for engine models.
+Control bus definitions are mainly included.
 </p>
 </html>"));
 end Internal;

@@ -3,68 +3,92 @@ model RearWheelDriveAutomaticVehicle
   "A conventional front-wheel drive automatic transmission vehicle with separate powertrain mounting system for the front axle and engine-transmission systems"
   extends Modelica.Icons.Example;
 
-  replaceable Engines.MinimalEngine engine constrainedby VehicleInterfaces.Engines.Interfaces.Base
-                                              "Engine subsystem" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-110,-20},{-80,10}})));
+  replaceable Engines.MinimalEngine engine
+    constrainedby VehicleInterfaces.Engines.Interfaces.Base
+    "Engine subsystem" annotation (
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-110,-20},{-80,10}})));
   replaceable Transmissions.SingleGearAutomaticTransmission transmission
     constrainedby VehicleInterfaces.Transmissions.Interfaces.BaseAutomaticTransmission
     "Transmission subsystem" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-60,-20},{-30,10}})));
-  replaceable Chassis.MinimalChassis3 chassis constrainedby VehicleInterfaces.Chassis.Interfaces.TwoAxleBase
-                                                     "Chassis subsystem"
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-60,-20},{-30,10}})));
+  replaceable Chassis.MinimalChassis3 chassis
+    constrainedby VehicleInterfaces.Chassis.Interfaces.TwoAxleBase
+    "Chassis subsystem"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{40,-30},{100,10}})));
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{40,-30},{100,10}})));
   replaceable Drivelines.MinimalDriveline driveline(
     usingMultiBodyChassis=true)
     constrainedby VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase
     "Driveline subsystem" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-10,-20},{20,10}})));
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-10,-20},{20,10}})));
   replaceable Brakes.MinimalBrakes brakes(usingMultiBodyChassis=true)
     constrainedby VehicleInterfaces.Brakes.Interfaces.TwoAxleBase
     "Brakes subsystem" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{120,-20},{150,10}})));
-  replaceable Accessories.MinimalAccessories accessories constrainedby VehicleInterfaces.Accessories.Interfaces.Base
-                                                  "Accessories subsystem"
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{120,-20},{150,10}})));
+  replaceable Accessories.MinimalAccessories accessories
+    constrainedby VehicleInterfaces.Accessories.Interfaces.Base
+    "Accessories subsystem"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-150,-15},{-130,5}})));
-  replaceable DriverEnvironments.DriveByWireAutomaticExternalDriver
-    driverEnvironment constrainedby VehicleInterfaces.DriverEnvironments.Interfaces.BaseAutomaticTransmissionExternalDriver
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-150,-15},{-130,5}})));
+  replaceable DriverEnvironments.DriveByWireAutomaticExternalDriver driverEnvironment
+    constrainedby VehicleInterfaces.DriverEnvironments.Interfaces.BaseAutomaticTransmissionExternalDriver
     "Driver environment" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Driver Models"),
-    Placement(transformation(extent={{0,60},{30,90}})));
-  inner replaceable Roads.FlatRoad road constrainedby VehicleInterfaces.Roads.Interfaces.Base
-                                            "Road model" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Conditions"),
-    Placement(transformation(extent={{-120,-100},{-80,-80}})));
-  inner replaceable Atmospheres.ConstantAtmosphere atmosphere constrainedby VehicleInterfaces.Atmospheres.Interfaces.Base
-                                                  "Atmospheric model"
+      choicesAllMatching=true,
+      Dialog(group="Driver Models"),
+      Placement(transformation(extent={{0,60},{30,90}})));
+  replaceable PowertrainMounts.TwoSystemRigidMount engineTransmissionMount
+    constrainedby PowertrainMounts.Interfaces.DualSystemMount
+    "Engine and Transmission mounting system" annotation (
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-100,-55},{-40,-40}})));
+  replaceable PowertrainMounts.SingleSystemRigidMount diffMount
+    constrainedby PowertrainMounts.Interfaces.SingleSystemMount
+    "Differential mounting system" annotation (
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{0,-54},{10,-40}})));
+  replaceable Drivers.MinimalDriver driver
+    constrainedby Drivers.Interfaces.Base
+    "Driver model"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Conditions"),
-    Placement(transformation(extent={{-60,-100},{-20,-80}})));
+      choicesAllMatching=true,
+      Dialog(group="Driver Models"),
+      Placement(transformation(extent={{-70,60},{-40,90}})));
+  inner replaceable Roads.FlatRoad road
+    constrainedby VehicleInterfaces.Roads.Interfaces.Base
+    "Road model" annotation (
+      choicesAllMatching=true,
+      Dialog(group="Conditions"),
+      Placement(transformation(extent={{-120,-100},{-80,-80}})));
+  inner replaceable Atmospheres.ConstantAtmosphere atmosphere
+    constrainedby VehicleInterfaces.Atmospheres.Interfaces.Base
+    "Atmospheric model"
+    annotation (
+      choicesAllMatching=true,
+      Dialog(group="Conditions"),
+      Placement(transformation(extent={{-60,-100},{-20,-80}})));
   inner replaceable Modelica.Mechanics.MultiBody.World world(
     enableAnimation=false,
     n={0,0,-1},
     driveTrainMechanics3D=false)
     constrainedby Modelica.Mechanics.MultiBody.World
     "Global co-ordinate system" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Conditions"),
-    Placement(transformation(extent={{-150,-100},{-130,-80}})));
+      choicesAllMatching=true,
+      Dialog(group="Conditions"),
+      Placement(transformation(extent={{-150,-100},{-130,-80}})));
 protected
   Interfaces.ControlBus controlBus "Control bus connector"
     annotation (Placement(transformation(
@@ -74,24 +98,6 @@ protected
         extent={{0,0},{0,0}},
         rotation=90,
         origin={-100,60})));
-public
-  replaceable PowertrainMounts.TwoSystemRigidMount engineTransmissionMount
-    constrainedby PowertrainMounts.Interfaces.DualSystemMount
-    "Engine and Transmission mounting system" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-100,-55},{-40,-40}})));
-  replaceable PowertrainMounts.SingleSystemRigidMount diffMount constrainedby PowertrainMounts.Interfaces.SingleSystemMount
-    "Differential mounting system" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{0,-54},{10,-40}})));
-  replaceable Drivers.MinimalDriver driver constrainedby Drivers.Interfaces.Base
-                            "Driver model"
-                   annotation (
-    choicesAllMatching=true,
-    Dialog(group="Driver Models"),
-    Placement(transformation(extent={{-70,60},{-40,90}})));
 equation
   connect(accessories.engineFlange, engine.accessoryFlange) annotation (Line(
         points={{-130,-5},{-110,-5}}));
@@ -198,12 +204,17 @@ equation
       color={85,85,255},
       thickness=0.5));
   annotation (
+    experiment(StopTime=10),
     Diagram(coordinateSystem(
         preserveAspectRatio=false,
         extent={{-160,-100},{160,100}},
         grid={1,1})),
     Documentation(info="<html>
-<p>Example model architecture of a rear wheel drive passenger car with an automatic transmission.  In this architecture variant the PowerTrain systems can be elastically mounted in the chassis when MultiBody effects are included.</p>
-</html>"),
-    experiment(StopTime=10));
+<p>
+Example model architecture of a&nbsp;rear wheel drive passenger car with
+an automatic transmission. In this architecture variant the PowerTrain
+systems can be elastically mounted in the chassis when MultiBody effects
+are included.
+</p>
+</html>"));
 end RearWheelDriveAutomaticVehicle;

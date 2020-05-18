@@ -88,6 +88,10 @@ equation
       extent={{6,3},{6,3}}));
   annotation (
     Documentation(info="<html>
-<p>Driver environment that requires an external driver model. Signals received from external driver model are simply propagated throug withouth any modification.</p>
+<p>
+Driver environment that requires an external driver model. Signals received
+from external driver model are simply propagated throug withouth any
+modification.
+</p>
 </html>"));
 end DriveByWireAutomaticExternalDriver;

@@ -49,10 +49,20 @@ equation
 
   // Friction coefficient at contact point
   mu = road.frictionCoefficient(s, w);
-  annotation (Documentation(info="<html>
-<p>A dummy wheel model used in test models to check the road definitions. Within this model, no tire force calculation is performed. Only kinematic relationships between wheel input <code>e_axis</code> (unit vector in direction of wheel axis) and <code>r_wheel</code> (wheel center position) and road definition are given. </p>
+
+  annotation (
+    Documentation(info="<html>
 <p>
-Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code> and compare wheel model outputs with road definition. </p>
+A&nbsp;dummy wheel model used in test models to check the road definitions.
+Within this model, no tire force calculation is performed. Only kinematic
+relationships between wheel input <code>e_axis</code> (unit vector in
+direction of wheel axis) and <code>r_wheel</code> (wheel center position)
+and road definition are given.
+</p>
+<p>
+Simply change the two inputs <code>e_axis</code> and <code>r_wheel</code>
+and compare wheel model outputs with road definition.
+</p>
 </html>"),
        Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
             {100,100}}), graphics={

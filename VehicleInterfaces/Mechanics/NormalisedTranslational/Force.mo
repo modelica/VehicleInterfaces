@@ -44,6 +44,9 @@ equation
           fillColor={0,127,0},
           fillPattern=FillPattern.Solid)}),
     Documentation(info="<html>
-<p>Applies a force to a 1D normalized translational system.  Cannot be connected to components from the Modelica.Mechanics.Translational library</p>
+<p>
+Applies a force to a 1D normalized translational system. Cannot be connected
+to components from the Modelica.Mechanics.Translational library.
+</p>
 </html>"));
 end Force;

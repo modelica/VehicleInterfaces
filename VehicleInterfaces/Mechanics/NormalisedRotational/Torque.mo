@@ -52,6 +52,9 @@ equation
           thickness=0.5,
           smooth=Smooth.Bezier)}),
     Documentation(info="<html>
-<p>Applies a torque to a 1D normalized rotational system.  Cannot be connected to components from the Modelica.Mechanics.Rotational library</p>
+<p>
+Applies a&nbsp;torque to a&nbsp;1D normalized rotational system.
+Cannot be connected to components from the Modelica.Mechanics.Rotational library.
+</p>
 </html>"));
 end Torque;

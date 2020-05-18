@@ -5,6 +5,7 @@ model SingleGearAutomaticTransmission
   extends Interfaces.BaseAutomaticTransmission(includeMount=world.driveTrainMechanics3D);
 
   parameter Real gearRatio=4 "Gear ratio";
+
   Modelica.Mechanics.Rotational.Components.IdealGear gear(
     ratio=gearRatio,
     useSupport=true)
@@ -53,6 +54,9 @@ equation
       color={0,0,127}));
   annotation (
     Documentation(info="<html>
-<p>A single gear transmission without a launch device that is based on the automatic transmission model interface definition</p>
+<p>
+A&nbsp;single gear transmission without a&nbsp;launch device that is
+based on the automatic transmission model interface definition.
+</p>
 </html>"));
 end SingleGearAutomaticTransmission;

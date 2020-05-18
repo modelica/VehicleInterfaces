@@ -17,8 +17,7 @@ model MinimalChassis
     m=vehicleMass,
     s(stateSelect=StateSelect.always,
       start=0,
-      fixed=true)) annotation (Placement(transformation(extent={{0,-10},{20,
-            10}})));
+      fixed=true)) annotation (Placement(transformation(extent={{0,-10},{20,10}})));
   Modelica.Mechanics.Translational.Components.Damper dragForces(
     d=drag)
     annotation (Placement(transformation(extent={{40,-10},{60,10}})));
@@ -40,7 +39,7 @@ equation
           0}}, color={0,127,0}));
   connect(body.flange_b, dragForces.flange_a) annotation (Line(points={{20,0},
           {40,0}}, color={0,127,0}));
-  connect(dragForces.flange_b,ground.flange)    annotation (Line(points={{60,
+  connect(dragForces.flange_b,ground.flange) annotation (Line(points={{60,
           0},{80,0}}, color={0,127,0}));
   connect(body.flange_b,longitudinalVelocity.flange)    annotation (Line(
         points={{20,0},{20,30},{5,30}}, color={0,127,0}));
@@ -69,8 +68,10 @@ equation
       index=-1,
       extent={{-6,3},{-6,3}}));
   annotation (Documentation(info="<html>
- <p>Single degree-of-freedom chassis model with mass and speed dependant drag model</p>
+<p>
+Single degree-of-freedom chassis model with mass and speed dependant drag model.
+</p>
 </html>"),
-         Diagram(coordinateSystem(preserveAspectRatio=true, extent={{-160,
+    Diagram(coordinateSystem(preserveAspectRatio=true, extent={{-160,
             -100},{160,100}})));
 end MinimalChassis;

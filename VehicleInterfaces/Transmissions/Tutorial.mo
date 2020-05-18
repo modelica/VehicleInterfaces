@@ -53,7 +53,7 @@ Starting from step&nbsp;3 above.
       <br><br></li>
   <li>Next, we need to add the required connections to the control signal
       bus for the transmission, see
-      <a href=\"Modelica://VehicleInterfaces.UsersGuide.SignalBus\">here</a>
+      <a href=\"modelica://VehicleInterfaces.UsersGuide.SignalBus\">here</a>
       for a&nbsp;complete list of the minimum connections required.
       As we are creating a&nbsp;manual transmission model we need to add
       three signals to the transmissionBus which is part of the controlBus.

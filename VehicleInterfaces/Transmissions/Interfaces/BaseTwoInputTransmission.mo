@@ -32,8 +32,13 @@ equation
           lineColor={255,128,0},
           pattern=LinePattern.Dot)}),
     Documentation(info="<html>
-<p>This partial model defines the interfaces required for a transmission model that has two input shafts (such as a power-split device)
-within the VehicleInterfaces package.  See the <a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a> and
-<a href=\"modelica://VehicleInterfaces.Transmissions.Tutorial\">tutorial</a> for more information.</p>
+<p>
+This partial model defines the interfaces required for a transmission
+model that has two input shafts (such as a power-split device) within
+the VehicleInterfaces package. See the
+<a href=\"modelica://VehicleInterfaces.Transmissions\">documentation</a> and
+<a href=\"modelica://VehicleInterfaces.Transmissions.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"));
 end BaseTwoInputTransmission;

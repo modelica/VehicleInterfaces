@@ -20,7 +20,10 @@ expandable connector ControlBus
   VehicleInterfaces.Interfaces.TransmissionBus transmissionBus "Transmission bus" annotation (Dialog(enable=false));
   VehicleInterfaces.Interfaces.TransmissionControlBus transmissionControlBus "Transmission control bus" annotation (Dialog(enable=false));
 
-  annotation (      Documentation(info="<html>
-<p>An empty expandable connector used as the top-level control signal bus in VehicleInterfaces.</p>
+  annotation (
+    Documentation(info="<html>
+<p>
+An empty expandable connector used as the top-level control signal bus in VehicleInterfaces.
+</p>
 </html>"));
 end ControlBus;

@@ -20,7 +20,15 @@ partial model DualSystemMount
         extent={{-150,-100},{150,100}},
         grid={1,1})),
     Documentation(info="<html>
-<p>This partial model defines the interfaces required for two powertrain system mounting subsystem. This class should be extended to form a particular powertrain mounting model. See the <a href=\"Modelica://VehicleInterfaces.PowertrainMounts\">documentation</a> and <a href=\"Modelica://VehicleInterfaces.PowertrainMounts.Tutorial\">tutorial</a> for more information.</p>
+<p>
+This partial model defines the interfaces required for two powertrain
+system mounting subsystem. This class should be extended to form
+a&nbsp;particular powertrain mounting model. See the
+<a href=\"modelica://VehicleInterfaces.PowertrainMounts\">documentation</a>
+and
+<a href=\"modelica://VehicleInterfaces.PowertrainMounts.Tutorial\">tutorial</a>
+for more information.
+</p>
 </html>"),
     Icon(coordinateSystem(
         preserveAspectRatio=false,

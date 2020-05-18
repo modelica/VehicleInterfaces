@@ -21,6 +21,9 @@ equation
 
   annotation (
     Documentation(info="<html>
-<p>Rigidly mounts 1 power train systems such as the engine or transmission on one supporting system, usually the chassis</p>
+<p>
+Rigidly mounts one power train system such as the engine or transmission on
+one supporting system, usually the chassis.
+</p>
 </html>"));
 end SingleSystemRigidMount;

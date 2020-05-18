@@ -5,6 +5,12 @@ expandable connector DriverInterface
 
   annotation (
     defaultComponentPrefixes="protected",
+    Documentation(info="<html>
+<p>
+Should be used to contain signals and normalised mechanical connections that
+need to be exchanged between the Driver and DriverEnvironment subsystems. 
+</p>
+</html>"),
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
             100}}), graphics={
         Rectangle(
@@ -33,9 +39,6 @@ expandable connector DriverInterface
           lineColor={0,0,0},
           fillColor={0,0,0},
           fillPattern=FillPattern.Solid)}),
-    Documentation(info="<html>
-<p>Should be used to contain signals and normalised mechanical connections that need to be exchanged between the Driver and DriverEnvironment subsystems.</p>
-</html>"),
     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
             100,100}}), graphics={
         Polygon(

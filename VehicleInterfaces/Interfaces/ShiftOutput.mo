@@ -99,6 +99,9 @@ equation
           fillColor={255,128,0},
           fillPattern=FillPattern.Solid)}),
     Documentation(info="<html>
-<p>Converts positions on the <strong>intoGear</strong> and <strong>crossGate</strong> sub-connectors of the ShiftConnector into an integer gear signal.</p>
+<p>
+Converts positions on the <strong>intoGear</strong> and <strong>crossGate</strong>
+sub-connectors of the ShiftConnector into an integer gear signal.
+</p>
 </html>"));
 end ShiftOutput;

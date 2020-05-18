@@ -2,74 +2,80 @@ within VehicleInterfaces.Examples;
 model ConventionalManualVehicle "Conventional manual transmission vehicle"
   extends Modelica.Icons.Example;
 
-  replaceable Engines.MinimalEngineUsingPedal engine constrainedby VehicleInterfaces.Engines.Interfaces.Base
-                                              "Engine subsystem" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-110,-30},{-80,0}})));
+  replaceable Engines.MinimalEngineUsingPedal engine
+    constrainedby VehicleInterfaces.Engines.Interfaces.Base
+    "Engine subsystem" annotation (
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-110,-30},{-80,0}})));
   replaceable Transmissions.SingleGearManualTransmission transmission(
     clutch(
       phi_rel(fixed=true, start=0)))
     constrainedby VehicleInterfaces.Transmissions.Interfaces.BaseManualTransmission
     "Transmission subsystem" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-60,-30},{-30,0}})));
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-60,-30},{-30,0}})));
   replaceable Chassis.MinimalChassis chassis(
     body(v(fixed=true)))
     constrainedby VehicleInterfaces.Chassis.Interfaces.TwoAxleBase
     "Chassis subsystem"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{40,-40},{100,0}})));
-  replaceable Drivelines.MinimalDriveline driveline constrainedby VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase
-                                                        "Driveline subsystem"
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{40,-40},{100,0}})));
+  replaceable Drivelines.MinimalDriveline driveline
+    constrainedby VehicleInterfaces.Drivelines.Interfaces.TwoAxleBase
+    "Driveline subsystem"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-10,-30},{20,0}})));
-  replaceable Brakes.MinimalBrakesUsingPedal brakes constrainedby VehicleInterfaces.Brakes.Interfaces.TwoAxleBase
-                                                    "Brakes subsystem"
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-10,-30},{20,0}})));
+  replaceable Brakes.MinimalBrakesUsingPedal brakes
+    constrainedby VehicleInterfaces.Brakes.Interfaces.TwoAxleBase
+    "Brakes subsystem"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{120,-30},{150,0}})));
-  replaceable Accessories.MinimalAccessories accessories constrainedby VehicleInterfaces.Accessories.Interfaces.Base
-                                                  "Accessory subsystem"
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{120,-30},{150,0}})));
+  replaceable Accessories.MinimalAccessories accessories
+    constrainedby VehicleInterfaces.Accessories.Interfaces.Base
+    "Accessory subsystem"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Plant Models"),
-    Placement(transformation(extent={{-145,-25},{-125,-5}})));
+      choicesAllMatching=true,
+      Dialog(group="Plant Models"),
+      Placement(transformation(extent={{-145,-25},{-125,-5}})));
   replaceable DriverEnvironments.ConventionalManual driverEnvironment(
     acceleratorPosition(v(fixed=true)),
     brakePosition(v(fixed=true)),
     clutchPosition(v(fixed=true)))
     constrainedby VehicleInterfaces.DriverEnvironments.Interfaces.BaseManualTransmission
     "Driver environment" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Driver Models"),
-    Placement(transformation(extent={{0,50},{30,80}})));
-  inner replaceable Roads.FlatRoad road constrainedby VehicleInterfaces.Roads.Interfaces.Base
-                                            "Road model" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Conditions"),
-    Placement(transformation(extent={{-120,-100},{-80,-80}})));
-  inner replaceable Atmospheres.ConstantAtmosphere atmosphere constrainedby VehicleInterfaces.Atmospheres.Interfaces.Base
-                                                  "Atmospheric model"
+      choicesAllMatching=true,
+      Dialog(group="Driver Models"),
+      Placement(transformation(extent={{0,50},{30,80}})));
+  inner replaceable Roads.FlatRoad road
+    constrainedby VehicleInterfaces.Roads.Interfaces.Base
+    "Road model" annotation (
+      choicesAllMatching=true,
+      Dialog(group="Conditions"),
+      Placement(transformation(extent={{-120,-100},{-80,-80}})));
+  inner replaceable Atmospheres.ConstantAtmosphere atmosphere
+    constrainedby VehicleInterfaces.Atmospheres.Interfaces.Base
+    "Atmospheric model"
     annotation (
-    choicesAllMatching=true,
-    Dialog(group="Conditions"),
-    Placement(transformation(extent={{-70,-100},{-30,-80}})));
+      choicesAllMatching=true,
+      Dialog(group="Conditions"),
+      Placement(transformation(extent={{-70,-100},{-30,-80}})));
   inner replaceable Modelica.Mechanics.MultiBody.World world(
     enableAnimation=false,
     n={0,0,-1},
     driveTrainMechanics3D=false)
     constrainedby Modelica.Mechanics.MultiBody.World
     "Global co-ordinate system" annotation (
-    choicesAllMatching=true,
-    Dialog(group="Conditions"),
-    Placement(transformation(extent={{-150,-100},{-130,-80}})));
+      choicesAllMatching=true,
+      Dialog(group="Conditions"),
+      Placement(transformation(extent={{-150,-100},{-130,-80}})));
 protected
   Interfaces.ControlBus controlBus "Control bus connector"
     annotation (Placement(transformation(
@@ -174,12 +180,16 @@ equation
     annotation (Line(points={{9,50},{9,35},{-54,35},{-54,0}}, color={0,127,0}));
 
   annotation (
+    experiment(StopTime=10),
     Diagram(coordinateSystem(
         preserveAspectRatio=true,
         extent={{-160,-100},{160,100}},
         grid={1,1})),
     Documentation(info="<html>
-<p>Example model architecture of a passenger car with a manual transmission.  In this architecture variant the PowerTrain systems are rigidly mounted to the chassis when MultiBody effects are included.</p>
-</html>"),
-    experiment(StopTime=10));
+<p>
+Example model architecture of a&nbsp;passenger car with a&nbsp;manual
+transmission. In this architecture variant the PowerTrain systems are
+rigidly mounted to the chassis when MultiBody effects are included.
+</p>
+</html>"));
 end ConventionalManualVehicle;
