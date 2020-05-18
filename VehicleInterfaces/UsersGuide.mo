@@ -815,6 +815,14 @@ compatible way:
       A&nbsp;<em>positive</em> load parameter <code>accessoriesLoad</code> of
       <a href=\"modelica://VehicleInterfaces.Accessories.MinimalAccessories\">MinimalAccessories</a>
       indicates accessories load now.</li>
+  <li>GitHub issue <a href=\"https://github.com/modelica/VehicleInterfaces/issues/70\">#70</a>:
+      Spell Greek letter for m (&mu;) correctly: mu instead of mue.
+      This concerns classes in <a href=\"modelica://VehicleInterfaces.Roads\">Roads</a>
+      package, in particular the function
+      <a href=\"modelica://VehicleInterfaces.Roads.Interfaces.frictionCoefficientBase\">Roads.Interfaces.frictionCoefficientBase</a>.
+      When using this function in your models, please check that automatic
+      conversion performed correctly, i.e. the function&apos;s output is
+      called <code>mu</code> now.</li>
 </ul>
 </html>"));
     end Version_2_0_0;

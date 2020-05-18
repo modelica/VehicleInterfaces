@@ -2,9 +2,9 @@ within VehicleInterfaces.PowertrainMounts;
 model TwoSystemRigidMount "2 system rigid mount"
   extends Interfaces.DualSystemMount;
   extends VehicleInterfaces.Icons.TwoMounts;
-  parameter Modelica.SIunits.Position r_ChassisToMount1[3]={0,0,0}
+  parameter SI.Position r_ChassisToMount1[3]={0,0,0}
     "Vector from chassis frame to mount_1 frame" annotation (Evaluate=false);
-  parameter Modelica.SIunits.Position r_ChassisToMount2[3]={0,0,0}
+  parameter SI.Position r_ChassisToMount2[3]={0,0,0}
     "Vector from chassis frame to mount_2 frame" annotation (Evaluate=false);
 
   Modelica.Mechanics.MultiBody.Parts.FixedTranslation chassisFrameToMount1(

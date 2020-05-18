@@ -2,7 +2,7 @@ within VehicleInterfaces.PowertrainMounts;
 model SingleSystemRigidMount "1 system rigid mount"
   extends Interfaces.SingleSystemMount;
   extends VehicleInterfaces.Icons.SingleMount;
-  parameter Modelica.SIunits.Position r_ChassisToMount1[3]={0,0,0}
+  parameter SI.Position r_ChassisToMount1[3]={0,0,0}
     "Vector from chassis frame to mount_1 frame" annotation (Evaluate=false);
 
   Modelica.Mechanics.MultiBody.Parts.FixedTranslation chassisFrameToMount1(r=

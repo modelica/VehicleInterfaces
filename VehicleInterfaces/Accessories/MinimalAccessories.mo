@@ -4,9 +4,9 @@ model MinimalAccessories
   extends VehicleInterfaces.Icons.Accessories;
   extends Interfaces.Base(includeEngineBearing=world.driveTrainMechanics3D);
 
-  parameter Modelica.SIunits.Inertia accessoriesInertia=0.001
+  parameter SI.Inertia accessoriesInertia=0.001
     "Total effective rotational inertia of the accessories";
-  parameter Modelica.SIunits.Torque accessoriesLoad=2
+  parameter SI.Torque accessoriesLoad=2
     "Total effective torque load due to the accessories (constant)";
   parameter Modelica.Mechanics.MultiBody.Types.Axis axisOfRotation={1,0,0}
     "Axis of rotation for accessories when including MultiBody effects";
@@ -16,9 +16,10 @@ model MinimalAccessories
     n=axisOfRotation)
     annotation (Placement(transformation(extent={{20,-10}, {40,10}})));
   Modelica.Mechanics.Rotational.Sources.SignTorque torqueLoss(
-    tau_constant=-accessoriesLoad,
-    useSupport=includeEngineBearing)
-    annotation (Placement(transformation(extent={{-20,-10}, {0,10}})));
+    tau_nominal=-accessoriesLoad,
+    useSupport=includeEngineBearing,
+    w0=1)
+    annotation (Placement(transformation(extent={{-20,-10},{0,10}})));
   Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction(
     n=axisOfRotation) if includeEngineBearing
     annotation (Placement(transformation(extent={{100,-30},{80,-50}})));

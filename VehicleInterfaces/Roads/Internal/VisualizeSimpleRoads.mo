@@ -15,10 +15,10 @@ model VisualizeSimpleRoads
       final s_max=s_max,
       final w_min=w_min,
       final w_max=w_max));
-  parameter Real s_min=0 "Minimum value of s";
-  parameter Real s_max=1 "Maximum value of s";
-  parameter Real w_min=-1 "Minimum value of w";
-  parameter Real w_max=1 "Maximum value of w";
+  parameter SI.Length s_min=0 "Minimum value of s";
+  parameter SI.Length s_max=1 "Maximum value of s";
+  parameter SI.Length w_min=-1 "Minimum value of w";
+  parameter SI.Length w_max=1 "Maximum value of w";
 
 protected
   outer VehicleInterfaces.Roads.Interfaces.Base road;

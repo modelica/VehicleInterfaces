@@ -1,7 +1,7 @@
 within VehicleInterfaces.Mechanics.NormalisedRotational.Interfaces;
 connector Flange "1D normalized rotational flange"
   Types.NormalizedReal phi "Normalized rotation of flange";
-  flow Modelica.SIunits.Torque tau "Cut torque directed in the flange";
+  flow SI.Torque tau "Cut torque directed in the flange";
 
   annotation (
     defaultComponentName="flange_a",

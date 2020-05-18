@@ -6,21 +6,21 @@ model FlatRoad "Straight road along x-axis (perpendicular to world z-axis)"
     redeclare final function trackOffset = constantOffset (offset=offset),
     redeclare final function normal = lineNormal,
     redeclare final function headingDirection = lineHeadingDirection,
-    redeclare final function frictionCoefficient = lineFrictionCoefficient (mue_fixed=mue));
+    redeclare final function frictionCoefficient = lineFrictionCoefficient (mu_fixed=mu));
 
   parameter Boolean animation=true "= true, if road shall be visualized";
-  parameter Real mue=0.5 "Friction coefficient of road";
+  parameter Real mu=0.5 "Friction coefficient of road";
   parameter Modelica.Mechanics.MultiBody.Types.Color roadColor={255,0,0}
     "Color of road" annotation (Dialog(group="Animation",enable=animation));
-  parameter Modelica.SIunits.Length width=8 "Width of road"
+  parameter SI.Length width=8 "Width of road"
     annotation (Dialog(group="Animation", enable=animation));
-  parameter Modelica.SIunits.Position x_min=-100
+  parameter SI.Position x_min=-100
     "Roads is visualized in the range [x_min .. x_max]"
     annotation (Dialog(group="Animation", enable=animation));
-  parameter Modelica.SIunits.Position x_max=100
+  parameter SI.Position x_max=100
     "Roads is visualized in the range [x_min .. x_max]"
     annotation (Dialog(group="Animation", enable=animation));
-  parameter Modelica.SIunits.Distance offset=0
+  parameter SI.Distance offset=0
     "Offset from the road centre line";
 protected
   outer Modelica.Mechanics.MultiBody.World world;
@@ -41,7 +41,7 @@ protected
 
   function constantOffset "Determine offset from road centre line"
     extends VehicleInterfaces.Roads.Interfaces.trackOffsetBase;
-    input Modelica.SIunits.Distance offset=0;
+    input SI.Distance offset=0;
   algorithm
     trackOffset := {0,offset,0};
   end constantOffset;
@@ -61,9 +61,9 @@ protected
   function lineFrictionCoefficient
     "Determine friction coefficient at point on road"
     extends VehicleInterfaces.Roads.Interfaces.frictionCoefficientBase;
-    input Real mue_fixed=1 "Friction coefficient";
+    input Real mu_fixed=1 "Friction coefficient";
   algorithm
-    mue := mue_fixed;
+    mu := mu_fixed;
   end lineFrictionCoefficient;
 
   annotation (

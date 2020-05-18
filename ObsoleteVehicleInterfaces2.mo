@@ -587,6 +587,7 @@ VehicleInterfaces.Interfaces.TransmissionControlBus transmissionControlBus
       end StandardControlBus;
     end Interfaces;
   end Transmissions;
+
   annotation (
     uses(
       VehicleInterfaces(version="2.0.0"),

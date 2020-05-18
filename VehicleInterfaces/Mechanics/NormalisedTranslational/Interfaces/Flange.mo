@@ -1,7 +1,7 @@
 within VehicleInterfaces.Mechanics.NormalisedTranslational.Interfaces;
 connector Flange "1D normalized translational flange"
   Types.NormalizedReal s "Normalized position of flange";
-  flow Modelica.SIunits.Force f "Cut force directed into flange";
+  flow SI.Force f "Cut force directed into flange";
 
   annotation (
     defaultComponentName="flange_a",
