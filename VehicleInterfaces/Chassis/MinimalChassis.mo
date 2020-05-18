@@ -41,7 +41,7 @@ equation
           {40,0}}, color={0,127,0}));
   connect(dragForces.flange_b,ground.flange) annotation (Line(points={{60,
           0},{80,0}}, color={0,127,0}));
-  connect(body.flange_b,longitudinalVelocity.flange)    annotation (Line(
+  connect(body.flange_b,longitudinalVelocity.flange) annotation (Line(
         points={{20,0},{20,30},{5,30}}, color={0,127,0}));
   connect(tyres.flangeR,  wheelHub_1.flange) annotation (Line(points={{-40,0},
           {-90,0},{-90,-100}}));
@@ -72,6 +72,5 @@ equation
 Single degree-of-freedom chassis model with mass and speed dependant drag model.
 </p>
 </html>"),
-    Diagram(coordinateSystem(preserveAspectRatio=true, extent={{-160,
-            -100},{160,100}})));
+    Diagram(coordinateSystem(preserveAspectRatio=true, extent={{-160,-100},{160,100}})));
 end MinimalChassis;

@@ -10,11 +10,10 @@ model MinimalEngineUsingPedal
 
   parameter SI.AngularVelocity engineSpeed_start(displayUnit="r/min") = 104.7197551196598
     "Initial engine speed";
-  parameter SI.Force pedalPositionToTorque=50
+  parameter SI.Force pedalPositionToTorque = 50
     "Engine torque = pedalPositionToTorque*accelerator_pedal_position";
-  parameter SI.Inertia flywheelInertia=0.08
-    "Flywheel inertia";
-  parameter Modelica.Mechanics.MultiBody.Types.Axis axisOfRotation={1,0,0}
+  parameter SI.Inertia flywheelInertia = 0.08 "Flywheel inertia";
+  parameter Modelica.Mechanics.MultiBody.Types.Axis axisOfRotation = {1,0,0}
     "Axis of rotation resolved in engineMount";
 
   Modelica.Mechanics.MultiBody.Parts.Rotor1D flywheel(
@@ -50,9 +49,9 @@ protected
     annotation (Placement(transformation(extent={{-70,50},{-50,70}})));
   outer Modelica.Mechanics.MultiBody.World world;
 equation
-  connect(engine.flange,   flywheel.flange_a)
+  connect(engine.flange, flywheel.flange_a)
     annotation (Line(points={{-20,-20},{-20,0},{-10,0}}));
-  connect(flywheel.flange_b,engineSpeed.flange) annotation (Line(points={{
+  connect(flywheel.flange_b, engineSpeed.flange) annotation (Line(points={{
           10,0},{20,0},{20,60}}));
   connect(flywheel.flange_b, engineTorque.flange_a) annotation (Line(points={
           {10,0},{30,0}}));
@@ -64,7 +63,7 @@ equation
   connect(flywheel.frame_a, engineMount) annotation (Line(
       points={{0,-10},{0,-100}},
       thickness=0.5));
-  connect(mounting1D.flange_b,engine.support)  annotation (Line(points={{-30,-40},
+  connect(mounting1D.flange_b, engine.support) annotation (Line(points={{-30,-40},
           {-30,-40},{-30,-30}}, color={
           0,0,0}));
   connect(mounting1D.frame_a, engineMount) annotation (Line(
