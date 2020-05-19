@@ -38,19 +38,19 @@ public
   Modelica.Mechanics.MultiBody.Parts.Mounting1D mountingR(n=constraint.n)
     annotation (Placement(transformation(extent={{-50,-20},{-30,0}})));
 equation
-  connect(tyres.flangeR,  wheelHub_2.flange) annotation (Line(points={{-20,0},
+  connect(tyres.flangeR, wheelHub_2.flange) annotation (Line(points={{-20,0},
           {-90,0},{-90,100}}));
-  connect(tyres.flangeR,  wheelHub_1.flange) annotation (Line(points={{-20,0},
+  connect(tyres.flangeR, wheelHub_1.flange) annotation (Line(points={{-20,0},
           {-90,0},{-90,-100}}));
-  connect(tyres.flangeR,  wheelHub_4.flange) annotation (Line(points={{-20,0},
+  connect(tyres.flangeR, wheelHub_4.flange) annotation (Line(points={{-20,0},
           {-90,0},{-90,80},{90,80},{90,100}}));
-  connect(tyres.flangeR,  wheelHub_3.flange) annotation (Line(points={{-20,0},
+  connect(tyres.flangeR, wheelHub_3.flange) annotation (Line(points={{-20,0},
           {-90,0},{-90,-80},{90,-80},{90,-100}}));
-  connect(tyres.flangeT,  dragForces.flange_a)
+  connect(tyres.flangeT, dragForces.flange_a)
     annotation (Line(points={{0,0},{40,0}}, color={0,127,0}));
-  connect(longitudinalVelocity.flange,   dragForces.flange_a) annotation (Line(
+  connect(longitudinalVelocity.flange, dragForces.flange_a) annotation (Line(
         points={{5,30},{20,30},{20,0},{40,0}}, color={0,127,0}));
-  connect(dragForces.flange_b,constraint.support)  annotation (Line(points={{60,0},{
+  connect(dragForces.flange_b, constraint.support) annotation (Line(points={{60,0},{
           60,-24},{54,-24}}, color={0,127,0}));
   connect(dragForces.flange_a, constraint.axis) annotation (Line(points={{40,0},{
           40,-12},{40,-24},{42,-24}}, color={0,127,0}));

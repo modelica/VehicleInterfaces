@@ -64,25 +64,25 @@ model MinimalBrakes
         origin={60,45},
         extent={{-5,-5},{5,5}},
         rotation=270)));
+  Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction_1(n={0,1,0})
+    annotation (Placement(transformation(
+        origin={-80,-80},
+        extent={{5,5},{-5,-5}},
+        rotation=270)));
   Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction_2(n={0,1,0})
     annotation (Placement(transformation(
         origin={-80,80},
         extent={{-5,5},{5,-5}},
-        rotation=270)));
-  Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction_4(n={0,1,0})
-    annotation (Placement(transformation(
-        origin={80,80},
-        extent={{-5,-5},{5,5}},
         rotation=270)));
   Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction_3(n={0,1,0})
     annotation (Placement(transformation(
         origin={80,-80},
         extent={{5,-5},{-5,5}},
         rotation=270)));
-  Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction_1(n={0,1,0})
+  Modelica.Mechanics.MultiBody.Parts.Mounting1D torqueReaction_4(n={0,1,0})
     annotation (Placement(transformation(
-        origin={-80,-80},
-        extent={{5,5},{-5,-5}},
+        origin={80,80},
+        extent={{-5,-5},{5,5}},
         rotation=270)));
 protected
   outer Modelica.Mechanics.MultiBody.World world;
@@ -106,55 +106,55 @@ equation
   connect(brake_4.flange_b, wheelHub_4.flange) annotation (Line(points={{60,70},{60,86},{60,100.05},{59.95,100.05}}));
   connect(wheelSpeed_1.flange, brake_1.flange_a) annotation (Line(points={{
           -60,-50},{-60,-50}}));
-  connect(brake_2.flange_b,wheelSpeed_2.flange)
+  connect(brake_2.flange_b, wheelSpeed_2.flange)
     annotation (Line(points={{-60,50},{-60,50}}));
   connect(wheelSpeed_3.flange, brake_3.flange_b)
     annotation (Line(points={{60,-50},{60,-50}}));
-  connect(brake_4.flange_a,wheelSpeed_4.flange)
+  connect(brake_4.flange_a, wheelSpeed_4.flange)
     annotation (Line(points={{60,50},{60,50}}));
   connect(controlBus.driverBus, driverBus) annotation (Line(
       points={{-100.1,60.1},{-90,60.1},{-90,-10},{-80,-10}},
       color={255,204,51},
       thickness=0.5));
   connect(computeTorque.u, driverBus.brakePedalPosition) annotation (Line(
-        points={{-42,-10},{-80,-10},{-80,-10}},
+        points={{-42,-10},{-79.95,-10},{-79.95,-9.95}},
         color={0,0,127}));
-  connect(wheelSpeed_1.w, brakesBus.wheelSpeed_1) annotation (Line(points={{-60,-39.5},{-60,-10},{-60,20},{-60,20}},
-                                color={0,0,127}));
-  connect(wheelSpeed_2.w, brakesBus.wheelSpeed_2) annotation (Line(points={{-60,39.5},{-60,30},{-60,20},{-60,20}},
-                               color={0,0,127}));
-  connect(wheelSpeed_3.w, brakesBus.wheelSpeed_3) annotation (Line(points={{60,-39.5},{60,19},{-60,19},{-60,20}},
-                                                color={0,0,127}));
-  connect(wheelSpeed_4.w, brakesBus.wheelSpeed_4) annotation (Line(points={{60,39.5},{60,21},{-60,21},{-60,20}},
-                                               color={0,0,127}));
+  connect(wheelSpeed_1.w, brakesBus.wheelSpeed_1) annotation (Line(points={{-60,-39.5},{-60,-10},{-60,20.05},{-59.95,20.05}},
+        color={0,0,127}));
+  connect(wheelSpeed_2.w, brakesBus.wheelSpeed_2) annotation (Line(points={{-60,39.5},{-60,30},{-60,20.05},{-59.95,20.05}},
+        color={0,0,127}));
+  connect(wheelSpeed_3.w, brakesBus.wheelSpeed_3) annotation (Line(points={{60,-39.5},{60,19},{-59.95,19},{-59.95,20.05}},
+        color={0,0,127}));
+  connect(wheelSpeed_4.w, brakesBus.wheelSpeed_4) annotation (Line(points={{60,39.5},{60,21},{-59.95,21},{-59.95,20.05}},
+        color={0,0,127}));
   connect(controlBus.brakesBus, brakesBus) annotation (Line(
       points={{-100.1,60.1},{-90,60.1},{-90,20},{-60,20}},
       color={255,204,51},
       thickness=0.5));
+  connect(torqueReaction_1.frame_a, wheelHub_1.bearingFrame) annotation (Line(
+      points={{-75,-80},{-70,-80},{-70,-99.95},{-60.05,-99.95}},
+      color={135,135,135},
+      thickness=0.5));
+  connect(torqueReaction_1.flange_b, brake_1.support) annotation (Line(points=
+         {{-80,-75},{-80,-60},{-70,-60}}));
   connect(brake_2.support, torqueReaction_2.flange_b) annotation (Line(points=
          {{-70,60},{-80,60},{-80,75}}));
   connect(torqueReaction_2.frame_a, wheelHub_2.bearingFrame) annotation (Line(
       points={{-75,80},{-70,80},{-70,100.05},{-60.05,100.05}},
       color={135,135,135},
       thickness=0.5));
-  connect(torqueReaction_4.frame_a, wheelHub_4.bearingFrame) annotation (Line(
-      points={{75,80},{70,80},{70,100.05},{59.95,100.05}},
-      color={135,135,135},
-      thickness=0.5));
-  connect(torqueReaction_4.flange_b,brake_4.support)  annotation (Line(points={{80,75},
-          {80,60},{70,60}}));
-  connect(torqueReaction_3.flange_b,brake_3.support)  annotation (Line(points={{80,-75},
+  connect(torqueReaction_3.flange_b, brake_3.support) annotation (Line(points={{80,-75},
           {80,-60},{70,-60}}));
   connect(torqueReaction_3.frame_a, wheelHub_3.bearingFrame) annotation (Line(
       points={{75,-80},{70,-80},{70,-99.95},{59.95,-99.95}},
       color={135,135,135},
       thickness=0.5));
-  connect(torqueReaction_1.frame_a, wheelHub_1.bearingFrame) annotation (Line(
-      points={{-75,-80},{-70,-80},{-70,-99.95},{-60.05,-99.95}},
+  connect(torqueReaction_4.frame_a, wheelHub_4.bearingFrame) annotation (Line(
+      points={{75,80},{70,80},{70,100.05},{59.95,100.05}},
       color={135,135,135},
       thickness=0.5));
-  connect(torqueReaction_1.flange_b,brake_1.support)  annotation (Line(points=
-         {{-80,-75},{-80,-60},{-70,-60}}));
+  connect(torqueReaction_4.flange_b, brake_4.support) annotation (Line(points={{80,75},
+          {80,60},{70,60}}));
 
   annotation (
     Documentation(info="<html>
