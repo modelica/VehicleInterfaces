@@ -1,5 +1,5 @@
 within ;
-package ObsoleteVehicleInterfaces2
+package ObsoleteVehicleInterfaces2 "Library that contains components from VehicleInterfaces Library 1.2.5 that have been removed from version 2.0.0"
 
   package Brakes "Collection of brakes subsystem definitions"
     package Interfaces "Collection of interface definitions for brakes"
@@ -593,8 +593,8 @@ VehicleInterfaces.Interfaces.TransmissionControlBus transmissionControlBus
       VehicleInterfaces(version="2.0.0"),
       Modelica(version="4.0.0")),
     version="2.0.0",
-    versionDate="2020-04-28",
-    dateModified = "2020-04-28 19:00:00Z",
+    versionDate="2020-06-16",
+    dateModified = "2020-06-16 10:00:00Z",
     revisionId="$Format:%h %ci$",
     Documentation(info="<html>
 <p>

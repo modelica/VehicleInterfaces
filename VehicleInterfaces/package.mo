@@ -1,5 +1,5 @@
 within ;
-package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.0-dev) - Interface definitions and architectures for vehicle system modeling"
+package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.0) - Interface definitions and architectures for vehicle system modeling"
   extends Modelica.Icons.Package;
 
   import Modelica.Units.SI;
@@ -13,10 +13,10 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.0-dev) - Inter
       showStatistics=true,
       allowDuplicate=true),
     preferredView="info",
-    version="2.0.0-dev",
-    versionDate="2020-01-14",
+    version="2.0.0",
     versionBuild=1,
-    dateModified="2020-01-14",
+    versionDate="2020-06-16",
+    dateModified = "2020-06-16 10:00:00Z",
     revisionId="$Format:%h %ci$",
     uses(Modelica(version="4.0.0")),
     conversion(
