@@ -16,6 +16,10 @@ This library also contains a proposal for a naming convention covering the whole
 
 Download [VehicleInterfaces v2.0.0 (2020-06-26)](../../releases/tag/v2.0.0)
 
+## Older releases
+
+Browse the [Releases](../../releases) page in order to get access to older releases of the library.
+
 ## License
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 
