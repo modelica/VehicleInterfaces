@@ -779,7 +779,6 @@ Short Overview:
   <li>Obsolete classes of previous versions 1.x.y have been replaced.</li>
   <li>Obsolete classes, that could not be automatically converted to alternative
       implementations, have been moved to library ObsoleteVehicleInterfaces2.</li>
-  <li>The license has been changed to the BSD 3-clause license.</li>
 </ul>
 
 
@@ -1174,7 +1173,6 @@ Claytex Services Limited under contract to Dassault Syst&egrave;mes AB.
 </p>
 </html>"));
   end Contact;
-
   annotation (DocumentationClass=true, Documentation(info="<html>
 <p>
 The VehicleInterfaces Modelica library provides standard interface
