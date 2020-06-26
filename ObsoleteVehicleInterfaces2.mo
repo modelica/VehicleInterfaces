@@ -9,15 +9,15 @@ package ObsoleteVehicleInterfaces2 "Library that contains components from Vehicl
         extends VehicleInterfaces.Icons.SignalSubBusWithExplicitSignals;
         extends Modelica.Icons.ObsoleteModel;
 
-        .Modelica.SIunits.AngularVelocity wheelSpeed_1
+        Modelica.Units.SI.AngularVelocity wheelSpeed_1
           "Individual wheel speed (wheel 1 = front left wheel)"
           annotation (Dialog);
-        .Modelica.SIunits.AngularVelocity wheelSpeed_2
+        Modelica.Units.SI.AngularVelocity wheelSpeed_2
           "Individual wheel speed (wheel 2 = front right wheel)"
           annotation (Dialog);
-        .Modelica.SIunits.AngularVelocity wheelSpeed_3
+        Modelica.Units.SI.AngularVelocity wheelSpeed_3
           "Individual wheel speed (wheel 3 = rear left wheel)" annotation (Dialog);
-        .Modelica.SIunits.AngularVelocity wheelSpeed_4
+        Modelica.Units.SI.AngularVelocity wheelSpeed_4
           "Individual wheel speed (wheel 4 = rear right wheel)"
           annotation (Dialog);
         annotation (
@@ -76,7 +76,7 @@ VehicleInterfaces.Interfaces.BrakesBus brakesBus
         extends .VehicleInterfaces.Icons.SignalSubBusWithExplicitSignals;
         extends Modelica.Icons.ObsoleteModel;
 
-        .Modelica.SIunits.Velocity longitudinalVelocity
+        Modelica.Units.SI.Velocity longitudinalVelocity
           "Longitudinal velocity of vehicle"
           annotation (Dialog);
         annotation (
@@ -297,8 +297,8 @@ VehicleInterfaces.Interfaces.DriverBus driverBus
         VehicleInterfaces.Types.IgnitionSetting.Temp ignition
           "Engine ignition (Off, On or Start)" annotation (Dialog);
 
-        Modelica.SIunits.Velocity vehicleSpeed "Vehicle speed" annotation (Dialog);
-        Modelica.SIunits.AngularVelocity engineSpeed "Engine speed" annotation (Dialog);
+        Modelica.Units.SI.Velocity vehicleSpeed "Vehicle speed" annotation (Dialog);
+        Modelica.Units.SI.AngularVelocity engineSpeed "Engine speed" annotation (Dialog);
         annotation (
           obsolete = "Obsolete model - use VehicleInterfaces.Interfaces.DriverInterface instead",
           Documentation(info="<html>
@@ -438,7 +438,7 @@ VehicleInterfaces.Interfaces.DriverInterface driverInterface
         extends .VehicleInterfaces.Icons.SignalSubBusWithExplicitSignals;
         extends Modelica.Icons.ObsoleteModel;
 
-        .Modelica.SIunits.AngularVelocity speed "Speed of engine" annotation (Dialog);
+        Modelica.Units.SI.AngularVelocity speed "Speed of engine" annotation (Dialog);
 
         annotation (
           obsolete = "Obsolete model - use VehicleInterfaces.Interfaces.EngineBus instead",
@@ -495,7 +495,7 @@ VehicleInterfaces.Interfaces.EngineBus engineBus
         extends .VehicleInterfaces.Icons.SignalSubBusWithExplicitSignals;
         extends Modelica.Icons.ObsoleteModel;
 
-        .Modelica.SIunits.AngularVelocity outputSpeed "Output shaft speed" annotation (Dialog);
+        Modelica.Units.SI.AngularVelocity outputSpeed "Output shaft speed" annotation (Dialog);
         Boolean clutchLocked "Clutch state (true if locked)" annotation (Dialog);
 
         annotation (
