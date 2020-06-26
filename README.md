@@ -14,7 +14,7 @@ This library also contains a proposal for a naming convention covering the whole
 
 ## Current release
 
-Download [VehicleInterfaces v1.2.5 (2019-03-06)](../../releases/tag/v1.2.5)
+Download [VehicleInterfaces v2.0.0 (2020-06-26)](../../releases/tag/v2.0.0)
 
 #### Release notes
 * [Version v1.2.5 (2019-03-06)](../../releases/tag/v1.2.5)
@@ -44,12 +44,6 @@ Download [VehicleInterfaces v1.2.5 (2019-03-06)](../../releases/tag/v1.2.5)
   * Clean-up of superfluous annotations and HTML syntax and links
 * [Version v1.2.1 (2013-10-01)](../../releases/tag/v1.2.1)
   * Adapted to the conventions of the *Modelica Standard Library 3.2.1*.
-
-## Release candidate
-
-[VehicleInterfaces v2.0.0-beta.1 (2020-06-16)](../../releases/tag/v2.0.0-beta.1)
-
-Uses Modelica Standard Library 4.0.0.
 
 ## License
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
