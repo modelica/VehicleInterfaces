@@ -16,35 +16,6 @@ This library also contains a proposal for a naming convention covering the whole
 
 Download [VehicleInterfaces v2.0.0 (2020-06-26)](../../releases/tag/v2.0.0)
 
-#### Release notes
-* [Version v1.2.5 (2019-03-06)](../../releases/tag/v1.2.5)
-  * This version requires the <b>[Modelica 3.2.3](https://github.com/modelica/ModelicaStandardLibrary/releases/tag/v3.2.3)</b> Library.
-  * This version is backwards compatible to versions&nbsp;1.1.x and 1.2.x of the VehicleInterfaces library.
-  * Blocks marked as obsolete: VehicleInterfaces.Blocks.RealPassThrough, VehicleInterfaces.Blocks.IntegerPassThrough, VehicleInterfaces.Blocks.BooleanPassThrough
-  * Resolved usage of obsolete block in VehicleInterfaces.DriverEnvironments.DriveByWireAutomaticExternalDriver
-  * Deleted text string from icons of VehicleInterfaces.Mechanics.NormalisedTranslational.Interfaces.Flange and VehicleInterfaces.Mechanics.NormalisedRotational.Interfaces.Flange
-  * Restructured Images and Scripts directories to match Modelica Standard Library conventions, removed unused files
-* [Version v1.2.4 (2016-03-02)](../../releases/tag/v1.2.4)
-  * This version is backwards compatible to versions 1.1.x and 1.2.x
-  * Typos in the documentation fixed.
-  * FillPattern graphical annotations corrected in a variety of Icons.
-  * Icon `VehicleInterfaces.Icons.VariantLibrary` marked as obsolete and no more used. Using `Modelica.Icons.VariantsPackage` instead.
-  * Copyright upgraded in `VehicleInterfaces.UsersGuide.License`.
-* [Version v1.2.3 (2015-09-09)](../../releases/tag/v1.2.3)
-  * This version is backwards compatible to versions 1.1.x and 1.2.x
-  * #3: Typos in the documentation fixed.
-  * #4: Illegal inheritance fixed.
-  * #5: Some LinePattern graphical annotations corrected:
-      * `Examples.PowerSplitHybrid`
-      * `Examples.SeriesHybridConverting`
-      * `Icons.DataDictionary`
-  * #5: Bitmap.extent corrected in `Icons.Driver`
-* [Version v1.2.2 (2014-06-30)](../../releases/tag/v1.2.2)
-  * Further adaption to the conventions of the Modelica Specification 3.2 Revision 2, removal of Dymola specific visualization.
-  * Clean-up of superfluous annotations and HTML syntax and links
-* [Version v1.2.1 (2013-10-01)](../../releases/tag/v1.2.1)
-  * Adapted to the conventions of the *Modelica Standard Library 3.2.1*.
-
 ## License
 Copyright &copy; 2005-2013, Dassault Syst&egrave;mes, DLR and Modelon
 
