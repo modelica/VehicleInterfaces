@@ -587,15 +587,15 @@ VehicleInterfaces.Interfaces.TransmissionControlBus transmissionControlBus
       end StandardControlBus;
     end Interfaces;
   end Transmissions;
-
   annotation (
+    preferredView="info",
+    version="2.0.0",
+    versionDate="2020-06-26",
+    dateModified = "2020-06-26 10:00:00Z",
+    revisionId="$Format:%h %ci$",
     uses(
       VehicleInterfaces(version="2.0.0"),
       Modelica(version="4.0.0")),
-    version="2.0.0",
-    versionDate="2020-06-16",
-    dateModified = "2020-06-16 10:00:00Z",
-    revisionId="$Format:%h %ci$",
     Documentation(info="<html>
 <p>
 This package contains models and blocks from the VehicleInterfaces Library
