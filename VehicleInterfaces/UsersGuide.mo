@@ -706,7 +706,7 @@ but the principles are still utilised.
   end Tutorials;
 
   package ReleaseNotes "Release notes"
-    package Version_2_0_0 "Version 2.0.0-rc.1 (Jun. 22, 2020)"
+    package Version_2_0_0 "Version 2.0.0 (Jun. 26, 2020)"
       extends Modelica.Icons.ReleaseNotes;
 
       model ReintroduceExpandableConnectors "Reintroduce expandable connectors"
