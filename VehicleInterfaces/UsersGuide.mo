@@ -777,8 +777,8 @@ Short Overview:
 <ul>
   <li>This version is based on the recent Modelica language standard version 3.4.</li>
   <li>Obsolete classes of previous versions 1.x.y have been replaced.</li>
-  <li>Obsolete classes, that could not be automatically converted to alternative
-      implementations, have been moved to library ObsoleteVehicleInterfaces2.</li>
+  <li>Obsolete classes that could not be automatically converted to alternative
+      implementations have been moved to library ObsoleteVehicleInterfaces2.</li>
 </ul>
 
 
