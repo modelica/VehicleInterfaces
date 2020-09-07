@@ -294,7 +294,7 @@ vehicle variants (i.e. manual and automatic transmission equipped vehicles).
   <tr>
     <td>chassisBus.longitudinalVelocity</td>
     <td>m/s</td>
-    <td>Vehicle Longitundinal Velocity</td>
+    <td>Vehicle longitudinal velocity</td>
   </tr>
   <tr>
     <td>driverBus.ignition</td>
@@ -410,7 +410,7 @@ transmission drive-by-wire vehicle.
   </tr>
   <tr>
     <td>driverBus.gear</td>
-    <td>None</td>
+    <td>Integer</td>
     <td>Driver selected gear</td>
   </tr>
 </table>
@@ -422,12 +422,15 @@ transmission drive-by-wire vehicle.
 
     annotation (Documentation(info="<html>
 <p>
-The Driver Interaction bus connects the DriverEnvironment to an external
-Driver model and is implemented using expandable connectors. This enables
+The Driver Interaction bus connects the
+<a href=\"modelica://VehicleInterfaces.DriverEnvironments\">driver&apos;s environment</a>
+to an external
+<a href=\"modelica://VehicleInterfaces.Drivers\">driver model</a>
+and is implemented using expandable connectors. This enables
 signals to be easily added to the control signal bus to suit a&nbsp;particular
-application. A&nbsp;minimal set of signals has been defined to ensure basic
-compatibility between the various automotive libraries currently being
-developed.
+application. A&nbsp;minimal set of signals has been defined,
+see <a href=\"modelica://VehicleInterfaces.Drivers.Internal\">Drivers.Internal</a>,
+to ensure basic compatibility between the various automotive libraries.
 </p>
 <p>
 The Driver Interaction bus can contain both normalised physical connectors
@@ -452,7 +455,8 @@ each word, like in &quot;acceleratorPedal&quot;.
 The following table defines the standard names and associated connector
 types and units used.
 </p>
-<table cellspacing=\"0\" cellpadding=\"2\" border=\"1\">
+<table border=\"1\" cellspacing=\"0\" cellpadding=\"2\">
+  <caption align=\"bottom\">Signals of the minimum Driver Interaction bus</caption>
   <tr>
     <th>Name on the bus</th>
     <th>Connector Type</th>
@@ -487,13 +491,13 @@ types and units used.
     <td>vehicleSpeed</td>
     <td>RealSignal</td>
     <td>m/s</td>
-    <td>Vehicle longitudinal speed in kmh</td>
+    <td>Vehicle longitudinal velocity</td>
   </tr>
   <tr>
     <td>engineSpeed</td>
     <td>RealSignal</td>
     <td>rad/s</td>
-    <td>Engine speed in rpm</td>
+    <td>Engine speed</td>
   </tr>
   <tr>
     <td>gear</td>
