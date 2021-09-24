@@ -72,7 +72,7 @@ Starting from step&nbsp;3 above.
   <li>We shouldn&apos;t connect the speed sensor directly to the engineBus connector
       though because the units for the speed signal would be incorrect.
       The definition of the speed signal on the control bus also states that
-      this should be in <strong>rpm</strong> but the speed sensor measures
+      this should be in rev/min (or rpm) but the speed sensor measures
       speed in <strong>rad/s</strong>. We can convert the units using the
       conversion blocks that can be found in
       <strong>Modelica.Blocks.Math.UnitConversions</strong>.

@@ -70,7 +70,7 @@ Starting from step&nbsp;3 above.
       <br><br></li>
   <li>We can now connect the constants for clutch state and current gear
       to the transmissionBus. The transmission output speed needs to be
-      in the correct units, in this case r/min (or rpm).
+      in the correct units, in this case rev/min (or rpm).
       Add a&nbsp;rotational speed sensor and a&nbsp;unit conversion block
       from <strong>Modelica.Blocks.Math.UnitConversions</strong>, set
       the conversion block to convert to rpm. When you create the connection
