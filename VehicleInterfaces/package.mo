@@ -20,16 +20,12 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.0) - Interface
     revisionId="$Format:%h %ci$",
     uses(Modelica(version="4.0.0")),
     conversion(
-      from(version="1.0", script="modelica://VehicleInterfaces/Resources/Scripts/Dymola/ConvertVehicleInterfaces_from_1.0_to_1.1.mos"),
-      noneFromVersion="1.1",
-      noneFromVersion="1.1.1",
-      noneFromVersion="1.1.2",
-      noneFromVersion="1.2",
-      noneFromVersion="1.2.1",
-      noneFromVersion="1.2.2",
-      noneFromVersion="1.2.3",
-      noneFromVersion="1.2.4",
-      from(version="1.2.5", script="modelica://VehicleInterfaces/Resources/Scripts/Dymola/ConvertVehicleInterfaces_from_1.2.5_to_2.0.0.mos")),
+      from(
+        version="1.0",
+        script="modelica://VehicleInterfaces/Resources/Scripts/Dymola/ConvertVehicleInterfaces_from_1.0_to_1.1.mos"),
+      from(
+        version={"1.1", "1.1.1", "1.1.2", "1.2", "1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.5"},
+        script="modelica://VehicleInterfaces/Resources/Scripts/Dymola/ConvertVehicleInterfaces_from_1.2.5_to_2.0.0.mos")),
     Documentation(info="<html>
 <p>This Modelica library provides standard interface definitions for automotive subsystems and vehicle models.  These are designed to promote compatibility between the various automotive libraries and provide a flexible, powerful structure for vehicle modelling.  The main focus of the library is on defining the interfaces for the individual subsystems and a number of vehicle model examples are included to demonstrate how they might be used.</p>
 <p>
