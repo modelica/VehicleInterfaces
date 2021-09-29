@@ -23,14 +23,14 @@ equation
           fillPattern=FillPattern.Solid),
         Text(
           extent={{-74,54},{-4,30}},
-          lineColor={95,95,95},
+          textColor={95,95,95},
           textString="0..1"),
         Line(points={{-90,-78},{76,-78}}, color={192,192,192}),
         Line(
           points={{-80,22},{32,-78}}),
         Text(
           extent={{28,54},{98,30}},
-          lineColor={95,95,95},
+          textColor={95,95,95},
           textString="1..0"),
         Polygon(
           points={{-8,42},{28,42},{16,46},{16,38},{28,42},{-8,42}},
@@ -55,13 +55,13 @@ equation
           fillPattern=FillPattern.Solid),
         Text(
           extent={{-53,98},{-26,78}},
-          lineColor={160,160,164},
+          textColor={160,160,164},
           fillColor={95,95,95},
           fillPattern=FillPattern.Solid,
           textString="u"),
         Text(
           extent={{74,-8},{96,-28}},
-          lineColor={95,95,95},
+          textColor={95,95,95},
           textString="y"),
         Text(extent={{18,-7},{38,-27}}, textString="1"),
         Text(extent={{-92,77},{-72,57}}, textString="1"),

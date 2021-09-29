@@ -37,6 +37,6 @@ connector. The torque is not normalized in this connector.
           fillPattern=FillPattern.Solid),
         Text(
           extent={{-100,-60},{100,-100}},
-          lineColor={95,95,95},
+          textColor={95,95,95},
           textString="%name")}));
 end Flange;

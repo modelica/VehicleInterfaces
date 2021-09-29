@@ -77,7 +77,7 @@ package Icons "Collection of icons"
           Line(points={{16,-20},{6,-42},{6,-42}}),
           Text(
             extent={{-100,-50},{100,-90}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name")}),
@@ -168,7 +168,7 @@ This partial class is intended to design a default icon for an <em>accessorier a
             fillPattern=FillPattern.Solid),
           Text(
             extent={{-200,200},{200,120}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             textString="%name")}), Documentation(info="<html>
 <p>
 This partial class is intended to design a default icon for an <em>atmosphere</em>.
@@ -202,7 +202,7 @@ This partial class is intended to design a default icon for an <em>atmosphere</e
             color={0,0,255}),
           Text(
             extent={{-100,100},{100,62}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name")}),
@@ -264,7 +264,7 @@ This partial class is intended to design a default icon for a <em>batery model</
             fillPattern=FillPattern.Solid),
           Text(
             extent={{-100,-50},{100,-90}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name"),
@@ -433,7 +433,7 @@ This partial class is intended to design a default icon for a <em>brakes assembl
             fillPattern=FillPattern.Solid),
           Text(
             extent={{-143,-64},{146,-97}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name")}),
@@ -503,7 +503,7 @@ This partial class is intended to design a default icon for a <em>chassis assemb
           Text(
             extent={{-150,96},{150,56}},
             textString="%name",
-            lineColor={0,0,255}),
+            textColor={0,0,255}),
           Polygon(
             points={{28,-18},{48,-28},{40,-34},{20,-24},{28,-18}},
             lineColor={0,0,255},
@@ -709,7 +709,7 @@ This partial class is intended to design a default icon for <em>controllers</em>
             pattern=LinePattern.Solid),
           Text(
             extent={{-150,140},{150,100}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name")}),
@@ -754,7 +754,7 @@ This partial class is intended to design a default icon for a <em>data dictionar
             fillColor={215,215,215}),
           Text(
             extent={{-100,-55},{100,-95}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name"),
@@ -844,7 +844,7 @@ This partial class is intended to design a default icon for a <em>driveline asse
             fillColor={0,0,0}),
           Text(
             extent={{-100,-50},{100,-90}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name")}), Documentation(info="<html>
@@ -866,7 +866,7 @@ This partial class is intended to design a default icon for a <em>driver environ
           Bitmap(extent={{-70,-60},{82,96}}, fileName="modelica://VehicleInterfaces/Resources/Images/Icons/driver.jpg"),
           Text(
             extent={{-100,-50},{100,-90}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name")}), Documentation(info="<html>
@@ -917,7 +917,7 @@ This partial class is intended to design a default icon for a <em>driver model</
             fillPattern=FillPattern.Solid),
           Text(
             extent={{-100,-55},{100,-95}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name")}),
@@ -1005,7 +1005,7 @@ This partial class is intended to design a default icon for an <em>empty element
           Line(points={{-46,38},{-36,54},{40,66}}),
           Text(
             extent={{-100,-50},{100,-90}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name")}), Documentation(info="<html>
@@ -1033,7 +1033,7 @@ This partial class is intended to design a default icon for a <em>engine assembl
             fillPattern=FillPattern.Solid),
           Text(
             extent={{-150,20},{150,-20}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name"),
@@ -1077,7 +1077,7 @@ This partial class is intended to design a default icon for a model of <em>multi
             fillPattern=FillPattern.Solid),
           Text(
             extent={{-200,200},{200,120}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             textString="%name"),
           Rectangle(
             extent={{-167,14},{-107,-7}},
@@ -1140,7 +1140,7 @@ to highlight such a particular sub-bus.
             fillPattern=FillPattern.Solid),
           Text(
             extent={{-100,20},{100,-20}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name"),
@@ -1177,7 +1177,7 @@ This partial class is intended to design a default icon for a model of <em>singl
             fillPattern=FillPattern.Solid),
           Text(
             extent={{-150,20},{150,-20}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name"),
@@ -1234,7 +1234,7 @@ This partial class is intended to design a default icon for a model of <em>two m
           Line(points={{-33,-34},{-30,-34},{7,-34}}),
           Text(
             extent={{-100,-50},{100,-90}},
-            lineColor={0,0,255},
+            textColor={0,0,255},
             fillColor={255,255,0},
             fillPattern=FillPattern.Solid,
             textString="%name")}), Documentation(info="<html>

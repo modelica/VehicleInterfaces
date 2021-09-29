@@ -65,6 +65,6 @@ need to be exchanged between the Driver and DriverEnvironment subsystems.
           fillPattern=FillPattern.Solid),
         Text(
           extent={{-150,70},{150,40}},
-          lineColor={0,0,0},
+          textColor={0,0,0},
           textString="%name")}));
 end DriverInterface;
