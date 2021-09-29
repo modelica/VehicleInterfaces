@@ -17,6 +17,6 @@ connection dialog (i.e. the GUI) for signal buses.
     Diagram(graphics={
         Text(
           extent={{-100,-40},{100,-80}},
-          lineColor={255,0,0},
+          textColor={255,0,0},
           textString="Do not use!")}));
 end StandardBus;

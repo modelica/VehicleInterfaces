@@ -7,7 +7,7 @@ model MinimalEngine
     includeMount=world.driveTrainMechanics3D,
     includeAccessoriesBearing=world.driveTrainMechanics3D);
 
-  parameter SI.AngularVelocity engineSpeed_start(displayUnit="r/min") = 104.7197551196598
+  parameter SI.AngularVelocity engineSpeed_start(displayUnit="rev/min") = 104.7197551196598
     "Initial engine speed";
   parameter SI.Torque requestedTorque=50
     "Engine torque = requested_torque*accelerator_pedal_position";

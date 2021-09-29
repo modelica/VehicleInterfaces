@@ -94,7 +94,7 @@ equation
         Line(points={{-60,-74},{-60,-84}}),
         Text(
           extent={{-150,140},{150,100}},
-          lineColor={0,0,255},
+          textColor={0,0,255},
           fillColor={255,255,0},
           fillPattern=FillPattern.Solid,
           textString="%name")}),

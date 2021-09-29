@@ -60,10 +60,11 @@ initial equation
           extent={{-100,20},{100,-20}},
           lineColor={0,0,0},
           fillPattern=FillPattern.HorizontalCylinder,
-          fillColor={192,192,192}), Text(
+          fillColor={192,192,192}),
+        Text(
           extent={{-150,100},{150,60}},
           textString="%name",
-          lineColor={0,0,255})}),
+          textColor={0,0,255})}),
     Documentation(info="<html>
 <p>
 Applies a&nbsp;normalized angle to a&nbsp;1D normalized rotational system.

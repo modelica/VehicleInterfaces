@@ -116,6 +116,6 @@ of the functions.
           pattern=LinePattern.Dash),
         Text(
           extent={{-150,160},{150,110}},
-          lineColor={0,0,255},
+          textColor={0,0,255},
           textString="%name")}));
 end CircleRoad;
