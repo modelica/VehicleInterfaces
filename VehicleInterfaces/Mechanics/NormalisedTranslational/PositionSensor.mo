@@ -25,5 +25,5 @@ Cannot be connected to components from the Modelica.Mechanics.Translational libr
         Text(
           extent={{-150,80},{150,40}},
           textString="%name",
-          lineColor={0,0,255})}));
+          textColor={0,0,255})}));
 end PositionSensor;

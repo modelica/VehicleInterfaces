@@ -23,8 +23,9 @@ connector. The force is not normalized in this connector.
           points={{-52,0},{0,52},{52,0},{0,-52},{-52,0}},
           lineColor={0,127,0},
           fillColor={0,127,0},
-          fillPattern=FillPattern.Solid), Text(
+          fillPattern=FillPattern.Solid),
+        Text(
           extent={{-100,-60},{100,-100}},
-          lineColor={0,127,0},
+          textColor={0,127,0},
           textString="%name")}));
 end Flange;

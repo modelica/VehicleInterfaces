@@ -46,12 +46,14 @@ is applied to the bearingFrame.
           fillPattern=FillPattern.Solid)}),
     Diagram(coordinateSystem(
         preserveAspectRatio=true,
-        extent={{-60,-80},{60,80}}), graphics={Rectangle(
+        extent={{-60,-80},{60,80}}), graphics={
+        Rectangle(
           extent={{-66,18},{0,-24}},
           lineColor={0,127,0},
           fillColor={215,215,215},
-          fillPattern=FillPattern.Solid), Text(
+          fillPattern=FillPattern.Solid),
+        Text(
           extent={{-64,-16},{-4,-22}},
-          lineColor={0,127,0},
+          textColor={0,127,0},
           textString="if includeBearingConnector = true")}));
 end MultiBodyEnd;

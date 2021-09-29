@@ -78,7 +78,7 @@ and compare wheel model outputs with road definition.
           fillPattern=FillPattern.Solid),
         Text(
           extent={{-150,60},{152,20}},
-          lineColor={0,0,255},
+          textColor={0,0,255},
           fillColor={255,255,255},
           fillPattern=FillPattern.Solid,
           textString="%name"),
