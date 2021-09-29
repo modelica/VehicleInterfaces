@@ -35,7 +35,7 @@ equation
             100,100}}), graphics={
         Text(
           extent={{14,-10},{-100,-60}},
-          lineColor={95,95,95},
+          textColor={95,95,95},
           textString="tau"),
         Polygon(
           points={{94,10},{75,59},{41,24},{94,10}},
@@ -45,7 +45,7 @@ equation
         Text(
           extent={{-150,100},{150,60}},
           textString="%name",
-          lineColor={0,0,255}),
+          textColor={0,0,255}),
         Line(
           points={{-100,0},{-76,30},{-48,48},{-14,58},{16,56},{40,50},{56,
               42},{66,32},{80,20}},

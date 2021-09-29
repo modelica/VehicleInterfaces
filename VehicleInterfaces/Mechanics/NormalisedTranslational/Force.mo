@@ -30,14 +30,14 @@ equation
             100,100}}), graphics={
         Text(
           extent={{-100,-30},{-40,-70}},
-          lineColor={95,95,95},
+          textColor={95,95,95},
           textString="f",
           fillColor={95,95,95},
           fillPattern=FillPattern.Solid),
         Text(
           extent={{-150,100},{150,60}},
           textString="%name",
-          lineColor={0,0,255}),
+          textColor={0,0,255}),
         Polygon(
           points={{-100,10},{-100,-10},{20,-10},{20,-40},{90,0},{20,40},{20,10},{-100,10}},
           lineColor={0,127,0},

@@ -25,5 +25,5 @@ Cannot be connected to components from the Modelica.Mechanics.Rotational library
         Text(
           extent={{-150,120},{150,80}},
           textString="%name",
-          lineColor={0,0,255})}));
+          textColor={0,0,255})}));
 end AngleSensor;

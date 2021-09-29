@@ -13,7 +13,8 @@
 *.md text
 
 # list of files that git archive should ignore
+.CI export-ignore
 .gitattributes export-ignore
+.github export-ignore
 .gitignore export-ignore
-.travis.mos export-ignore
-.travis.yml export-ignore
+
