@@ -31,9 +31,7 @@ equation
         Text(
           extent={{-100,-30},{-40,-70}},
           textColor={95,95,95},
-          textString="f",
-          fillColor={95,95,95},
-          fillPattern=FillPattern.Solid),
+          textString="f"),
         Text(
           extent={{-150,100},{150,60}},
           textString="%name",

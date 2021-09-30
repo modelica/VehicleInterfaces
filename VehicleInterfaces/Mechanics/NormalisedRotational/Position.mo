@@ -54,9 +54,12 @@ initial equation
           lineColor={0,0,0},
           fillPattern=FillPattern.HorizontalCylinder,
           fillColor={192,192,192}),
-        Text(extent={{150,60},{-150,100}}, textString="%name")}),
+        Text(
+          extent={{150,60},{-150,100}},
+          textString="%name")}),
     Icon(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{
-            100,100}}), graphics={Rectangle(
+            100,100}}), graphics={
+        Rectangle(
           extent={{-100,20},{100,-20}},
           lineColor={0,0,0},
           fillPattern=FillPattern.HorizontalCylinder,
