@@ -27,7 +27,7 @@ This function returns the track offset at the road location (s,w).
       Dialog(tab="Road functions"),
       Documentation(info="<html>
 <p>
-This function returns the normal of the road surface at the road location (s,w).
+This function returns the normal vector of the road surface at the road location (s,w).
 </p>
 </html>"));
 
