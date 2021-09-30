@@ -13,8 +13,8 @@ This connector shall <strong>not</strong> be used in models and is included here
 connection dialog (i.e. the GUI) for signal buses.
 </p>
 </html>"),
-       Diagram(graphics={
-                      Text(
+    Diagram(graphics={
+        Text(
           extent={{-100,-40},{100,-80}},
           textColor={255,0,0},
           textString="Do not use!")}));

@@ -38,8 +38,6 @@ connector ShiftConnector "Manual transmission shift connector"
         Text(
           extent={{-150,140},{150,100}},
           textColor={0,0,255},
-          fillColor={255,255,0},
-          fillPattern=FillPattern.Solid,
           textString="%name"),
         Rectangle(
           extent={{-100,100},{100,-100}},

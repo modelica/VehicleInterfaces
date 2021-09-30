@@ -24,7 +24,7 @@ connection dialog (i.e. the GUI) for signal buses.
 </p>
 </html>"),
     Diagram(graphics={
-       Text(
+        Text(
           extent={{-100,-40},{100,-80}},
           textColor={255,0,0},
           textString="Do not use!")}));

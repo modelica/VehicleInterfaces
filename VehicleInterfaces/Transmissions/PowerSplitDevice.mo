@@ -42,7 +42,7 @@ equation
   connect(currentGear.y, transmissionControlBus.currentGear) annotation (Line(
         points={{9,90},{-20,90}}, color={255,127,0}));
   connect(outputSpeed.w, transmissionBus.outputSpeed) annotation (Line(
-      points={{49,60},{14,60},{14,60.05},{-19.95,60.05}},
+      points={{49,60},{14,60},{14,60},{-20,60}},
       color={0,0,127}));
   annotation (
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
@@ -95,8 +95,6 @@ equation
         Text(
           extent={{-150,140},{150,100}},
           textColor={0,0,255},
-          fillColor={255,255,0},
-          fillPattern=FillPattern.Solid,
           textString="%name")}),
     Documentation(info="<html>
 <p>

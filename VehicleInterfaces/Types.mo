@@ -46,8 +46,6 @@ package Types "Collection of type definitions"
           Text(
             extent={{-94,94},{94,-94}},
             textColor={255,0,128},
-            fillColor={255,255,255},
-            fillPattern=FillPattern.Solid,
             textString="e")}));
   end GearMode;
 
@@ -81,8 +79,6 @@ package Types "Collection of type definitions"
           Text(
             extent={{-94,94},{94,-94}},
             textColor={255,0,128},
-            fillColor={255,255,255},
-            fillPattern=FillPattern.Solid,
             textString="e")}));
   end IgnitionSetting;
 
