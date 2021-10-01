@@ -4,7 +4,7 @@ partial model Base "Base model for all roads"
   replaceable function position = Roads.Interfaces.positionBase
     "Get position vector at a road location" annotation (
       choicesAllMatching=true,
-      Dialog(tab="Road functions"),
+      Dialog(tab="Functions"),
       Documentation(info="<html>
 <p>
 This function returns the road position vector w.r.t world at the road location (s,w).
@@ -14,7 +14,7 @@ This function returns the road position vector w.r.t world at the road location 
   replaceable function trackOffset = Roads.Interfaces.trackOffsetBase
     "Get track offset at a road location" annotation (
       choicesAllMatching=true,
-      Dialog(tab="Road functions"),
+      Dialog(tab="Functions"),
       Documentation(info="<html>
 <p>
 This function returns the track offset at the road location (s,w).
@@ -24,7 +24,7 @@ This function returns the track offset at the road location (s,w).
   replaceable function normal = Roads.Interfaces.normalBase
     "Get road normal at a road location" annotation (
       choicesAllMatching=true,
-      Dialog(tab="Road functions"),
+      Dialog(tab="Functions"),
       Documentation(info="<html>
 <p>
 This function returns the normal vector of the road surface at the road location (s,w).
@@ -34,7 +34,7 @@ This function returns the normal vector of the road surface at the road location
   replaceable function headingDirection = Roads.Interfaces.headingDirectionBase
     "Get heading direction at a road location" annotation (
       choicesAllMatching=true,
-      Dialog(tab="Road functions"),
+      Dialog(tab="Functions"),
       Documentation(info="<html>
 <p>
 This function returns the unit heading direction at the road location (s,w).
@@ -44,7 +44,7 @@ This function returns the unit heading direction at the road location (s,w).
   replaceable function frictionCoefficient = Roads.Interfaces.frictionCoefficientBase
     "Get friction coefficient at a road location" annotation (
       choicesAllMatching=true,
-      Dialog(tab="Road functions"),
+      Dialog(tab="Functions"),
       Documentation(info="<html>
 <p>
 This function returns the friction coefficient at the road location (s,w).
