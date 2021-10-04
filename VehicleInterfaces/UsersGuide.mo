@@ -1080,10 +1080,10 @@ on the library.
 <h4>Copyright</h4>
 <p>
 &copy; 2005-2013: Dassault Syst&egrave;mes, DLR and Modelon<br>
-&copy; since 2013: Modelica Association
+&copy; 2013-2021: Modelica Association
 </p>
 <h4>License</h4>
-<p>The VehicleInterfaces library is distributed under the Modelica license (Version 1.1)</p>
+<p>The VehicleInterfaces library is distributed under the Modelica License (Version 1.1).</p>
 <p>Redistribution and use in source and binary forms, with or without
 modification are permitted, provided that the following conditions are met:
 </p>
