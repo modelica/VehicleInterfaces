@@ -33,7 +33,7 @@ This Modelica package is free software and the use is completely at your own ris
 it can be redistributed and/or modified under the terms of the [Modelica License 1.1](https://modelica.org/licenses/ModelicaLicense1.1).
 
 ## Development and contribution
-The devolopment is organised by individual members of the [Modelica Association](https://www.modelica.org/association).
+The development is organised by individual members of the [Modelica Association](https://www.modelica.org/association).
 
 You may report any issues with using the [Issues](https://github.com/modelica/VehicleInterfaces/issues) button.
 
