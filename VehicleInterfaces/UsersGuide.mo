@@ -36,7 +36,7 @@ Modelica.Mechanics.MultiBody.Interfaces called FlangeWithBearing.
 This connector contains a&nbsp;1D rotational connector and an optional
 MultiBody connector. The MultiBody connector can be enabled/disabled
 via a&nbsp;parameter in the connector definition. In the case of the
-VehicleInterfaces subsystem definitions these parameters are propogated
+VehicleInterfaces subsystem definitions these parameters are propagated
 to the subsystem level so that they can all be set by one parameter.
 The MultiBody connector is used to provide the support for the rotating
 component.
@@ -77,7 +77,7 @@ and allow you access to the connector parameters.
 The control bus structure utilises expandable connectors to provide
 a&nbsp;flexible bus concept. This approach makes it easy to add new signals
 to the control bus so that data can be passed around the model.
-The control bus structure implemented is heirarchical so that signals
+The control bus structure implemented is hierarchical so that signals
 are easily located. The approach adopted is that physical measurements
 taken from, for example, the transmission are placed on a&nbsp;sub-bus
 called <strong>transmissionBus</strong>. Signals output from control
