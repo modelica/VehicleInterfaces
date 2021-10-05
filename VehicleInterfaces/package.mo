@@ -14,6 +14,7 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.0) - Interface
       allowDuplicate=true),
     preferredView="info",
     version="2.0.0",
+    versionBuild=1,
     versionDate="2020-06-26",
     dateModified = "2020-06-26 10:00:00Z",
     revisionId="$Format:%h %ci$",
