@@ -1,11 +1,12 @@
 within VehicleInterfaces.Engines.Interfaces;
 partial model Base "Basic interface definition for an engine"
+
   parameter Boolean usingMultiBodyAccessories=false
-    "=true, if using MultiBody accessories with a 1D engine"
-    annotation (Dialog(tab="Advanced"));
+    "= true, if connecting to a MultiBody accessories"
+    annotation (Dialog(tab="Advanced", group="Only for 1D engine", enable=not includeAccessoriesBearing));
   parameter Boolean usingMultiBodyTransmission=false
-    "=true, if using a MultiBody transmission with a 1D engine"
-    annotation (Dialog(tab="Advanced"));
+    "= true, if connecting to a MultiBody transmission"
+    annotation (Dialog(tab="Advanced", group="Only for 1D engine", enable=not includeTransmissionBearing));
 protected
   parameter Boolean includeAcceleratorPedal=false "Include the accelerator pedal connection";
   parameter Boolean includeMount=false "Include the engine mount connection";

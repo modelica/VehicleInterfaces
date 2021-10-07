@@ -2,8 +2,8 @@ within VehicleInterfaces.Chassis.Interfaces;
 partial model Base "Basic interface definition for a chassis"
 
   parameter Boolean usingMultiBodyDriveline=false
-    "=true, if using a MultiBody driveline with a 1D chassis"
-    annotation (Dialog(tab="Advanced"));
+    "= true, if connecting to a MultiBody driveline"
+    annotation (Dialog(tab="Advanced", group="Only for 1D chassis", enable=not includeWheelBearings));
 protected
   parameter Boolean includeWheelBearings=false "Include wheel bearing connectors";
   parameter Boolean includeChassisFrame=false "Include the chassis frame";

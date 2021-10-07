@@ -1,11 +1,12 @@
 within VehicleInterfaces.Transmissions.Interfaces;
 partial model Base "Basic interface definition for a transmission"
+
   parameter Boolean usingMultiBodyEngine=false
-    "=true, if using MultiBody engine with a 1D transmission"
-    annotation (Dialog(tab="Advanced"));
+    "= true, if connecting to a MultiBody engine"
+    annotation (Dialog(tab="Advanced", group="Only for 1D transmission", enable=not includeEngineBearing));
   parameter Boolean usingMultiBodyDriveline=false
-    "=true, if using a MultiBody driveline with a 1D transmission"
-    annotation (Dialog(tab="Advanced"));
+    "= true, if connecting to a MultiBody driveline"
+    annotation (Dialog(tab="Advanced", group="Only for 1D transmission", enable=not includeDrivelineBearing));
 protected
   parameter Boolean includeMount=false "Include the transmission mount connection";
   parameter Boolean includeDrivelineBearing=false "Include the driveline bearing";
