@@ -7,20 +7,20 @@ partial model Base
         origin={100,60},
         extent={{-20,-20},{20,20}},
         rotation=270)));
-  Modelica.Mechanics.MultiBody.Interfaces.Frame_a chassisFrame if
-    includeDriverSeat "Chassis reference frame (optional)"
+  Modelica.Mechanics.MultiBody.Interfaces.Frame_a chassisFrame
+    if includeDriverSeat "Chassis reference frame (optional)"
     annotation (Placement(transformation(
         origin={80,-100},
         extent={{-16,-16},{16,16}},
         rotation=90)));
-  Modelica.Mechanics.Rotational.Interfaces.Flange_a steeringWheel if
-    includeSteeringWheel "Steering wheel connection (optional)"
+  Modelica.Mechanics.Rotational.Interfaces.Flange_a steeringWheel
+    if includeSteeringWheel "Steering wheel connection (optional)"
     annotation (Placement(transformation(extent={{90,-10},{110,10}})));
-  Modelica.Mechanics.Translational.Interfaces.Flange_a acceleratorPedal if
-    includeAcceleratorPedal "Accelerator pedal connection (optional)"
+  Modelica.Mechanics.Translational.Interfaces.Flange_a acceleratorPedal
+    if includeAcceleratorPedal "Accelerator pedal connection (optional)"
     annotation (Placement(transformation(extent={{-90,-90},{-70,-110}})));
-  Modelica.Mechanics.Translational.Interfaces.Flange_a brakePedal if
-    includeBrakePedal "Brake pedal connection (optional)"
+  Modelica.Mechanics.Translational.Interfaces.Flange_a brakePedal
+    if includeBrakePedal "Brake pedal connection (optional)"
     annotation (Placement(transformation(extent={{30,-90},{50,-110}})));
 protected
   parameter Boolean includeDriverSeat=false
