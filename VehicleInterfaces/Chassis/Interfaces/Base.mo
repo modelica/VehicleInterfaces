@@ -10,11 +10,11 @@ protected
   parameter Boolean includeSteeringWheel=false "Include the steering wheel connection";
 
 public
-  Modelica.Mechanics.MultiBody.Interfaces.Frame_b chassisFrame if
-    includeChassisFrame "Chassis reference frame (optional)"
+  Modelica.Mechanics.MultiBody.Interfaces.Frame_b chassisFrame
+    if includeChassisFrame "Chassis reference frame (optional)"
     annotation (Placement(transformation(extent={{-176,-86},{-144,-54}})));
-  Modelica.Mechanics.Rotational.Interfaces.Flange_a steeringWheel if
-    includeSteeringWheel "Steering wheel connection (optional)"
+  Modelica.Mechanics.Rotational.Interfaces.Flange_a steeringWheel
+    if includeSteeringWheel "Steering wheel connection (optional)"
     annotation (Placement(transformation(extent={{-10,90},{10,110}})));
 
 public

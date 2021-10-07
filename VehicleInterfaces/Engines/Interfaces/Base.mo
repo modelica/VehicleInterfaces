@@ -22,14 +22,14 @@ public
     final includeBearingConnector=includeTransmissionBearing or usingMultiBodyTransmission)
     "Connection to the transmission" annotation (Placement(transformation(
           extent={{90,-10},{110,10}})));
-  Modelica.Mechanics.MultiBody.Interfaces.Frame_a engineMount if
-    includeMount "Engine mount connection (optional)"
+  Modelica.Mechanics.MultiBody.Interfaces.Frame_a engineMount
+    if includeMount "Engine mount connection (optional)"
     annotation (Placement(transformation(
         origin={0,-100},
         extent={{-16,-16},{16,16}},
         rotation=90)));
-  Modelica.Mechanics.Translational.Interfaces.Flange_a acceleratorPedal if
-    includeAcceleratorPedal "Accelerator pedal connection (optional)"
+  Modelica.Mechanics.Translational.Interfaces.Flange_a acceleratorPedal
+   if includeAcceleratorPedal "Accelerator pedal connection (optional)"
     annotation (Placement(transformation(extent={{-10,110},{10,90}})));
   VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
     annotation (Placement(transformation(
