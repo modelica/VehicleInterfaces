@@ -1,5 +1,5 @@
 within VehicleInterfaces.Accessories.Interfaces;
-partial model Base "Basic interface definition for the accessories"
+partial model Base "Basic interface definition for accessories"
 
   parameter Boolean usingMultiBodyEngine=false
     "=true, if using a MultiBody engine with a 1D accessories model"

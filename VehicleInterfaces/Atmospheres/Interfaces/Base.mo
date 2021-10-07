@@ -1,5 +1,5 @@
 within VehicleInterfaces.Atmospheres.Interfaces;
-partial model Base "Base model for all atmospheres"
+partial model Base "Basic model for all atmospheres"
 
   replaceable function windVelocity=windVelocityBase
     "Dummy model for wind velocity" annotation (Documentation(info="<html>
