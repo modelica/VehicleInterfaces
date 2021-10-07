@@ -1,6 +1,6 @@
 within VehicleInterfaces.DriverEnvironments.Interfaces;
 partial model Base
-  "Basic interface definition for the driver-vehicle interface"
+  "Basic interface definition for a driver-vehicle interface"
 
   VehicleInterfaces.Interfaces.ControlBus controlBus "Control signal bus"
     annotation (Placement(transformation(

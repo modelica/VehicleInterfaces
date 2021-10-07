@@ -1,5 +1,5 @@
 within VehicleInterfaces.Brakes.Interfaces;
-partial model Base "Base interface definition for a brakes"
+partial model Base "Basic interface definition for brakes"
 
   parameter Boolean usingMultiBodyChassis=false
     "=true, if using a MultiBody chassis with a 1D driveline"

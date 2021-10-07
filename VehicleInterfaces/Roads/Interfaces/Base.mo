@@ -1,5 +1,5 @@
 within VehicleInterfaces.Roads.Interfaces;
-partial model Base "Base model for all roads"
+partial model Base "Basic model for all roads"
 
   replaceable function position = Roads.Interfaces.positionBase
     "Get position vector at a road location" annotation (

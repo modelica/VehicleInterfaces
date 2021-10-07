@@ -1,5 +1,5 @@
 within VehicleInterfaces.ElectricDrives.Interfaces;
-partial model Base "Basic interface for an electric drives"
+partial model Base "Basic interface for an electric drive"
 
   parameter Boolean usingMultiBodySystem=false
     "=true, if connecting to a MultiBody system with a 1D model"
