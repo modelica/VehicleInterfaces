@@ -18,8 +18,8 @@ public
     final includeBearingConnector=includeTransmissionBearing or usingMultiBodyTransmission)
     "Connection to the Transmission output shaft"
     annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
-  Modelica.Mechanics.MultiBody.Interfaces.Frame_a drivelineMount if
-    includeMount "Driveline mount connection (optional)"
+  Modelica.Mechanics.MultiBody.Interfaces.Frame_a drivelineMount
+    if includeMount "Driveline mount connection (optional)"
     annotation (Placement(transformation(
         origin={0,-100},
         extent={{-16,-16},{16,16}},
