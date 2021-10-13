@@ -4,8 +4,8 @@ model BaseTwoInputTransmission
   extends Base;
 
   parameter Boolean usingMultiBodyMotor=false
-    "=true, if using MultiBody motor with a 1D transmission"
-    annotation (Dialog(tab="Advanced"));
+    "= true, if connecting to a MultiBody motor"
+    annotation (Dialog(tab="Advanced", group="Only for 1D transmission", enable=not includeMotorBearing));
 protected
   parameter Boolean includeMotorBearing=false
     "Include the motor bearing connection";

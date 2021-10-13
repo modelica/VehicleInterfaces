@@ -2,8 +2,8 @@ within VehicleInterfaces.ElectricDrives.Interfaces;
 partial model Base "Basic interface for an electric drives"
 
   parameter Boolean usingMultiBodySystem=false
-    "=true, if connecting to a MultiBody system with a 1D model"
-    annotation (Dialog(tab="Advanced"));
+    "= true, if connecting to a MultiBody system"
+    annotation (Dialog(tab="Advanced", group="Only for 1D electric drive", enable=not includeBearing));
 protected
   parameter Boolean includeBearing=false "Include bearing connector";
 
