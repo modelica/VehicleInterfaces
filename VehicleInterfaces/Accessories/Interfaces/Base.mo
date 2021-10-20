@@ -2,8 +2,8 @@ within VehicleInterfaces.Accessories.Interfaces;
 partial model Base "Basic interface definition for the accessories"
 
   parameter Boolean usingMultiBodyEngine=false
-    "=true, if using a MultiBody engine with a 1D accessories model"
-    annotation (Dialog(tab="Advanced"));
+    "= true, if connecting to a MultiBody engine"
+    annotation (Dialog(tab="Advanced", group="Only for 1D accessories", enable=not includeEngineBearing));
 protected
   parameter Boolean includeEngineBearing=false "Include the engine bearing";
 
