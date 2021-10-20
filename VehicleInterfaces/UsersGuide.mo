@@ -710,6 +710,30 @@ but the principles are still utilised.
   end Tutorials;
 
   package ReleaseNotes "Release notes"
+    package Version_2_0_1 "Version 2.0.1 (???)"
+      extends Modelica.Icons.ReleaseNotes;
+
+      annotation (Documentation(info="<html>
+<p>
+This version requires <strong>version 4.0.0</strong> of the 
+<a href=\"https://github.com/modelica/ModelicaStandardLibrary\">Modelica Standard Library</a>.
+This version is backwards compatible to version 2.0.0 of the
+VehicleInterfaces library. 
+</p>
+
+
+<h4>Improvements in this version</h4>
+<ul>
+  <li>
+    Use unit rev/min instead of r/min for displayUnit of initial engine
+    speed in combustion engine models. This is, thus, compatible to the
+    spelling adapted for angular velocity in some models of the
+    Modelica Standard Library.
+  </li>
+</ul>
+</html>"));
+    end Version_2_0_1;
+
     package Version_2_0_0 "Version 2.0.0 (Jun. 26, 2020)"
       extends Modelica.Icons.ReleaseNotes;
 
