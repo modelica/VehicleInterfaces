@@ -49,7 +49,7 @@ initial equation
           lineColor={128,128,128},
           fillColor={128,128,128},
           fillPattern=FillPattern.Solid), Line(points={{-46,-80},{25,-80}},
-            color={128,128,128})}),
+          color={128,128,128})}),
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
             100,100}}), graphics={
         Text(

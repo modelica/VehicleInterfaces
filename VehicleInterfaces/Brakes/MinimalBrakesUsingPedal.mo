@@ -106,7 +106,7 @@ equation
           127}));
   connect(computeTorque.y, brake_1.f_normalized) annotation (Line(points={{
           -1.22155e-016,49.5},{-1.22155e-016,-60},{-49,-60}},
-                 color={0,0,127}));
+        color={0,0,127}));
   connect(brake_1.flange_b, wheelHub_1.flange) annotation (Line(points={{-60,-70},{-60,-84},{-60,-99.95},{-60.05,-99.95}}));
   connect(brake_2.flange_a, wheelHub_2.flange) annotation (Line(points={{-60,70},{-60,86},{-60,100.05},{-60.05,100.05}}));
   connect(brake_3.flange_a, wheelHub_3.flange) annotation (Line(points={{60,-70},{60,-99.95},{59.95,-99.95}}));
