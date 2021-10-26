@@ -78,7 +78,7 @@ protected
     defaultComponentPrefixes="inner",
     Documentation(info="<html>
 <p>
-The road is a&nbsp;circle described by \"radius\" and \"width\".
+The road is a&nbsp;circle described by &quot;radius&quot; and &quot;width&quot;.
 The road surface parameters are defined as:
 </p>
 <blockquote><pre>

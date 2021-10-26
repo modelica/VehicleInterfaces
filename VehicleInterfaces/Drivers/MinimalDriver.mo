@@ -73,7 +73,7 @@ equation
       extent={{6,3},{6,3}}));
   connect(acceleratorPosition.flange_b, driverInterface.acceleratorPedal)
     annotation (Line(points={{20,20},{98,20},{98,0},{100,0}},
-                                                      color={0,127,0}),
+        color={0,127,0}),
     Text(
       string="%second",
       index=1,
