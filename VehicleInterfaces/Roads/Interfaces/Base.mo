@@ -57,10 +57,10 @@ This function returns the friction coefficient at the road location (s,w).
     Documentation(info="<html>
 <p>
 A vehicle is driving on a road that is described
-as parameterized surface r<sub>0</sub> = r<sub>0</sub>(s, w),
-where (s, w) are the surface parameters. Usually, \"s\"
+as parameterized surface r<sub>0</sub>&nbsp;= r<sub>0</sub>(s,&nbsp;w),
+where (s, w) are the surface parameters. Usually, &quot;s&quot;
 describes the heading direction, i.e., the direction in which the
-vehicle is driving, whereas \"w\" describes the lateral direction
+vehicle is driving, whereas &quot;w&quot; describes the lateral direction
 of the track.
 </p>
 </html>"));
