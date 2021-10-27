@@ -95,9 +95,8 @@ equation
       points={{100.1,59.9},{80,59.9},{80,60},{60,60}},
       color={255,204,51},
       thickness=0.5));
-
   connect(ignition.y, driverBus.ignition) annotation (Line(points={{21,60},{21,60.05},{60.05,60.05}},
-                   color={255,127,0}));
+        color={255,127,0}));
 
   annotation (
     Documentation(info="<html>
