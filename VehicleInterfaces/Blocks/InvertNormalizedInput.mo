@@ -56,8 +56,6 @@ equation
         Text(
           extent={{-53,98},{-26,78}},
           textColor={160,160,164},
-          fillColor={95,95,95},
-          fillPattern=FillPattern.Solid,
           textString="u"),
         Text(
           extent={{74,-8},{96,-28}},
