@@ -11,10 +11,16 @@
 .gitattributes text
 .gitignore text
 *.md text
+LICENSE.txt text
+
+# git archive keyword substitutions for the main package files
+VehicleInterfaces/package.mo export-subst
+ObsoleteVehicleInterfaces2.mo export-subst
 
 # list of files that git archive should ignore
 .CI export-ignore
 .gitattributes export-ignore
 .github export-ignore
 .gitignore export-ignore
-
+README.md export-ignore
+VehicleInterfacesTestConversion2.mo export-ignore
