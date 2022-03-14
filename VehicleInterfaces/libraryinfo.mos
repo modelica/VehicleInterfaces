@@ -2,8 +2,8 @@ LibraryInfoMenuCommand(
 category = "libraries",
 text = "VehicleInterfaces",
 reference = "VehicleInterfaces",
-version = "2.0.0",
+version = "2.0.1",
 isModel = true,
-description = "VehicleInterfaces Library (version 2.0.0)",
+description = "VehicleInterfaces Library (version 2.0.1)",
 ModelicaVersion = "4.0.0",
 pos = 103);
