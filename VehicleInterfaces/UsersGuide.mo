@@ -710,7 +710,7 @@ but the principles are still utilised.
   end Tutorials;
 
   package ReleaseNotes "Release notes"
-    package Version_2_0_1 "Version 2.0.1 (???)"
+    package Version_2_0_1 "Version 2.0.1 (2022-03-15)"
       extends Modelica.Icons.ReleaseNotes;
 
       annotation (Documentation(info="<html>
