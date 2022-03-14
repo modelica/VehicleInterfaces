@@ -725,10 +725,22 @@ VehicleInterfaces library.
 <h4>Improvements in this version</h4>
 <ul>
   <li>
-    Use unit rev/min instead of r/min for displayUnit of initial engine
+    Use unit rev/min instead of r/min for <em>displayUnit</em> of initial engine
     speed in combustion engine models. This is, thus, compatible to the
     spelling adapted for angular velocity in some models of the
     Modelica Standard Library.
+  </li>
+  <li>
+    GitHub issue <a href=\"https://github.com/modelica/VehicleInterfaces/issues/89\">#89</a>:
+    Improve user dialog of road functions in 
+    <a href=\"modelica://VehicleInterfaces.Roads.Interfaces.Base\">Roads.Interfaces.Base</a>
+    and facilitate function redeclaration (choicesAllMatching&nbsp;=&nbsp;true).
+  </li>
+  <li>
+    GitHub issue <a href=\"https://github.com/modelica/VehicleInterfaces/issues/88\">#88</a>:
+    Limit possibility to modify <code>usingMultiBodyXXX</code> parameter
+    in user dialog of base classes of several assemblies. This depends on
+    the setting of <code>includeXXXBearing</code> now.
   </li>
 </ul>
 </html>"));
