@@ -21,7 +21,8 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.1) - Interface
     conversion(
       from(
         version="1.0",
-        script="modelica://VehicleInterfaces/Resources/Scripts/Dymola/ConvertVehicleInterfaces_from_1.0_to_1.1.mos"),
+        script="modelica://VehicleInterfaces/Resources/Scripts/Dymola/ConvertVehicleInterfaces_from_1.0_to_1.1.mos",
+        to="1.1"),
       from(
         version={"1.1", "1.1.1", "1.1.2", "1.2", "1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.5"},
         script="modelica://VehicleInterfaces/Resources/Scripts/Dymola/ConvertVehicleInterfaces_from_1.2.5_to_2.0.0.mos"),
