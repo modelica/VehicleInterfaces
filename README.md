@@ -25,7 +25,7 @@ Download [VehicleInterfaces v2.0.1 (2022-03-15)](../../releases/tag/v2.0.1)
 Browse the [Releases](../../releases) page in order to get access to older releases of the library.
 
 ## License
-Copyright &copy; 2005-2013, Dassault Systémes, DLR and Modelon
+Copyright &copy; 2005-2013, Dassault Systémes, DLR and Modelon<br>
 Copyright &copy; 2013-2022, Modelica Association
 
 This Modelica package is free software and the use is completely at your own risk;
