@@ -2,7 +2,6 @@ within VehicleInterfaces.Interfaces.Internal;
 expandable connector StandardControlBus
   "Do not use - Expandable connector defining sub-buses for control bus"
   extends VehicleInterfaces.Interfaces.ControlBus;
-
   VehicleInterfaces.Interfaces.AccessoriesBus accessoriesBus "AccessoriesBus";
   VehicleInterfaces.Interfaces.AccessoriesControlBus accessoriesControlBus "AccessoriesControlBus";
   VehicleInterfaces.Interfaces.BatteryBus batteryBus "BatteryBus";
