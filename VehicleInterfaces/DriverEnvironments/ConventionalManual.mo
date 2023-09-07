@@ -1,7 +1,6 @@
 within VehicleInterfaces.DriverEnvironments;
 model ConventionalManual
   "Minimal Driver-Vehicle Interface, manual transmission, uses physical pedal connections"
-  import VehicleInterfaces;
   extends VehicleInterfaces.Icons.DriverEnvironment;
   extends Interfaces.BaseManualTransmission(
     includeManualShiftConnector=true,
