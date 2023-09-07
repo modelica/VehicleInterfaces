@@ -1,7 +1,6 @@
 within VehicleInterfaces.Transmissions;
 model SingleGearManualTransmission
   "Simple fixed gear ratio, manual transmission, uses physical connectors"
-  import VehicleInterfaces;
   extends VehicleInterfaces.Icons.Transmission;
   extends Interfaces.BaseManualTransmission(
     includeMount=world.driveTrainMechanics3D,
