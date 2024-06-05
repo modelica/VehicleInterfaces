@@ -12,7 +12,8 @@ expandable connector DrivelineBus
           lineThickness=0.5)}),
     Documentation(info="<html>
 <p>
-Should be used to contain signals measured in the driveline subsystem.
+Should be used to contain signals measured in the
+<a href=\"modelica://VehicleInterfaces.Drivelines\">driveline</a> subsystem.
 It is defined as an empty expandable connector.
 </p>
 </html>"));

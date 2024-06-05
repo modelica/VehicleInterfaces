@@ -12,7 +12,8 @@ expandable connector EngineBus
           lineThickness=0.5)}),
     Documentation(info="<html>
 <p>
-Should be used to contain signals measured in the engine subsystem.
+Should be used to contain signals measured in the
+<a href=\"modelica://VehicleInterfaces.Engines\">engine</a> subsystem.
 It is defined as an empty expandable connector.
 </p>
 </html>"));

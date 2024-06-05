@@ -12,7 +12,8 @@ expandable connector TransmissionBus
           lineThickness=0.5)}),
     Documentation(info="<html>
 <p>
-Should be used to contain signals measured in the transmission subsystem.
+Should be used to contain signals measured in the
+<a href=\"modelica://VehicleInterfaces.Transmissions\">transmission</a> subsystem.
 It is defined as an empty expandable connector.
 </p>
 </html>"));

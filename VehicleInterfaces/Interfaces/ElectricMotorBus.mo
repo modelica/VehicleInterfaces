@@ -12,7 +12,8 @@ expandable connector ElectricMotorBus
           lineThickness=0.5)}),
     Documentation(info="<html>
 <p>
-Should be used to contain signals measured in the electrical motor subsystem.
+Should be used to contain signals measured in the
+<a href=\"modelica://VehicleInterfaces.ElectricDrives\">electrical drive</a> subsystem.
 It is defined as an empty expandable connector. 
 </p>
 </html>"));

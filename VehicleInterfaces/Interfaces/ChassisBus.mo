@@ -12,7 +12,8 @@ expandable connector ChassisBus
           lineThickness=0.5)}),
     Documentation(info="<html>
 <p>
-Should be used to contain signals measured in the chassis subsystem.
+Should be used to contain signals measured in the
+<a href=\"modelica://VehicleInterfaces.Chassis\">chassis</a> subsystem.
 It is defined as an empty expandable connector.
 </p>
 </html>"));
