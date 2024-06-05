@@ -24,9 +24,11 @@ protected
   outer VehicleInterfaces.Roads.Interfaces.Base road;
 
   encapsulated function roadSurfaceCharacteristic
-  import Modelica;
-  import VehicleInterfaces;
-    extends Modelica.Mechanics.MultiBody.Interfaces.partialSurfaceCharacteristic(      final multiColoredSurface=false);
+    import Modelica;
+    import VehicleInterfaces;
+    extends Modelica.Mechanics.MultiBody.Interfaces.partialSurfaceCharacteristic(
+      final multiColoredSurface=false);
+
     input VehicleInterfaces.Roads.Interfaces.positionBase position;
     input Real s_min=0 "Minimum value of s";
     input Real s_max=1 "Maximum value of s";
