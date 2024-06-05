@@ -12,7 +12,8 @@ expandable connector BrakesBus
           lineThickness=0.5)}),
     Documentation(info="<html>
 <p>
-Should be used to contain signals measured in the brakes subsystem.
+Should be used to contain signals measured in the
+<a href=\"modelica://VehicleInterfaces.Brakes\">brakes</a> subsystem.
 It is defined as an empty expandable connector.
 </p>
 </html>"));

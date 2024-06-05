@@ -12,7 +12,8 @@ expandable connector AccessoriesBus
           lineThickness=0.5)}),
     Documentation(info="<html>
 <p>
-Should be used to contain signals measured in the accessories subsystem.
+Should be used to contain signals measured in the
+<a href=\"modelica://VehicleInterfaces.Accessories\">accessories</a> subsystem.
 It is defined as an empty expandable connector.
 </p>
 </html>"));

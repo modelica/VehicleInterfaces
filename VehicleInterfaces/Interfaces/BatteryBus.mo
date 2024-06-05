@@ -12,7 +12,8 @@ expandable connector BatteryBus
           lineThickness=0.5)}),
     Documentation(info="<html>
 <p>
-Should be used to contain signals measured in the battery subsystem.
+Should be used to contain signals measured in the
+<a href=\"modelica://VehicleInterfaces.EnergyStorage\">battery</a> subsystem.
 It is defined as an empty expandable connector.
 </p>
 </html>"));

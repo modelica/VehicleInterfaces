@@ -12,7 +12,7 @@ expandable connector BatteryControlBus
           lineThickness=0.5)}),
     Documentation(info="<html>
 <p>
-Should be used to contain signals measured in the battery subsystem.
+Should be used to contain signals determined in the batteries&apos; controller.
 It is defined as an empty expandable connector.
 </p>
 </html>"));

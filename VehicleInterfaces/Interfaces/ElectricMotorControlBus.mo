@@ -12,7 +12,7 @@ expandable connector ElectricMotorControlBus
           lineThickness=0.5)}),
     Documentation(info="<html>
 <p>
-Should be used to contain signals measured in the electrical motor control subsystem.
+Should be used to contain signals determined in the electrical drive controller.
 It is defined as an empty expandable connector. 
 </p>
 </html>"));
