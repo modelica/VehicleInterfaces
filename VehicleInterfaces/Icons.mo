@@ -933,10 +933,11 @@ This partial class is intended to design a default icon for an <em>electric moto
     annotation (
       Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
         graphics={
-        	Ellipse(
+          Ellipse(
             extent={{-100,100},{100,-100}},
             lineColor={255,0,0},
-            lineThickness=1), Line(
+            lineThickness=1),
+          Line(
             points={{-70,-70},{70,70}},
             color={255,0,0},
             thickness=1)}),
