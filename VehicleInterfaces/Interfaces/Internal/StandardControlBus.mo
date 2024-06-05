@@ -5,6 +5,7 @@ expandable connector StandardControlBus
   VehicleInterfaces.Interfaces.AccessoriesBus accessoriesBus "AccessoriesBus";
   VehicleInterfaces.Interfaces.AccessoriesControlBus accessoriesControlBus "AccessoriesControlBus";
   VehicleInterfaces.Interfaces.BatteryBus batteryBus "BatteryBus";
+  VehicleInterfaces.Interfaces.BatteryControlBus batteryControlBus "Battery control bus";
   VehicleInterfaces.Interfaces.BrakesBus brakesBus "BrakesBus";
   VehicleInterfaces.Interfaces.BrakesControlBus brakesControlBus "BrakesControlBus";
   VehicleInterfaces.Interfaces.ChassisBus chassisBus "ChassisBus";

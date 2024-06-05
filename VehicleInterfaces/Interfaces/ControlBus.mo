@@ -6,6 +6,7 @@ expandable connector ControlBus
   VehicleInterfaces.Interfaces.AccessoriesBus accessoriesBus "Accessories bus" annotation (Dialog(enable=false));
   VehicleInterfaces.Interfaces.AccessoriesControlBus accessoriesControlBus "Accessories control bus" annotation (Dialog(enable=false));
   VehicleInterfaces.Interfaces.BatteryBus batteryBus "Battery bus" annotation (Dialog(enable=false));
+  VehicleInterfaces.Interfaces.BatteryControlBus batteryControlBus "Battery control bus" annotation (Dialog(enable=false));
   VehicleInterfaces.Interfaces.BrakesBus brakesBus "Brakes bus" annotation (Dialog(enable=false));
   VehicleInterfaces.Interfaces.BrakesControlBus brakesControlBus "Brakes control bus" annotation (Dialog(enable=false));
   VehicleInterfaces.Interfaces.ChassisBus chassisBus "Chassis bus" annotation (Dialog(enable=false));
