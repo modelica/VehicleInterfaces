@@ -5,12 +5,12 @@
 # to native line endings on checkout.
 *.c text
 *.h text
+*.md text
 *.mo text
 *.mos text
 *.order text
 .gitattributes text
 .gitignore text
-*.md text
 LICENSE.txt text
 
 # git archive keyword substitutions for the main package files
@@ -24,3 +24,5 @@ ObsoleteVehicleInterfaces2.mo export-subst
 .gitignore export-ignore
 README.md export-ignore
 VehicleInterfacesTestConversion2.mo export-ignore
+
+*.mo linguist-language=Modelica
