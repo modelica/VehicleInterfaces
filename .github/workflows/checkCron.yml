@@ -23,3 +23,16 @@ jobs:
       - name: Check links
         timeout-minutes: 3
         run: python ./.CI/check_html.py checkLinks ./
+
+  clean_workflow_runs:
+    timeout-minutes: 5
+    if: github.repository_owner == 'modelica'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete workflow runs
+        uses: dmvict/clean-workflow-runs@v1
+        with:
+          run_conclusions: skipped,success
+          save_period: 60
+          save_min_runs_number: 6
+          dry: false
