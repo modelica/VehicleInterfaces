@@ -11,12 +11,12 @@ a&nbsp;chassis for a&nbsp;passenger car, i.e., a&nbsp;vehicle with 4&nbsp;wheels
 </p>
 <ol>
   <li>Create a&nbsp;new model that extends
-      <strong>VehicleInterfaces.Chassis.Interfaces.FourWheelBase</strong>,
+      <a href=\"modelica://VehicleInterfaces.Chassis.Interfaces.TwoAxleBase\">TwoAxleBase</a>,
       it should look like this:
       <br><br>
       <img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis1.png\">
       <br><br></li>
-  <li>In the component browser, right click on <strong>FourWheelBase</strong> and select
+  <li>In the component browser, right click on <strong>TwoAxleBase</strong> and select
       <strong>Parameters</strong> from the context menu to produce the following
       parameter dialog
       <br><br>
@@ -58,7 +58,7 @@ Starting from step 3&nbsp;above.
       <br><br>
       <img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis4.png\">
       <br><br>
-      <img src=\"modelica://VehicleInterfaces/Resources/Images/Drivelines/buildNewDriveline5.png\">
+      <img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis5.png\">
       <br><br></li>
   <li>Next, we need to check to see if any connections to the control signal bus
       are required for the chassis, see
@@ -68,7 +68,8 @@ Starting from step 3&nbsp;above.
       bus and this can be done by connecting a&nbsp;speed sensor to the vehicle
       body and then connecting this to the signal bus. As the longitudinal speed
       signals are added to the chassisBus we first need to add this connector.
-      The chassisBus connector is <strong>VehicleInterfaces.Interfaces.ChassisBus</strong>.
+      The chassisBus connector is
+      <a href=\"modelica://VehicleInterfaces.Interfaces.ChassisBus\">VehicleInterfaces.Interfaces.ChassisBus</a>.
       This should be connected to the <strong>controlBus</strong>, when this
       connection is made the following dialog is produced and should be
       completed as shown.
