@@ -73,12 +73,12 @@ Starting from step 3&nbsp;above.
       connection is made the following dialog is produced and should be
       completed as shown.
       <br><br>
-      <img src=\"modelica://VehicleInterfaces/Resources/Images/UsersGuide/SignalBus/signalNaming2.png\">
+      <img src=\"modelica://VehicleInterfaces/Resources/Images/UsersGuide/SignalBus/signalNaming1.png\">
       <br><br></li>
   <li>When the connection between the sensor and the chassisBus connector is
       added the dialog below appears and should be completed as shown
       <br><br>
-      <img src=\"modelica://VehicleInterfaces/Resources/Images/UsersGuide/SignalBus/signalNaming.png\">
+      <img src=\"modelica://VehicleInterfaces/Resources/Images/UsersGuide/SignalBus/signalNaming2.png\">
       <br><br></li>
   <li>The model is now complete and should check successfully and can be
       used in any model compatible with the VehicleInterfaces library
