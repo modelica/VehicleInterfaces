@@ -85,7 +85,7 @@ Starting from step 3&nbsp;above.
       assuming the selected Driver model doesn&apos;t use the steering wheel
       or chassis frame connections
       <br><br>
-      <img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis5.png\"></li>
+      <img src=\"modelica://VehicleInterfaces/Resources/Images/Chassis/buildNewChassis6.png\"></li>
 </ol>
 </html>"));
 end Tutorial;
