@@ -737,7 +737,7 @@ and these demonstrate:
 A tutorial session on the VehicleInterfaces package was run at the
 Modelica 2006 conference. The tutorial material from this conference
 can be found at
-<a href=\"http://www.modelica.org/events/modelica2006/Proceedings/html/tutorials.html\">http://www.modelica.org/events/modelica2006/Proceedings/html/tutorials.html</a>.
+<a href=\"https://modelica.org/events/modelica2006/Proceedings/tutorials/Tutorial4.pdf\">https://modelica.org/events/modelica2006/Proceedings/tutorials/Tutorial4.pdf</a>.
 Some elements of the library may have been renamed since this tutorial
 but the principles are still utilised.
 </p>
