@@ -1176,7 +1176,7 @@ even if advised of the possibility of such damage.
     annotation (Documentation(info="<html>
 <p>
 This library is maintained by the
-<a href=\"https://www.modelica.org/association\">Modelica Association</a>.
+<a href=\"https://modelica.org/association\">Modelica Association</a>.
 Further development takes place on
 <a href=\"https://github.com/modelica/VehicleInterfaces\">https://github.com/modelica/VehicleInterfaces</a>
 where users can also report issues and/or supply pull-requests.
@@ -1198,7 +1198,7 @@ to develop the VehicleInterfaces Library. The developers were:
 </ul>
 <p>
 This library has been developed from work on the original Modelica VMA
-(<a href=\"http://www.modelica.org/events/Conference2003/papers/h32_vehicle_Tiller.pdf\">Paper from the Modelica Conference 2003</a>)
+(<a href=\"https://modelica.org/events/Conference2003/papers/h32_vehicle_Tiller.pdf\">Paper from the Modelica Conference 2003</a>)
 developed by Michael Tiller et al and published by Ford Motor Company.
 </p>
 <p>
