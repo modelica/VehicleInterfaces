@@ -2,10 +2,10 @@ within VehicleInterfaces.Atmospheres;
 model ConstantAtmosphere "Atmospheres with constant conditions"
   extends VehicleInterfaces.Icons.Atmosphere;
   extends VehicleInterfaces.Atmospheres.Interfaces.Base(
-    redeclare final function windVelocity = constantWindVelocity (windVelocity=v),
-    redeclare final function density = constantDensity (density=rho),
-    redeclare final function temperature = constantTemperature (T0=T),
-    redeclare final function humidity = constantHumidity (h0=h));
+    redeclare function windVelocity = constantWindVelocity(windVelocity=v),
+    redeclare function density = constantDensity(density=rho),
+    redeclare function temperature = constantTemperature(T0=T),
+    redeclare function humidity = constantHumidity(h0=h));
 
   parameter SI.Velocity[3] v=zeros(3) "Wind velocity";
   parameter SI.AbsolutePressure ambientPressure=101300
