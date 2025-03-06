@@ -2,11 +2,11 @@ within VehicleInterfaces.Roads;
 model FlatRoad "Straight road along x-axis (perpendicular to world z-axis)"
   extends VehicleInterfaces.Icons.Road;
   extends VehicleInterfaces.Roads.Interfaces.Base(
-    redeclare final function position = linePosition,
-    redeclare final function trackOffset = constantOffset (offset=offset),
-    redeclare final function normal = lineNormal,
-    redeclare final function headingDirection = lineHeadingDirection,
-    redeclare final function frictionCoefficient = lineFrictionCoefficient (mu_fixed=mu));
+    redeclare function position = linePosition,
+    redeclare function trackOffset = constantOffset (offset=offset),
+    redeclare function normal = lineNormal,
+    redeclare function headingDirection = lineHeadingDirection,
+    redeclare function frictionCoefficient = lineFrictionCoefficient (mu_fixed=mu));
 
   parameter Boolean animation=true "= true, if road shall be visualized";
   parameter Real mu=0.5 "Friction coefficient of road";
