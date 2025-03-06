@@ -8,7 +8,7 @@ model VisualizeSimpleRoads
   extends Modelica.Mechanics.MultiBody.Visualizers.Advanced.Surface(
     final nu=ns,
     final nv=nw,
-    redeclare final function surfaceCharacteristic =
+    redeclare function surfaceCharacteristic =
         roadSurfaceCharacteristic (
       final position=road.position,
       final s_min=s_min,
