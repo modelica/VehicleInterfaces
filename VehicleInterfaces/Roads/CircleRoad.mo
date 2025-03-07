@@ -1,11 +1,11 @@
 within VehicleInterfaces.Roads;
 model CircleRoad "Circular road (perpendicular to world z-axis)"
   extends VehicleInterfaces.Roads.Interfaces.Base(
-    redeclare final function position = circlePosition (radius=radius, width=width),
-    redeclare final function trackOffset = constantOffset,
-    redeclare final function normal = circleNormal,
-    redeclare final function headingDirection = circleHeadingDirection (radius=radius),
-    redeclare final function frictionCoefficient = circleFrictionCoefficient (mu_fixed=mu));
+    redeclare function position = circlePosition (radius=radius, width=width),
+    redeclare function trackOffset = constantOffset,
+    redeclare function normal = circleNormal,
+    redeclare function headingDirection = circleHeadingDirection (radius=radius),
+    redeclare function frictionCoefficient = circleFrictionCoefficient (mu_fixed=mu));
 
   parameter Boolean animation=true "= true, if road shall be visualized";
   parameter SI.Radius radius "Radius of road";
