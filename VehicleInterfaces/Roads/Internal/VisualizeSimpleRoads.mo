@@ -38,10 +38,8 @@ protected
     Real s;
     Real w;
     Real r[3];
-    parameter Real ds = s_max - s_min
-      "Length of one segment in s-direction";
-    parameter Real dw = w_max - w_min
-      "Length of one segment in w-direction";
+    Real ds = s_max - s_min "Length of one segment in s-direction";
+    Real dw = w_max - w_min "Length of one segment in w-direction";
   algorithm
     for j in 1:nv loop
       w := w_min + (j - 1)*dw/(nv - 1);
