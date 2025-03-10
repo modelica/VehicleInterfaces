@@ -1,5 +1,5 @@
 within ;
-package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.1) - Interface definitions and architectures for vehicle system modeling"
+package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.2) - Interface definitions and architectures for vehicle system modeling"
   extends Modelica.Icons.Package;
 
   import Modelica.Units.SI;
@@ -13,11 +13,11 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.1) - Interface
       showStatistics=true,
       allowDuplicate=true),
     preferredView="info",
-    version="2.0.1",
-    versionDate="2022-03-15",
-    dateModified = "2022-03-15 10:00:00Z",
+    version="2.0.2",
+    versionDate="2025-03-21",
+    dateModified = "2025-03-10 10:00:00Z",
     revisionId="$Format:%h %ci$",
-    uses(Modelica(version="4.0.0")),
+    uses(Modelica(version="4.1.0")),
     conversion(
       from(
         version="1.0",
@@ -26,7 +26,8 @@ package VehicleInterfaces "VehicleInterfaces Library (Version 2.0.1) - Interface
       from(
         version={"1.1", "1.1.1", "1.1.2", "1.2", "1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.5"},
         script="modelica://VehicleInterfaces/Resources/Scripts/Dymola/ConvertVehicleInterfaces_from_1.2.5_to_2.0.0.mos"),
-      noneFromVersion="2.0.0"),
+      noneFromVersion="2.0.0",
+      noneFromVersion="2.0.1"),
     Documentation(info="<html>
 <p>This Modelica library provides standard interface definitions for automotive subsystems and vehicle models.  These are designed to promote compatibility between the various automotive libraries and provide a flexible, powerful structure for vehicle modelling.  The main focus of the library is on defining the interfaces for the individual subsystems and a number of vehicle model examples are included to demonstrate how they might be used.</p>
 <p>
