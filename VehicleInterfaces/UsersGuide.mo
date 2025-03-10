@@ -745,6 +745,41 @@ but the principles are still utilised.
   end Tutorials;
 
   package ReleaseNotes "Release notes"
+    package Version_2_0_2 "Version 2.0.2 (2025-03-21)"
+      extends Modelica.Icons.ReleaseNotes;
+
+      annotation (Documentation(info="<html>
+<p>
+This version requires <strong>version 4.1.0</strong> of the 
+<a href=\"https://github.com/modelica/ModelicaStandardLibrary\">Modelica Standard Library</a>.
+This version is backwards compatible to version 2.0.0 of the
+VehicleInterfaces library. 
+</p>
+
+
+<h4>Improvements in this version</h4>
+<ul>
+  <li>
+    <a href=\"modelica://VehicleInterfaces.Interfaces.ControlBus\">ControlBus</a>
+    and 
+    <a href=\"modelica://VehicleInterfaces.Interfaces.Internal.StandardControlBus\">Internal.StandardControlBus</a>:
+    add missing <a href=\"modelica://VehicleInterfaces.Interfaces.BatteryControlBus\">batteryControlBus</a>
+    to list of sub-busses.
+  </li>
+  <li>
+    Several classes: don't use <code>final</code> modifier in function redeclarations.
+  </li>
+  <li>
+    Don&apos;t use parameters in function 
+    <a href=\"modelica://VehicleInterfaces.Roads.Internal.VisualizeSimpleRoads.roadSurfaceCharacteristic\">VisualizeSimpleRoads.roadSurfaceCharacteristic</a>.
+  </li>
+  <li>
+    Documentation and broken links.
+  </li>
+</ul>
+</html>"));
+    end Version_2_0_2;
+
     package Version_2_0_1 "Version 2.0.1 (2022-03-15)"
       extends Modelica.Icons.ReleaseNotes;
 
@@ -1151,7 +1186,7 @@ on the library.
 <h4>Copyright</h4>
 <p>
 &copy; 2005-2013: Dassault Syst&egrave;mes, DLR and Modelon<br>
-&copy; 2013-2022: Modelica Association
+&copy; 2013-2025: Modelica Association
 </p>
 <h4>License</h4>
 <p>The VehicleInterfaces library is distributed under the Modelica License (Version 1.1).</p>

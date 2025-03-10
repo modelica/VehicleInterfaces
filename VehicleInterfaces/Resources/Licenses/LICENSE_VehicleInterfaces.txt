@@ -1,5 +1,5 @@
 Copyright (C) 2005-2013, Dassault Systémes, DLR and Modelon
-Copyright (C) 2013-2022, Modelica Association
+Copyright (C) 2013-2025, Modelica Association
 All rights reserved.
 
 The VehicleInterfaces library is distributed under the Modelica License (Version 1.1).
