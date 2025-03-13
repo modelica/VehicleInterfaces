@@ -767,7 +767,7 @@ VehicleInterfaces library.
     to list of sub-busses.
   </li>
   <li>
-    Several classes: don't use <code>final</code> modifier in function redeclarations.
+    Several classes: don&apos;t use <code>final</code> modifier in function redeclarations.
   </li>
   <li>
     Don&apos;t use parameters in function 
