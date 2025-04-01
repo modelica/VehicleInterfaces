@@ -18,7 +18,7 @@ This library also contains a proposal for a naming convention covering the whole
 
 ## Current release
 
-Download [VehicleInterfaces v2.0.1 (2022-03-15)](../../releases/tag/v2.0.1)
+Download [VehicleInterfaces v2.0.2 (2025-03-21)](../../releases/tag/v2.0.2)
 
 ## Older releases
 
@@ -26,7 +26,7 @@ Browse the [Releases](../../releases) page in order to get access to older relea
 
 ## License
 Copyright &copy; 2005-2013, Dassault Systémes, DLR and Modelon<br>
-Copyright &copy; 2013-2022, Modelica Association
+Copyright &copy; 2013-2025, Modelica Association
 
 This Modelica package is free software and the use is completely at your own risk;
 it can be redistributed and/or modified under the terms of the [Modelica License 1.1](https://modelica.org/licenses/ModelicaLicense1.1).
