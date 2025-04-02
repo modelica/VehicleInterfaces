@@ -13,7 +13,7 @@ import os
 import re
 import sys
 
-PATTERN = re.compile(r'(Text\s*\([^\).]*)lineColor')
+PATTERN = re.compile(r'(?:Text\s*\([^\)]*?(?:\"(?:\\.|[^\"])*\")?[^\)]*?)(lineColor)')
 
 def _checkDeprecatedFileLineColor(file_name):
     errors = 0
