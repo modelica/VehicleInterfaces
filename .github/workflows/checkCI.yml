@@ -2,6 +2,10 @@ name: CI
 
 on: [pull_request]
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   html_documentation_checks:
     timeout-minutes: 5
@@ -38,6 +42,7 @@ jobs:
           echo "::add-matcher::./.github/checkTags.json"
           python ./.CI/check_html.py checkTags ./
           echo "::remove-matcher owner=checkTags::"
+
   syntax_checks:
     timeout-minutes: 5
     runs-on: ubuntu-latest
