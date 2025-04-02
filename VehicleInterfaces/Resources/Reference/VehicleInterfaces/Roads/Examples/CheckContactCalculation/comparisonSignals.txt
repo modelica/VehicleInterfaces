@@ -1,0 +1,5 @@
+time
+tyre.r_wheel[1]
+tyre.r_wheel[2]
+tyre.r_wheel[3]
+tyre.w

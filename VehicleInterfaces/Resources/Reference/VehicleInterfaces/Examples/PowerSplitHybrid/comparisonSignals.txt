@@ -1,0 +1,7 @@
+time
+chassis.body.s
+driveline.leftHalfShaft.w
+driveline.rightHalfShaft.w
+engine.flywheel.w
+motor1.inductor.i
+motor2.inductor.i
