@@ -1,9 +1,0 @@
-LibraryInfoMenuCommand(
-category = "libraries",
-text = "VehicleInterfaces",
-reference = "VehicleInterfaces",
-version = "2.0.2",
-isModel = true,
-description = "VehicleInterfaces Library (version 2.0.2)",
-ModelicaVersion = "4.1.0",
-pos = 103);
