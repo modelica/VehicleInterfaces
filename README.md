@@ -2,9 +2,10 @@
 
 Free library from the Modelica Association for interface definitions and architectures for vehicle system modeling
 
-## Build status
+## Status
 
 [![CI checks](https://github.com/modelica/VehicleInterfaces/workflows/CI/badge.svg)](https://github.com/modelica/VehicleInterfaces/actions)
+[![GitHub](https://github.com/modelica/VehicleInterfaces)](LICENSE)
 
 ## Library description
 
