@@ -42,8 +42,8 @@ before using the library.</p>
 
 <p>
 <strong>Licensed by the Modelica Association under the 3-Clause BSD License</strong><br>
-Copyright &copy; 2005-2013: Dassault Syst&egrave;mes, DLR and Modelon.<br>
-Copyright &copy; since 2013: Modelica Association.
+Copyright &copy; 2013-2025: Modelica Association and <a href=\"modelica://VehicleInterfaces.UsersGuide.Contact\">contributors</a>.<br>
+Copyright &copy; 2005-2013: Dassault Syst&egrave;mes, DLR and Modelon.
 </p>
 
 <p>
