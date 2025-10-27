@@ -1179,67 +1179,6 @@ on the library.
 </html>"));
   end ReleaseNotes;
 
-  class License "Copyright and License"
-
-    annotation (
-      Documentation(info="<html>
-<h4>Copyright</h4>
-<p>
-&copy; 2005-2013: Dassault Syst&egrave;mes, DLR and Modelon<br>
-&copy; 2013-2025: Modelica Association
-</p>
-<h4>License</h4>
-<p>The VehicleInterfaces library is distributed under the Modelica License (Version 1.1).</p>
-<p>Redistribution and use in source and binary forms, with or without
-modification are permitted, provided that the following conditions are met:
-</p>
-<ol>
-<li>
-The author and copyright notices in the source files, these license conditions
-and the disclaimer below are (a) retained and (b) reproduced in the documentation
-provided with the distribution.</li>
-<li>
-Modifications of the original source files are allowed, provided that a
-prominent notice is inserted in each changed file and the accompanying
-documentation, stating how and when the file was modified, and provided
-that the conditions under (1) are met.</li>
-<li>
-It is not allowed to charge a fee for the original version or a modified
-version of the software, besides a reasonable fee for distribution and support.
-Distribution in aggregate with other (possibly commercial) programs
-as part of a larger (possibly commercial) software distribution is permitted,
-provided that it is not advertised as a product of your own.</li>
-</ol>
-
-<h4>Disclaimer</h4>
-<p>The software (sources, binaries, etc.) in their original or in a modified
-form are provided
-&quot;as is&quot; and the copyright holders assume no responsibility for its contents
-what so ever. Any express or implied warranties, including, but not
-limited to, the implied warranties of merchantability and fitness for a
-particular purpose are <strong>disclaimed</strong>. <strong>In no event</strong> shall the
-copyright holders, or any party who modify and/or redistribute the package,
-<strong>be liable</strong> for any direct, indirect, incidental, special, exemplary, or
-consequential damages, arising in any way out of the use of this software,
-even if advised of the possibility of such damage.
-</p>
-</html>"),
-      Icon(graphics={
-          Ellipse(
-            extent={{-100,100},{100,-100}},
-            lineColor={0,0,0},
-            fillColor={245,245,245},
-            fillPattern=FillPattern.Solid),
-          Ellipse(
-            extent={{-50,50},{50,-54}},
-            lineColor={0,0,0}),
-          Rectangle(
-            extent={{38,22},{74,-20}},
-            lineColor={245,245,245},
-            fillColor={245,245,245},
-            fillPattern=FillPattern.Solid)}));
-  end License;
-
   class Contact "Contact"
     extends Modelica.Icons.Contact;
 
