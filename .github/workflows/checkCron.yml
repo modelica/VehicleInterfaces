@@ -3,7 +3,7 @@ name: Cron
 on:
   workflow_dispatch:
   schedule:
-    - cron: "7 3 * * 0"
+    - cron: "7 3 3,17 * *"
 
 jobs:
   html_documentation_link_checks:
