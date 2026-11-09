@@ -25,9 +25,9 @@ model SingleGearManualTransmission
         origin={0,76},
         extent={{-6,-6},{6,6}},
         rotation=270)));
-  Modelica.Mechanics.Rotational.Components.Clutch clutch(fn_max=1)
+  Modelica.Mechanics.Rotational.Components.Clutch clutch(fn_max=100)
     annotation (Placement(transformation(extent={{-80,-10},{-60,10}})));
-  Modelica.Mechanics.Translational.Components.Fixed fixed
+  Modelica.Mechanics.Translational.Components.Fixed fixed(s0=1)
     annotation (Placement(transformation(
         origin={-80,46},
         extent={{-10,-10},{10,10}},
@@ -48,7 +48,7 @@ protected
     annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
   outer Modelica.Mechanics.MultiBody.World world;
 public
-  Modelica.Blocks.Math.Gain normalise(k=1/clutch.fn_max)
+  Modelica.Blocks.Math.Gain normalise(k=1)
     annotation (Placement(transformation(
         origin={-70,23},
         extent={{-5,-4},{5,4}},
