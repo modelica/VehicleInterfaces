@@ -1,0 +1,13 @@
+time
+chassis.body.s
+chassis.dragForces.v_rel
+driveline.leftHalfShaft.w
+driveline.rightHalfShaft.w
+driverEnvironment.acceleratorPosition.s
+driverEnvironment.acceleratorPosition.v
+driverEnvironment.brakePosition.s
+driverEnvironment.brakePosition.v
+driverEnvironment.clutchPosition.v
+engine.flywheel.w
+transmission.clutch.phi_rel
+transmission.clutch.w_rel
